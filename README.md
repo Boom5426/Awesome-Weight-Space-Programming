@@ -7,9 +7,6 @@
 </p>
 
 
-<p align="center">
-  Weight Reading &nbsp;·&nbsp; Direct Editing &nbsp;·&nbsp; Capability Installation &nbsp;·&nbsp; Model Generation &nbsp;·&nbsp; Verification
-</p>
 
 **Weight-Space Programming (WSP)** explores how language models and other reasoning agents can inspect, construct, and modify neural-network weights with executable procedures. This repository follows direct WSP research, while clearly distinguishing neural-program compilation, hypernetworks, and established model-editing methods as related foundations.
 
