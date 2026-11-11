@@ -20,16 +20,17 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 | --- | --- |
 | 🧠 **Understand direct WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
 | 🛠️ **Install and retain capabilities** | **[WeightCode](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
-| 📏 **Evaluate weight understanding and editing** | **[IWIBench](https://arxiv.org/abs/2611.08647)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) |
+| 📏 **Evaluate weight understanding and editing** | **[IWIBench](https://arxiv.org/abs/2611.08647)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) · [Clinical Network Audits](https://arxiv.org/abs/2611.05341) |
 | 🧬 **Generate weights and networks** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
 | ✅ **Build verifiable interventions** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
-| 🔗 **Understand adjacent paradigms** | **[Program-as-Weights](https://arxiv.org/abs/2607.02512)** · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) · [Text-to-LoRA](https://arxiv.org/abs/2506.06105) |
+| 🔗 **Understand adjacent paradigms** | **[Program-as-Weights](https://arxiv.org/abs/2607.02512)** · [Tracr](https://arxiv.org/abs/2301.05062) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) · [Text-to-LoRA](https://arxiv.org/abs/2506.06105) |
 
 <a id="latest-updates"></a>
 ## 📰 Latest Updates
 
 | Date | What changed |
 | --- | --- |
+| `2026-11-11` | Gap-filling pass: added the clinical-network auditing paper, a Claude Fable 5.2 replication, an evidence-scope critique, autoresearch experiments, the released edited Qwen checkpoint, and missing foundations (RASP, Tracr, Learning Transformer Programs, neural functionals, deep weight-space alignment, parameter decomposition, refusal-direction weight orthogonalization). |
 | `2026-11-11` | Multi-keyword sweep of arXiv, alphaXiv, Hugging Face Papers and other preprint platforms: added IWIBench, Tree-Ising, Weight Oracles, SkillSmith, a diffusion-editing research report, and an independent replication resource. |
 | `2026-11-11` | Adopted research-question reading tracks, a chronological direct-WSP catalog, and separate related-method sections. |
 | `2026-11-11` | Initial curated collection of 33 research and technical resources, including new November preprints. |
@@ -39,10 +40,10 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**16 papers and manuscripts** · [2026 (16)](#2026)
+**17 papers and manuscripts** · [2026 (17)](#2026)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 16 papers
+### 🗓️ 2026 — 17 papers
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming (**Manuscript 2026**) [[paper](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -74,13 +75,21 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[Orbit Audits]** `[Weight Reading]` `[Symmetry]` Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.05798)]
 
+- **[Clinical Network Audits]** `[Clinical AI]` `[Auditing & Repair]` Weight-space programming for auditing clinical decision networks (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.05341)] [[code](https://github.com/hnusrat1/weightspace-rt)] ![GitHub stars](https://img.shields.io/github/stars/hnusrat1/weightspace-rt.svg?logo=github&label=Stars)
+
 - **[Diffusion WSP Conjectures]** `[Diffusion Models]` `[Conjecture]` Weight-Space Programming for Improving Image-Restoration Diffusion Models: Technical Conjectures and a Recursive Improvement Loop (**Conjectural arXiv Preprint 2026**) [[paper](https://arxiv.org/abs/2611.04268)]
 
 
 <a id="reports-and-blogs"></a>
 ## 📝 Reports and Blogs
 
+- **[Fable WSP Replication]** `[Replication]` `[Cross-Model Comparison]` Claude Fable 5.2 can do "weight-space-programming" about as well as GPT-6 Astra (**LessWrong Post 2026**) [[post](https://www.lesswrong.com/posts/wg3K6xFFTdM6RmRgn/claude-fable-5-2-can-do-weight-space-programming-about-as)] [[data](https://huggingface.co/datasets/shawnghu/fable-weight-space-programming)]
+
 - **[Gradient-Free Diffusion Weight Editing]** `[LLM Editing]` `[Concept Erasure]` An LLM Erases a Concept by Editing Diffusion Weights Directly, Without Gradients (**alphaXiv Research Report 2026**) [[report](https://www.alphaxiv.org/abs/2611.gradient-free-diffusion-weight-editing)] [[blog](https://huggingface.co/blog/javadtaghia/an-llm-erases-a-concept-by-editing-diffusion-weigh)]
+
+- **[Evidence-Scope Critique]** `[Critique]` `[Evidence Scope]` The 'Astra can read and write weights to improve Qwen' post is misleading (**Technical Blog 2026**) [[blog](https://honnibal.dev/blog/astra-read-write-misleading)]
+
+- **[WSP Autoresearch]** `[Autoresearch]` `[Hand-Written Transformers]` Weight-Space Programming Autoresearch: agents hand-writing transformer weights for arithmetic, algorithmic, and NLP tasks (**Technical Report 2026**) [[report](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Sparks of Weight-Space Programming]** `[Weight Reading]` `[Direct Editing]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights (**Technical Blog 2026**) [[blog](https://rikiyat.github.io/blog/weight-space-programming/)] [[logs](https://github.com/RikiyaT/lm_understand-logs)]
 
@@ -91,7 +100,9 @@ These adjacent methods inform WSP, but are not automatically instances of direct
 
 ### Neural Program Compilation & Weight Generation
 
-Learned compilers, hypernetworks, and adapter generators that map instructions or data to model parameters.
+Learned compilers, hypernetworks, and adapter generators that map instructions or data to model parameters, plus program-to-weight compilers that construct networks by hand.
+
+- **[Adapters as Data]** `[LoRA]` `[Weight Representation]` Adapters as Data: The Latent Space of LoRAs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07775)]
 
 - **[SkillSmith]** `[Parametric Skill Synthesis]` `[Prefix Tuning]` SkillSmith: Learning to Compose Parametric Skills and Textual Knowledge (**arXiv 2026**) [[paper](https://arxiv.org/abs/2607.27497)]
 
@@ -107,7 +118,15 @@ Learned compilers, hypernetworks, and adapter generators that map instructions o
 
 - **[Text-to-LoRA]** `[Hypernetwork]` `[Task Adaptation]` Text-to-LoRA: Instant Transformer Adaption (**ICML 2025**) [[paper](https://proceedings.mlr.press/v267/charakorn25a.html)] [[preprint](https://arxiv.org/abs/2506.06105)] [[code](https://github.com/SakanaAI/text-to-lora)] ![GitHub stars](https://img.shields.io/github/stars/SakanaAI/text-to-lora.svg?logo=github&label=Stars)
 
-- **[Adapters as Data]** `[LoRA]` `[Weight Representation]` Adapters as Data: The Latent Space of LoRAs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07775)]
+- **[Neural Programs in Weight Space]** `[Program Synthesis]` `[Meta-Learning]` End-to-End Synthesis of Neural Programs in Weight Space (**ICLR 2025 Workshop on Neural Network Weights as a New Data Modality**) [[paper](https://openreview.net/forum?id=tzf3XUg0Q5)]
+
+- **[Learning Transformer Programs]** `[Interpretable by Design]` `[Program Extraction]` Learning Transformer Programs (**NeurIPS 2023**) [[paper](https://arxiv.org/abs/2306.01128)] [[code](https://github.com/princeton-nlp/TransformerPrograms)] ![GitHub stars](https://img.shields.io/github/stars/princeton-nlp/TransformerPrograms.svg?logo=github&label=Stars)
+
+- **[Tracr]** `[Program Compilation]` `[Hand-Constructed Weights]` Tracr: Compiled Transformers as a Laboratory for Interpretability (**NeurIPS 2023**) [[paper](https://arxiv.org/abs/2301.05062)] [[code](https://github.com/google-deepmind/tracr)] ![GitHub stars](https://img.shields.io/github/stars/google-deepmind/tracr.svg?logo=github&label=Stars)
+
+- **[PPUDA]** `[Parameter Prediction]` `[Graph Hypernetwork]` Parameter Prediction for Unseen Deep Architectures (**NeurIPS 2021**) [[paper](https://arxiv.org/abs/2110.13100)] [[code](https://github.com/facebookresearch/ppuda)] ![GitHub stars](https://img.shields.io/github/stars/facebookresearch/ppuda.svg?logo=github&label=Stars)
+
+- **[RASP]** `[Programming Language]` `[Transformer Computation]` Thinking Like Transformers (**ICML 2021**) [[paper](https://arxiv.org/abs/2106.06981)] [[code](https://github.com/tech-srl/RASP)] ![GitHub stars](https://img.shields.io/github/stars/tech-srl/RASP.svg?logo=github&label=Stars)
 
 ### Model Editing & Weight-Space Foundations
 
@@ -121,11 +140,23 @@ Research on modifying facts or behaviors, reusing parameter differences, and rea
 
 - **[Weight Oracles]** `[Weight Reading]` `[Safety Auditing]` Weight Oracles: Reading Neural Network Weights with Language Models (**arXiv 2026; NeurIPS 2026 NeuralArtifacts Workshop Spotlight**) [[paper](https://arxiv.org/abs/2610.07334)]
 
+- **[Targeted Parameter Decomposition]** `[Mechanism Recovery]` `[Targeted Rewiring]` Targeted Recovery of Weight-Space Mechanisms From Neural Networks (**ICML 2026 Mechanistic Interpretability Workshop**) [[paper](https://arxiv.org/abs/2607.13047)] [[code](https://github.com/Antovigo/targeted-parameter-decomposition)] ![GitHub stars](https://img.shields.io/github/stars/Antovigo/targeted-parameter-decomposition.svg?logo=github&label=Stars)
+
+- **[Weight Space as a Modality]** `[Position]` `[Weight Generation]` Position: Weight Space Should Be a First-Class Generative AI Modality (**ICML 2026**) [[paper](https://arxiv.org/abs/2605.18632)]
+
 - **[AlphaEdit]** `[Model Editing]` `[Knowledge Preservation]` AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models (**ICLR 2025**) [[paper](https://arxiv.org/abs/2410.02355)] [[code](https://github.com/jianghoucheng/AlphaEdit)] ![GitHub stars](https://img.shields.io/github/stars/jianghoucheng/AlphaEdit.svg?logo=github&label=Stars)
+
+- **[Refusal Direction]** `[Weight Orthogonalization]` `[Behavior Editing]` Refusal in Language Models Is Mediated by a Single Direction (**NeurIPS 2024**) [[paper](https://arxiv.org/abs/2406.11717)] [[code](https://github.com/andyrdt/refusal_direction)] ![GitHub stars](https://img.shields.io/github/stars/andyrdt/refusal_direction.svg?logo=github&label=Stars)
 
 - **[WISE]** `[Lifelong Editing]` `[Knowledge Memory]` WISE: Rethinking the Knowledge Memory for Lifelong Model Editing of Large Language Models (**arXiv 2024**) [[paper](https://arxiv.org/abs/2405.14768)] [[code](https://github.com/zjunlp/EasyEdit)] ![GitHub stars](https://img.shields.io/github/stars/zjunlp/EasyEdit.svg?logo=github&label=Stars)
 
+- **[Deep Weight Space Alignment]** `[Weight Alignment]` `[Equivariant Networks]` Equivariant Deep Weight Space Alignment (**ICML 2024**) [[paper](https://arxiv.org/abs/2310.13397)] [[code](https://github.com/AvivNavon/deep-align)] ![GitHub stars](https://img.shields.io/github/stars/AvivNavon/deep-align.svg?logo=github&label=Stars)
+
 - **[Neural Functional Transformers]** `[Weight-Space Learning]` `[Permutation Symmetry]` Neural Functional Transformers (**NeurIPS 2023**) [[paper](https://papers.neurips.cc/paper_files/paper/2023/hash/f4757db82a02eea015670ecca605d5cc-Abstract-Conference.html)] [[code](https://github.com/AllanYangZhou/nfn)] ![GitHub stars](https://img.shields.io/github/stars/AllanYangZhou/nfn.svg?logo=github&label=Stars)
+
+- **[NFN]** `[Weight-Space Learning]` `[Permutation Equivariance]` Permutation Equivariant Neural Functionals (**NeurIPS 2023**) [[paper](https://arxiv.org/abs/2302.14040)] [[code](https://github.com/AllanYangZhou/nfn)] ![GitHub stars](https://img.shields.io/github/stars/AllanYangZhou/nfn.svg?logo=github&label=Stars)
+
+- **[DWSNets]** `[Weight-Space Learning]` `[Equivariant Networks]` Equivariant Architectures for Learning in Deep Weight Spaces (**ICML 2023**) [[paper](https://arxiv.org/abs/2301.12780)] [[code](https://github.com/AvivNavon/DWSNets)] ![GitHub stars](https://img.shields.io/github/stars/AvivNavon/DWSNets.svg?logo=github&label=Stars)
 
 - **[Git Re-Basin]** `[Weight Alignment]` `[Model Merging]` Git Re-Basin: Merging Models Modulo Permutation Symmetries (**ICLR 2023**) [[paper](https://arxiv.org/abs/2209.04836)] [[code](https://github.com/samuela/git-re-basin)] ![GitHub stars](https://img.shields.io/github/stars/samuela/git-re-basin.svg?logo=github&label=Stars)
 
@@ -134,6 +165,8 @@ Research on modifying facts or behaviors, reusing parameter differences, and rea
 - **[MEMIT]** `[Knowledge Editing]` `[Mass Editing]` Mass-Editing Memory in a Transformer (**ICLR 2023**) [[paper](https://arxiv.org/abs/2210.07229)] [[code](https://github.com/kmeng01/memit)] ![GitHub stars](https://img.shields.io/github/stars/kmeng01/memit.svg?logo=github&label=Stars)
 
 - **[ROME]** `[Knowledge Editing]` `[Causal Tracing]` Locating and Editing Factual Associations in GPT (**NeurIPS 2022**) [[paper](https://arxiv.org/abs/2202.05262)] [[code](https://github.com/kmeng01/rome)] ![GitHub stars](https://img.shields.io/github/stars/kmeng01/rome.svg?logo=github&label=Stars)
+
+- **[Transformer Circuits Framework]** `[Mechanistic Interpretability]` `[Weight Reading]` A Mathematical Framework for Transformer Circuits (**Transformer Circuits Thread 2021**) [[article](https://transformer-circuits.pub/2021/framework/index.html)]
 
 - **[HyperNetworks]** `[Hypernetwork]` `[Weight Generation]` HyperNetworks (**ICLR 2017**) [[paper](https://research.google/pubs/hypernetworks-2/)]
 
@@ -144,6 +177,7 @@ Research on modifying facts or behaviors, reusing parameter differences, and rea
 - **[Weights-Only Replication]** Independent replication of selected MIT WSP weight-reading experiments, including reduced-context controls. [[code](https://github.com/jhpark94/weights-only-replication)] ![GitHub stars](https://img.shields.io/github/stars/jhpark94/weights-only-replication.svg?logo=github&label=Stars)
 
 - **[MIT WSP Logs]** First-party experiment records for *Sparks of Weight-Space Programming*. [[code](https://github.com/RikiyaT/lm_understand-logs)] ![GitHub stars](https://img.shields.io/github/stars/RikiyaT/lm_understand-logs.svg?logo=github&label=Stars)
+- **[Edited Qwen3.5-0.8B]** Released checkpoint from the *Sparks* math-looping repair experiment, with an independent benchmark re-run on the model card. [[model](https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming)]
 - **[WSP-Scope]** Code and experiments for systematic evaluation. [[code](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars)
 - **[wsp-kit]** Independent toolkit for bounded edits; not a peer-reviewed paper. [[code](https://github.com/AuremHQ/weight-space-programming)] ![GitHub stars](https://img.shields.io/github/stars/AuremHQ/weight-space-programming.svg?logo=github&label=Stars)
 
