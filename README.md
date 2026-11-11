@@ -6,7 +6,6 @@
   <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/commits/main"><img src="https://img.shields.io/github/last-commit/Boom5426/Awesome-Weight-Space-Programming?style=flat-square&logo=github&label=Updated" alt="Last update" /></a>
 </p>
 
-<p align="center"><b>Papers, methods, benchmarks, and tools for programming neural-network weights.</b></p>
 
 <p align="center">
   Weight Reading &nbsp;·&nbsp; Direct Editing &nbsp;·&nbsp; Capability Installation &nbsp;·&nbsp; Model Generation &nbsp;·&nbsp; Verification
@@ -14,13 +13,6 @@
 
 **Weight-Space Programming (WSP)** explores how language models and other reasoning agents can inspect, construct, and modify neural-network weights with executable procedures. This repository follows direct WSP research, while clearly distinguishing neural-program compilation, hypernetworks, and established model-editing methods as related foundations.
 
-<p align="center"><sub>
-  <a href="#start-here">Start Here</a> ·
-  <a href="#latest-updates">Latest Updates</a> ·
-  <a href="#research-papers">Papers</a> ·
-  <a href="#related-research">Related Research</a> ·
-  <a href="#scope">Scope</a>
-</sub></p>
 
 <a id="start-here"></a>
 ## 🚀 Start Here
