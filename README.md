@@ -31,7 +31,7 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 | --- | --- |
 | 🧠 **Understand direct WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
 | 🛠️ **Install and retain capabilities** | **[WeightCode](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
-| 📏 **Evaluate weight understanding** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)** · [Weight Reasoning Audit](https://arxiv.org/abs/2611.08070) · [Orbit Audits](https://arxiv.org/abs/2611.05798) |
+| 📏 **Evaluate weight understanding and editing** | **[IWIBench](https://arxiv.org/abs/2611.08647)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) |
 | 🧬 **Generate weights and networks** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
 | ✅ **Build verifiable interventions** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
 | 🔗 **Understand adjacent paradigms** | **[Program-as-Weights](https://arxiv.org/abs/2607.02512)** · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) · [Text-to-LoRA](https://arxiv.org/abs/2506.06105) |
@@ -41,6 +41,7 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 
 | Date | What changed |
 | --- | --- |
+| `2026-11-11` | Multi-keyword sweep of arXiv, alphaXiv, Hugging Face Papers and other preprint platforms: added IWIBench, Tree-Ising, Weight Oracles, SkillSmith, a diffusion-editing research report, and an independent replication resource. |
 | `2026-11-11` | Adopted research-question reading tracks, a chronological direct-WSP catalog, and separate related-method sections. |
 | `2026-11-11` | Initial curated collection of 33 research and technical resources, including new November preprints. |
 
@@ -49,10 +50,10 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**15 papers and manuscripts** · [2026 (15)](#2026)
+**16 papers and manuscripts** · [2026 (16)](#2026)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 15 papers
+### 🗓️ 2026 — 16 papers
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming (**Manuscript 2026**) [[paper](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -74,6 +75,8 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[WSP-Scope]** `[Benchmark]` `[LLM Editing]` Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09382)] [[code](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars) [[project](https://wsp-scope.github.io/)]
 
+- **[IWIBench]** `[Benchmark]` `[Intra-weight Injection]` IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.08647)] [[code](https://github.com/hcltech-robotics/iwibench)] ![GitHub stars](https://img.shields.io/github/stars/hcltech-robotics/iwibench.svg?logo=github&label=Stars)
+
 - **[Zero-Shot Game WSP]** `[Games]` `[Policy Synthesis]` Zero-Shot Weight-Space Programming Across a Difficulty-Graded Ladder of Two-Player Games (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09271)]
 
 - **[Can an LLM Actually Reason about Weights?]** `[Weight Reading]` `[Reliability]` Can an LLM Actually Reason and Program about Neural Network's Weights or is it just memorization on steroids? Exploring "Weight-Space Programming" (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.08070)]
@@ -88,6 +91,8 @@ Research directly involving programmatic inspection, construction, or modificati
 <a id="reports-and-blogs"></a>
 ## 📝 Reports and Blogs
 
+- **[Gradient-Free Diffusion Weight Editing]** `[LLM Editing]` `[Concept Erasure]` An LLM Erases a Concept by Editing Diffusion Weights Directly, Without Gradients (**alphaXiv Research Report 2026**) [[report](https://www.alphaxiv.org/abs/2611.gradient-free-diffusion-weight-editing)] [[blog](https://huggingface.co/blog/javadtaghia/an-llm-erases-a-concept-by-editing-diffusion-weigh)]
+
 - **[Sparks of Weight-Space Programming]** `[Weight Reading]` `[Direct Editing]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights (**Technical Blog 2026**) [[blog](https://rikiyat.github.io/blog/weight-space-programming/)] [[logs](https://github.com/RikiyaT/lm_understand-logs)]
 
 <a id="related-research"></a>
@@ -98,6 +103,8 @@ These adjacent methods inform WSP, but are not automatically instances of direct
 ### Neural Program Compilation & Weight Generation
 
 Learned compilers, hypernetworks, and adapter generators that map instructions or data to model parameters.
+
+- **[SkillSmith]** `[Parametric Skill Synthesis]` `[Prefix Tuning]` SkillSmith: Learning to Compose Parametric Skills and Textual Knowledge (**arXiv 2026**) [[paper](https://arxiv.org/abs/2607.27497)]
 
 - **[Program-as-Weights]** `[Neural Compiler]` `[Reusable Programs]` Program-as-Weights: A Programming Paradigm for Fuzzy Functions (**NeurIPS 2026**) [[paper](https://arxiv.org/abs/2607.02512)] [[code](https://github.com/programasweights/programasweights-python)] ![GitHub stars](https://img.shields.io/github/stars/programasweights/programasweights-python.svg?logo=github&label=Stars) [[project](https://programasweights.com/research/)]
 
@@ -117,9 +124,13 @@ Learned compilers, hypernetworks, and adapter generators that map instructions o
 
 Research on modifying facts or behaviors, reusing parameter differences, and reasoning about symmetries or learned weight representations.
 
+- **[Tree-Ising]** `[Training-Free Editing]` `[Discrete Optimization]` Tree-Ising: Repairing Language Models with Bit-Level Ising Edits (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.14210)]
+
 - **[A Survey of Weight Space Learning]** `[Survey]` `[Weight-Space Learning]` A Survey of Weight Space Learning: Understanding, Representation, and Generation (**arXiv 2026**) [[paper](https://arxiv.org/abs/2603.10090)] [[code](https://github.com/Zehong-Wang/Awesome-Weight-Space-Learning)] ![GitHub stars](https://img.shields.io/github/stars/Zehong-Wang/Awesome-Weight-Space-Learning.svg?logo=github&label=Stars)
 
 - **[TensorMutation]** `[Weight-Space Learning]` `[Model Mutation]` TensorMutation: Learning Weight-Space Mutations of Deep Learning Models on Neural Graphs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09650)]
+
+- **[Weight Oracles]** `[Weight Reading]` `[Safety Auditing]` Weight Oracles: Reading Neural Network Weights with Language Models (**arXiv 2026; NeurIPS 2026 NeuralArtifacts Workshop Spotlight**) [[paper](https://arxiv.org/abs/2610.07334)]
 
 - **[AlphaEdit]** `[Model Editing]` `[Knowledge Preservation]` AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models (**ICLR 2025**) [[paper](https://arxiv.org/abs/2410.02355)] [[code](https://github.com/jianghoucheng/AlphaEdit)] ![GitHub stars](https://img.shields.io/github/stars/jianghoucheng/AlphaEdit.svg?logo=github&label=Stars)
 
@@ -141,6 +152,8 @@ Research on modifying facts or behaviors, reusing parameter differences, and rea
 ## 🧰 Resources & Tools
 
 - **[WeightCode]** Executable programs, reproduction scripts, and an agent skill. [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
+- **[Weights-Only Replication]** Independent replication of selected MIT WSP weight-reading experiments, including reduced-context controls. [[code](https://github.com/jhpark94/weights-only-replication)] ![GitHub stars](https://img.shields.io/github/stars/jhpark94/weights-only-replication.svg?logo=github&label=Stars)
+
 - **[MIT WSP Logs]** First-party experiment records for *Sparks of Weight-Space Programming*. [[code](https://github.com/RikiyaT/lm_understand-logs)] ![GitHub stars](https://img.shields.io/github/stars/RikiyaT/lm_understand-logs.svg?logo=github&label=Stars)
 - **[WSP-Scope]** Code and experiments for systematic evaluation. [[code](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars)
 - **[wsp-kit]** Independent toolkit for bounded edits; not a peer-reviewed paper. [[code](https://github.com/AuremHQ/weight-space-programming)] ![GitHub stars](https://img.shields.io/github/stars/AuremHQ/weight-space-programming.svg?logo=github&label=Stars)
