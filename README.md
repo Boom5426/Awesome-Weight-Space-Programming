@@ -6,6 +6,9 @@
   <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/commits/main"><img src="https://img.shields.io/github/last-commit/Boom5426/Awesome-Weight-Space-Programming?style=flat-square&logo=github&label=Updated" alt="Last update" /></a>
 </p>
 
+<p align="center">
+  <b>English</b> | <a href="README_zh.md">简体中文</a>
+</p>
 
 
 **Weight-Space Programming (WSP)** explores how language models and other reasoning agents can inspect, construct, and modify neural-network weights with executable procedures. This repository follows direct WSP research, while clearly distinguishing neural-program compilation, hypernetworks, and established model-editing methods as related foundations.
@@ -30,6 +33,7 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 
 | Date | What changed |
 | --- | --- |
+| `2026-11-11` | Added a Simplified Chinese README ([README_zh.md](README_zh.md)). |
 | `2026-11-11` | Gap-filling pass: added the clinical-network auditing paper, a Claude Fable 5.2 replication, an evidence-scope critique, autoresearch experiments, the released edited Qwen checkpoint, and missing foundations (RASP, Tracr, Learning Transformer Programs, neural functionals, deep weight-space alignment, parameter decomposition, refusal-direction weight orthogonalization). |
 | `2026-11-11` | Multi-keyword sweep of arXiv, alphaXiv, Hugging Face Papers and other preprint platforms: added IWIBench, Tree-Ising, Weight Oracles, SkillSmith, a diffusion-editing research report, and an independent replication resource. |
 | `2026-11-11` | Adopted research-question reading tracks, a chronological direct-WSP catalog, and separate related-method sections. |
