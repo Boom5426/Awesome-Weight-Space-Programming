@@ -91,6 +91,8 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[Gradient-Free Diffusion Weight Editing]** `[LLM Editing]` `[Concept Erasure]` An LLM Erases a Concept by Editing Diffusion Weights Directly, Without Gradients (**alphaXiv Research Report 2026**) [[report](https://www.alphaxiv.org/abs/2611.gradient-free-diffusion-weight-editing)] [[blog](https://huggingface.co/blog/javadtaghia/an-llm-erases-a-concept-by-editing-diffusion-weigh)]
 
+- **[Sycophancy Repair by Weight Editing]** `[Direct Editing]` `[Sycophancy]` `[Preregistered]` Repairing sycophancy in Qwen2.5-0.5B by editing its weights, with Claude Opus 5.5 as the editor and a blind test split (**Technical Blog 2026**) [[blog](https://say43.github.io/2026/11/05/repairing-sycophancy.html)] [[code](https://github.com/Say43/Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/Say43/Weight-Space-Programming.svg?logo=github&label=Stars)
+
 - **[Evidence-Scope Critique]** `[Critique]` `[Evidence Scope]` The 'Astra can read and write weights to improve Qwen' post is misleading (**Technical Blog 2026**) [[blog](https://honnibal.dev/blog/astra-read-write-misleading)]
 
 - **[WSP Autoresearch]** `[Autoresearch]` `[Hand-Written Transformers]` Weight-Space Programming Autoresearch: agents hand-writing transformer weights for arithmetic, algorithmic, and NLP tasks (**Technical Report 2026**) [[report](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
