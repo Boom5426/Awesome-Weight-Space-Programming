@@ -58,3 +58,11 @@ python3 scripts/build_site.py --check
 The generator writes `index.html` and `landscape.html` at both repository root and under `docs/`, allowing either Pages source option. In GitHub **Settings → Pages**, publish `main` from **/(root)** or **/docs** (depending on repository setup). The public URLs are `https://boom5426.github.io/Awesome-Weight-Space-Programming/` and `.../landscape.html` after Pages deployment.
 
 The README badges assume Pages is enabled. If not, the Markdown lists remain directly available on GitHub. GitHub Actions checks that generated pages are synchronized with JSON and HTML templates.
+
+The research map includes a readable mobile track menu, and the catalog has bilingual UI and search. Use `?lang=zh` for Chinese and deep links such as `?branch=weight-centric&leaf=geometry` for a specific research track. To test the browser-side state (not just the HTML syntax), run:
+
+```bash
+node tests/test_site_ui.cjs
+```
+
+The catalog displays at most 24 entries initially; its **Show more** button loads the next 24. Evidence-status filters mean *the source was inspected*, never independently reproduced.
