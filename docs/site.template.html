@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Explore direct Weight-Space Programming, weight-centric research, model editing and related foundations.">
+<title>Awesome Weight-Space Programming — Searchable Research Catalog</title>
+<style>
+:root{--bg:#f6f8fa;--card:#fff;--text:#1f2937;--muted:#667085;--accent:#0b6e99;--teal:#24b6a6;--line:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1140px;margin:auto;padding:26px 18px 60px}
+.hero{padding:32px;border-radius:20px;color:white;background:linear-gradient(135deg,#071a2b,#0b6e99 58%,#24b6a6);box-shadow:0 15px 42px #0b6e9920}
+.hero h1{font-size:clamp(26px,4vw,44px);line-height:1.15;margin:0 0 8px}.hero p{opacity:.93;margin:0;line-height:1.5}
+.nav{display:flex;flex-wrap:wrap;gap:15px;margin:17px 0 8px}.nav a{color:white;font-size:13px;font-weight:650;text-decoration:none;border-bottom:1px solid #ffffff70}.nav a:hover{border-bottom-color:white}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.stat{border:1px solid #ffffff55;background:#ffffff15;padding:5px 11px;border-radius:999px;font-size:12px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 16px}.tab{border:1px solid var(--line);background:white;padding:9px 13px;border-radius:11px;font-size:13px;color:var(--text);cursor:pointer;font-weight:600}.tab.active{background:#e5f5f8;border-color:#90c8d3;color:#075b7d}
+.controls{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:10px;margin:0 0 10px}
+input,select{width:100%;background:white;border:1px solid #d2dce3;border-radius:10px;padding:11px 12px;font:inherit;font-size:13px;color:var(--text);outline:none}
+input:focus,select:focus,.tab:focus-visible{border-color:var(--accent);outline:2px solid #9adbe2;outline-offset:1px}
+.options{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:12px 1px 20px;color:var(--muted);font-size:13px}
+.options button{border:1px solid var(--line);background:white;border-radius:9px;padding:7px 11px;color:var(--accent);cursor:pointer}
+.count{font-weight:650;color:var(--text)}
+.grid{display:grid;gap:10px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 2px 11px #0f172a08}
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.label{font-size:16px;font-weight:710;line-height:1.45;color:#19263b}
+.details{font-size:12px;white-space:nowrap;color:var(--muted);padding-top:3px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.tag{font-size:11px;line-height:1.4;padding:3px 8px;border:1px solid #0b6e9920;border-radius:20px;color:#0b6e99;background:#0b6e990e}
+.tag.secondary{color:#556477;border-color:#dce5ea;background:#f5f7fa}
+.evidence{margin:10px 0 0;font-size:13px;color:#4b5563;line-height:1.5}
+.links{display:flex;gap:15px;flex-wrap:wrap;margin-top:11px}
+.links a{font-size:13px;text-decoration:none;color:var(--accent);font-weight:650}
+.links a:hover{text-decoration:underline}.empty{padding:55px 20px;text-align:center;color:var(--muted)}
+footer{margin-top:27px;font-size:13px;text-align:center;color:var(--muted);line-height:1.8}footer a{color:var(--accent)}
+@media(max-width:830px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.top{display:block}.details{margin-top:6px}}
+@media(max-width:520px){.wrap{padding:14px 10px 42px}.hero{padding:24px 17px}.controls{grid-template-columns:1fr}.controls input{grid-column:auto}.item{padding:15px}}
+</style>
+</head>
+<body><main class="wrap">
+<section class="hero">
+<h1>Awesome Weight-Space Programming</h1>
+<p>Explore weight programming, weight-centric research, and the ideas behind programmable neural networks.</p>
+<div class="nav"><a href="landscape.html">Research Landscape ↗</a><a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming#start-here">Start Here on GitHub ↗</a><a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/docs/wsp-evidence.md">WSP Evidence Matrix ↗</a></div>
+<div class="stats"><span class="stat" id="statAll"></span><span class="stat" id="statDirect"></span><span class="stat" id="statCentric"></span><span class="stat" id="statChecked"></span></div>
+</section>
+<nav class="tabs" id="tabs" aria-label="Research collections"></nav>
+<section class="controls" aria-label="Search and filter the bibliography">
+<input id="q" type="search" placeholder="Search paper titles, methods, research questions…" aria-label="Search papers">
+<select id="leaf" aria-label="Filter by research track"><option value="">All research tracks</option></select>
+<select id="year" aria-label="Filter by publication year"><option value="">All years</option></select>
+<select id="code" aria-label="Filter by code availability"><option value="">Any code status</option><option value="yes">Code available</option><option value="no">No code link</option></select>
+<select id="review" aria-label="Filter by source audit"><option value="">Any source audit</option><option value="source_checked">Source-checked WSP</option><option value="metadata_only">WSP metadata only</option></select>
+</section>
+<div class="options"><div class="count" id="count" aria-live="polite"></div><button id="clear" type="button">Clear filters</button></div>
+<section id="results" class="grid"></section>
+<footer><a href="landscape.html">Interactive research map</a> · <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/README.md">English README</a> · <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/README_zh.md">中文 README</a><p>Source-reported results are not independent reproductions. Weight-centric inspirations are hypotheses, not direct WSP evidence.</p></footer>
+</main>
+<script>
+const PAPERS=__CATALOG_DATA__;
+const NAV=__NAVIGATION_DATA__;
+const byId=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const groups=[["","All research"],["direct","Direct WSP"],["weight-centric","Weight-Centric"],["related","Foundations"],["reports","Reports"],["resources","Tools & resources"]];
+const allLeaves=NAV.branches.flatMap(b=>b.leaves.map(l=>({id:b.id+"."+l.id,name:l.name,branch:b.id})));
+const years=[...new Set(PAPERS.map(p=>p.year))].sort((a,b)=>b-a);
+years.forEach(y=>byId("year").insertAdjacentHTML("beforeend",'<option value="'+y+'">'+y+'</option>'));
+let group="",activeLeaf="";
+function groupKey(p){return p.group==="related"?"related":p.group;}
+function link(label,url){return url&&/^https:\/\//.test(url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">'+esc(label)+' ↗</a>':"";}
+function loadState(){
+  const url=new URLSearchParams(location.search);
+  group=url.get("group")||({"direct":"direct","weight-centric":"weight-centric","foundations":"related","resources":"reports"}[url.get("branch")]||"");
+  activeLeaf=url.get("leaf")&&url.get("branch")?(url.get("branch")+"."+url.get("leaf")):(url.get("track")||"");
+  byId("q").value=url.get("q")||"";
+  byId("year").value=url.get("year")||"";
+  byId("code").value=url.get("code")||"";
+  byId("review").value=url.get("review")||"";
+  if(!groups.some(x=>x[0]===group))group="";
+  if(!allLeaves.some(l=>l.id===activeLeaf))activeLeaf="";
+}
+function syncURL(){
+  const url=new URLSearchParams();
+  if(group)url.set("group",group);
+  if(activeLeaf){const [b,l]=activeLeaf.split(".");url.set("branch",b);url.set("leaf",l);}
+  ["q","year","code","review"].forEach(k=>{const v=byId(k).value.trim();if(v)url.set(k,v);});
+  if(location.protocol!=="file:")history.replaceState(null,"",location.pathname+(url.size?"?"+url.toString():""));
+}
+function tabs(){
+  byId("tabs").innerHTML=groups.map(([id,text])=>'<button type="button" class="tab'+(group===id?" active":"")+'" data-group="'+esc(id)+'" aria-pressed="'+(group===id)+'">'+esc(text)+'</button>').join("");
+}
+function leafMenu(){
+  const valid=allLeaves.filter(l=>!group||l.branch===group||(group==="related"&&l.branch==="foundations")||(group==="reports"&&l.branch==="resources")||(group==="resources"&&l.branch==="resources"));
+  byId("leaf").innerHTML='<option value="">All research tracks</option>'+valid.map(l=>'<option value="'+esc(l.id)+'">'+esc(l.name)+'</option>').join("");
+  if(!valid.some(l=>l.id===activeLeaf))activeLeaf="";
+  byId("leaf").value=activeLeaf;
+}
+function matches(p){
+  const words=byId("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const hay=[p.label,p.title,p.group,p.section,p.idea,p.inspiration,p.claim].join(" ").toLowerCase();
+  const code=byId("code").value,review=byId("review").value;
+  return (!group||p.group===group)&&(!activeLeaf||p.track===activeLeaf)
+    &&(!byId("year").value||String(p.year)===byId("year").value)
+    &&(!code||(code==="yes"&&!!p.code)||(code==="no"&&!p.code))
+    &&(!review||p.review===review)
+    &&words.every(w=>hay.includes(w));
+}
+function render(){
+  tabs();
+  leafMenu();
+  const visible=PAPERS.filter(matches).sort((a,b)=>b.year-a.year||a.order-b.order);
+  byId("count").textContent="Showing "+visible.length+" of "+PAPERS.length+" entries";
+  byId("results").innerHTML=visible.length?visible.map(p=>{
+    const sub=allLeaves.find(l=>l.id===p.track);
+    const tags='<span class="tag">'+esc(p.groupLabel)+'</span>'+(sub?'<span class="tag secondary">'+esc(sub.name)+'</span>':"");
+    const checked=p.review==="source_checked"?'<span class="tag">Source checked</span>':"";
+    const commentary=p.idea?'<p class="evidence"><strong>Research idea:</strong> '+esc(p.idea)+'</p><p class="evidence"><strong>Potential WSP inspiration:</strong> '+esc(p.inspiration)+'</p>':
+      p.claim?'<p class="evidence"><strong>Source-reported result:</strong> '+esc(p.claim)+'</p>':"";
+    const title=p.label===p.title?p.title:p.label+": "+p.title;
+    return '<article class="item"><div class="top"><div class="label">'+esc(title)+'</div><div class="details">'+p.year+'</div></div><div class="tags">'+tags+checked+'</div>'+commentary+'<div class="links">'+link("Source",p.url)+(p.code?link("Code",p.code):"")+'</div></article>';
+  }).join(""):'<div class="empty">No matching entries. Clear a filter or choose another research track.</div>';
+  syncURL();
+}
+byId("statAll").textContent=PAPERS.length+" curated entries";
+byId("statDirect").textContent=PAPERS.filter(p=>p.group==="direct").length+" direct WSP";
+byId("statCentric").textContent=PAPERS.filter(p=>p.group==="weight-centric").length+" weight-centric";
+byId("statChecked").textContent=PAPERS.filter(p=>p.review==="source_checked").length+" source checked";
+byId("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-group]");if(!b)return;group=b.dataset.group;activeLeaf="";render();});
+byId("leaf").addEventListener("change",e=>{activeLeaf=e.target.value;render();});
+["q","year","code","review"].forEach(id=>byId(id).addEventListener("input",render));
+byId("clear").addEventListener("click",()=>{group="";activeLeaf="";["q","year","code","review"].forEach(id=>byId(id).value="");render();});
+window.addEventListener("popstate",()=>{loadState();render();});
+document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","SELECT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();byId("q").focus();}});
+loadState();render();
+</script>
+</body></html>
