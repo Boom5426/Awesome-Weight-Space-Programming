@@ -28,6 +28,7 @@
 | 📏 **评测权重理解与编辑** | **[IWIBench](https://arxiv.org/abs/2611.08647)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) · [Clinical Network Audits](https://arxiv.org/abs/2611.05341) |
 | 🧬 **生成权重与网络** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
 | ✅ **构建可验证的干预** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
+| 🧭 **探索权重相关研究** | **[权重相关研究](docs/weight-centric-research_zh.md)** · [English](docs/weight-centric-research.md) |
 | 🔗 **了解相邻范式** | **[Program-as-Weights](https://arxiv.org/abs/2607.02512)** · [Tracr](https://arxiv.org/abs/2301.05062) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) · [Text-to-LoRA](https://arxiv.org/abs/2506.06105) |
 
 <a id="latest-updates"></a>
@@ -35,6 +36,7 @@
 
 | 日期 | 更新内容 |
 | --- | --- |
+| `2026-11-13` | 新增独立的**权重相关研究**中英文阅读系列，首批 21 篇、六条研究线，覆盖权重几何、表征、生成、组合、结构化更新和能力保护。 |
 | `2026-11-11` | 新增中文 README。 |
 | `2026-11-11` | 查漏补缺：新增临床决策网络审计论文、Claude Fable 5.2 复现、证据范围批评、autoresearch 实验、已发布的编辑版 Qwen 检查点，以及此前缺失的基础工作（RASP、Tracr、Learning Transformer Programs、神经泛函、深度权重空间对齐、参数分解、基于拒绝方向的权重正交化）。 |
 | `2026-11-11` | 对 arXiv、alphaXiv、Hugging Face Papers 等预印本平台做多关键词检索：新增 IWIBench、Tree-Ising、Weight Oracles、SkillSmith、一份扩散模型编辑研究报告和一个独立复现资源。 |
@@ -98,6 +100,24 @@
 - **[WSP Autoresearch]** `[自主研究]` `[手写 Transformer]` Weight-Space Programming Autoresearch：智能体为算术、算法和 NLP 任务手写 Transformer 权重（**技术报告 2026**）[[报告](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[代码](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Sparks of Weight-Space Programming]** `[权重读取]` `[直接编辑]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights（**技术博客 2026**）[[博客](https://rikiyat.github.io/blog/weight-space-programming/)] [[日志](https://github.com/RikiyaT/lm_understand-logs)]
+
+<a id="weight-centric-inspirations"></a>
+## 🧭 权重相关研究：超越编辑的灵感来源
+
+未来的权重编程不必只从模型编辑论文中寻找灵感。新增的 **[权重相关研究](docs/weight-centric-research_zh.md)** 系列把权重作为可理解、可表征、可生成、可组合和可保护的对象。这些论文提供**方法启发与比较基线**，不等于直接 WSP。
+
+**首批 21 篇，分成六条研究线：**
+
+| 研究线 | 关键问题 |
+| --- | --- |
+| 权重几何与对称性 | 等价参数化的网络如何比较、对齐与迁移计算？ |
+| 权重读取与表征 | 不依赖原任务数据，能从权重中读出什么？ |
+| 权重生成与合成 | 能否直接生成可用的网络或参数子块？ |
+| 权重算术与合并 | 多次参数更新如何组合、为何相互干扰？ |
+| 结构化参数与机制定位 | 应该修改哪些权重方向、神经元或子空间？ |
+| 持续能力积累与保护 | 如何引入新能力而不破坏已有能力？ |
+
+[**进入中文阅读系列**](docs/weight-centric-research_zh.md) · [English](docs/weight-centric-research.md)
 
 <a id="related-research"></a>
 ## 🔗 相关研究
