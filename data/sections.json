@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "sections": [
+    {
+      "id": "geometry",
+      "anchor": "wcr-geometry",
+      "title_en": "Weight Geometry, Symmetry & Connectivity",
+      "title_zh": "权重几何、对称性与连通性",
+      "intro_en": "When are raw coordinates misleading, and when can two checkpoints be combined?",
+      "intro_zh": "什么时候直接比较参数会产生误导？不同检查点何时可以安全组合？"
+    },
+    {
+      "id": "reading",
+      "anchor": "wcr-reading",
+      "title_en": "Weights as Data: Reading & Representation",
+      "title_zh": "权重作为数据：读取与表征",
+      "intro_en": "Can model properties be inferred from parameters without running the model on the original task?",
+      "intro_zh": "不运行原任务，仅靠参数能读出模型的哪些性质？"
+    },
+    {
+      "id": "generation",
+      "anchor": "wcr-generation",
+      "title_en": "Weight Generation & Synthesis",
+      "title_zh": "权重生成与合成",
+      "intro_en": "Can networks be generated as objects rather than optimized afresh for every task?",
+      "intro_zh": "能否把网络作为可生成的对象，而不是每个任务都重新优化？"
+    },
+    {
+      "id": "composition",
+      "anchor": "wcr-composition",
+      "title_en": "Weight Arithmetic, Merging & Interference",
+      "title_zh": "权重算术、合并与干扰",
+      "intro_en": "How can changes be combined without destroying existing capabilities?",
+      "intro_zh": "多个参数变化如何组合，才能避免破坏已有能力？"
+    },
+    {
+      "id": "structure",
+      "anchor": "wcr-structure",
+      "title_en": "Structured Parameters, Sparsity & Mechanism Localization",
+      "title_zh": "结构化参数、稀疏性与机制定位",
+      "intro_en": "Which coordinates, directions, or subnetworks should a program modify?",
+      "intro_zh": "程序究竟该改哪些参数、方向或子网络？"
+    },
+    {
+      "id": "retention",
+      "anchor": "wcr-retention",
+      "title_en": "Continual Capability Accumulation & Preservation",
+      "title_zh": "持续能力积累与旧能力保护",
+      "intro_en": "Where can new abilities live, and what should remain unchanged after many updates?",
+      "intro_zh": "新能力应写到哪里？连续更新后哪些旧能力必须保持？"
+    }
+  ]
+}
