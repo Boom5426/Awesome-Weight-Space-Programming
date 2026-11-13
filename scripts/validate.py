@@ -62,8 +62,8 @@ def errors():
                         problems.append(key + ": missing " + field)
                 if link not in raw:
                     problems.append(key + ": missing companion source in " + lang)
-        en_label = re.match(r"^- \\*\\*\\[([^\\]]+)\\]", e.get("render_en", ""))
-        zh_label = re.match(r"^- \\*\\*\\[([^\\]]+)\\]", e.get("render_zh", ""))
+        en_label = re.match(r"^- [*][*][[]([^]]+)[]]", e.get("render_en", ""))
+        zh_label = re.match(r"^- [*][*][[]([^]]+)[]]", e.get("render_zh", ""))
         if not en_label or not zh_label or en_label.group(1) != zh_label.group(1):
             problems.append(key + ": bilingual display-label mismatch")
         if group == "direct":
