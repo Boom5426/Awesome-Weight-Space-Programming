@@ -115,7 +115,7 @@ assert.ok(map.get("mapTitle").textContent.includes("导航"));
 assert.equal((map.get("mobileLinks").innerHTML.match(/<a href=/g)||[]).length,20);
 assert.ok(map.get("mobileLinks").innerHTML.includes("lang=zh"));
 const scene=map.get("scene");
-const leaf=scene.children.find(e=>e.attributes.class==="node leaf"&&e.attributes["aria-label"]?.includes("几何"));
+const leaf=scene.children.find(e=>e.attributes.class?.startsWith("node leaf")&&e.attributes["aria-label"]?.includes("几何"));
 assert.ok(leaf,"a focusable Chinese geometry leaf must exist");
 drive({get:()=>leaf},"leaf","click");
 assert.ok(map.location.href.includes("branch=weight-centric"));
