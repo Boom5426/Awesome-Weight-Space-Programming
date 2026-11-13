@@ -10,6 +10,7 @@ on:
       - 'README_zh.md'
       - 'data/navigation.json'
       - 'scripts/build_site.py'
+      - 'tests/**'
       - 'docs/site.template.html'
       - 'docs/landscape.template.html'
       - 'index.html'
@@ -28,6 +29,7 @@ on:
       - 'README_zh.md'
       - 'data/navigation.json'
       - 'scripts/build_site.py'
+      - 'tests/**'
       - 'docs/site.template.html'
       - 'docs/landscape.template.html'
       - 'index.html'
@@ -57,3 +59,14 @@ jobs:
         run: python3 scripts/build_site.py --check
       - name: Run navigation/data tests
         run: python3 -m unittest discover -s tests -v
+      - name: Syntax-check generated browser scripts
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for source, output in (("index.html", "_catalog.js"), ("landscape.html", "_landscape.js")):
+              content = Path(source).read_text(encoding="utf-8")
+              script = content.split("<script>", 1)[1].split("</script>", 1)[0]
+              Path(output).write_text(script, encoding="utf-8")
+          PY
+          node --check _catalog.js
+          node --check _landscape.js
