@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "updates": [
+    {
+      "date": "2026-11-13",
+      "en": "Added a structured bilingual bibliography with validation and evidence fields, plus historical foundations and robot-policy weight programming.",
+      "zh": "引入结构化双语文献库、自动校验与证据字段，并补充早期权重编程基础和机器人策略编辑研究。"
+    },
+    {
+      "date": "2026-11-13",
+      "en": "Expanded **Weight-Centric Research** to **67 papers** across six tracks, with dedicated surveys and evaluation resources.",
+      "zh": "**权重相关研究**扩充至 **67 篇**，覆盖六条研究线，并补充综述和评估资源。"
+    },
+    {
+      "date": "2026-11-13",
+      "en": "Launched a separate bilingual **Weight-Centric Research** companion series.",
+      "zh": "上线独立的中英文 **Weight-Centric Research** 专题系列。"
+    },
+    {
+      "date": "2026-11-11",
+      "en": "Added a Simplified Chinese README.",
+      "zh": "新增中文 README。"
+    }
+  ]
+}
