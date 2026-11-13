@@ -100,7 +100,7 @@
 
 - **[Drag-and-Drop LLMs: Zero-Shot Prompt-to-Weights](https://arxiv.org/abs/2506.16406)**（2025）。**核心思路：**探索文本提示条件下的零样本参数生成。 **对未来权重编程的启发：**与将语言知识转换为持久参数变化的目标直接相关。
 
-- **[Scaling Up Parameter Generation: A Recurrent Diffusion Approach](https://arxiv.org/abs/2501.11587)**（NeurIPS 2025）。**核心思路：**以循环扩散和参数分块扩展权重生成规模。 **对未来权重编程的启发：**启发对大模型进行分块、结构化的编辑或修复。
+- **[Recurrent Diffusion for Large-Scale Parameter Generation](https://arxiv.org/abs/2501.11587)**（NeurIPS 2025）。**核心思路：**以循环扩散和参数分块扩展权重生成规模。 **对未来权重编程的启发：**启发对大模型进行分块、结构化的编辑或修复。
 
 - **[Text2Weight: Bridging Natural Language and Neural Network Weight Spaces](https://arxiv.org/abs/2508.13633)**（2025）。**核心思路：**根据自然语言任务描述生成任务相关权重。 **对未来权重编程的启发：**适合作为文本到权重程序的泛化对照。
 
@@ -110,7 +110,6 @@
 
 - **[LoRAGen: Structure-Aware Weight Space Learning for LoRA Generation](https://proceedings.iclr.cc/paper_files/paper/2026/hash/fc7c087b5e965075c8946b9ff57e3d64-Abstract-Conference.html)**（ICLR 2026）。**核心思路：**在条件化生成中处理 LoRA 非唯一分解与模块间分布差异。 **对未来权重编程的启发：**启发程序构造规范化更新，并考虑不同模块的结构差异。
 
-- **[Weight-Space Linear Recurrent Neural Networks](https://arxiv.org/abs/2506.01153)**（ICLR 2026）。**核心思路：**研究在权重空间中以循环结构建模参数。 **对未来权重编程的启发：**为逐块产生大型权重更新提供另一类结构先验。
 
 <a id="wcr-composition"></a>
 ## 权重算术、合并与干扰
@@ -180,6 +179,8 @@
 - **[C-LoRA: Continual Low-Rank Adaptation for Pre-trained Models](https://arxiv.org/abs/2502.17920)**（2025）。**核心思路：**通过路由与正交约束管理顺序低秩更新。 **对未来权重编程的启发：**启发跟踪多轮程序安装的子空间占用情况。
 
 - **[BECAME: Bayesian Continual Learning with Adaptive Model Merging](https://proceedings.mlr.press/v267/li25bk.html)**（ICML 2025）。**核心思路：**以贝叶斯持续学习推导自适应合并系数。 **对未来权重编程的启发：**为连续更新中的可塑性和保持权衡提供原则性对照。
+
+- **[Weight-Space Linear Recurrent Neural Networks](https://arxiv.org/abs/2506.01153)**（ICLR 2026）。**核心思路：**WARP 将辅助网络的权重和偏置作为循环隐藏状态，并利用输入差异进行免梯度在线更新。 **对未来权重编程的启发：**比较输入驱动的临时参数状态更新与持久能力安装，区分在线适应与真正的能力保留。
 
 ## 综述、文献地图与评估资源
 
