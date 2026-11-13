@@ -3,6 +3,11 @@
   "updates": [
     {
       "date": "2026-11-13",
+      "en": "Improved the interactive map and catalog with Chinese search, clearer navigation, mobile track browsing and paginated results.",
+      "zh": "优化交互式研究图谱与检索页面：支持中文检索、准确的分支导航、移动端目录和分页浏览。"
+    },
+    {
+      "date": "2026-11-13",
       "en": "Added a structured bilingual bibliography with validation and evidence fields, plus historical foundations and robot-policy weight programming.",
       "zh": "引入结构化双语文献库、自动校验与证据字段，并补充早期权重编程基础和机器人策略编辑研究。"
     },
