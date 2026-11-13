@@ -70,7 +70,7 @@ function groupKey(p){return p.group==="related"?"related":p.group;}
 function link(label,url){return url&&/^https:\/\//.test(url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">'+esc(label)+' ↗</a>':"";}
 function loadState(){
   const url=new URLSearchParams(location.search);
-  group=url.get("group")||({"direct":"direct","weight-centric":"weight-centric","foundations":"related","resources":"reports"}[url.get("branch")]||"");
+  group=url.get("group")||({"direct":"direct","weight-centric":"weight-centric","foundations":"related"}[url.get("branch")]||"");
   activeLeaf=url.get("leaf")&&url.get("branch")?(url.get("branch")+"."+url.get("leaf")):(url.get("track")||"");
   byId("q").value=url.get("q")||"";
   byId("year").value=url.get("year")||"";
@@ -90,7 +90,7 @@ function tabs(){
   byId("tabs").innerHTML=groups.map(([id,text])=>'<button type="button" class="tab'+(group===id?" active":"")+'" data-group="'+esc(id)+'" aria-pressed="'+(group===id)+'">'+esc(text)+'</button>').join("");
 }
 function leafMenu(){
-  const valid=allLeaves.filter(l=>!group||l.branch===group||(group==="related"&&l.branch==="foundations")||(group==="reports"&&l.branch==="resources")||(group==="resources"&&l.branch==="resources"));
+  const valid=allLeaves.filter(l=>!group||(group==="direct"&&l.branch==="direct")||(group==="weight-centric"&&l.branch==="weight-centric")||(group==="related"&&l.branch==="foundations")||(group==="reports"&&l.id==="resources.reports")||(group==="resources"&&l.id==="resources.tools"));
   byId("leaf").innerHTML='<option value="">All research tracks</option>'+valid.map(l=>'<option value="'+esc(l.id)+'">'+esc(l.name)+'</option>').join("");
   if(!valid.some(l=>l.id===activeLeaf))activeLeaf="";
   byId("leaf").value=activeLeaf;
