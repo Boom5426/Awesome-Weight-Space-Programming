@@ -8,6 +8,14 @@ on:
       - 'scripts/validate.py'
       - 'README.md'
       - 'README_zh.md'
+      - 'data/navigation.json'
+      - 'scripts/build_site.py'
+      - 'docs/site.template.html'
+      - 'docs/landscape.template.html'
+      - 'index.html'
+      - 'landscape.html'
+      - 'docs/index.html'
+      - 'docs/landscape.html'
       - 'docs/weight-centric-research*.md'
       - 'docs/wsp-evidence.md'
       - '.github/workflows/validate-bibliography.yml'
@@ -18,6 +26,14 @@ on:
       - 'scripts/validate.py'
       - 'README.md'
       - 'README_zh.md'
+      - 'data/navigation.json'
+      - 'scripts/build_site.py'
+      - 'docs/site.template.html'
+      - 'docs/landscape.template.html'
+      - 'index.html'
+      - 'landscape.html'
+      - 'docs/index.html'
+      - 'docs/landscape.html'
       - 'docs/weight-centric-research*.md'
       - 'docs/wsp-evidence.md'
       - '.github/workflows/validate-bibliography.yml'
@@ -37,3 +53,7 @@ jobs:
         run: python3 scripts/validate.py
       - name: Check generated Markdown and latest-three updates
         run: python3 scripts/build.py --check
+      - name: Validate generated research catalog and map
+        run: python3 scripts/build_site.py --check
+      - name: Run navigation/data tests
+        run: python3 -m unittest discover -s tests -v
