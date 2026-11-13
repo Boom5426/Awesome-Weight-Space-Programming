@@ -212,6 +212,7 @@ Research on modifying facts or behaviors, reusing parameter differences, and rea
 
 - **Direct WSP:** weight reading, construction, editing, capability installation, program reuse, evaluation, and verification through reasoning agents or executable programs.
 - **Related methods:** neural-program compilation, learned weight generators, model editing, weight merging, and weight-space representation learning when they clarify an important mechanism or comparison.
+- **Weight-centric inspirations:** broader work on parameter geometry, representation, generation, structured manipulation, and continual retention when it offers a concrete, testable idea for future weight programming.
 - **Usually out of scope:** generic PEFT and gradient-only adaptation without a clear connection to programmable weights.
 
 <a id="inclusion-rules"></a>
