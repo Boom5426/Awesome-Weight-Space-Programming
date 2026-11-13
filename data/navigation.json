@@ -37,7 +37,8 @@
             "wsp-for-medical-imaging",
             "wsp-for-quantum-circuits",
             "wsp-for-mathematical-optimization",
-            "zero-shot-game-wsp"
+            "zero-shot-game-wsp",
+            "wsp-autoresearch"
           ]
         },
         {

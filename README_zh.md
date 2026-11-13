@@ -36,6 +36,8 @@
 
 刚接触 WSP？先选一个研究问题。**加粗条目**是建议的入门起点，不代表影响力排名；发表状态请见下方完整列表。
 
+准备设计实验？参阅[评估研究指南（英文，附中文摘要）](docs/wsp-research-opportunities.md)，了解程序迁移、组合、能力保持和公平基线的研究问题及一手依据。
+
 | 目标 | 推荐入口 |
 | --- | --- |
 | 🧠 **理解直接 WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
@@ -52,9 +54,9 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
+| `2026-11-13` | 核对五篇 WSP 论文的证据，将 Autoresearch 更新为 iWSP 预印本，补充 EditLens 和[评估研究指南](docs/wsp-research-opportunities.md)。 |
 | `2026-11-13` | 优化交互式研究图谱与检索页面：支持中文检索、准确的分支导航、移动端目录和分页浏览。 |
 | `2026-11-13` | 引入结构化双语文献库、自动校验与证据字段，并补充早期权重编程基础和机器人策略编辑研究。 |
-| `2026-11-13` | **权重相关研究**扩充至 **67 篇**，覆盖六条研究线，并补充综述和评估资源。 |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -63,14 +65,16 @@
 <!-- AUTO:START direct -->
 直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**19 篇论文与手稿** · [2026（19）](#2026)
+**20 篇论文与手稿** · [2026（20）](#2026)
 
 **证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 19 篇
+### 🗓️ 2026 — 20 篇
 
 - **[WeightCode]** `[能力植入]` `[程序复用]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming（**手稿 2026**）[[论文](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
+
+- **[iWSP]** `[可解释构造]` `[神经科学]` Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models（**alphaXiv 预印本 2026**）[[论文](https://www.alphaxiv.org/abs/2611.interpretable-weight-space-programming)] [[代码](https://github.com/csinva/weight-space-programming-autoresearch)] [[报告](https://csinva.io/weight-space-programming-autoresearch/analyze)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Mixed Signals]** `[生物信号]` `[模型构建]` Mixed Signals: Weight-Space Programming for EEG and ECG（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13758)] [[项目](https://daravaram.github.io/)]
 
@@ -113,6 +117,8 @@
 ## 📝 报告与博客
 
 <!-- AUTO:START reports -->
+- **[EditLens]** `[机制审计]` `[复现]` What Did Astra's Edit Actually Do?（**技术博客 2026**）[[博客](https://xxlya.github.io/editlens/)] [[代码](https://github.com/assassin808/edit-lens)] — 检验循环修复的机制解释，并区分权重交换与激活修补。
+
 - **[Fable WSP Replication]** `[复现]` `[跨模型对比]` Claude Fable 5.2 can do "weight-space-programming" about as well as GPT-6 Astra（**LessWrong 帖子 2026**）[[帖子](https://www.lesswrong.com/posts/wg3K6xFFTdM6RmRgn/claude-fable-5-2-can-do-weight-space-programming-about-as)] [[数据](https://huggingface.co/datasets/shawnghu/fable-weight-space-programming)]
 
 - **[Gradient-Free Diffusion Weight Editing]** `[LLM 编辑]` `[概念擦除]` An LLM Erases a Concept by Editing Diffusion Weights Directly, Without Gradients（**alphaXiv 研究报告 2026**）[[报告](https://www.alphaxiv.org/abs/2611.gradient-free-diffusion-weight-editing)] [[博客](https://huggingface.co/blog/javadtaghia/an-llm-erases-a-concept-by-editing-diffusion-weigh)]
@@ -120,8 +126,6 @@
 - **[Sycophancy Repair by Weight Editing]** `[直接编辑]` `[迎合行为]` `[预注册]` Repairing sycophancy in Qwen2.5-0.5B by editing its weights, with Claude Opus 5.5 as the editor and a blind test split（**技术博客 2026**）[[博客](https://say43.github.io/2026/11/05/repairing-sycophancy.html)] [[代码](https://github.com/Say43/Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/Say43/Weight-Space-Programming.svg?logo=github&label=Stars)
 
 - **[Evidence-Scope Critique]** `[批评]` `[证据范围]` The 'Astra can read and write weights to improve Qwen' post is misleading（**技术博客 2026**）[[博客](https://honnibal.dev/blog/astra-read-write-misleading)]
-
-- **[WSP Autoresearch]** `[自主研究]` `[手写 Transformer]` Weight-Space Programming Autoresearch：智能体为算术、算法和 NLP 任务手写 Transformer 权重（**技术报告 2026**）[[报告](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[代码](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Sparks of Weight-Space Programming]** `[权重读取]` `[直接编辑]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights（**技术博客 2026**）[[博客](https://rikiyat.github.io/blog/weight-space-programming/)] [[日志](https://github.com/RikiyaT/lm_understand-logs)]
 
