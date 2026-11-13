@@ -70,3 +70,5 @@ jobs:
           PY
           node --check _catalog.js
           node --check _landscape.js
+      - name: Test browser navigation and filters (no dependencies)
+        run: node tests/test_site_ui.cjs
