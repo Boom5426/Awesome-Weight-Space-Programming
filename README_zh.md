@@ -17,8 +17,8 @@
 
 
 <p align="center">
-  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/"><img src="https://img.shields.io/badge/Search_%26_Filter-Browse_Catalog-0B6E99?style=for-the-badge" alt="Search and filter Weight-Space Programming research" /></a>
-  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/landscape.html"><img src="https://img.shields.io/badge/Research_Landscape-Interactive_Map-24B6A6?style=for-the-badge" alt="Explore the interactive weight-space research map" /></a>
+  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/?lang=zh"><img src="https://img.shields.io/badge/Search_%26_Filter-Browse_Catalog-0B6E99?style=for-the-badge" alt="Search and filter Weight-Space Programming research" /></a>
+  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/landscape.html?lang=zh"><img src="https://img.shields.io/badge/Research_Landscape-Interactive_Map-24B6A6?style=for-the-badge" alt="Explore the interactive weight-space research map" /></a>
 </p>
 
 <p align="center">
