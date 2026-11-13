@@ -37,10 +37,7 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 | `2026-11-13` | Expanded **Weight-Centric Research** from 21 to **67 papers** with 46 additional verified references, plus surveys and evaluation resources; preserves the six-track taxonomy and distinguishes inspirations from direct WSP. |
 | `2026-11-13` | Launched **Weight-Centric Research**, a separate bilingual reading series with 67 curated papers across six tracks, connecting weight geometry, representation, generation, composition, structured updates, and capability preservation to future WSP research. |
 | `2026-11-11` | Added a Simplified Chinese README ([README_zh.md](README_zh.md)). |
-| `2026-11-11` | Gap-filling pass: added the clinical-network auditing paper, a Claude Fable 5.2 replication, an evidence-scope critique, autoresearch experiments, the released edited Qwen checkpoint, and missing foundations (RASP, Tracr, Learning Transformer Programs, neural functionals, deep weight-space alignment, parameter decomposition, refusal-direction weight orthogonalization). |
-| `2026-11-11` | Multi-keyword sweep of arXiv, alphaXiv, Hugging Face Papers and other preprint platforms: added IWIBench, Tree-Ising, Weight Oracles, SkillSmith, a diffusion-editing research report, and an independent replication resource. |
-| `2026-11-11` | Adopted research-question reading tracks, a chronological direct-WSP catalog, and separate related-method sections. |
-| `2026-11-11` | Initial curated collection of 33 research and technical resources, including new November preprints. |
+
 
 <a id="research-papers"></a>
 ## 🔬 Research Papers
