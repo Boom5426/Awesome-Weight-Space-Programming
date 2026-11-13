@@ -24,6 +24,13 @@ GROUP_LABELS = {
     "reports": "Reports & Blogs",
     "resources": "Tools & Resources",
 }
+GROUP_LABELS_ZH = {
+    "direct": "直接 WSP",
+    "weight-centric": "权重相关研究",
+    "related": "相关基础研究",
+    "reports": "报告与博客",
+    "resources": "工具与资源",
+}
 
 
 def read_json(path: str) -> dict:
@@ -98,9 +105,14 @@ def compact_catalog(items: list[dict], allocation: dict[str, str]) -> list[dict]
             "id": e["id"], "label": e["title"], "title": full_title(e),
             "url": e["url"], "code": code_link(e), "year": e["year"],
             "group": e["group"], "groupLabel": GROUP_LABELS[e["group"]],
+            "groupLabelZh": GROUP_LABELS_ZH[e["group"]],
             "section": e["section"], "track": allocation[e["id"]],
             "idea": e.get("idea_en", ""),
+            "ideaZh": e.get("idea_zh", ""),
             "inspiration": e.get("inspiration_en", ""),
+            "inspirationZh": e.get("inspiration_zh", ""),
+            "venue": e.get("venue_en") or ev.get("level") or "",
+            "search": e["render_en"] + " " + e["render_zh"],
             "claim": ev.get("claim") if checked else None,
             "review": ev.get("review"),
             "order": index,

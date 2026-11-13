@@ -17,8 +17,8 @@
 
 
 <p align="center">
-  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/"><img src="https://img.shields.io/badge/Search_%26_Filter-Browse_Catalog-0B6E99?style=for-the-badge" alt="Search and filter Weight-Space Programming research" /></a>
-  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/landscape.html"><img src="https://img.shields.io/badge/Research_Landscape-Interactive_Map-24B6A6?style=for-the-badge" alt="Explore the interactive weight-space research map" /></a>
+  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/?lang=zh"><img src="https://img.shields.io/badge/Search_%26_Filter-Browse_Catalog-0B6E99?style=for-the-badge" alt="Search and filter Weight-Space Programming research" /></a>
+  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/landscape.html?lang=zh"><img src="https://img.shields.io/badge/Research_Landscape-Interactive_Map-24B6A6?style=for-the-badge" alt="Explore the interactive weight-space research map" /></a>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@
 | 目标 | 推荐入口 |
 | --- | --- |
 | 🧠 **理解直接 WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
-| 🛠️ **植入并保持新能力** | **[WeightCode](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
+| 🛠️ **安装能力与反馈适应** | **[WeightCode](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
 | 📏 **评测权重理解与编辑** | **[IWIBench](https://arxiv.org/abs/2611.08647)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) · [Clinical Network Audits](https://arxiv.org/abs/2611.05341) |
 | 🧬 **生成权重与网络** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
 | ✅ **构建可验证的干预** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
@@ -52,9 +52,9 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
+| `2026-11-13` | 优化交互式研究图谱与检索页面：支持中文检索、准确的分支导航、移动端目录和分页浏览。 |
 | `2026-11-13` | 引入结构化双语文献库、自动校验与证据字段，并补充早期权重编程基础和机器人策略编辑研究。 |
 | `2026-11-13` | **权重相关研究**扩充至 **67 篇**，覆盖六条研究线，并补充综述和评估资源。 |
-| `2026-11-13` | 上线独立的中英文 **Weight-Centric Research** 专题系列。 |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>

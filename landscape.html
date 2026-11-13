@@ -31,31 +31,79 @@ svg{display:block;width:100%;height:100%;touch-action:none}
 .node:hover rect{stroke:#0b6e99;stroke-width:2.6}
 .node:focus-visible rect{stroke:#0b6e99;stroke-width:3}
 @media(max-width:630px){header{padding:11px 12px;align-items:flex-start;flex-direction:column;gap:6px}h1{font-size:18px}.toolbar{top:9px;right:9px}.hint{font-size:11px}}
+nav button{font:inherit;font-size:13px;border:1px solid #cbd9df;border-radius:7px;padding:5px 9px;background:#f6fcfd;color:#0b6e99;cursor:pointer}
+nav button:hover,nav button:focus-visible{outline:2px solid #91cbd8}
+.mobile-index{display:none}
+.mobile-index details{background:#fffffff5;border:1px solid #c8d8e2;border-radius:9px;box-shadow:0 6px 15px #0a25301a}
+.mobile-index summary{cursor:pointer;padding:10px 12px;font-size:13px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mobile-index #mobileLinks{max-height:40vh;overflow-y:auto;padding:4px 12px 10px}
+.mobile-index .track-heading{font-weight:700;font-size:12px;color:#334155;margin:10px 0 5px}
+.mobile-index a{display:block;padding:6px 2px;font-size:12px;text-decoration:none;border-bottom:1px solid #edf2f5}
+.mobile-index a:hover{text-decoration:underline}
+@media(max-width:700px){.mobile-index{position:absolute;display:block;left:9px;top:9px;z-index:4;width:calc(100% - 115px);max-width:345px}
+.hint{font-size:11px;padding:7px 9px;line-height:1.4}header{gap:9px}}
 </style>
 </head>
 <body>
 <div class="shell">
 <header>
-  <div><h1>Weight-Space Programming Research Landscape</h1><p>Explore 145 curated entries · four collections · branch counts do not overlap</p></div>
-  <nav><a href="./">Search catalog</a> · <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming">GitHub list</a></nav>
+  <div><h1 id="mapTitle">Weight-Space Programming Research Landscape</h1><p id="mapIntro">Explore 145 curated entries · four collections · branch counts do not overlap</p></div>
+  <nav><a id="catalogLink" href="./">Search catalog</a> · <a id="repoLink" href="https://github.com/Boom5426/Awesome-Weight-Space-Programming">GitHub list</a> · <button id="langToggle" type="button">中文</button></nav>
 </header>
 <div class="stage">
+  <div class="mobile-index"><details id="mobileTracks"><summary id="mobileSummary">Browse 20 research tracks</summary><div id="mobileLinks"></div></details></div>
   <div class="toolbar"><button type="button" id="out" aria-label="Zoom out">−</button><button type="button" id="in" aria-label="Zoom in">+</button><button type="button" id="fit">Fit</button></div>
-  <div class="hint">Scroll to zoom · drag to pan · click a branch to collapse · click a leaf to filter papers</div>
-  <svg id="map" viewBox="0 0 1800 1000" role="img" aria-label="Interactive weight-space research map"><g id="scene"></g></svg>
+  <div class="hint" id="mapHint">Scroll to zoom · drag to pan · click a branch to collapse · click a leaf to filter papers</div>
+  <svg id="map" viewBox="0 0 1800 1000" role="group" aria-label="Interactive weight-space research map"><g id="scene"></g></svg>
 </div></div>
 <script>
-const MAP={"total":145,"branches":[{"id":"direct","name":"Direct WSP","name_zh":"直接权重编程","side":"left","count":19,"leaves":[{"id":"install","name":"Capability installation","name_zh":"能力安装与积累","count":2,"examples":["WeightCode","WeightLoop"]},{"id":"read","name":"Weight reading & audits","name_zh":"权重读取与审计","count":3,"examples":["Can an LLM Actually Reason about Weights?","Orbit Audits","Clinical Network Audits"]},{"id":"synthesize","name":"Network construction","name_zh":"网络与权重构造","count":6,"examples":["Mixed Signals","Physics2Weight","WSP for Medical Imaging","WSP for Quantum Circuits"]},{"id":"repair","name":"Repair & targeted editing","name_zh":"修复与定向编辑","count":2,"examples":["Can LLMs Debug Robots by Editing Their Weights?","Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading"]},{"id":"evaluate","name":"Benchmarking editors","name_zh":"编辑器评估","count":2,"examples":["WSP-Scope","IWIBench"]},{"id":"verify","name":"Verification & control","name_zh":"验证与控制","count":3,"examples":["NCP","W-ISA","WSP for Policies"]},{"id":"explore","name":"Conjectures & proposals","name_zh":"研究猜想","count":1,"examples":["Diffusion WSP Conjectures"]}]},{"id":"weight-centric","name":"Weight-Centric Research","name_zh":"权重相关研究","side":"right","count":67,"leaves":[{"id":"geometry","name":"Geometry & symmetry","name_zh":"几何与对称性","count":11,"examples":["Linear Mode Connectivity and the Lottery Ticket Hypothesis","The Role of Permutation Invariance in Linear Mode Connectivity of Neural Networks","Interpreting the Weight Space of Customized Diffusion Models","Weight-space symmetry in deep networks gives rise to permutation saddles, connected by equal-loss valleys across the loss landscape"]},{"id":"reading","name":"Weight representations","name_zh":"权重表征","count":15,"examples":["Predicting Neural Network Accuracy from Weights","Self-Supervised Representation Learning on Neural Network Weights for Model Characteristic Prediction","Hyper-Representations as Generative Models: Sampling Unseen Neural Network Weights","Classifying the classifier: dissecting the weight space of neural networks"]},{"id":"generation","name":"Weight generation","name_zh":"权重生成","count":13,"examples":["HyperDiffusion: Generating Implicit Neural Fields with Weight-Space Diffusion","Neural Network Diffusion","NNiT: Width-Agnostic Neural Network Generation with Structurally Aligned Weight Spaces","HyperGAN: A Generative Model for Diverse, Performant Neural Networks"]},{"id":"composition","name":"Merging & composition","name_zh":"合并与组合","count":11,"examples":["Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time","TIES-Merging: Resolving Interference When Merging Models","Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch","AdaMerging: Adaptive Model Merging for Multi-Task Learning"]},{"id":"structure","name":"Localization & sparsity","name_zh":"定位与稀疏","count":7,"examples":["The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks","Knowledge Neurons in Pretrained Transformers","DoRA: Weight-Decomposed Low-Rank Adaptation","PiSSA: Principal Singular Values and Singular Vectors Adaptation of Large Language Models"]},{"id":"retention","name":"Continual retention","name_zh":"持续能力保持","count":10,"examples":["Overcoming catastrophic forgetting in neural networks","Progressive Neural Networks","PackNet: Adding Multiple Tasks to a Single Network by Iterative Pruning","Piggyback: Adapting a Single Network to Multiple Tasks by Learning to Mask Weights"]}]},{"id":"foundations","name":"Related Foundations","name_zh":"相关基础研究","side":"left","count":44,"leaves":[{"id":"compilation","name":"Neural compilation","name_zh":"神经编译","count":13,"examples":["Adapters as Data","SkillSmith","Program-as-Weights","Compile by Training"]},{"id":"editing","name":"Model editing & geometry","name_zh":"模型编辑与几何","count":19,"examples":["Tree-Ising","A Survey of Weight Space Learning","TensorMutation","Weight Oracles"]},{"id":"fast","name":"Fast & self-modifying weights","name_zh":"快速与自修改权重","count":6,"examples":["Learning to control fast-weight memories: An alternative to dynamic recurrent networks","A 'self-referential' weight matrix","Using Fast Weights to Attend to the Recent Past","Linear Transformers Are Secretly Fast Weight Programmers"]},{"id":"historical","name":"Historic program-to-weights","name_zh":"早期程序到权重","count":3,"examples":["Neural networks and physical systems with emergent collective computational abilities","Knowledge-based artificial neural networks","A neural compiler"]},{"id":"cross-domain","name":"Cross-domain ideas","name_zh":"跨领域方法","count":3,"examples":["Learning to Interpret Weight Differences in Language Models","Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts","Robotic Policy Adaptation via Weight-Space Meta-Learning"]}]},{"id":"resources","name":"Reports & Resources","name_zh":"报告与资源","side":"right","count":15,"leaves":[{"id":"reports","name":"Technical reports & blogs","name_zh":"技术报告与博客","count":9,"examples":["Fable WSP Replication","Gradient-Free Diffusion Weight Editing","Sycophancy Repair by Weight Editing","Evidence-Scope Critique"]},{"id":"tools","name":"Tools & reproduction","name_zh":"工具与复现","count":6,"examples":["WeightCode","Weights-Only Replication","MIT WSP Logs","Edited Qwen3.5-0.8B"]}]}]};
+const MAP={"total":145,"branches":[{"id":"direct","name":"Direct WSP","name_zh":"直接权重编程","side":"left","count":19,"leaves":[{"id":"install","name":"Capability installation & adaptation","name_zh":"能力安装与反馈适应","count":2,"examples":["WeightCode","WeightLoop"]},{"id":"read","name":"Weight reading & audits","name_zh":"权重读取与审计","count":3,"examples":["Can an LLM Actually Reason about Weights?","Orbit Audits","Clinical Network Audits"]},{"id":"synthesize","name":"Network construction","name_zh":"网络与权重构造","count":6,"examples":["Mixed Signals","Physics2Weight","WSP for Medical Imaging","WSP for Quantum Circuits"]},{"id":"repair","name":"Repair & targeted editing","name_zh":"修复与定向编辑","count":2,"examples":["Can LLMs Debug Robots by Editing Their Weights?","Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading"]},{"id":"evaluate","name":"Benchmarking editors","name_zh":"编辑器评估","count":2,"examples":["WSP-Scope","IWIBench"]},{"id":"verify","name":"Verification & control","name_zh":"验证与控制","count":3,"examples":["NCP","W-ISA","WSP for Policies"]},{"id":"explore","name":"Conjectures & proposals","name_zh":"研究猜想","count":1,"examples":["Diffusion WSP Conjectures"]}]},{"id":"weight-centric","name":"Weight-Centric Research","name_zh":"权重相关研究","side":"right","count":67,"leaves":[{"id":"geometry","name":"Geometry & symmetry","name_zh":"几何与对称性","count":11,"examples":["Linear Mode Connectivity and the Lottery Ticket Hypothesis","The Role of Permutation Invariance in Linear Mode Connectivity of Neural Networks","Interpreting the Weight Space of Customized Diffusion Models","Weight-space symmetry in deep networks gives rise to permutation saddles, connected by equal-loss valleys across the loss landscape"]},{"id":"reading","name":"Weight representations","name_zh":"权重表征","count":15,"examples":["Predicting Neural Network Accuracy from Weights","Self-Supervised Representation Learning on Neural Network Weights for Model Characteristic Prediction","Hyper-Representations as Generative Models: Sampling Unseen Neural Network Weights","Classifying the classifier: dissecting the weight space of neural networks"]},{"id":"generation","name":"Weight generation","name_zh":"权重生成","count":13,"examples":["HyperDiffusion: Generating Implicit Neural Fields with Weight-Space Diffusion","Neural Network Diffusion","NNiT: Width-Agnostic Neural Network Generation with Structurally Aligned Weight Spaces","HyperGAN: A Generative Model for Diverse, Performant Neural Networks"]},{"id":"composition","name":"Merging & composition","name_zh":"合并与组合","count":11,"examples":["Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time","TIES-Merging: Resolving Interference When Merging Models","Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch","AdaMerging: Adaptive Model Merging for Multi-Task Learning"]},{"id":"structure","name":"Localization & sparsity","name_zh":"定位与稀疏","count":7,"examples":["The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks","Knowledge Neurons in Pretrained Transformers","DoRA: Weight-Decomposed Low-Rank Adaptation","PiSSA: Principal Singular Values and Singular Vectors Adaptation of Large Language Models"]},{"id":"retention","name":"Continual retention","name_zh":"持续能力保持","count":10,"examples":["Overcoming catastrophic forgetting in neural networks","Progressive Neural Networks","PackNet: Adding Multiple Tasks to a Single Network by Iterative Pruning","Piggyback: Adapting a Single Network to Multiple Tasks by Learning to Mask Weights"]}]},{"id":"foundations","name":"Related Foundations","name_zh":"相关基础研究","side":"left","count":44,"leaves":[{"id":"compilation","name":"Neural compilation","name_zh":"神经编译","count":13,"examples":["Adapters as Data","SkillSmith","Program-as-Weights","Compile by Training"]},{"id":"editing","name":"Model editing & geometry","name_zh":"模型编辑与几何","count":19,"examples":["Tree-Ising","A Survey of Weight Space Learning","TensorMutation","Weight Oracles"]},{"id":"fast","name":"Fast & self-modifying weights","name_zh":"快速与自修改权重","count":6,"examples":["Learning to control fast-weight memories: An alternative to dynamic recurrent networks","A 'self-referential' weight matrix","Using Fast Weights to Attend to the Recent Past","Linear Transformers Are Secretly Fast Weight Programmers"]},{"id":"historical","name":"Historic program-to-weights","name_zh":"早期程序到权重","count":3,"examples":["Neural networks and physical systems with emergent collective computational abilities","Knowledge-based artificial neural networks","A neural compiler"]},{"id":"cross-domain","name":"Cross-domain ideas","name_zh":"跨领域方法","count":3,"examples":["Learning to Interpret Weight Differences in Language Models","Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts","Robotic Policy Adaptation via Weight-Space Meta-Learning"]}]},{"id":"resources","name":"Reports & Resources","name_zh":"报告与资源","side":"right","count":15,"leaves":[{"id":"reports","name":"Technical reports & blogs","name_zh":"技术报告与博客","count":9,"examples":["Fable WSP Replication","Gradient-Free Diffusion Weight Editing","Sycophancy Repair by Weight Editing","Evidence-Scope Critique"]},{"id":"tools","name":"Tools & reproduction","name_zh":"工具与复现","count":6,"examples":["WeightCode","Weights-Only Replication","MIT WSP Logs","Edited Qwen3.5-0.8B"]}]}]};
 const svg=document.getElementById("map"),scene=document.getElementById("scene"),NS="http://www.w3.org/2000/svg";
-const collapsed=new Set();
-const W=1800,H=1000;
-let tr={x:W/2,y:H/2,s:1},drag=null;
-function el(tag,attrs){const e=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>e.setAttribute(k,v));return e;}
-function edge(x1,y1,x2,y2){
-  const middle=(x1+x2)/2;
-  scene.appendChild(el("path",{class:"edge",d:"M "+x1+" "+y1+" C "+middle+" "+y1+" "+middle+" "+y2+" "+x2+" "+y2}));
+const collapsed=new Set(),W=1800,H=1000;
+let tr={x:W/2,y:H/2,s:1},drag=null,lang=new URLSearchParams(location.search).get("lang")==="zh"?"zh":"en";
+const T={
+en:{title:"Weight-Space Programming Research Landscape",description:"Explore "+MAP.total+" curated entries · four collections · each entry belongs to one branch",catalog:"Search catalog",repo:"GitHub list",hint:"Scroll to zoom · drag to pan · click a branch to collapse · click a leaf to filter papers",summary:"Browse "+MAP.branches.reduce((a,b)=>a+b.leaves.length,0)+" research tracks",entries:" entries",zoom:"Zoom in and pan to inspect smaller labels"},
+zh:{title:"权重空间编程研究导航图",description:"探索 "+MAP.total+" 条精选资源 · 四个研究集合 · 每条文献只属于一个分支",catalog:"检索文献",repo:"GitHub 仓库",hint:"滚轮缩放 · 拖动画布 · 点击分支折叠 · 点击子方向筛选文献。手机上可使用顶部目录。",summary:"浏览 "+MAP.branches.reduce((a,b)=>a+b.leaves.length,0)+" 个研究子方向",entries:" 条",zoom:"缩放与拖动以查看标签"}
+};
+const trText=()=>T[lang];
+function urlFor(branch,leaf){
+  const q=new URLSearchParams();
+  if(lang==="zh")q.set("lang","zh");
+  if(branch)q.set("branch",branch);
+  if(leaf)q.set("leaf",leaf);
+  return "./"+(q.toString()?"?"+q.toString():"");
 }
-function addNode({x,y,w,h,label,detail,kind,side="",hint="",action}){
+function languageUI(){
+  const t=trText();document.documentElement.lang=lang;
+  document.getElementById("mapTitle").textContent=t.title;
+  document.getElementById("mapIntro").textContent=t.description;
+  document.getElementById("catalogLink").textContent=t.catalog;
+  document.getElementById("catalogLink").href=urlFor();
+  document.getElementById("repoLink").textContent=t.repo;
+  document.getElementById("langToggle").textContent=lang==="en"?"中文":"English";
+  document.getElementById("mapHint").textContent=t.hint;
+  document.getElementById("mobileSummary").textContent=t.summary;
+  document.getElementById("map").setAttribute("aria-label",t.title);
+  let blocks=[];
+  for(const b of MAP.branches){
+    blocks.push('<div class="track-heading">'+escapeHTML(lang==="zh"?b.name_zh:b.name)+" ("+b.count+")</div>");
+    for(const leaf of b.leaves){
+      blocks.push('<a href="'+escapeHTML(urlFor(b.id,leaf.id))+'">'+escapeHTML(lang==="zh"?leaf.name_zh:leaf.name)+" ("+leaf.count+")</a>");
+    }
+  }
+  document.getElementById("mobileLinks").innerHTML=blocks.join("");
+}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function el(tag,attrs){
+  const e=document.createElementNS(NS,tag);
+  for(const [key,value] of Object.entries(attrs||{}))e.setAttribute(key,value);
+  return e;
+}
+function edge(x1,y1,x2,y2){
+  const mid=(x1+x2)/2;
+  scene.appendChild(el("path",{class:"edge",d:"M "+x1+" "+y1+" C "+mid+" "+y1+" "+mid+" "+y2+" "+x2+" "+y2}));
+}
+function node({x,y,w,h,label,detail,kind,side="",hint="",action}){
   const g=el("g",{class:"node "+kind+" "+side,transform:"translate("+(x-w/2)+","+(y-h/2)+")",tabindex:"0",role:"button","aria-label":label+"; "+detail});
   g.appendChild(el("rect",{width:w,height:h,rx:12}));
   let text=el("text",{class:"label",x:14,y:h/2-3});text.textContent=label;g.appendChild(text);
@@ -65,54 +113,59 @@ function addNode({x,y,w,h,label,detail,kind,side="",hint="",action}){
   g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();action();}});
   scene.appendChild(g);
 }
-function branchLayout(items){
+function layout(items){
   const gap=65;
   const heights=items.map(b=>collapsed.has(b.id)?120:Math.max(155,76+(b.leaves.length-1)*70));
   const total=heights.reduce((a,b)=>a+b,0)+Math.max(0,items.length-1)*gap;
   let cursor=-total/2;
-  return items.map((b,i)=>{const center=cursor+heights[i]/2;cursor+=heights[i]+gap;return {b,y:center};});
+  return items.map((b,i)=>{const y=cursor+heights[i]/2;cursor+=heights[i]+gap;return {b,y};});
 }
-function transform(){scene.setAttribute("transform","translate("+tr.x+" "+tr.y+") scale("+tr.s+")");}
+function apply(){scene.setAttribute("transform","translate("+tr.x+" "+tr.y+") scale("+tr.s+")");}
 function render(){
   scene.replaceChildren();
-  const positions=[...branchLayout(MAP.branches.filter(b=>b.side==="left")),...branchLayout(MAP.branches.filter(b=>b.side==="right"))];
-  for(const {b,y} of positions){
+  const sideLayouts=[...layout(MAP.branches.filter(b=>b.side==="left")),...layout(MAP.branches.filter(b=>b.side==="right"))];
+  for(const {b,y} of sideLayouts){
     const side=b.side==="left"?-1:1;
     edge(side*145,0,side*255,y);
-    if(!collapsed.has(b.id)){
-      b.leaves.forEach((leaf,j)=>{
-        const ly=y+(j-(b.leaves.length-1)/2)*70;
-        edge(side*505,y,side*655,ly);
-      });
-    }
+    if(!collapsed.has(b.id))b.leaves.forEach((leaf,j)=>{
+      edge(side*505,y,side*655,y+(j-(b.leaves.length-1)/2)*70);
+    });
   }
-  addNode({x:0,y:0,w:290,h:78,label:"Weight-Space Programming",detail:MAP.total+" curated entries",kind:"root",hint:"Open all entries",action:()=>location.href="./"});
-  for(const {b,y} of positions){
+  node({x:0,y:0,w:290,h:78,label:lang==="zh"?"权重空间编程":"Weight-Space Programming",
+    detail:MAP.total+trText().entries,kind:"root",hint:trText().summary,action:()=>location.href=urlFor()});
+  for(const {b,y} of sideLayouts){
     const side=b.side==="left"?-1:1;
-    addNode({x:side*380,y,w:250,h:65,label:b.name,detail:b.count+" entries",kind:"branch",side:b.side,
-      hint:"Click to "+(collapsed.has(b.id)?"expand":"collapse")+" "+b.name,
+    node({x:side*380,y,w:250,h:65,label:lang==="zh"?b.name_zh:b.name,
+      detail:b.count+trText().entries,kind:"branch",side:b.side,
       action:()=>{collapsed.has(b.id)?collapsed.delete(b.id):collapsed.add(b.id);render();fit();}});
     if(collapsed.has(b.id))continue;
     b.leaves.forEach((leaf,j)=>{
-      const ly=y+(j-(b.leaves.length-1)/2)*70;
-      addNode({x:side*793,y:ly,w:275,h:52,label:leaf.name,detail:leaf.count+" entries",kind:"leaf",
-        hint:leaf.name+"\n"+(leaf.examples||[]).slice(0,4).join("\n"),
-        action:()=>{const q=new URLSearchParams({branch:b.id,leaf:leaf.id});location.href="./?"+q.toString();}});
+      const yleaf=y+(j-(b.leaves.length-1)/2)*70;
+      node({x:side*793,y:yleaf,w:275,h:52,label:lang==="zh"?leaf.name_zh:leaf.name,
+        detail:leaf.count+trText().entries,kind:"leaf",
+        hint:(lang==="zh"?leaf.name_zh:leaf.name)+"\n"+(leaf.examples||[]).slice(0,4).join("\n"),
+        action:()=>location.href=urlFor(b.id,leaf.id)});
     });
   }
-  transform();
+  apply();
 }
 function zoom(f,x=W/2,y=H/2){
-  const ns=Math.max(.18,Math.min(3.2,tr.s*f)),wx=(x-tr.x)/tr.s,wy=(y-tr.y)/tr.s;
-  tr={s:ns,x:x-wx*ns,y:y-wy*ns};transform();
+  const scale=Math.max(.18,Math.min(3.2,tr.s*f)),wx=(x-tr.x)/tr.s,wy=(y-tr.y)/tr.s;
+  tr={s:scale,x:x-wx*scale,y:y-wy*scale};apply();
 }
 function fit(){
-  const b=scene.getBBox();
-  if(!b.width||!b.height)return;
-  const s=Math.min((W-130)/b.width,(H-110)/b.height,1.6);
-  tr={s,x:W/2-(b.x+b.width/2)*s,y:H/2-(b.y+b.height/2)*s};
-  transform();
+  const b=scene.getBBox();if(!b.width||!b.height)return;
+  const scale=Math.min((W-130)/b.width,(H-110)/b.height,1.6);
+  tr={s:scale,x:W/2-(b.x+b.width/2)*scale,y:H/2-(b.y+b.height/2)*scale};
+  apply();
 }
+document.getElementById("langToggle").addEventListener("click",()=>{
+  lang=lang==="zh"?"en":"zh";
+  const q=new URLSearchParams(location.search);
+  if(lang==="zh")q.set("lang","zh");else q.delete("lang");
+  if(location.protocol!=="file:")history.replaceState(null,"",location.pathname+(q.toString()?"?"+q.toString():""));
+  languageUI();render();fit();
+});
 document.getElementById("in").onclick=()=>zoom(1.22);
 document.getElementById("out").onclick=()=>zoom(1/1.22);
 document.getElementById("fit").onclick=fit;
@@ -120,10 +173,22 @@ svg.addEventListener("wheel",e=>{
   e.preventDefault();const r=svg.getBoundingClientRect();
   zoom(e.deltaY<0?1.12:1/1.12,(e.clientX-r.left)/r.width*W,(e.clientY-r.top)/r.height*H);
 },{passive:false});
-svg.addEventListener("pointerdown",e=>{if(e.target.closest(".node"))return;drag={x:e.clientX,y:e.clientY,tx:tr.x,ty:tr.y};svg.setPointerCapture(e.pointerId);});
-svg.addEventListener("pointermove",e=>{if(!drag)return;const r=svg.getBoundingClientRect();tr.x=drag.tx+(e.clientX-drag.x)/r.width*W;tr.y=drag.ty+(e.clientY-drag.y)/r.height*H;transform();});
+svg.addEventListener("pointerdown",e=>{
+  if(e.target.closest(".node"))return;
+  drag={x:e.clientX,y:e.clientY,tx:tr.x,ty:tr.y};svg.setPointerCapture(e.pointerId);
+});
+svg.addEventListener("pointermove",e=>{
+  if(!drag)return;
+  const r=svg.getBoundingClientRect();
+  tr.x=drag.tx+(e.clientX-drag.x)/r.width*W;tr.y=drag.ty+(e.clientY-drag.y)/r.height*H;apply();
+});
 svg.addEventListener("pointerup",()=>drag=null);
 svg.addEventListener("pointercancel",()=>drag=null);
-render();requestAnimationFrame(fit);
+window.addEventListener("resize",fit);
+window.addEventListener("popstate",()=>{
+  lang=new URLSearchParams(location.search).get("lang")==="zh"?"zh":"en";
+  languageUI();render();fit();
+});
+languageUI();render();requestAnimationFrame(fit);
 </script>
 </body></html>

@@ -10,8 +10,8 @@
       "leaves": [
         {
           "id": "install",
-          "name": "Capability installation",
-          "name_zh": "能力安装与积累",
+          "name": "Capability installation & adaptation",
+          "name_zh": "能力安装与反馈适应",
           "ids": [
             "weightcode",
             "weightloop"
