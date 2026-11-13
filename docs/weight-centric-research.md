@@ -10,13 +10,14 @@
 
 | Research track | Question for future weight programming |
 | --- | --- |
-| [Weight Geometry, Symmetry & Connectivity](#weight-geometry-symmetry-connectivity) | When are raw coordinates misleading, and when can two checkpoints be combined? |
-| [Weights as Data: Reading & Representation](#weights-as-data-reading-representation) | Can model properties be inferred from parameters without running the model on the original task? |
-| [Weight Generation & Synthesis](#weight-generation-synthesis) | Can networks be generated as objects rather than optimized afresh for every task? |
-| [Weight Arithmetic, Merging & Interference](#weight-arithmetic-merging-interference) | How can changes be combined without destroying existing capabilities? |
-| [Structured Parameters, Sparsity & Mechanism Localization](#structured-parameters-sparsity-mechanism-localization) | Which coordinates, directions, or subnetworks should a program modify? |
-| [Continual Capability Accumulation & Preservation](#continual-capability-accumulation-preservation) | Where can new abilities live, and what should remain unchanged after many updates? |
+| [Weight Geometry, Symmetry & Connectivity](#wcr-geometry) | When are raw coordinates misleading, and when can two checkpoints be combined? |
+| [Weights as Data: Reading & Representation](#wcr-reading) | Can model properties be inferred from parameters without running the model on the original task? |
+| [Weight Generation & Synthesis](#wcr-generation) | Can networks be generated as objects rather than optimized afresh for every task? |
+| [Weight Arithmetic, Merging & Interference](#wcr-composition) | How can changes be combined without destroying existing capabilities? |
+| [Structured Parameters, Sparsity & Mechanism Localization](#wcr-structure) | Which coordinates, directions, or subnetworks should a program modify? |
+| [Continual Capability Accumulation & Preservation](#wcr-retention) | Where can new abilities live, and what should remain unchanged after many updates? |
 
+<a id="wcr-geometry"></a>
 ## Weight Geometry, Symmetry & Connectivity
 
 *When are raw coordinates misleading, and when can two checkpoints be combined?*
@@ -27,6 +28,7 @@
 
 - **[Interpreting the Weight Space of Customized Diffusion Models](https://papers.nips.cc/paper_files/paper/2024/hash/f85364507054c257959c2011c28bfc0d-Abstract-Conference.html)** (NeurIPS 2024). **Weight-centric idea:** Studies semantic directions in a subspace of customized diffusion-model weights. **Potential WSP inspiration:** Suggests inspecting whether capability changes admit reusable, interpretable weight directions.
 
+<a id="wcr-reading"></a>
 ## Weights as Data: Reading & Representation
 
 *Can model properties be inferred from parameters without running the model on the original task?*
@@ -37,6 +39,7 @@
 
 - **[Hyper-Representations as Generative Models: Sampling Unseen Neural Network Weights](https://arxiv.org/abs/2209.14733)** (NeurIPS 2022). **Weight-centric idea:** Uses learned weight embeddings to sample new network parameters. **Potential WSP inspiration:** Connects model-zoo knowledge to reusable parameter priors, while remaining a trained generator rather than direct WSP.
 
+<a id="wcr-generation"></a>
 ## Weight Generation & Synthesis
 
 *Can networks be generated as objects rather than optimized afresh for every task?*
@@ -47,6 +50,7 @@
 
 - **[NNiT: Width-Agnostic Neural Network Generation with Structurally Aligned Weight Spaces](https://proceedings.mlr.press/v306/kim26ay.html)** (ICML 2026). **Weight-centric idea:** Generates neural-network weights across widths with structural alignment. **Potential WSP inspiration:** A useful reference for reusable programs that must tolerate differences in model width or parameterization.
 
+<a id="wcr-composition"></a>
 ## Weight Arithmetic, Merging & Interference
 
 *How can changes be combined without destroying existing capabilities?*
@@ -59,6 +63,7 @@
 
 - **[AdaMerging: Adaptive Model Merging for Multi-Task Learning](https://arxiv.org/abs/2310.02575)** (2023 preprint). **Weight-centric idea:** Adapts task-wise or layer-wise merging coefficients using an unsupervised objective. **Potential WSP inspiration:** Suggests task- or layer-dependent arbitration when successive edits conflict.
 
+<a id="wcr-structure"></a>
 ## Structured Parameters, Sparsity & Mechanism Localization
 
 *Which coordinates, directions, or subnetworks should a program modify?*
@@ -71,6 +76,7 @@
 
 - **[PiSSA: Principal Singular Values and Singular Vectors Adaptation of Large Language Models](https://arxiv.org/abs/2404.02948)** (NeurIPS 2024). **Weight-centric idea:** Uses principal singular components of pretrained matrices as adaptable subspaces. **Potential WSP inspiration:** Suggests selecting editing subspaces through matrix structure rather than arbitrary coordinates.
 
+<a id="wcr-retention"></a>
 ## Continual Capability Accumulation & Preservation
 
 *Where can new abilities live, and what should remain unchanged after many updates?*
@@ -85,7 +91,7 @@
 
 ## Connections to the existing WSP catalog
 
-- **Reading and alignment:** [Neural Functional Transformers](https://papers.neurips.cc/paper_files/paper/2023/hash/80a4eae94795e4d636a8f3d529e1fba9-Abstract-Conference.html), [Git Re-Basin](https://arxiv.org/abs/2209.04836) and [Equivariant Deep Weight Space Alignment](https://arxiv.org/abs/2310.13397) are already covered in the main catalog; use them with the geometry and representation tracks above.
+- **Reading and alignment:** [Neural Functional Transformers](https://papers.neurips.cc/paper_files/paper/2023/hash/f4757db82a02eea015670ecca605d5cc-Abstract-Conference.html), [Git Re-Basin](https://arxiv.org/abs/2209.04836) and [Equivariant Deep Weight Space Alignment](https://arxiv.org/abs/2310.13397) are already covered in the main catalog; use them with the geometry and representation tracks above.
 - **Program-to-weights and learned generators:** [Tracr](https://arxiv.org/abs/2301.05062), [Text-to-LoRA](https://arxiv.org/abs/2506.06105) and [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) are already in the main catalog. They differ in supervision, parameter construction and whether an editor has to be trained.
 - **Targeted changes:** [ROME](https://arxiv.org/abs/2202.05262), [MEMIT](https://arxiv.org/abs/2210.07229), [AlphaEdit](https://arxiv.org/abs/2410.02355) and [Task Arithmetic](https://arxiv.org/abs/2212.04089) remain in the main catalog rather than being duplicated here.
 
