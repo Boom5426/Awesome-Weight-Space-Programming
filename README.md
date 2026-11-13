@@ -26,6 +26,7 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 | 📏 **Evaluate weight understanding and editing** | **[IWIBench](https://arxiv.org/abs/2611.08647)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) · [Clinical Network Audits](https://arxiv.org/abs/2611.05341) |
 | 🧬 **Generate weights and networks** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
 | ✅ **Build verifiable interventions** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
+| 🧭 **Explore weight-centric inspirations** | **[Weight-Centric Research](docs/weight-centric-research.md)** · [中文](docs/weight-centric-research_zh.md) |
 | 🔗 **Understand adjacent paradigms** | **[Program-as-Weights](https://arxiv.org/abs/2607.02512)** · [Tracr](https://arxiv.org/abs/2301.05062) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) · [Text-to-LoRA](https://arxiv.org/abs/2506.06105) |
 
 <a id="latest-updates"></a>
@@ -33,6 +34,7 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 
 | Date | What changed |
 | --- | --- |
+| `2026-11-13` | Launched **Weight-Centric Research**, a separate bilingual reading series with 21 curated papers across six tracks, connecting weight geometry, representation, generation, composition, structured updates, and capability preservation to future WSP research. |
 | `2026-11-11` | Added a Simplified Chinese README ([README_zh.md](README_zh.md)). |
 | `2026-11-11` | Gap-filling pass: added the clinical-network auditing paper, a Claude Fable 5.2 replication, an evidence-scope critique, autoresearch experiments, the released edited Qwen checkpoint, and missing foundations (RASP, Tracr, Learning Transformer Programs, neural functionals, deep weight-space alignment, parameter decomposition, refusal-direction weight orthogonalization). |
 | `2026-11-11` | Multi-keyword sweep of arXiv, alphaXiv, Hugging Face Papers and other preprint platforms: added IWIBench, Tree-Ising, Weight Oracles, SkillSmith, a diffusion-editing research report, and an independent replication resource. |
@@ -98,6 +100,24 @@ Research directly involving programmatic inspection, construction, or modificati
 - **[WSP Autoresearch]** `[Autoresearch]` `[Hand-Written Transformers]` Weight-Space Programming Autoresearch: agents hand-writing transformer weights for arithmetic, algorithmic, and NLP tasks (**Technical Report 2026**) [[report](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Sparks of Weight-Space Programming]** `[Weight Reading]` `[Direct Editing]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights (**Technical Blog 2026**) [[blog](https://rikiyat.github.io/blog/weight-space-programming/)] [[logs](https://github.com/RikiyaT/lm_understand-logs)]
+
+<a id="weight-centric-inspirations"></a>
+## 🧭 Weight-Centric Inspirations (Beyond Editing)
+
+Not all useful ideas for future weight programming come from editing papers. Our new **[Weight-Centric Research](docs/weight-centric-research.md)** reading series explores neural weights as objects to understand, represent, generate, compose, and protect. These studies are **inspirations and baselines**, not automatically direct WSP.
+
+**21 curated papers across six research tracks:**
+
+| Track | Research question |
+| --- | --- |
+| Weight geometry & symmetry | Can we compare or transfer computations across equivalent parameterizations? |
+| Weight reading & representation | What can weights reveal without original task data? |
+| Weight generation & synthesis | Can we generate a functional network or parameter block? |
+| Weight arithmetic & merging | How do multiple updates interact or interfere? |
+| Structured parameters & localization | Which weight directions, units, or subspaces should be changed? |
+| Continual capability retention | How can new capabilities accumulate without erasing old ones? |
+
+[**Browse the reading series (English)**](docs/weight-centric-research.md) · [简体中文](docs/weight-centric-research_zh.md)
 
 <a id="related-research"></a>
 ## 🔗 Related Research
