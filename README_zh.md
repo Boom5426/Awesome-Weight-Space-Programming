@@ -34,22 +34,26 @@
 <a id="latest-updates"></a>
 ## 📰 最近更新
 
+<!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
-| `2026-11-13` | 系统扩充**权重相关研究**：从 21 篇增加至 **67 篇**，新增 46 篇经检索核对的论文，并补充综述与基准资源；保留六条研究线，继续区分潜在启发与直接 WSP。 |
-| `2026-11-13` | 新增独立的**权重相关研究**中英文阅读系列，现收录 67 篇、六条研究线，覆盖权重几何、表征、生成、组合、结构化更新和能力保护。 |
-| `2026-11-11` | 新增中文 README。 |
-
+| `2026-11-13` | 引入结构化双语文献库、自动校验与证据字段，并补充早期权重编程基础和机器人策略编辑研究。 |
+| `2026-11-13` | **权重相关研究**扩充至 **67 篇**，覆盖六条研究线，并补充综述和评估资源。 |
+| `2026-11-13` | 上线独立的中英文 **Weight-Centric Research** 专题系列。 |
+<!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
 ## 🔬 研究论文
 
-直接涉及以程序化方式读取、构建或修改神经网络权重的研究，附方法与任务标签。
+<!-- AUTO:START direct -->
+直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**17 篇论文与手稿** · [2026（17）](#2026)
+**19 篇论文与手稿** · [2026（19）](#2026)
+
+**证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 17 篇
+### 🗓️ 2026 — 19 篇
 
 - **[WeightCode]** `[能力植入]` `[程序复用]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming（**手稿 2026**）[[论文](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -85,19 +89,33 @@
 
 - **[Diffusion WSP Conjectures]** `[扩散模型]` `[猜想]` Weight-Space Programming for Improving Image-Restoration Diffusion Models: Technical Conjectures and a Recursive Improvement Loop（**猜想性 arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.04268)]
 
+- **[Robot Policy Debugging]** `[机器人基础模型]` `[词汇修复]` Can LLMs Debug Robots by Editing Their Weights?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09376)]
+
+- **[Instruction Distillation]** `[机器人策略]` `[闭式编辑]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11894)]
+<!-- AUTO:END direct -->
 
 <a id="reports-and-blogs"></a>
 ## 📝 报告与博客
 
+<!-- AUTO:START reports -->
 - **[Fable WSP Replication]** `[复现]` `[跨模型对比]` Claude Fable 5.2 can do "weight-space-programming" about as well as GPT-6 Astra（**LessWrong 帖子 2026**）[[帖子](https://www.lesswrong.com/posts/wg3K6xFFTdM6RmRgn/claude-fable-5-2-can-do-weight-space-programming-about-as)] [[数据](https://huggingface.co/datasets/shawnghu/fable-weight-space-programming)]
 
 - **[Gradient-Free Diffusion Weight Editing]** `[LLM 编辑]` `[概念擦除]` An LLM Erases a Concept by Editing Diffusion Weights Directly, Without Gradients（**alphaXiv 研究报告 2026**）[[报告](https://www.alphaxiv.org/abs/2611.gradient-free-diffusion-weight-editing)] [[博客](https://huggingface.co/blog/javadtaghia/an-llm-erases-a-concept-by-editing-diffusion-weigh)]
+
+- **[Sycophancy Repair by Weight Editing]** `[直接编辑]` `[迎合行为]` `[预注册]` Repairing sycophancy in Qwen2.5-0.5B by editing its weights, with Claude Opus 5.5 as the editor and a blind test split（**技术博客 2026**）[[博客](https://say43.github.io/2026/11/05/repairing-sycophancy.html)] [[代码](https://github.com/Say43/Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/Say43/Weight-Space-Programming.svg?logo=github&label=Stars)
 
 - **[Evidence-Scope Critique]** `[批评]` `[证据范围]` The 'Astra can read and write weights to improve Qwen' post is misleading（**技术博客 2026**）[[博客](https://honnibal.dev/blog/astra-read-write-misleading)]
 
 - **[WSP Autoresearch]** `[自主研究]` `[手写 Transformer]` Weight-Space Programming Autoresearch：智能体为算术、算法和 NLP 任务手写 Transformer 权重（**技术报告 2026**）[[报告](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[代码](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Sparks of Weight-Space Programming]** `[权重读取]` `[直接编辑]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights（**技术博客 2026**）[[博客](https://rikiyat.github.io/blog/weight-space-programming/)] [[日志](https://github.com/RikiyaT/lm_understand-logs)]
+
+- **[Independent Edit Composition]** `[独立复现]` `[组合]` Independently Discovered Weight Edits Compose: A Replication and Extension of Weight-Space Programming（**GitHub 报告 2026**）[[代码](https://github.com/ajaygrover/weight-space-programming-stacking)]
+
+- **[Robot VLA Weight Editing]** `[机器人策略]` `[直接编辑]` Opus 5.5 makes π0.5 move faster and smoother by editing its weights（**技术报告 2026**）[[代码](https://github.com/Cuzyoung/robotics-weight-editing)]
+
+- **[Policy Surgery]** `[强化学习控制]` `[权重编辑]` Policy Surgery：对已有控制策略进行程序化权重修复（**GitHub 项目 2026**）[[代码](https://github.com/latentpaths/policy-surgery)]
+<!-- AUTO:END reports -->
 
 <a id="weight-centric-inspirations"></a>
 ## 🧭 权重相关研究：超越编辑的灵感来源
@@ -120,11 +138,12 @@
 <a id="related-research"></a>
 ## 🔗 相关研究
 
-这些相邻方法为 WSP 提供了思路，但本身并不自动等同于由 LLM 直接驱动的权重编程。
+<!-- AUTO:START related -->
+这些相邻方法可启发权重编程，但不应自动归类为由大模型直接完成的权重空间编程。
 
 ### 神经程序编译与权重生成
 
-把指令或数据映射为模型参数的学习型编译器、超网络和适配器生成器，以及手工构造网络的“程序 → 权重”编译器。
+学习型编译器、超网络和适配器生成器，以及将程序直接编译为网络参数的方法。
 
 - **[Adapters as Data]** `[LoRA]` `[权重表征]` Adapters as Data: The Latent Space of LoRAs（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07775)]
 
@@ -154,7 +173,7 @@
 
 ### 模型编辑与权重空间基础
 
-关于修改事实或行为、复用参数差分，以及推理对称性或学习权重表征的研究。
+研究知识与行为修改、参数增量复用、对称性以及网络权重表征。
 
 - **[Tree-Ising]** `[免训练编辑]` `[离散优化]` Tree-Ising: Repairing Language Models with Bit-Level Ising Edits（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.14210)]
 
@@ -194,15 +213,59 @@
 
 - **[HyperNetworks]** `[超网络]` `[权重生成]` HyperNetworks（**ICLR 2017**）[[论文](https://research.google/pubs/hypernetworks-2/)]
 
+### 快速权重与自修改网络
+
+关注动态参数状态和自修改机制，区分在线临时记忆与持久能力安装。
+
+- **[Learning to control fast-weight memories: An alternative to dynamic recurrent networks]** `[历史基础]` Learning to control fast-weight memories: An alternative to dynamic recurrent networks（**经典研究 1992**）[[论文](https://doi.org/10.1162/neco.1992.4.1.131)] — 早期 Fast Weight 控制器：一个网络在线编程另一个网络的临时权重。
+
+- **[A 'self-referential' weight matrix]** `[历史基础]` A 'self-referential' weight matrix（**经典研究 1993**）[[论文](https://doi.org/10.1007/978-1-4471-2063-6_107)] — 提出读取并修改网络自身参数的早期自指机制。
+
+- **[Using Fast Weights to Attend to the Recent Past]** `[历史基础]` Using Fast Weights to Attend to the Recent Past（**预印本 2016**）[[论文](https://arxiv.org/abs/1610.06258)] — 将快速权重用作短期联想记忆，不等同于持久能力安装。
+
+- **[Linear Transformers Are Secretly Fast Weight Programmers]** `[历史基础]` Linear Transformers Are Secretly Fast Weight Programmers（**预印本 2021**）[[论文](https://arxiv.org/abs/2102.11174)] — 揭示线性注意力与快速权重编程的形式关系。
+
+- **[A Modern Self-Referential Weight Matrix That Learns to Modify Itself]** `[历史基础]` A Modern Self-Referential Weight Matrix That Learns to Modify Itself（**预印本 2022**）[[论文](https://arxiv.org/abs/2202.05780)] — 探索运行时能修改自身参数状态的网络结构。
+
+- **[Learning to (Learn at Test Time): RNNs with Expressive Hidden States]** `[历史基础]` Learning to (Learn at Test Time): RNNs with Expressive Hidden States（**预印本 2024**）[[论文](https://arxiv.org/abs/2407.04620)] — 把网络组件当作测试时动态更新的状态；应与持久编辑区分。
+
+### 早期程序到权重编译与规则植入
+
+追溯解析构造与符号规则转化为神经网络计算的历史路径。
+
+- **[Neural networks and physical systems with emergent collective computational abilities]** `[历史基础]` Neural networks and physical systems with emergent collective computational abilities（**经典研究 1982**）[[论文](https://doi.org/10.1073/pnas.79.8.2554)] — Hopfield 网络展示由解析规则构造的联想记忆权重。
+
+- **[Knowledge-based artificial neural networks]** `[历史基础]` Knowledge-based artificial neural networks（**经典研究 1994**）[[论文](https://doi.org/10.1016/0004-3702(94)90105-8)] — 先将命题规则编译进初始权重，再利用梯度优化完善。
+
+- **[A neural compiler]** `[历史基础]` A neural compiler（**经典研究 1995**）[[论文](https://doi.org/10.1016/0304-3975(94)00200-3)] — 把高级程序编译成网络拓扑与参数。
+
+### 跨领域迁移与权重变化解释
+
+借鉴机器人与可解释性研究，支持程序跨模型复用和能力变化追踪。
+
+- **[Learning to Interpret Weight Differences in Language Models]** `[历史基础]` Learning to Interpret Weight Differences in Language Models（**预印本 2025**）[[论文](https://arxiv.org/abs/2510.05092)] — 训练 Diff Interpretation Tuning 描述微调产生的权重变化，不是直接 WSP。
+
+- **[Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts]** `[历史基础]` Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts（**预印本 2026**）[[论文](https://arxiv.org/abs/2607.00666)] — 利用带子空间对齐的权重向量算术实现 VLA 领域适应。
+
+- **[Robotic Policy Adaptation via Weight-Space Meta-Learning]** `[历史基础]` Robotic Policy Adaptation via Weight-Space Meta-Learning（**预印本 2026**）[[论文](https://arxiv.org/abs/2606.07217)] — 学习型元网络为机器人策略生成适应性权重。
+<!-- AUTO:END related -->
+
 <a id="resources"></a>
 ## 🧰 资源与工具
 
+<!-- AUTO:START resources -->
 - **[WeightCode]** 可执行程序、复现脚本和一个智能体技能（agent skill）。[[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
+
 - **[Weights-Only Replication]** 对 MIT WSP 部分权重读取实验的独立复现，包含缩减上下文的对照实验。[[代码](https://github.com/jhpark94/weights-only-replication)] ![GitHub stars](https://img.shields.io/github/stars/jhpark94/weights-only-replication.svg?logo=github&label=Stars)
+
 - **[MIT WSP Logs]** *Sparks of Weight-Space Programming* 的一手实验记录。[[代码](https://github.com/RikiyaT/lm_understand-logs)] ![GitHub stars](https://img.shields.io/github/stars/RikiyaT/lm_understand-logs.svg?logo=github&label=Stars)
+
 - **[Edited Qwen3.5-0.8B]** *Sparks* 中数学推理死循环修复实验发布的检查点，模型卡附有独立的基准重测结果。[[模型](https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming)]
+
 - **[WSP-Scope]** 系统性评测的代码与实验。[[代码](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars)
+
 - **[wsp-kit]** 用于有界编辑的独立工具包；并非同行评审论文。[[代码](https://github.com/AuremHQ/weight-space-programming)] ![GitHub stars](https://img.shields.io/github/stars/AuremHQ/weight-space-programming.svg?logo=github&label=Stars)
+<!-- AUTO:END resources -->
 
 <a id="scope"></a>
 ## 🎯 收录范围

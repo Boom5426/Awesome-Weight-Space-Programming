@@ -33,22 +33,26 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 <a id="latest-updates"></a>
 ## 📰 Latest Updates
 
+<!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
-| `2026-11-13` | Expanded **Weight-Centric Research** from 21 to **67 papers** with 46 additional verified references, plus surveys and evaluation resources; preserves the six-track taxonomy and distinguishes inspirations from direct WSP. |
-| `2026-11-13` | Launched **Weight-Centric Research**, a separate bilingual reading series with 67 curated papers across six tracks, connecting weight geometry, representation, generation, composition, structured updates, and capability preservation to future WSP research. |
-| `2026-11-11` | Added a Simplified Chinese README ([README_zh.md](README_zh.md)). |
-
+| `2026-11-13` | Added a structured bilingual bibliography with validation and evidence fields, plus historical foundations and robot-policy weight programming. |
+| `2026-11-13` | Expanded **Weight-Centric Research** to **67 papers** across six tracks, with dedicated surveys and evaluation resources. |
+| `2026-11-13` | Launched a separate bilingual **Weight-Centric Research** companion series. |
+<!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
 ## 🔬 Research Papers
 
+<!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**17 papers and manuscripts** · [2026 (17)](#2026)
+**19 papers and manuscripts** · [2026 (19)](#2026)
+
+**Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 17 papers
+### 🗓️ 2026 — 19 papers
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming (**Manuscript 2026**) [[paper](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -84,10 +88,15 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[Diffusion WSP Conjectures]** `[Diffusion Models]` `[Conjecture]` Weight-Space Programming for Improving Image-Restoration Diffusion Models: Technical Conjectures and a Recursive Improvement Loop (**Conjectural arXiv Preprint 2026**) [[paper](https://arxiv.org/abs/2611.04268)]
 
+- **[Robot Policy Debugging]** `[Robot Foundation Model]` `[Lexical Repair]` Can LLMs Debug Robots by Editing Their Weights? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09376)]
+
+- **[Instruction Distillation]** `[Robot Policy]` `[Closed-Form Editing]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11894)]
+<!-- AUTO:END direct -->
 
 <a id="reports-and-blogs"></a>
 ## 📝 Reports and Blogs
 
+<!-- AUTO:START reports -->
 - **[Fable WSP Replication]** `[Replication]` `[Cross-Model Comparison]` Claude Fable 5.2 can do "weight-space-programming" about as well as GPT-6 Astra (**LessWrong Post 2026**) [[post](https://www.lesswrong.com/posts/wg3K6xFFTdM6RmRgn/claude-fable-5-2-can-do-weight-space-programming-about-as)] [[data](https://huggingface.co/datasets/shawnghu/fable-weight-space-programming)]
 
 - **[Gradient-Free Diffusion Weight Editing]** `[LLM Editing]` `[Concept Erasure]` An LLM Erases a Concept by Editing Diffusion Weights Directly, Without Gradients (**alphaXiv Research Report 2026**) [[report](https://www.alphaxiv.org/abs/2611.gradient-free-diffusion-weight-editing)] [[blog](https://huggingface.co/blog/javadtaghia/an-llm-erases-a-concept-by-editing-diffusion-weigh)]
@@ -99,6 +108,13 @@ Research directly involving programmatic inspection, construction, or modificati
 - **[WSP Autoresearch]** `[Autoresearch]` `[Hand-Written Transformers]` Weight-Space Programming Autoresearch: agents hand-writing transformer weights for arithmetic, algorithmic, and NLP tasks (**Technical Report 2026**) [[report](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Sparks of Weight-Space Programming]** `[Weight Reading]` `[Direct Editing]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights (**Technical Blog 2026**) [[blog](https://rikiyat.github.io/blog/weight-space-programming/)] [[logs](https://github.com/RikiyaT/lm_understand-logs)]
+
+- **[Independent Edit Composition]** `[Replication]` `[Composition]` Independently Discovered Weight Edits Compose: A Replication and Extension of Weight-Space Programming (**GitHub Report 2026**) [[code](https://github.com/ajaygrover/weight-space-programming-stacking)]
+
+- **[Robot VLA Weight Editing]** `[Robot Policy]` `[Direct Editing]` Opus 5.5 makes π0.5 move faster and smoother by editing its weights (**Technical Report 2026**) [[code](https://github.com/Cuzyoung/robotics-weight-editing)]
+
+- **[Policy Surgery]** `[RL Control]` `[Weight Editing]` Policy Surgery: Programmatic repair of learned control policies (**GitHub Project 2026**) [[code](https://github.com/latentpaths/policy-surgery)]
+<!-- AUTO:END reports -->
 
 <a id="weight-centric-inspirations"></a>
 ## 🧭 Weight-Centric Inspirations (Beyond Editing)
@@ -121,11 +137,12 @@ Not all useful ideas for future weight programming come from editing papers. Our
 <a id="related-research"></a>
 ## 🔗 Related Research
 
+<!-- AUTO:START related -->
 These adjacent methods inform WSP, but are not automatically instances of direct LLM-driven weight programming.
 
 ### Neural Program Compilation & Weight Generation
 
-Learned compilers, hypernetworks, and adapter generators that map instructions or data to model parameters, plus program-to-weight compilers that construct networks by hand.
+Learned compilers, hypernetworks, and adapter generators that map instructions or data to model parameters, plus program-to-weight compilers.
 
 - **[Adapters as Data]** `[LoRA]` `[Weight Representation]` Adapters as Data: The Latent Space of LoRAs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07775)]
 
@@ -155,7 +172,7 @@ Learned compilers, hypernetworks, and adapter generators that map instructions o
 
 ### Model Editing & Weight-Space Foundations
 
-Research on modifying facts or behaviors, reusing parameter differences, and reasoning about symmetries or learned weight representations.
+Research on modifying facts or behaviors, parameter differences, symmetries, and learned weight representations.
 
 - **[Tree-Ising]** `[Training-Free Editing]` `[Discrete Optimization]` Tree-Ising: Repairing Language Models with Bit-Level Ising Edits (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.14210)]
 
@@ -195,16 +212,59 @@ Research on modifying facts or behaviors, reusing parameter differences, and rea
 
 - **[HyperNetworks]** `[Hypernetwork]` `[Weight Generation]` HyperNetworks (**ICLR 2017**) [[paper](https://research.google/pubs/hypernetworks-2/)]
 
+### Fast Weights & Self-Modifying Networks
+
+Dynamic parameter states and self-modification; distinguish online memory from persistent capability installation.
+
+- **[Learning to control fast-weight memories: An alternative to dynamic recurrent networks]** `[Historical Foundation]` Learning to control fast-weight memories: An alternative to dynamic recurrent networks (**Classic 1992**) [[paper](https://doi.org/10.1162/neco.1992.4.1.131)] — Early fast-weight controllers in which one network programs transient weights of another.
+
+- **[A 'self-referential' weight matrix]** `[Historical Foundation]` A 'self-referential' weight matrix (**Classic 1993**) [[paper](https://doi.org/10.1007/978-1-4471-2063-6_107)] — Early explicit self-referential mechanisms for reading and modifying the network's own parameters.
+
+- **[Using Fast Weights to Attend to the Recent Past]** `[Historical Foundation]` Using Fast Weights to Attend to the Recent Past (**Preprint 2016**) [[paper](https://arxiv.org/abs/1610.06258)] — Fast weights as transient associative memory; distinct from permanent capability installation.
+
+- **[Linear Transformers Are Secretly Fast Weight Programmers]** `[Historical Foundation]` Linear Transformers Are Secretly Fast Weight Programmers (**Preprint 2021**) [[paper](https://arxiv.org/abs/2102.11174)] — Shows the formal relation between linear attention and fast-weight programming.
+
+- **[A Modern Self-Referential Weight Matrix That Learns to Modify Itself]** `[Historical Foundation]` A Modern Self-Referential Weight Matrix That Learns to Modify Itself (**Preprint 2022**) [[paper](https://arxiv.org/abs/2202.05780)] — Explores networks with runtime self-modifying parameter state.
+
+- **[Learning to (Learn at Test Time): RNNs with Expressive Hidden States]** `[Historical Foundation]` Learning to (Learn at Test Time): RNNs with Expressive Hidden States (**Preprint 2024**) [[paper](https://arxiv.org/abs/2407.04620)] — Test-time training treats part of a model as a learned, dynamically updated state.
+
+### Historical Program-to-Weights & Rule Insertion
+
+Earlier analytical and symbolic routes to specifying neural computations through weights.
+
+- **[Neural networks and physical systems with emergent collective computational abilities]** `[Historical Foundation]` Neural networks and physical systems with emergent collective computational abilities (**Classic 1982**) [[paper](https://doi.org/10.1073/pnas.79.8.2554)] — Hopfield networks illustrate analytically constructed synaptic memories.
+
+- **[Knowledge-based artificial neural networks]** `[Historical Foundation]` Knowledge-based artificial neural networks (**Classic 1994**) [[paper](https://doi.org/10.1016/0004-3702(94)90105-8)] — Compiles propositional prior rules into initial weights before gradient refinement.
+
+- **[A neural compiler]** `[Historical Foundation]` A neural compiler (**Classic 1995**) [[paper](https://doi.org/10.1016/0304-3975(94)00200-3)] — Compiles high-level programs into network topology and weights.
+
+### Cross-Domain Transfer & Weight-Difference Interpretation
+
+Ideas from robotics and interpretability that may inform portable programs and capability tracing.
+
+- **[Learning to Interpret Weight Differences in Language Models]** `[Historical Foundation]` Learning to Interpret Weight Differences in Language Models (**Preprint 2025**) [[paper](https://arxiv.org/abs/2510.05092)] — Trains Diff Interpretation Tuning to describe finetuning-induced weight changes; not direct WSP.
+
+- **[Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts]** `[Historical Foundation]` Domain Arithmetic: One-Shot VLA Adaptation under Environmental Shifts (**Preprint 2026**) [[paper](https://arxiv.org/abs/2607.00666)] — Uses weight-vector arithmetic with subspace alignment for VLA domain shifts.
+
+- **[Robotic Policy Adaptation via Weight-Space Meta-Learning]** `[Historical Foundation]` Robotic Policy Adaptation via Weight-Space Meta-Learning (**Preprint 2026**) [[paper](https://arxiv.org/abs/2606.07217)] — A learned meta-network predicts adaptation weights for robot policies.
+<!-- AUTO:END related -->
+
 <a id="resources"></a>
 ## 🧰 Resources & Tools
 
+<!-- AUTO:START resources -->
 - **[WeightCode]** Executable programs, reproduction scripts, and an agent skill. [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
+
 - **[Weights-Only Replication]** Independent replication of selected MIT WSP weight-reading experiments, including reduced-context controls. [[code](https://github.com/jhpark94/weights-only-replication)] ![GitHub stars](https://img.shields.io/github/stars/jhpark94/weights-only-replication.svg?logo=github&label=Stars)
 
 - **[MIT WSP Logs]** First-party experiment records for *Sparks of Weight-Space Programming*. [[code](https://github.com/RikiyaT/lm_understand-logs)] ![GitHub stars](https://img.shields.io/github/stars/RikiyaT/lm_understand-logs.svg?logo=github&label=Stars)
+
 - **[Edited Qwen3.5-0.8B]** Released checkpoint from the *Sparks* math-looping repair experiment, with an independent benchmark re-run on the model card. [[model](https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming)]
+
 - **[WSP-Scope]** Code and experiments for systematic evaluation. [[code](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars)
+
 - **[wsp-kit]** Independent toolkit for bounded edits; not a peer-reviewed paper. [[code](https://github.com/AuremHQ/weight-space-programming)] ![GitHub stars](https://img.shields.io/github/stars/AuremHQ/weight-space-programming.svg?logo=github&label=Stars)
+<!-- AUTO:END resources -->
 
 <a id="scope"></a>
 ## 🎯 Scope

@@ -17,6 +17,7 @@
 | [结构化参数、稀疏性与机制定位](#wcr-structure) | 程序究竟该改哪些参数、方向或子网络？ |
 | [持续能力积累与旧能力保护](#wcr-retention) | 新能力应写到哪里？连续更新后哪些旧能力必须保持？ |
 
+<!-- AUTO:START weight-centric -->
 <a id="wcr-geometry"></a>
 ## 权重几何、对称性与连通性
 
@@ -110,7 +111,6 @@
 
 - **[LoRAGen: Structure-Aware Weight Space Learning for LoRA Generation](https://proceedings.iclr.cc/paper_files/paper/2026/hash/fc7c087b5e965075c8946b9ff57e3d64-Abstract-Conference.html)**（ICLR 2026）。**核心思路：**在条件化生成中处理 LoRA 非唯一分解与模块间分布差异。 **对未来权重编程的启发：**启发程序构造规范化更新，并考虑不同模块的结构差异。
 
-
 <a id="wcr-composition"></a>
 ## 权重算术、合并与干扰
 
@@ -181,6 +181,7 @@
 - **[BECAME: Bayesian Continual Learning with Adaptive Model Merging](https://proceedings.mlr.press/v267/li25bk.html)**（ICML 2025）。**核心思路：**以贝叶斯持续学习推导自适应合并系数。 **对未来权重编程的启发：**为连续更新中的可塑性和保持权衡提供原则性对照。
 
 - **[Weight-Space Linear Recurrent Neural Networks](https://arxiv.org/abs/2506.01153)**（ICLR 2026）。**核心思路：**WARP 将辅助网络的权重和偏置作为循环隐藏状态，并利用输入差异进行免梯度在线更新。 **对未来权重编程的启发：**比较输入驱动的临时参数状态更新与持久能力安装，区分在线适应与真正的能力保留。
+<!-- AUTO:END weight-centric -->
 
 ## 综述、文献地图与评估资源
 
