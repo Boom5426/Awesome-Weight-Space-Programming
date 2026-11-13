@@ -10,14 +10,14 @@
 
 | 研究线 | 面向未来权重编程的关键问题 |
 | --- | --- |
-| [权重几何、对称性与连通性](#weight-geometry-symmetry-connectivity) | 什么时候直接比较参数会产生误导？不同检查点何时可以安全组合？ |
-| [权重作为数据：读取与表征](#weights-as-data-reading-representation) | 不运行原任务，仅靠参数能读出模型的哪些性质？ |
-| [权重生成与合成](#weight-generation-synthesis) | 能否把网络作为可生成的对象，而不是每个任务都重新优化？ |
-| [权重算术、合并与干扰](#weight-arithmetic-merging-interference) | 多个参数变化如何组合，才能避免破坏已有能力？ |
-| [结构化参数、稀疏性与机制定位](#structured-parameters-sparsity-mechanism-localization) | 程序究竟该改哪些参数、方向或子网络？ |
-| [持续能力积累与旧能力保护](#continual-capability-accumulation-preservation) | 新能力应写到哪里？连续更新后哪些旧能力必须保持？ |
+| [权重几何、对称性与连通性](#wcr-geometry) | 什么时候直接比较参数会产生误导？不同检查点何时可以安全组合？ |
+| [权重作为数据：读取与表征](#wcr-reading) | 不运行原任务，仅靠参数能读出模型的哪些性质？ |
+| [权重生成与合成](#wcr-generation) | 能否把网络作为可生成的对象，而不是每个任务都重新优化？ |
+| [权重算术、合并与干扰](#wcr-composition) | 多个参数变化如何组合，才能避免破坏已有能力？ |
+| [结构化参数、稀疏性与机制定位](#wcr-structure) | 程序究竟该改哪些参数、方向或子网络？ |
+| [持续能力积累与旧能力保护](#wcr-retention) | 新能力应写到哪里？连续更新后哪些旧能力必须保持？ |
 
-<a id="weight-geometry-symmetry-connectivity"></a>
+<a id="wcr-geometry"></a>
 ## 权重几何、对称性与连通性
 
 *什么时候直接比较参数会产生误导？不同检查点何时可以安全组合？*
@@ -28,7 +28,7 @@
 
 - **[Interpreting the Weight Space of Customized Diffusion Models](https://papers.nips.cc/paper_files/paper/2024/hash/f85364507054c257959c2011c28bfc0d-Abstract-Conference.html)**（NeurIPS 2024）。**核心思路：**在定制扩散模型的权重子空间中发现可解释的语义方向。 **对未来权重编程的启发：**探索能力变化能否表示为可理解、可复用的权重方向。
 
-<a id="weights-as-data-reading-representation"></a>
+<a id="wcr-reading"></a>
 ## 权重作为数据：读取与表征
 
 *不运行原任务，仅靠参数能读出模型的哪些性质？*
@@ -39,7 +39,7 @@
 
 - **[Hyper-Representations as Generative Models: Sampling Unseen Neural Network Weights](https://arxiv.org/abs/2209.14733)**（NeurIPS 2022）。**核心思路：**利用学习到的权重表征生成新的网络参数。 **对未来权重编程的启发：**启发从模型群体中提炼可复用先验；它属于训练式生成器，而不是直接 WSP。
 
-<a id="weight-generation-synthesis"></a>
+<a id="wcr-generation"></a>
 ## 权重生成与合成
 
 *能否把网络作为可生成的对象，而不是每个任务都重新优化？*
@@ -50,7 +50,7 @@
 
 - **[NNiT: Width-Agnostic Neural Network Generation with Structurally Aligned Weight Spaces](https://proceedings.mlr.press/v306/kim26ay.html)**（ICML 2026）。**核心思路：**通过结构对齐，在不同宽度的网络间生成权重。 **对未来权重编程的启发：**为跨宽度、跨参数化的可移植权重程序提供设计参考。
 
-<a id="weight-arithmetic-merging-interference"></a>
+<a id="wcr-composition"></a>
 ## 权重算术、合并与干扰
 
 *多个参数变化如何组合，才能避免破坏已有能力？*
@@ -63,7 +63,7 @@
 
 - **[AdaMerging: Adaptive Model Merging for Multi-Task Learning](https://arxiv.org/abs/2310.02575)**（2023 preprint）。**核心思路：**借助无监督目标自适应学习任务级或层级的合并系数。 **对未来权重编程的启发：**启发在连续编辑冲突时，采用任务或层级相关的组合策略。
 
-<a id="structured-parameters-sparsity-mechanism-localization"></a>
+<a id="wcr-structure"></a>
 ## 结构化参数、稀疏性与机制定位
 
 *程序究竟该改哪些参数、方向或子网络？*
@@ -76,7 +76,7 @@
 
 - **[PiSSA: Principal Singular Values and Singular Vectors Adaptation of Large Language Models](https://arxiv.org/abs/2404.02948)**（NeurIPS 2024）。**核心思路：**利用预训练权重矩阵的主要奇异分量构造适应空间。 **对未来权重编程的启发：**启发依据矩阵结构选择编辑子空间，而非任意参数坐标。
 
-<a id="continual-capability-accumulation-preservation"></a>
+<a id="wcr-retention"></a>
 ## 持续能力积累与旧能力保护
 
 *新能力应写到哪里？连续更新后哪些旧能力必须保持？*
@@ -91,7 +91,7 @@
 
 ## 与主仓库已有文献的关联
 
-- **读取与对齐：** 主目录已收录 [Neural Functional Transformers](https://papers.neurips.cc/paper_files/paper/2023/hash/80a4eae94795e4d636a8f3d529e1fba9-Abstract-Conference.html)、[Git Re-Basin](https://arxiv.org/abs/2209.04836)、[Equivariant Deep Weight Space Alignment](https://arxiv.org/abs/2310.13397)，可结合上述几何与表征研究一起阅读。
+- **读取与对齐：** 主目录已收录 [Neural Functional Transformers](https://papers.neurips.cc/paper_files/paper/2023/hash/f4757db82a02eea015670ecca605d5cc-Abstract-Conference.html)、[Git Re-Basin](https://arxiv.org/abs/2209.04836)、[Equivariant Deep Weight Space Alignment](https://arxiv.org/abs/2310.13397)，可结合上述几何与表征研究一起阅读。
 - **程序编译与训练式生成：** [Tracr](https://arxiv.org/abs/2301.05062)、[Text-to-LoRA](https://arxiv.org/abs/2506.06105)、[Doc-to-LoRA](https://arxiv.org/abs/2602.15902) 已在主目录收录。应区分这些方法的训练需求、参数构造方式和是否需要专门训练编辑器。
 - **定向修改：** [ROME](https://arxiv.org/abs/2202.05262)、[MEMIT](https://arxiv.org/abs/2210.07229)、[AlphaEdit](https://arxiv.org/abs/2410.02355)、[Task Arithmetic](https://arxiv.org/abs/2212.04089) 仍保留在主目录，不在此重复收录。
 
