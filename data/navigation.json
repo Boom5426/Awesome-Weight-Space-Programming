@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "description": "Mutually exclusive navigation leaves; numbers derive from data/entries.json.",
+  "branches": [
+    {
+      "id": "direct",
+      "name": "Direct WSP",
+      "name_zh": "直接权重编程",
+      "side": "left",
+      "leaves": [
+        {
+          "id": "install",
+          "name": "Capability installation",
+          "name_zh": "能力安装与积累",
+          "ids": [
+            "weightcode",
+            "weightloop"
+          ]
+        },
+        {
+          "id": "read",
+          "name": "Weight reading & audits",
+          "name_zh": "权重读取与审计",
+          "ids": [
+            "can-an-llm-actually-reason-about-weights",
+            "orbit-audits",
+            "clinical-network-audits"
+          ]
+        },
+        {
+          "id": "synthesize",
+          "name": "Network construction",
+          "name_zh": "网络与权重构造",
+          "ids": [
+            "mixed-signals",
+            "physics2weight",
+            "wsp-for-medical-imaging",
+            "wsp-for-quantum-circuits",
+            "wsp-for-mathematical-optimization",
+            "zero-shot-game-wsp"
+          ]
+        },
+        {
+          "id": "repair",
+          "name": "Repair & targeted editing",
+          "name_zh": "修复与定向编辑",
+          "ids": [
+            "can-llms-debug-robots-by-editing-their-weights",
+            "distilling-instructions-into-weights-closed-form-edits-fix-a-robot-pol"
+          ]
+        },
+        {
+          "id": "evaluate",
+          "name": "Benchmarking editors",
+          "name_zh": "编辑器评估",
+          "ids": [
+            "wsp-scope",
+            "iwibench"
+          ]
+        },
+        {
+          "id": "verify",
+          "name": "Verification & control",
+          "name_zh": "验证与控制",
+          "ids": [
+            "ncp",
+            "w-isa",
+            "wsp-for-policies"
+          ]
+        },
+        {
+          "id": "explore",
+          "name": "Conjectures & proposals",
+          "name_zh": "研究猜想",
+          "ids": [
+            "diffusion-wsp-conjectures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weight-centric",
+      "name": "Weight-Centric Research",
+      "name_zh": "权重相关研究",
+      "side": "right",
+      "leaves": [
+        {
+          "id": "geometry",
+          "name": "Geometry & symmetry",
+          "name_zh": "几何与对称性",
+          "section": "geometry"
+        },
+        {
+          "id": "reading",
+          "name": "Weight representations",
+          "name_zh": "权重表征",
+          "section": "reading"
+        },
+        {
+          "id": "generation",
+          "name": "Weight generation",
+          "name_zh": "权重生成",
+          "section": "generation"
+        },
+        {
+          "id": "composition",
+          "name": "Merging & composition",
+          "name_zh": "合并与组合",
+          "section": "composition"
+        },
+        {
+          "id": "structure",
+          "name": "Localization & sparsity",
+          "name_zh": "定位与稀疏",
+          "section": "structure"
+        },
+        {
+          "id": "retention",
+          "name": "Continual retention",
+          "name_zh": "持续能力保持",
+          "section": "retention"
+        }
+      ]
+    },
+    {
+      "id": "foundations",
+      "name": "Related Foundations",
+      "name_zh": "相关基础研究",
+      "side": "left",
+      "group": "related",
+      "leaves": [
+        {
+          "id": "compilation",
+          "name": "Neural compilation",
+          "name_zh": "神经编译",
+          "section": "neural-compilation"
+        },
+        {
+          "id": "editing",
+          "name": "Model editing & geometry",
+          "name_zh": "模型编辑与几何",
+          "section": "weight-foundations"
+        },
+        {
+          "id": "fast",
+          "name": "Fast & self-modifying weights",
+          "name_zh": "快速与自修改权重",
+          "section": "fast-foundations"
+        },
+        {
+          "id": "historical",
+          "name": "Historic program-to-weights",
+          "name_zh": "早期程序到权重",
+          "section": "program-foundations"
+        },
+        {
+          "id": "cross-domain",
+          "name": "Cross-domain ideas",
+          "name_zh": "跨领域方法",
+          "section": "cross-domain"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "name": "Reports & Resources",
+      "name_zh": "报告与资源",
+      "side": "right",
+      "leaves": [
+        {
+          "id": "reports",
+          "name": "Technical reports & blogs",
+          "name_zh": "技术报告与博客",
+          "group": "reports"
+        },
+        {
+          "id": "tools",
+          "name": "Tools & reproduction",
+          "name_zh": "工具与复现",
+          "group": "resources"
+        }
+      ]
+    }
+  ]
+}
