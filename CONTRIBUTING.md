@@ -40,3 +40,21 @@ Keep unknown evidence values null. Do not invent outcomes or infer old-skill pre
 ## Submission policy / 投稿规则
 
 Authors may submit their own work but should disclose authorship, venue status, model/task, evaluation protocol, public code, and evidence scope. Prefer primary papers and first-party projects. Focus on practical research value, not raw number of papers or GitHub stars.
+
+## Research Landscape and searchable catalog
+
+The interactive pages are generated from **the same** `data/entries.json` used by the bilingual README. Add any new paper only once to the canonical dataset; never edit the embedded HTML data by hand.
+
+Edit `data/navigation.json` when adding a new direct-WSP research item or changing the mutually exclusive research-map tracks. Every entry must belong to exactly one leaf (see the build validator). The pages are based on the design pattern used in [Awesome Virtual Cell](https://github.com/Boom5426/Awesome-Virtual-Cell), with a WSP-specific taxonomy.
+
+```bash
+python3 scripts/validate.py
+python3 scripts/build.py
+python3 scripts/build_site.py
+python3 scripts/build.py --check
+python3 scripts/build_site.py --check
+```
+
+The generator writes `index.html` and `landscape.html` at both repository root and under `docs/`, allowing either Pages source option. In GitHub **Settings → Pages**, publish `main` from **/(root)** or **/docs** (depending on repository setup). The public URLs are `https://boom5426.github.io/Awesome-Weight-Space-Programming/` and `.../landscape.html` after Pages deployment.
+
+The README badges assume Pages is enabled. If not, the Markdown lists remain directly available on GitHub. GitHub Actions checks that generated pages are synchronized with JSON and HTML templates.
