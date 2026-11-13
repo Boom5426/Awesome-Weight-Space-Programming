@@ -100,7 +100,7 @@
 
 - **[Drag-and-Drop LLMs: Zero-Shot Prompt-to-Weights](https://arxiv.org/abs/2506.16406)** (2025). **Weight-centric idea:** Explores zero-shot prompt-conditioned parameter production. **Potential WSP inspiration:** Relevant to converting textual specifications into persistent weight changes.
 
-- **[Scaling Up Parameter Generation: A Recurrent Diffusion Approach](https://arxiv.org/abs/2501.11587)** (NeurIPS 2025). **Weight-centric idea:** Uses recurrent diffusion to generate large parameter sets in chunks. **Potential WSP inspiration:** Suggests blockwise generation for edits too large for direct tensor writing.
+- **[Recurrent Diffusion for Large-Scale Parameter Generation](https://arxiv.org/abs/2501.11587)** (NeurIPS 2025). **Weight-centric idea:** Uses recurrent diffusion to generate large parameter sets in chunks. **Potential WSP inspiration:** Suggests blockwise generation for edits too large for direct tensor writing.
 
 - **[Text2Weight: Bridging Natural Language and Neural Network Weight Spaces](https://arxiv.org/abs/2508.13633)** (2025). **Weight-centric idea:** Generates task-conditioned weights from natural-language descriptions. **Potential WSP inspiration:** A natural-language-to-weights baseline for testing generalization to unseen tasks.
 
@@ -110,7 +110,6 @@
 
 - **[LoRAGen: Structure-Aware Weight Space Learning for LoRA Generation](https://proceedings.iclr.cc/paper_files/paper/2026/hash/fc7c087b5e965075c8946b9ff57e3d64-Abstract-Conference.html)** (ICLR 2026). **Weight-centric idea:** Handles non-identifiable LoRA factors and module-specific distributions in conditional generation. **Potential WSP inspiration:** Editing code may likewise need module-aware structure and canonical update representations.
 
-- **[Weight-Space Linear Recurrent Neural Networks](https://arxiv.org/abs/2506.01153)** (ICLR 2026). **Weight-centric idea:** Explores recurrent modeling of parameter sequences in weight space. **Potential WSP inspiration:** An alternative structured prior when large edits must be produced sequentially.
 
 <a id="wcr-composition"></a>
 ## Weight Arithmetic, Merging & Interference
@@ -180,6 +179,8 @@
 - **[C-LoRA: Continual Low-Rank Adaptation for Pre-trained Models](https://arxiv.org/abs/2502.17920)** (2025). **Weight-centric idea:** Routes sequential low-rank updates with orthogonality constraints. **Potential WSP inspiration:** Suggests tracking subspace usage as successive programs accumulate.
 
 - **[BECAME: Bayesian Continual Learning with Adaptive Model Merging](https://proceedings.mlr.press/v267/li25bk.html)** (ICML 2025). **Weight-centric idea:** Derives adaptive merging coefficients from a Bayesian continual-learning view. **Potential WSP inspiration:** A principled comparator for balancing plasticity and preservation as edits accumulate.
+
+- **[Weight-Space Linear Recurrent Neural Networks](https://arxiv.org/abs/2506.01153)** (ICLR 2026). **Weight-centric idea:** WARP treats the weights and biases of an auxiliary network as a recurrent hidden state, adapting those weights from input differences without test-time gradients. **Potential WSP inspiration:** Compare reversible, input-driven parameter-state updates against persistent ability installation; distinguish online adaptation from retained capability.
 
 ## Surveys, maps and benchmarking resources
 
