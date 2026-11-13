@@ -35,13 +35,18 @@ input:focus,select:focus,.tab:focus-visible{border-color:var(--accent);outline:2
 footer{margin-top:27px;font-size:13px;text-align:center;color:var(--muted);line-height:1.8}footer a{color:var(--accent)}
 @media(max-width:830px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.top{display:block}.details{margin-top:6px}}
 @media(max-width:520px){.wrap{padding:14px 10px 42px}.hero{padding:24px 17px}.controls{grid-template-columns:1fr}.controls input{grid-column:auto}.item{padding:15px}}
+.nav button{color:white;font:inherit;font-size:13px;background:#ffffff17;border:1px solid #ffffff65;border-radius:8px;padding:4px 9px;cursor:pointer}
+.nav button:hover,.nav button:focus-visible{background:#ffffff35;outline:2px solid white;outline-offset:2px}
+.pager{text-align:center;margin:16px 0 0}.pager button{padding:10px 18px;border-radius:9px;border:1px solid #9ac6d6;color:#0b6e99;background:#e9f7fa;cursor:pointer;font-weight:650}
+.pager button:hover{background:#dcf0f5}.pager button:focus-visible{outline:2px solid #0b6e99;outline-offset:2px}
+[hidden]{display:none!important}
 </style>
 </head>
 <body><main class="wrap">
 <section class="hero">
 <h1>Awesome Weight-Space Programming</h1>
-<p>Explore weight programming, weight-centric research, and the ideas behind programmable neural networks.</p>
-<div class="nav"><a href="landscape.html">Research Landscape ↗</a><a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming#start-here">Start Here on GitHub ↗</a><a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/docs/wsp-evidence.md">WSP Evidence Matrix ↗</a></div>
+<p id="heroDescription">Explore weight programming, weight-centric research, and the ideas behind programmable neural networks.</p>
+<div class="nav"><a id="mapLink" href="landscape.html">Research Landscape ↗</a><a id="startLink" href="https://github.com/Boom5426/Awesome-Weight-Space-Programming#start-here">Start Here on GitHub ↗</a><a id="evidenceLink" href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/docs/wsp-evidence.md">WSP Evidence Matrix ↗</a><button id="langToggle" type="button" aria-label="Switch language">中文</button></div>
 <div class="stats"><span class="stat" id="statAll"></span><span class="stat" id="statDirect"></span><span class="stat" id="statCentric"></span><span class="stat" id="statChecked"></span></div>
 </section>
 <nav class="tabs" id="tabs" aria-label="Research collections"></nav>
@@ -54,83 +59,176 @@ footer{margin-top:27px;font-size:13px;text-align:center;color:var(--muted);line-
 </section>
 <div class="options"><div class="count" id="count" aria-live="polite"></div><button id="clear" type="button">Clear filters</button></div>
 <section id="results" class="grid"></section>
-<footer><a href="landscape.html">Interactive research map</a> · <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/README.md">English README</a> · <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/README_zh.md">中文 README</a><p>Source-reported results are not independent reproductions. Weight-centric inspirations are hypotheses, not direct WSP evidence.</p></footer>
+<div class="pager"><button id="more" type="button" hidden>Show more</button></div>
+<footer><a id="footerMap" href="landscape.html">Interactive research map</a> · <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/README.md">English README</a> · <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/blob/main/README_zh.md">中文 README</a><p id="footerNote">Source-reported results are not independent reproductions. Weight-centric inspirations are hypotheses, not direct WSP evidence.</p></footer>
 </main>
 <script>
 const PAPERS=__CATALOG_DATA__;
 const NAV=__NAVIGATION_DATA__;
-const byId=id=>document.getElementById(id);
+const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-const groups=[["","All research"],["direct","Direct WSP"],["weight-centric","Weight-Centric"],["related","Foundations"],["reports","Reports"],["resources","Tools & resources"]];
-const allLeaves=NAV.branches.flatMap(b=>b.leaves.map(l=>({id:b.id+"."+l.id,name:l.name,branch:b.id})));
-const years=[...new Set(PAPERS.map(p=>p.year))].sort((a,b)=>b-a);
-years.forEach(y=>byId("year").insertAdjacentHTML("beforeend",'<option value="'+y+'">'+y+'</option>'));
-let group="",activeLeaf="";
-function groupKey(p){return p.group==="related"?"related":p.group;}
-function link(label,url){return url&&/^https:\/\//.test(url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">'+esc(label)+' ↗</a>':"";}
+const groupIds=["","direct","weight-centric","related","reports","resources"];
+const leaves=NAV.branches.flatMap(b=>b.leaves.map(l=>({id:b.id+"."+l.id,name:l.name,nameZh:l.name_zh,branch:b.id,count:l.count})));
+const PAGE_SIZE=24;
+const I18N={
+  en:{
+    hero:"Explore weight programming, weight-centric research, and the ideas behind programmable neural networks.",
+    map:"Research Landscape ↗",start:"Start Here on GitHub ↗",matrix:"WSP Evidence Matrix ↗",
+    groups:["All research","Direct WSP","Weight-Centric","Foundations","Reports","Tools & resources"],
+    placeholder:"Search titles, methods and research questions…",allTracks:"All research tracks",
+    allYears:"All years",anyCode:"Any code status",withCode:"Code available",withoutCode:"No code link",
+    anyReview:"Any source audit",reviewed:"Source checked (not reproduced)",unreviewed:"WSP metadata only",
+    clear:"Clear filters",more:"Show more",source:"Source",code:"Code",
+    idea:"Research idea",inspiration:"Potential WSP inspiration",claim:"Source-reported result",
+    sourceChecked:"Source checked",empty:"No matching entries. Clear a filter or choose another research track.",
+    footerMap:"Interactive research map",footer:"Source-reported results are not independent reproductions. Weight-centric inspirations are hypotheses, not direct WSP evidence.",
+    summary:(shown,matches,total)=>"Showing "+shown+" of "+matches+" matches ("+total+" entries)",
+    stats:(total,direct,centric,checked)=>[total+" curated entries",direct+" direct WSP",centric+" weight-centric",checked+" sources reviewed"]
+  },
+  zh:{
+    hero:"探索权重编程、权重相关研究，以及可编程神经网络背后的方法与证据。",
+    map:"研究导航图 ↗",start:"从 GitHub 开始 ↗",matrix:"WSP 证据矩阵 ↗",
+    groups:["全部研究","直接 WSP","权重相关研究","基础研究","报告与博客","工具与资源"],
+    placeholder:"搜索论文标题、方法、研究问题（支持中英文）…",allTracks:"全部研究子方向",
+    allYears:"全部年份",anyCode:"全部代码状态",withCode:"有代码链接",withoutCode:"无代码链接",
+    anyReview:"全部证据状态",reviewed:"已核对来源（非复现）",unreviewed:"WSP 仅有元信息",
+    clear:"清除筛选",more:"查看更多",source:"来源",code:"代码",
+    idea:"核心思路",inspiration:"对 WSP 的潜在启发",claim:"来源报告的结果",
+    sourceChecked:"已核对来源",empty:"没有匹配条目。请清除部分筛选条件或切换研究方向。",
+    footerMap:"交互式研究导航图",footer:"来源核对不等于独立复现；权重相关研究的潜在启发不等于已经验证的 WSP 成果。",
+    summary:(shown,matches,total)=>"显示 "+shown+" / "+matches+" 条匹配结果（共 "+total+" 条）",
+    stats:(total,direct,centric,checked)=>[total+" 条精选资源",direct+" 篇直接 WSP",centric+" 篇权重相关研究",checked+" 项已核对来源"]
+  }
+};
+let group="",track="",lang="en",limit=PAGE_SIZE;
+const T=()=>I18N[lang];
+const groupForTrack=id=>{
+  if(!id)return "";
+  const leaf=leaves.find(l=>l.id===id);
+  if(!leaf)return "";
+  if(leaf.branch==="resources")return leaf.id.endsWith(".reports")?"reports":"resources";
+  if(leaf.branch==="foundations")return "related";
+  return leaf.branch;
+};
 function loadState(){
-  const url=new URLSearchParams(location.search);
-  group=url.get("group")||({"direct":"direct","weight-centric":"weight-centric","foundations":"related"}[url.get("branch")]||"");
-  activeLeaf=url.get("leaf")&&url.get("branch")?(url.get("branch")+"."+url.get("leaf")):(url.get("track")||"");
-  byId("q").value=url.get("q")||"";
-  byId("year").value=url.get("year")||"";
-  byId("code").value=url.get("code")||"";
-  byId("review").value=url.get("review")||"";
-  if(!groups.some(x=>x[0]===group))group="";
-  if(!allLeaves.some(l=>l.id===activeLeaf))activeLeaf="";
+  const q=new URLSearchParams(location.search);
+  lang=q.get("lang")==="zh"?"zh":"en";
+  track=q.get("branch")&&q.get("leaf")?(q.get("branch")+"."+q.get("leaf")):(q.get("track")||"");
+  if(!leaves.some(l=>l.id===track))track="";
+  group=q.get("group")||groupForTrack(track);
+  if(!groupIds.includes(group))group="";
+  if(track && group!==groupForTrack(track))group=groupForTrack(track);
+  for(const id of ["q","year","code","review"])$(id).value=q.get(id)||"";
+  limit=PAGE_SIZE;
 }
-function syncURL(){
-  const url=new URLSearchParams();
-  if(group)url.set("group",group);
-  if(activeLeaf){const [b,l]=activeLeaf.split(".");url.set("branch",b);url.set("leaf",l);}
-  ["q","year","code","review"].forEach(k=>{const v=byId(k).value.trim();if(v)url.set(k,v);});
-  if(location.protocol!=="file:")history.replaceState(null,"",location.pathname+(url.size?"?"+url.toString():""));
+function setSelect(id,opts){
+  const el=$(id),selected=el.value;
+  el.innerHTML=opts.map(([value,label])=>'<option value="'+esc(value)+'">'+esc(label)+'</option>').join("");
+  el.value=opts.some(x=>x[0]===selected)?selected:"";
 }
-function tabs(){
-  byId("tabs").innerHTML=groups.map(([id,text])=>'<button type="button" class="tab'+(group===id?" active":"")+'" data-group="'+esc(id)+'" aria-pressed="'+(group===id)+'">'+esc(text)+'</button>').join("");
+function languageUI(){
+  const t=T();
+  document.documentElement.lang=lang;
+  $("heroDescription").textContent=t.hero;
+  $("mapLink").textContent=t.map;$("startLink").textContent=t.start;$("evidenceLink").textContent=t.matrix;
+  $("mapLink").href="landscape.html"+(lang==="zh"?"?lang=zh":"");
+  $("footerMap").href=$("mapLink").href;$("footerMap").textContent=t.footerMap;
+  $("footerNote").textContent=t.footer;
+  $("langToggle").textContent=lang==="en"?"中文":"English";
+  $("langToggle").setAttribute("aria-label",lang==="en"?"Switch to Chinese":"切换为英文");
+  $("q").placeholder=t.placeholder;$("q").setAttribute("aria-label",t.placeholder);
+  $("clear").textContent=t.clear;$("more").textContent=t.more;
+  const years=[...new Set(PAPERS.map(p=>p.year))].sort((a,b)=>b-a);
+  setSelect("year",[["",t.allYears],...years.map(y=>[String(y),String(y)])]);
+  setSelect("code",[["",t.anyCode],["yes",t.withCode],["no",t.withoutCode]]);
+  setSelect("review",[["",t.anyReview],["source_checked",t.reviewed],["metadata_only",t.unreviewed]]);
+  const statistics=t.stats(PAPERS.length,PAPERS.filter(p=>p.group==="direct").length,
+    PAPERS.filter(p=>p.group==="weight-centric").length,PAPERS.filter(p=>p.review==="source_checked").length);
+  ["statAll","statDirect","statCentric","statChecked"].forEach((id,i)=>$(id).textContent=statistics[i]);
 }
-function leafMenu(){
-  const valid=allLeaves.filter(l=>!group||(group==="direct"&&l.branch==="direct")||(group==="weight-centric"&&l.branch==="weight-centric")||(group==="related"&&l.branch==="foundations")||(group==="reports"&&l.id==="resources.reports")||(group==="resources"&&l.id==="resources.tools"));
-  byId("leaf").innerHTML='<option value="">All research tracks</option>'+valid.map(l=>'<option value="'+esc(l.id)+'">'+esc(l.name)+'</option>').join("");
-  if(!valid.some(l=>l.id===activeLeaf))activeLeaf="";
-  byId("leaf").value=activeLeaf;
+function drawTabs(){
+  const labels=T().groups;
+  $("tabs").innerHTML=groupIds.map((id,i)=>'<button type="button" class="tab'+(group===id?" active":"")+
+    '" data-group="'+esc(id)+'" aria-pressed="'+(group===id)+'">'+esc(labels[i])+'</button>').join("");
+}
+function drawTracks(){
+  const valid=leaves.filter(l=>!group||l.branch===(group==="related"?"foundations":group)||
+    (l.branch==="resources"&&groupForTrack(l.id)===group));
+  if(track&&!valid.some(l=>l.id===track))track="";
+  setSelect("leaf",[["",T().allTracks],...valid.map(l=>[l.id,(lang==="zh"?l.nameZh:l.name)+" ("+l.count+")"])]);
+  $("leaf").value=track;
+  $("review").disabled=!!group&&group!=="direct";
+  if($("review").disabled)$("review").value="";
 }
 function matches(p){
-  const words=byId("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
-  const hay=[p.label,p.title,p.group,p.section,p.idea,p.inspiration,p.claim].join(" ").toLowerCase();
-  const code=byId("code").value,review=byId("review").value;
-  return (!group||p.group===group)&&(!activeLeaf||p.track===activeLeaf)
-    &&(!byId("year").value||String(p.year)===byId("year").value)
+  const words=$("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const search=[p.label,p.title,p.group,p.section,p.idea,p.ideaZh,p.inspiration,p.inspirationZh,p.claim,p.search].join(" ").toLowerCase();
+  const code=$("code").value,review=$("review").value;
+  return (!group||p.group===group)&&(!track||p.track===track)
+    &&(!$("year").value||String(p.year)===$("year").value)
     &&(!code||(code==="yes"&&!!p.code)||(code==="no"&&!p.code))
     &&(!review||p.review===review)
-    &&words.every(w=>hay.includes(w));
+    &&words.every(w=>search.includes(w));
 }
-function render(){
-  tabs();
-  leafMenu();
-  const visible=PAPERS.filter(matches).sort((a,b)=>b.year-a.year||a.order-b.order);
-  byId("count").textContent="Showing "+visible.length+" of "+PAPERS.length+" entries";
-  byId("results").innerHTML=visible.length?visible.map(p=>{
-    const sub=allLeaves.find(l=>l.id===p.track);
-    const tags='<span class="tag">'+esc(p.groupLabel)+'</span>'+(sub?'<span class="tag secondary">'+esc(sub.name)+'</span>':"");
-    const checked=p.review==="source_checked"?'<span class="tag">Source checked</span>':"";
-    const commentary=p.idea?'<p class="evidence"><strong>Research idea:</strong> '+esc(p.idea)+'</p><p class="evidence"><strong>Potential WSP inspiration:</strong> '+esc(p.inspiration)+'</p>':
-      p.claim?'<p class="evidence"><strong>Source-reported result:</strong> '+esc(p.claim)+'</p>':"";
-    const title=p.label===p.title?p.title:p.label+": "+p.title;
-    return '<article class="item"><div class="top"><div class="label">'+esc(title)+'</div><div class="details">'+p.year+'</div></div><div class="tags">'+tags+checked+'</div>'+commentary+'<div class="links">'+link("Source",p.url)+(p.code?link("Code",p.code):"")+'</div></article>';
-  }).join(""):'<div class="empty">No matching entries. Clear a filter or choose another research track.</div>';
+function extLink(label,url){
+  return /^https:\/\//.test(url||"")?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">'+esc(label)+' ↗</a>':"";
+}
+function card(p){
+  const t=T(),trackInfo=leaves.find(l=>l.id===p.track),title=p.label===p.title?p.title:p.label+": "+p.title;
+  const tags='<span class="tag">'+esc(lang==="zh"?p.groupLabelZh:p.groupLabel)+'</span>'+
+    (trackInfo?'<span class="tag secondary">'+esc(lang==="zh"?trackInfo.nameZh:trackInfo.name)+'</span>':"")+
+    (p.review==="source_checked"?'<span class="tag" title="'+esc(t.reviewed)+'">'+esc(t.sourceChecked)+'</span>':"");
+  const idea=lang==="zh"?(p.ideaZh||p.idea):(p.idea||p.ideaZh);
+  const inspiration=lang==="zh"?(p.inspirationZh||p.inspiration):(p.inspiration||p.inspirationZh);
+  const summary=idea?'<p class="evidence"><strong>'+esc(t.idea)+':</strong> '+esc(idea)+'</p>'+
+    '<p class="evidence"><strong>'+esc(t.inspiration)+':</strong> '+esc(inspiration)+'</p>':
+    p.claim?'<p class="evidence"><strong>'+esc(t.claim)+':</strong> '+esc(p.claim)+'</p>':"";
+  const meta=p.venue&&p.venue!=="metadata_only"?p.venue+" · "+p.year:String(p.year);
+  return '<article class="item"><div class="top"><div class="label">'+esc(title)+'</div><div class="details">'+esc(meta)+'</div></div>'+
+    '<div class="tags">'+tags+'</div>'+summary+'<div class="links">'+extLink(t.source,p.url)+(p.code?extLink(t.code,p.code):"")+'</div></article>';
+}
+function syncURL(){
+  const q=new URLSearchParams();
+  if(lang==="zh")q.set("lang","zh");
+  if(group)q.set("group",group);
+  if(track){const [b,l]=track.split(".");q.set("branch",b);q.set("leaf",l);}
+  ["q","year","code","review"].forEach(k=>{if($(k).value.trim())q.set(k,$(k).value.trim());});
+  if(location.protocol!=="file:")history.replaceState(null,"",location.pathname+(q.toString()?"?"+q.toString():""));
+}
+function render(reset=false){
+  if(reset)limit=PAGE_SIZE;
+  languageUI();drawTabs();drawTracks();
+  const filtered=PAPERS.filter(matches).sort((a,b)=>b.year-a.year||a.order-b.order);
+  const display=filtered.slice(0,limit);
+  $("count").textContent=T().summary(display.length,filtered.length,PAPERS.length);
+  $("results").innerHTML=display.length?display.map(card).join(""):'<div class="empty">'+esc(T().empty)+'</div>';
+  $("more").hidden=display.length>=filtered.length;
   syncURL();
 }
-byId("statAll").textContent=PAPERS.length+" curated entries";
-byId("statDirect").textContent=PAPERS.filter(p=>p.group==="direct").length+" direct WSP";
-byId("statCentric").textContent=PAPERS.filter(p=>p.group==="weight-centric").length+" weight-centric";
-byId("statChecked").textContent=PAPERS.filter(p=>p.review==="source_checked").length+" source checked";
-byId("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-group]");if(!b)return;group=b.dataset.group;activeLeaf="";render();});
-byId("leaf").addEventListener("change",e=>{activeLeaf=e.target.value;render();});
-["q","year","code","review"].forEach(id=>byId(id).addEventListener("input",render));
-byId("clear").addEventListener("click",()=>{group="";activeLeaf="";["q","year","code","review"].forEach(id=>byId(id).value="");render();});
-window.addEventListener("popstate",()=>{loadState();render();});
-document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","SELECT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();byId("q").focus();}});
-loadState();render();
+$("tabs").addEventListener("click",e=>{
+  const tab=e.target.closest("[data-group]");if(!tab)return;
+  group=tab.dataset.group;track="";
+  if(group&&group!=="direct")$("review").value="";
+  render(true);
+});
+$("leaf").addEventListener("change",e=>{
+  track=e.target.value;
+  if(track)group=groupForTrack(track);
+  render(true);
+});
+for(const id of ["q","year","code","review"])$(id).addEventListener("input",()=>render(true));
+$("langToggle").addEventListener("click",()=>{lang=lang==="en"?"zh":"en";render();});
+$("more").addEventListener("click",()=>{limit+=PAGE_SIZE;render();});
+$("clear").addEventListener("click",()=>{
+  group="";track="";for(const id of ["q","year","code","review"])$(id).value="";
+  render(true);
+});
+window.addEventListener("popstate",()=>{loadState();render(true);});
+document.addEventListener("keydown",e=>{
+  if(e.key==="/"&&!["INPUT","SELECT","TEXTAREA"].includes(document.activeElement?.tagName)){
+    e.preventDefault();$("q").focus();
+  }
+});
+loadState();render(true);
 </script>
 </body></html>
