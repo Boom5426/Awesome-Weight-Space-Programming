@@ -16,6 +16,21 @@
 > 论文标题保留英文原文，便于检索和引用。
 
 
+<p align="center">
+  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/"><img src="https://img.shields.io/badge/Search_%26_Filter-Browse_Catalog-0B6E99?style=for-the-badge" alt="Search and filter Weight-Space Programming research" /></a>
+  <a href="https://boom5426.github.io/Awesome-Weight-Space-Programming/landscape.html"><img src="https://img.shields.io/badge/Research_Landscape-Interactive_Map-24B6A6?style=for-the-badge" alt="Explore the interactive weight-space research map" /></a>
+</p>
+
+<p align="center">
+  <sub>
+    <a href="#start-here">从这里开始</a> ·
+    <a href="#latest-updates">最近更新</a> ·
+    <a href="#research-papers">直接 WSP</a> ·
+    <a href="#weight-centric-inspirations">权重相关研究</a> ·
+    <a href="docs/wsp-evidence.md">证据矩阵</a>
+  </sub>
+</p>
+
 <a id="start-here"></a>
 ## 🚀 从这里开始
 
