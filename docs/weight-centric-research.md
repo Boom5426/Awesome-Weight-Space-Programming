@@ -17,6 +17,7 @@
 | [Structured Parameters, Sparsity & Mechanism Localization](#wcr-structure) | Which coordinates, directions, or subnetworks should a program modify? |
 | [Continual Capability Accumulation & Preservation](#wcr-retention) | Where can new abilities live, and what should remain unchanged after many updates? |
 
+<!-- AUTO:START weight-centric -->
 <a id="wcr-geometry"></a>
 ## Weight Geometry, Symmetry & Connectivity
 
@@ -110,7 +111,6 @@
 
 - **[LoRAGen: Structure-Aware Weight Space Learning for LoRA Generation](https://proceedings.iclr.cc/paper_files/paper/2026/hash/fc7c087b5e965075c8946b9ff57e3d64-Abstract-Conference.html)** (ICLR 2026). **Weight-centric idea:** Handles non-identifiable LoRA factors and module-specific distributions in conditional generation. **Potential WSP inspiration:** Editing code may likewise need module-aware structure and canonical update representations.
 
-
 <a id="wcr-composition"></a>
 ## Weight Arithmetic, Merging & Interference
 
@@ -181,6 +181,7 @@
 - **[BECAME: Bayesian Continual Learning with Adaptive Model Merging](https://proceedings.mlr.press/v267/li25bk.html)** (ICML 2025). **Weight-centric idea:** Derives adaptive merging coefficients from a Bayesian continual-learning view. **Potential WSP inspiration:** A principled comparator for balancing plasticity and preservation as edits accumulate.
 
 - **[Weight-Space Linear Recurrent Neural Networks](https://arxiv.org/abs/2506.01153)** (ICLR 2026). **Weight-centric idea:** WARP treats the weights and biases of an auxiliary network as a recurrent hidden state, adapting those weights from input differences without test-time gradients. **Potential WSP inspiration:** Compare reversible, input-driven parameter-state updates against persistent ability installation; distinguish online adaptation from retained capability.
+<!-- AUTO:END weight-centric -->
 
 ## Surveys, maps and benchmarking resources
 
