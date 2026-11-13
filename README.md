@@ -38,7 +38,7 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 | Goal | Recommended entry points |
 | --- | --- |
 | 🧠 **Understand direct WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
-| 🛠️ **Install and retain capabilities** | **[WeightCode](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
+| 🛠️ **Install capabilities & adapt with feedback** | **[WeightCode](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
 | 📏 **Evaluate weight understanding and editing** | **[IWIBench](https://arxiv.org/abs/2611.08647)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) · [Clinical Network Audits](https://arxiv.org/abs/2611.05341) |
 | 🧬 **Generate weights and networks** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
 | ✅ **Build verifiable interventions** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
@@ -51,9 +51,9 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
+| `2026-11-13` | Improved the interactive map and catalog with Chinese search, clearer navigation, mobile track browsing and paginated results. |
 | `2026-11-13` | Added a structured bilingual bibliography with validation and evidence fields, plus historical foundations and robot-policy weight programming. |
 | `2026-11-13` | Expanded **Weight-Centric Research** to **67 papers** across six tracks, with dedicated surveys and evaluation resources. |
-| `2026-11-13` | Launched a separate bilingual **Weight-Centric Research** companion series. |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
