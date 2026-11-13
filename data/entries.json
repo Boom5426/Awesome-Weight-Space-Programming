@@ -220,16 +220,16 @@
       "render_zh": "- **[WSP-Scope]** `[基准评测]` `[LLM 编辑]` Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09382)] [[代码](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars) [[项目](https://wsp-scope.github.io/)]",
       "evidence": {
         "level": "preprint",
-        "review": "metadata_only",
-        "gradient_free": null,
-        "target_model": null,
-        "intervention": null,
-        "claim": null,
-        "baselines": null,
-        "preservation": null,
-        "transfer": null,
-        "caveat": null,
-        "source_url": "https://arxiv.org/abs/2611.09382"
+        "review": "source_checked",
+        "gradient_free": true,
+        "source_url": "https://arxiv.org/abs/2611.09382",
+        "target_model": "Qwen3.5-0.8B and Qwen3.5-9B; 7 benchmarks",
+        "intervention": "16 weight-editing trajectories with localized parameter interventions and held-out evaluation.",
+        "claim": "On held-out tests, gains up to +29.45 pp MATH-500, +4.42 GPQA Diamond, +36.72 IFEval and +17.11 SciBench; one MATH result edits 1,023 parameters.",
+        "baselines": "Multi-benchmark, two model sizes, multiple editing trajectories; 6/16 retain original weights when candidates fail validation.",
+        "preservation": "Selected math-edited model improves other benchmarks; global original-capability preservation is not established.",
+        "transfer": "Cross-task changes shown on the same checkpoint; executable program reuse across independent hosts not shown.",
+        "caveat": "Highly variable trajectory outcomes; improvements do not by themselves establish previously missing capabilities."
       }
     },
     {
@@ -266,16 +266,16 @@
       "render_zh": "- **[Can an LLM Actually Reason about Weights?]** `[权重读取]` `[可靠性]` Can an LLM Actually Reason and Program about Neural Network's Weights or is it just memorization on steroids? Exploring \"Weight-Space Programming\"（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.08070)]",
       "evidence": {
         "level": "preprint",
-        "review": "metadata_only",
+        "review": "source_checked",
         "gradient_free": null,
-        "target_model": null,
-        "intervention": null,
-        "claim": null,
-        "baselines": null,
-        "preservation": null,
-        "transfer": null,
-        "caveat": null,
-        "source_url": "https://arxiv.org/abs/2611.08070"
+        "source_url": "https://arxiv.org/abs/2611.08070",
+        "target_model": "Small CNNs (~125K parameters) on five vision datasets, read by Claude Opus 5.5",
+        "intervention": "Presents every weight without tools, forward passes, or class names and audits inferred training/data properties.",
+        "claim": "Reports accurate local computations but multiple erroneous semantic/dataset identifications, including label-permutation failures.",
+        "baselines": "Label permutations, alternative datasets and verification of selected reasoning claims.",
+        "preservation": "Not an editing or retention study.",
+        "transfer": "No weight-program portability demonstrated.",
+        "caveat": "Mostly exploratory single runs, with no direct forward-pass validation of tracing claims."
       }
     },
     {
@@ -289,16 +289,16 @@
       "render_zh": "- **[IWIBench]** `[基准评测]` `[权重内注入]` IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.08647)] [[代码](https://github.com/hcltech-robotics/iwibench)] ![GitHub stars](https://img.shields.io/github/stars/hcltech-robotics/iwibench.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
-        "review": "metadata_only",
-        "gradient_free": null,
-        "target_model": null,
-        "intervention": null,
-        "claim": null,
-        "baselines": null,
-        "preservation": null,
-        "transfer": null,
-        "caveat": null,
-        "source_url": "https://arxiv.org/abs/2611.08647"
+        "review": "source_checked",
+        "gradient_free": true,
+        "source_url": "https://arxiv.org/abs/2611.08647",
+        "target_model": "Typically Gemma 3 4B IT as target, edited by larger models",
+        "intervention": "Benchmark with ten text-editing objectives, four bounded weight read/write tools and finite rollout budgets.",
+        "claim": "Editor success differs sharply by model and objective; structured response had no successful solution and answer-length control only one.",
+        "baselines": "Same target compared before and after patch in a clean validator; capability preservation part of task evaluation.",
+        "preservation": "Benchmarks aim to preserve other abilities; no universal no-regression result can be inferred from the abstract.",
+        "transfer": "Evaluates editor performance across objectives, not portability of executable programs to new hosts.",
+        "caveat": "Measures intra-weight editing performance, not broad new-capability installation for all task types."
       }
     },
     {
@@ -312,16 +312,16 @@
       "render_zh": "- **[WeightLoop]** `[实验反馈]` `[持续适应]` WeightLoop: Weight-Space Programming with Experimental Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07319)]",
       "evidence": {
         "level": "preprint",
-        "review": "metadata_only",
-        "gradient_free": null,
-        "target_model": null,
-        "intervention": null,
-        "claim": null,
-        "baselines": null,
-        "preservation": null,
-        "transfer": null,
-        "caveat": null,
-        "source_url": "https://arxiv.org/abs/2611.07319"
+        "review": "source_checked",
+        "gradient_free": true,
+        "source_url": "https://arxiv.org/abs/2611.07319",
+        "target_model": "Deployed prediction/recommendation models in offline experimental-feedback replay",
+        "intervention": "Fixed LLM writes bounded reusable update program; observed measurements select and persist weight edits without gradient retraining.",
+        "claim": "Targeted edits improve mean ranking utility in seven of eight endpoint-budget settings (all eight versus random edits) and mean final discovery across three sequential tasks.",
+        "baselines": "Random-edit comparison and endpoint-budget analyses in offline replay.",
+        "preservation": "Maintains inference interface; evidence of broad old-capability retention is not established in the abstract.",
+        "transfer": "Repeated updates without further LLM calls are reported, but cross-host program portability not established.",
+        "caveat": "Offline replay is not prospective wet-lab validation; task-specific improvements are not proof of general RSI."
       }
     },
     {
@@ -335,16 +335,16 @@
       "render_zh": "- **[Orbit Audits]** `[权重读取]` `[对称性]` Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.05798)]",
       "evidence": {
         "level": "preprint",
-        "review": "metadata_only",
+        "review": "source_checked",
         "gradient_free": null,
-        "target_model": null,
-        "intervention": null,
-        "claim": null,
-        "baselines": null,
-        "preservation": null,
-        "transfer": null,
-        "caveat": null,
-        "source_url": "https://arxiv.org/abs/2611.05798"
+        "source_url": "https://arxiv.org/abs/2611.05798",
+        "target_model": "480 shape neural fields and 1,000 MNIST neural fields",
+        "intervention": "Evaluates weight readers under function-preserving hidden-neuron permutations and positive ReLU rescalings; no weight installation.",
+        "claim": "Provides a consistency-versus-correctness evaluation protocol; numeric placeholders remain unresolved in its arXiv abstract.",
+        "baselines": "Functional-equivalence transformations, fresh repeated prompts, semantic-cue controls and canonicalization tests.",
+        "preservation": "Tests whether function-preserving transformations alter reading, not whether an editor retains prior skills.",
+        "transfer": "No executable cross-host edit transfer; examines robustness of weight reading across equivalent parameterizations.",
+        "caveat": "This is a weight-reader audit, not demonstrated capability installation."
       }
     },
     {
