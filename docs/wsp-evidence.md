@@ -5,7 +5,7 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 19 direct-WSP papers; 8 source-checked examples; 11 metadata-only entries.
+**Coverage:** 20 direct-WSP papers; 14 source-checked examples; 6 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
 
@@ -19,6 +19,72 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 - **Transfer / 迁移:** Ten programs rerun on 5 independently trained ViTs retain 83–110% of source gain; copying ΔW does not.
 - **Evidence boundary / 证据边界:** Evidence is reported for tested model families/tasks, not general foundation-model transfer.
 - **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** manuscript
+
+### [Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models](https://github.com/csinva/weight-space-programming-autoresearch/tree/f012b9557c8d522d58867025c0d602a04ecce38f)
+
+- **Model / 对象:** Handwritten transformers for 13 algorithmic and four NLP tasks; visual, language and auditory brain-encoding models.
+- **Intervention / 干预:** Agent iteratively writes weights/features from validation feedback without backpropagation; released neuroscience evaluators fit ridge readouts.
+- **Reported outcome / 结果:** All 26 reported Opus algorithmic runs attain 100% hidden accuracy; short-description rebuilds preserve algorithmic accuracy and lose about 1.4 points on NLP on average.
+- **Comparisons / 对照:** Majority-class, interpretable feature and pretrained neural-encoding baselines, plus description-and-rebuild audits.
+- **Old capability / 保持:** New model construction; not sequential retention of capabilities in an existing host.
+- **Transfer / 迁移:** Visual features evaluated across datasets; text-mediated rebuilding is distinct from rerunning an edit on independent pretrained hosts.
+- **Evidence boundary / 证据边界:** Source check uses the author abstract, repository and evaluators, not independent replication. Gradient-free feature writing does not mean a fitting-free pipeline; ECoG data are not public.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Mixed Signals](https://arxiv.org/html/2611.13758v1)
+
+- **Model / 对象:** TinyEEGNet (2,730 weights) and ECGResNet (941,189 weights); EEG and ECG tasks.
+- **Intervention / 干预:** Three LLMs read, repair and construct networks with bounded feedback; no gradient optimization; one-shot linear algebra allowed in ECG experiments.
+- **Reported outcome / 结果:** No reliable task reading or healthy-network improvement. With feedback, Opus/DeepSeek recover 0.99/0.96 of lost EEG accuracy; Opus constructs an eyes-state classifier with 0.834 balanced accuracy.
+- **Comparisons / 对照:** Random/shuffled-label controls, placebo edits, recalibration, fine-tuning, textbook ECG correction, and handcrafted EEG pipelines.
+- **Old capability / 保持:** Opus ECG swap repair leaves correct-ECG macro-AUC near baseline (0.9167 vs 0.9169); not a general retention result.
+- **Transfer / 迁移:** EEG construction evaluated on 65 unseen subjects; no executable-program transfer across independently trained hosts established.
+- **Evidence boundary / 证据边界:** ECG repair misses the textbook baseline; shortcut repairs miss the best standard fix. Several settings use one run; public-dataset familiarity and post-hoc EEG baselines limit interpretation.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [NCP](https://arxiv.org/html/2611.13236v1)
+
+- **Model / 对象:** SmolLM-135M-Instruct; nine-question fixture split 3/3/3 and separate WikiText-2 slices.
+- **Intervention / 干预:** Deterministic Python templates propose activation-conditioned temporary weight interventions; a verifier controls admission to a persistent rule table.
+- **Reported outcome / 结果:** Projection reduces validation repetition 0.4133 to 0.2191, but all three candidates correct zero new answers and are rejected; no rule is admitted.
+- **Comparisons / 对照:** Original policy versus projection, head ablation and their combination, on separate development/validation examples and a 4,095-target verifier corpus.
+- **Old capability / 保持:** Every trial restores base weights. Candidates satisfy the 0.5% perplexity budget; this bounded check does not establish broad capability preservation.
+- **Transfer / 迁移:** Fresh-process and saved-table replay reproduce outcomes; not program transfer to a new model.
+- **Evidence boundary / 证据边界:** Architectural microbenchmark with deterministic synthesis, not a demonstrated LLM editor or sustained recursive capability improvement.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [W-ISA](https://arxiv.org/html/2611.13232v1)
+
+- **Model / 对象:** SmolLM-135M-Instruct and Qwen2.5-1.5B-Instruct.
+- **Intervention / 干预:** Shape-checked parameter instructions execute in request-scoped transactions with snapshots, restoration and optional activation-based routing.
+- **Reported outcome / 结果:** Reports undo/replay and interruption restoration. Materialized rank-one updates and equivalent hooks yield identical greedy sequences in 45 timed Qwen requests.
+- **Comparisons / 对照:** Original inference, direct weight materialization and equivalent PyTorch hooks; separate ablation/projection conditions.
+- **Old capability / 保持:** Restores parameter digests after requests; combined SmolLM intervention raises full WikiText-2 perplexity by 0.3754%. Restoration is not preservation while an edit is active.
+- **Transfer / 迁移:** Runtime exercised on two model families; useful edit transfer across models is not established.
+- **Evidence boundary / 证据边界:** Execution infrastructure for supplied interventions, not autonomous capability discovery. The hook comparison uses one fixed prompt across three generation lengths.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Physics2Weight](https://arxiv.org/html/2611.12954v1)
+
+- **Model / 对象:** Small networks for heat, advection, Burgers and Allen-Cahn PDEs; Claude Opus 5.5 writes architectures and weights.
+- **Intervention / 干预:** Physics-constrained prompts, architecture editing and five refinement rounds using external residual/constraint feedback without reference solutions.
+- **Reported outcome / 结果:** Lower relative solution error than the tested PINN baseline on four PDEs; near-machine precision on heat/advection, but worse PDE residuals on nonlinear problems.
+- **Comparisons / 对照:** PINN, direct WSP, and prompting/architecture/refinement ablations; medians of three runs.
+- **Old capability / 保持:** Constructs task-specific solutions; prior-capability retention is not evaluated.
+- **Transfer / 迁移:** Separate constructions for four equations; unchanged executable-program transfer across trained hosts is not shown.
+- **Evidence boundary / 证据边界:** Architecture changes embed analytical structure. For one Burgers run, residual MSE rises from 5.45e-2 to 6.6e9 on a finer grid; low solution error does not certify physical consistency.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [WSP for Medical Imaging](https://arxiv.org/html/2611.12066v1)
+
+- **Model / 对象:** LeNet-style CNNs with at most 7,000 weights on seven 28x28 medical-imaging classification tasks.
+- **Intervention / 干预:** Opus 5.5 and GPT-6 Astra write weights in one reply without tools, images or task-specific training.
+- **Reported outcome / 结果:** Mean MedMNIST test AUC is 0.719/0.711; both beat zero-shot MedSigLIP on 5/6 tasks, but Adam with 256 labels wins on all six (mean 0.828).
+- **Comparisons / 对照:** Zero-shot MedSigLIP and the same CNN architecture trained with Adam at different label budgets; three calls per LLM/task.
+- **Old capability / 保持:** Constructs new classifiers; retention of a pretrained model is not evaluated.
+- **Transfer / 迁移:** Seven task-specific constructions, not reuse of a fixed edit program on independent hosts.
+- **Evidence boundary / 证据边界:** Astra reaches 0.136 AUC on SynthUterus. Public-dataset prior knowledge, tiny images, and upsampled inputs/untuned prompts for MedSigLIP constrain comparisons; no clinical deployment claim.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
 
 ### [WSP-Scope](https://arxiv.org/abs/2611.09382)
 
@@ -105,11 +171,6 @@ These entries have bibliographic metadata but their outcomes, controls and reten
 
 | Work | Source type | Verification status |
 | --- | --- | --- |
-| [Mixed Signals](https://arxiv.org/abs/2611.13758) | preprint | Metadata only / 未审查结果 |
-| [NCP](https://arxiv.org/abs/2611.13236) | preprint | Metadata only / 未审查结果 |
-| [W-ISA](https://arxiv.org/abs/2611.13232) | preprint | Metadata only / 未审查结果 |
-| [Physics2Weight](https://arxiv.org/abs/2611.12954) | preprint | Metadata only / 未审查结果 |
-| [WSP for Medical Imaging](https://arxiv.org/abs/2611.12066) | preprint | Metadata only / 未审查结果 |
 | [WSP for Policies](https://arxiv.org/abs/2611.11604) | preprint | Metadata only / 未审查结果 |
 | [WSP for Quantum Circuits](https://arxiv.org/abs/2611.11537) | preprint | Metadata only / 未审查结果 |
 | [WSP for Mathematical Optimization](https://arxiv.org/abs/2611.09559) | preprint | Metadata only / 未审查结果 |

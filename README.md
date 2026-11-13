@@ -35,6 +35,8 @@
 
 New to WSP? Pick a research question. **Bold entries** are suggested starting points, not an impact ranking; publication status appears in the full lists.
 
+Planning an experiment? See the [evaluation research guide](docs/wsp-research-opportunities.md) for source-grounded questions on program portability, composition, retention, and matched baselines.
+
 | Goal | Recommended entry points |
 | --- | --- |
 | 🧠 **Understand direct WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
@@ -51,9 +53,9 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
+| `2026-11-13` | Source-checked five more WSP papers, updated Autoresearch to the iWSP preprint, and added EditLens plus an [evaluation research guide](docs/wsp-research-opportunities.md). |
 | `2026-11-13` | Improved the interactive map and catalog with Chinese search, clearer navigation, mobile track browsing and paginated results. |
 | `2026-11-13` | Added a structured bilingual bibliography with validation and evidence fields, plus historical foundations and robot-policy weight programming. |
-| `2026-11-13` | Expanded **Weight-Centric Research** to **67 papers** across six tracks, with dedicated surveys and evaluation resources. |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -62,14 +64,16 @@ New to WSP? Pick a research question. **Bold entries** are suggested starting po
 <!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**19 papers and manuscripts** · [2026 (19)](#2026)
+**20 papers and manuscripts** · [2026 (20)](#2026)
 
 **Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 19 papers
+### 🗓️ 2026 — 20 papers
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming (**Manuscript 2026**) [[paper](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
+
+- **[iWSP]** `[Interpretable Construction]` `[Neuroscience]` Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models (**alphaXiv Preprint 2026**) [[paper](https://www.alphaxiv.org/abs/2611.interpretable-weight-space-programming)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] [[reports](https://csinva.io/weight-space-programming-autoresearch/analyze)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Mixed Signals]** `[Biosignals]` `[Model Construction]` Mixed Signals: Weight-Space Programming for EEG and ECG (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13758)] [[project](https://daravaram.github.io/)]
 
@@ -112,6 +116,8 @@ Research directly involving programmatic inspection, construction, or modificati
 ## 📝 Reports and Blogs
 
 <!-- AUTO:START reports -->
+- **[EditLens]** `[Mechanistic Audit]` `[Replication]` What Did Astra's Edit Actually Do? (**Technical Blog 2026**) [[blog](https://xxlya.github.io/editlens/)] [[code](https://github.com/assassin808/edit-lens)] — Tests loop-repair explanations and contrasts weight swaps with activation patches.
+
 - **[Fable WSP Replication]** `[Replication]` `[Cross-Model Comparison]` Claude Fable 5.2 can do "weight-space-programming" about as well as GPT-6 Astra (**LessWrong Post 2026**) [[post](https://www.lesswrong.com/posts/wg3K6xFFTdM6RmRgn/claude-fable-5-2-can-do-weight-space-programming-about-as)] [[data](https://huggingface.co/datasets/shawnghu/fable-weight-space-programming)]
 
 - **[Gradient-Free Diffusion Weight Editing]** `[LLM Editing]` `[Concept Erasure]` An LLM Erases a Concept by Editing Diffusion Weights Directly, Without Gradients (**alphaXiv Research Report 2026**) [[report](https://www.alphaxiv.org/abs/2611.gradient-free-diffusion-weight-editing)] [[blog](https://huggingface.co/blog/javadtaghia/an-llm-erases-a-concept-by-editing-diffusion-weigh)]
@@ -119,8 +125,6 @@ Research directly involving programmatic inspection, construction, or modificati
 - **[Sycophancy Repair by Weight Editing]** `[Direct Editing]` `[Sycophancy]` `[Preregistered]` Repairing sycophancy in Qwen2.5-0.5B by editing its weights, with Claude Opus 5.5 as the editor and a blind test split (**Technical Blog 2026**) [[blog](https://say43.github.io/2026/11/05/repairing-sycophancy.html)] [[code](https://github.com/Say43/Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/Say43/Weight-Space-Programming.svg?logo=github&label=Stars)
 
 - **[Evidence-Scope Critique]** `[Critique]` `[Evidence Scope]` The 'Astra can read and write weights to improve Qwen' post is misleading (**Technical Blog 2026**) [[blog](https://honnibal.dev/blog/astra-read-write-misleading)]
-
-- **[WSP Autoresearch]** `[Autoresearch]` `[Hand-Written Transformers]` Weight-Space Programming Autoresearch: agents hand-writing transformer weights for arithmetic, algorithmic, and NLP tasks (**Technical Report 2026**) [[report](https://csinva.io/weight-space-programming-autoresearch/analyze)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
 - **[Sparks of Weight-Space Programming]** `[Weight Reading]` `[Direct Editing]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights (**Technical Blog 2026**) [[blog](https://rikiyat.github.io/blog/weight-space-programming/)] [[logs](https://github.com/RikiyaT/lm_understand-logs)]
 

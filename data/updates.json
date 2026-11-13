@@ -3,6 +3,11 @@
   "updates": [
     {
       "date": "2026-11-13",
+      "en": "Source-checked five more WSP papers, updated Autoresearch to the iWSP preprint, and added EditLens plus an [evaluation research guide](docs/wsp-research-opportunities.md).",
+      "zh": "核对五篇 WSP 论文的证据，将 Autoresearch 更新为 iWSP 预印本，补充 EditLens 和[评估研究指南](docs/wsp-research-opportunities.md)。"
+    },
+    {
+      "date": "2026-11-13",
       "en": "Improved the interactive map and catalog with Chinese search, clearer navigation, mobile track browsing and paginated results.",
       "zh": "优化交互式研究图谱与检索页面：支持中文检索、准确的分支导航、移动端目录和分页浏览。"
     },

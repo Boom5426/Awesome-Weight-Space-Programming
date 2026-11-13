@@ -4,6 +4,7 @@ const fs=require("node:fs");
 const vm=require("node:vm");
 const path=require("node:path");
 const ROOT=path.resolve(__dirname,"..");
+const ENTRIES=JSON.parse(fs.readFileSync(path.join(ROOT,"data/entries.json"),"utf8")).entries;
 
 function scriptOf(file){
   const html=fs.readFileSync(path.join(ROOT,file),"utf8");
@@ -68,7 +69,7 @@ function cards(h){return (h.get("results").innerHTML.match(/<article class="item
 function drive(h,id,event,arg){const fn=h.get(id).handlers[event];assert.equal(typeof fn,"function","handler missing "+id+"."+event);fn(arg);}
 
 const all=harness("index.html","");
-assert.equal(all.evaluate("PAPERS.length"),145);
+assert.equal(all.evaluate("PAPERS.length"),ENTRIES.length);
 assert.equal(all.evaluate("group"),"");
 assert.equal(cards(all),24,"default page should be paginated");
 assert.equal(all.get("more").hidden,false);
@@ -105,7 +106,7 @@ assert.equal(year.get("year").value,"2017","deep-link year should not be reset b
 assert.equal(cards(year),year.evaluate('PAPERS.filter(p=>p.year===2017).length'));
 
 const reviewed=harness("index.html","?review=source_checked");
-assert.equal(cards(reviewed),8);
+assert.equal(cards(reviewed),Math.min(24,ENTRIES.filter(e=>e.evidence?.review==="source_checked").length));
 assert.ok(reviewed.get("results").innerHTML.includes("Source-reported result"));
 assert.ok(!reviewed.get("results").innerHTML.includes("undefined"));
 

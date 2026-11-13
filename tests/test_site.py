@@ -34,7 +34,7 @@ class ResearchSiteTest(unittest.TestCase):
                          "weight-centric.geometry")
         self.assertEqual(self.allocation["linear-transformers-are-secretly-fast-weight-programmers"],
                          "foundations.fast")
-        self.assertEqual(self.allocation["wsp-autoresearch"], "resources.reports")
+        self.assertEqual(self.allocation["wsp-autoresearch"], "direct.synthesize")
 
     def test_generated_html_is_current(self):
         for path, expected in MODULE.render().items():
