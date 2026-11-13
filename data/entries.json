@@ -1026,7 +1026,7 @@
       "inspiration_zh": "为纯权重读取提供可检验的先例，但跨模型泛化仍需验证。"
     },
     {
-      "id": "self-supervised-representation-learning-on-neural-network-weights-for-",
+      "id": "self-supervised-representation-learning-on-neural-network-weights-for",
       "group": "weight-centric",
       "section": "reading",
       "title": "Self-Supervised Representation Learning on Neural Network Weights for Model Characteristic Prediction",
@@ -1426,7 +1426,7 @@
       "inspiration_zh": "有助于界定训练式多条件生成器与权重程序的能力边界。"
     },
     {
-      "id": "deepweightflow-re-basined-flow-matching-for-generating-neural-network-",
+      "id": "deepweightflow-re-basined-flow-matching-for-generating-neural-network",
       "group": "weight-centric",
       "section": "generation",
       "title": "DeepWeightFlow: Re-Basined Flow Matching for Generating Neural Network Weights",
@@ -1602,7 +1602,7 @@
       "inspiration_zh": "可与直接相加比较，检验对齐能否降低程序冲突。"
     },
     {
-      "id": "regmean-enhancing-effectiveness-and-generalization-of-regression-mean-",
+      "id": "regmean-enhancing-effectiveness-and-generalization-of-regression-mean",
       "group": "weight-centric",
       "section": "composition",
       "title": "RegMean++: Enhancing Effectiveness and Generalization of Regression Mean for Model Merging",
