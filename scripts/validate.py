@@ -54,12 +54,18 @@ def errors():
             raw = e.get("render_" + lang, "")
             if not raw.startswith("- **["):
                 problems.append(key + ": malformed " + lang + " display line")
+            if e.get("url") and e["url"] not in raw:
+                problems.append(key + ": primary source URL missing from " + lang + " display")
             if group == "weight-centric":
                 for field in ("idea_" + lang, "inspiration_" + lang, "venue_" + lang):
                     if not e.get(field):
                         problems.append(key + ": missing " + field)
                 if link not in raw:
                     problems.append(key + ": missing companion source in " + lang)
+        en_label = re.match(r"^- \\*\\*\\[([^\\]]+)\\]", e.get("render_en", ""))
+        zh_label = re.match(r"^- \\*\\*\\[([^\\]]+)\\]", e.get("render_zh", ""))
+        if not en_label or not zh_label or en_label.group(1) != zh_label.group(1):
+            problems.append(key + ": bilingual display-label mismatch")
         if group == "direct":
             ev = e.get("evidence")
             if not isinstance(ev, dict):
