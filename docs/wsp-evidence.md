@@ -5,7 +5,7 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 20 direct-WSP papers; 14 source-checked examples; 6 metadata-only entries.
+**Coverage:** 22 direct-WSP papers; 16 source-checked examples; 6 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
 
@@ -29,6 +29,28 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 - **Old capability / 保持:** New model construction; not sequential retention of capabilities in an existing host.
 - **Transfer / 迁移:** Visual features evaluated across datasets; text-mediated rebuilding is distinct from rerunning an edit on independent pretrained hosts.
 - **Evidence boundary / 证据边界:** Source check uses the author abstract, repository and evaluators, not independent replication. Gradient-free feature writing does not mean a fitting-free pipeline; ECoG data are not public.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Replicating and Extending WSP](https://arxiv.org/html/2611.21449v1)
+
+- **Model / 对象:** Small MinAtar/Breakout policies, MNIST classifiers, three newly designed games, poisoned Olmo 3 190M models and Qwen3.5-0.8B adapters.
+- **Intervention / 干预:** Independent replication of Sparks: GPT-6 Astra, Claude Opus 5.5 and open-weight models write weights in one reply, decompile networks, read raw weights and audit models without executing code.
+- **Reported outcome / 结果:** Astra's Breakout networks score 514/550/307 (original 517); written MNIST networks average 49.6% vs 82.0% for a template classifier. Decompiled Python matches Astra's network on all 49,189 tested states. On new games Astra recovers board layout but mostly misses mechanics; audits flag poisoned models (10/10, 7/10; adapters 23/32) but never identify the trigger.
+- **Comparisons / 对照:** Shuffled-weight controls, rotated-digit and modified-game variants, code-versus-weights comparison across model generations, template and trained MNIST classifiers; PPO numbers are reused from the original report and likely under-tuned.
+- **Old capability / 保持:** Not a retention study; constructs new networks and audits existing ones.
+- **Transfer / 迁移:** The standard Breakout network scores 0.5/0.0 on swapped/upside-down variants; networks written for each variant average 515. Decompiled programs reproduce network actions.
+- **Evidence boundary / 证据边界:** Three-day sprint with one to five runs per condition; analysis code written mainly by the evaluated model families and not independently reviewed; no repository URL; original networks and logs are public, so contamination is possible.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Rule-to-Network Compilation](https://arxiv.org/html/2611.16981v1)
+
+- **Model / 对象:** Fixed 57,289-parameter recurrent actor and free-architecture networks for 20 unpublished ARC-AGI-3-style game families.
+- **Intervention / 干预:** Nine LLM writers receive redacted simulator source and write all weights without fitting or search, one-shot or with up to three feedback rounds.
+- **Reported outcome / 结果:** Strongest writer (GPT-6 Astra) reaches 0.56 [0.40, 0.71] held-out-level success with feedback in the fixed actor; free architectures reach 68–90%. Python players reach 97–100%; capped NumPy programs 91% vs 79% for networks. Written networks are 93% zeros.
+- **Comparisons / 对照:** Python and NumPy program controls; behaviour cloning, distillation and PPO in the same actor (best non-privileged 11%); retraining Astra's architectures from scratch solves about 1%; weight-noise and random-update controls.
+- **Old capability / 保持:** Not a host-retention study. Standard PPO fine-tuning drives held-out success from 0.50 to 0.01; written weights do not survive subsequent gradient updates.
+- **Transfer / 迁移:** Within-family generalisation to held-out levels, renderings and start states (held-out templates cost 1 point); no transfer to new games or independently trained hosts.
+- **Evidence boundary / 证据边界:** Writers read source code while learned baselines see only support levels, so the comparison is mainly about information access. Per-family estimates use 3–6 levels; games were authored with LLM assistance and an evaluated writer helped design the harness; private games limit outside reproduction.
 - **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
 
 ### [Mixed Signals](https://arxiv.org/html/2611.13758v1)

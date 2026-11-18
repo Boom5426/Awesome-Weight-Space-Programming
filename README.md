@@ -53,9 +53,9 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
+| `2026-11-18` | Source-checked two new WSP studies: an independent [replication and extension](https://arxiv.org/abs/2611.21449) of the original read/write claims, and [rule-to-network compilation](https://arxiv.org/abs/2611.16981) on unseen games with program and learning baselines. |
 | `2026-11-13` | Source-checked five more WSP papers, updated Autoresearch to the iWSP preprint, and added EditLens plus an [evaluation research guide](docs/wsp-research-opportunities.md). |
 | `2026-11-13` | Improved the interactive map and catalog with Chinese search, clearer navigation, mobile track browsing and paginated results. |
-| `2026-11-13` | Added a structured bilingual bibliography with validation and evidence fields, plus historical foundations and robot-policy weight programming. |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -64,16 +64,20 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**20 papers and manuscripts** · [2026 (20)](#2026)
+**22 papers and manuscripts** · [2026 (22)](#2026)
 
 **Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 20 papers
+### 🗓️ 2026 — 22 papers
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming (**Manuscript 2026**) [[paper](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
 - **[iWSP]** `[Interpretable Construction]` `[Neuroscience]` Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models (**alphaXiv Preprint 2026**) [[paper](https://www.alphaxiv.org/abs/2611.interpretable-weight-space-programming)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] [[reports](https://csinva.io/weight-space-programming-autoresearch/analyze)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
+
+- **[Replicating and Extending WSP]** `[Replication]` `[Weight Reading]` Replicating and Extending Weight-Space Programming: Frontier LLMs Compile Programs into Weights and Read Input Layers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.21449)]
+
+- **[Rule-to-Network Compilation]** `[Rule Compilation]` `[Program Baselines]` Compiling Known Rules into Compact Neural Agents: Weight-Space Programming on Unseen Games (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.16981)] [[code](https://github.com/JensLehmann/weight-space-programming-games)] ![GitHub stars](https://img.shields.io/github/stars/JensLehmann/weight-space-programming-games.svg?logo=github&label=Stars)
 
 - **[Mixed Signals]** `[Biosignals]` `[Model Construction]` Mixed Signals: Weight-Space Programming for EEG and ECG (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13758)] [[project](https://daravaram.github.io/)]
 
