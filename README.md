@@ -33,19 +33,21 @@
 <a id="start-here"></a>
 ## 🚀 Start Here
 
-New to WSP? Pick a research question. **Bold entries** are suggested starting points, not an impact ranking; publication status appears in the full lists.
+New to WSP? These are **selective research entry points**, chosen for substantive experiments, useful comparisons, and clear methodological relevance—not for venue prestige, citation counts, or being the newest arXiv post. Featured does not mean peer-reviewed.
 
 Planning an experiment? See the [evaluation research guide](docs/wsp-research-opportunities.md) for source-grounded questions on program portability, composition, retention, and matched baselines.
 
-| Goal | Recommended entry points |
+| Research question | Selected starting points |
 | --- | --- |
-| 🧠 **Understand direct WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
-| 🛠️ **Install capabilities & adapt with feedback** | **[WeightCode](https://arxiv.org/abs/2611.25476)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
-| 📏 **Evaluate weight understanding and editing** | **[WeightBench](https://arxiv.org/abs/2611.18553)** · [IWIBench](https://arxiv.org/abs/2611.08647) · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) · [Clinical Network Audits](https://arxiv.org/abs/2611.05341) |
-| 🧬 **Generate weights and networks** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
-| ✅ **Build verifiable interventions** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
-| 🧭 **Explore weight-centric inspirations** | **[Weight-Centric Research](docs/weight-centric-research.md)** · [中文](docs/weight-centric-research_zh.md) |
-| 🔗 **Understand adjacent paradigms** | **[Program-as-Weights](https://arxiv.org/abs/2607.02512)** · [Tracr](https://arxiv.org/abs/2301.05062) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) · [Text-to-LoRA](https://arxiv.org/abs/2506.06105) |
+| **What is weight-space programming?** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** (original technical report) · [WSP-Scope](https://arxiv.org/abs/2611.09382) (systematic evaluation) |
+| **Can programs install lasting capabilities?** | **[WeightCode](https://arxiv.org/abs/2611.25476)** (new-task gain, old-task retention, rerunnable cross-model programs) |
+| **Can scientific feedback improve an editing plan?** | **[HypoLoop](https://arxiv.org/abs/2611.23718v1)** (where/how to edit across 22 scientific tasks) · [WeightLoop](https://arxiv.org/abs/2611.07319) (reusable scientific feedback editor) |
+| **How reliable are WSP claims?** | **[WeightBench](https://arxiv.org/abs/2611.18553)** (multi-task benchmark) · [IWIBench](https://arxiv.org/abs/2611.08647) (preservation-aware editing evaluation) |
+| **Can agents construct useful networks?** | **[iWSP](https://arxiv.org/abs/2611.18114)** (interpretable networks and neural encoding) · [Weights & Caches](https://arxiv.org/abs/2611.20174) (tabular foundation models) |
+| **What actually causes an edit to work?** | **[Same Fix, Different Weights](https://arxiv.org/abs/2611.20953)** (mechanistic replication) · [YOLO26 evaluation](https://arxiv.org/abs/2611.17789) (matched negative controls) |
+| **What are the neighboring foundations?** | **[Tracr](https://arxiv.org/abs/2301.05062)** (program compilation) · [Program-as-Weights](https://arxiv.org/abs/2607.02512) (neural programming) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) (learned weight generation) |
+
+**Important distinction:** HypoLoop's editing *plan* is revised from experimental evidence, while numerical solvers—including gradient-based optimization in some variants—fit the actual weight changes. Its inclusion highlights valuable scientific-feedback methodology; it is **not** evidence of gradient-free weight updates. The full catalog below tracks other relevant studies, including informative failures, without endorsing every entry as a starting point.
 
 <a id="latest-updates"></a>
 ## 📰 Latest Updates
@@ -330,10 +332,11 @@ Ideas from robotics and interpretability that may inform portable programs and c
 
 - Prefer original research papers, first-party preprints and project pages, and official repositories.
 - Clearly distinguish peer-reviewed papers, preprints, unpublished manuscripts, and technical blogs.
-- Include substantive new methods, evaluations, benchmarks, and empirically grounded results; clearly label conjectural work.
+- Include substantive new methods, evaluations, benchmarks, and empirically grounded results; exclude unsupported conjecture-only proposals from the main curated catalog.
 - Assign concise method/task tags rather than repeating the name of the whole field.
 - Provide `[paper]`, `[preprint]`, `[code]`, and other primary-source links only when available; show star badges only for identifiable GitHub repositories.
 - Keep closely related foundations separate from direct WSP, and avoid duplicate references.
+- Feature work in **Start Here** only when it offers a useful methodological contribution and convincing task comparisons, preservation analysis, failure controls, or reproducible evidence. A paper's inclusion in the wider catalog is not an endorsement.
 
 <a id="contributing"></a>
 ## 🤝 Contributing
