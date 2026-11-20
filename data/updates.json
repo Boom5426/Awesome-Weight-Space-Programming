@@ -2,6 +2,11 @@
   "version": 1,
   "updates": [
     {
+      "date": "2026-11-20",
+      "en": "Updated [WeightCode](https://arxiv.org/abs/2611.25476) to its official arXiv preprint and [iWSP](https://arxiv.org/abs/2611.18114) to arXiv; added 12 source-checked WSP studies across construction, control, evaluation, repair and security, plus [HypoLoop](https://arxiv.org/abs/2611.23718) and SWEET as related weight-editing research.",
+      "zh": "将 [WeightCode](https://arxiv.org/abs/2611.25476) 与 [iWSP](https://arxiv.org/abs/2611.18114) 更新为正式 arXiv 链接；核对并新增 12 篇 WSP 研究（网络构造、控制、评测、修复和安全），另在相关模型编辑中加入 [HypoLoop](https://arxiv.org/abs/2611.23718) 与 SWEET。"
+    },
+    {
       "date": "2026-11-18",
       "en": "Source-checked two new WSP studies: an independent [replication and extension](https://arxiv.org/abs/2611.21449) of the original read/write claims, and [rule-to-network compilation](https://arxiv.org/abs/2611.16981) on unseen games with program and learning baselines.",
       "zh": "核对并新增两篇 WSP 研究：对原始读写结论的[独立复现与扩展](https://arxiv.org/abs/2611.21449)，以及在未公开游戏上将规则编译为网络、并与程序和学习基线对照的[研究](https://arxiv.org/abs/2611.16981)。"
