@@ -5,22 +5,154 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 22 direct-WSP papers; 16 source-checked examples; 6 metadata-only entries.
+**Coverage:** 34 direct-WSP papers; 28 source-checked examples; 6 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
 
-### [WeightCode](https://github.com/Gen-Verse/WeightCode)
+### [WeightCode](https://arxiv.org/abs/2611.25476)
 
 - **Model / 对象:** SCAN sequence model; BabyAI policy; ImageNet ResNet-18; independently trained ViTs
 - **Intervention / 干预:** Frozen LLM writes a reusable executable program p(W,I), without gradient training.
-- **Reported outcome / 结果:** SCAN exact match 0% → 99.8% (257 weights); BabyAI pickup 0% → 98.4%; image robustness gains reported.
+- **Reported outcome / 结果:** SCAN 0% → 99.8% exact match with 257 modified weights; BabyAI pickup 0% → 98.4%; four ImageNet programs yield net gains of 8.84–17.62 percentage points.
 - **Comparisons / 对照:** Eight fine-tuning comparisons on ImageNet with matched information and preservation constraints.
-- **Old capability / 保持:** SCAN prior commands remain 99.6%; sequential ViT updates preserve earlier installed robustness within reported tolerance.
-- **Transfer / 迁移:** Ten programs rerun on 5 independently trained ViTs retain 83–110% of source gain; copying ΔW does not.
-- **Evidence boundary / 证据边界:** Evidence is reported for tested model families/tasks, not general foundation-model transfer.
-- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** manuscript
+- **Old capability / 保持:** Original SCAN commands and BabyAI navigation were retained; six successive ViT programs preserve previously installed noise robustness.
+- **Transfer / 迁移:** Ten programs rerun on five independently trained ViTs retain 83–110% of source gains on average; fixed ΔW transfers do not reproduce the gains.
+- **Evidence boundary / 证据边界:** arXiv v1 reports tested SCAN, BabyAI and ImageNet models; not evidence of architecture-independent transfer or new skills in every foundation model.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
 
-### [Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models](https://github.com/csinva/weight-space-programming-autoresearch/tree/f012b9557c8d522d58867025c0d602a04ecce38f)
+### [WSP Beyond Transformers](https://arxiv.org/abs/2611.22055)
+
+- **Model / 对象:** Newly written models for ARC science questions; fixed Transformers and author-designed associative-memory systems.
+- **Intervention / 干预:** LLM writes sparse fact tables and lookup computations in place of gradient-trained Transformer weights.
+- **Reported outcome / 结果:** LLM-written sparse models reach up to 54.4% ARC test accuracy; the proposed associative memory is reported up to 17× faster than a same-sized Transformer.
+- **Comparisons / 对照:** LLM-written Transformer, trained Transformer, BM25 and pretrained LLM comparisons.
+- **Old capability / 保持:** Not an edit to an existing pretrained model.
+- **Transfer / 迁移:** Examines three model writers and additional tasks, not executable reuse across pretrained hosts.
+- **Evidence boundary / 证据边界:** The authored predictor uses explicit fact tables and a fixed retrieval procedure; should not be conflated with installing capability inside a pretrained neural backbone.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Tractor Guidance WSP](https://arxiv.org/abs/2611.21958)
+
+- **Model / 对象:** 253-parameter neural tractor steering controller in simulation and on a real agricultural vehicle.
+- **Intervention / 干预:** LLMs repair a controller for a different tractor or write one from zero weights using budgeted simulator feedback.
+- **Reported outcome / 结果:** LLM-written controllers steered the real tractor without intervention; from-zero evolutionary search did not find a controller under the tested budget.
+- **Comparisons / 对照:** Evolution strategies, gradient descent and pure-pursuit control.
+- **Old capability / 保持:** No general old-task retention or continual skill accumulation study.
+- **Transfer / 迁移:** Demonstrates a model change under a tractor actuator shift, not a reusable program across independently trained hosts.
+- **Evidence boundary / 证据边界:** Gradient descent achieves higher accuracy with more simulator evaluations; small control-network setting.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Same Fix, Different Weights](https://arxiv.org/abs/2611.20953)
+
+- **Model / 对象:** Small control policies, Go agents, Gemma 3 270M and Qwen3.5-0.8B.
+- **Intervention / 干预:** Ten preregistered Claude WSP replications with weight-reading, zero-shot construction and anti-loop edits.
+- **Reported outcome / 结果:** Qwen MATH-500 increases from 6.7% to 58.1% with 50 practice passes; authors attribute the fix to output-layer logit and effective-temperature changes, unlike the original mechanism.
+- **Comparisons / 对照:** Untrained and permutation controls, multiple practice budgets and a non-looping Gemma comparison.
+- **Old capability / 保持:** Reports repair on targeted tasks but not systematic retention across old capabilities.
+- **Transfer / 迁移:** Independent replication with a different writing LLM; not program reuse across independently trained target models.
+- **Evidence boundary / 证据边界:** Improvement is largely output-control repair, not evidence of new mathematical reasoning ability.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Weights & Caches](https://arxiv.org/abs/2611.20174)
+
+- **Model / 对象:** nanoTabPFN and pretrained TabPFN-3.5.
+- **Intervention / 干预:** GPT-6 Astra directly constructs nanoTabPFN parameters, repairs pretrained TabPFN weights and writes KV-cache interventions without gradients.
+- **Reported outcome / 结果:** Written nanoTabPFN reaches mean ROC AUC 0.849 versus pretrained 0.876 across 20 datasets; repairs a synthetic signed-product failure.
+- **Comparisons / 对照:** Pretrained nanoTabPFN and held-out TabArena/TabArena-Lite tasks.
+- **Old capability / 保持:** The TabPFN-3.5 repair reports an average relative error increase of only 0.08% on TabArena-Lite.
+- **Transfer / 迁移:** Evaluation across held-out tabular and synthetic datasets; no demonstration of a reusable program rerun on independent model weights.
+- **Evidence boundary / 证据边界:** KV-cache programming is a runtime-state intervention, not a persistent model-weight change.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Zero-Shot Structured-Data WSP](https://arxiv.org/abs/2611.19292)
+
+- **Model / 对象:** Feed-forward networks on synthetic rotated problems, classic tabular benchmarks and engineering regression.
+- **Intervention / 干预:** LLM must infer a rule from a small labeled dataset and write each parameter literally without optimization or test-time execution.
+- **Reported outcome / 结果:** Matches closed-form optima on linear tasks and irreducible error on three nonlinear rungs; fails on two oblique-structure rungs.
+- **Comparisons / 对照:** Closed-form predictors and fitted models including gradient-trained networks, with additional constructor controls.
+- **Old capability / 保持:** Builds new networks rather than editing pretrained ones.
+- **Transfer / 迁移:** Tests multiple tasks and constructors, but no cross-checkpoint program reuse.
+- **Evidence boundary / 证据边界:** Success depends on coordinate alignment and task structure; abstract does not establish general tabular superiority.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [WeightBench](https://arxiv.org/abs/2611.18553)
+
+- **Model / 对象:** 42 tasks across five tracks and target networks from 2K parameters to 7B.
+- **Intervention / 干预:** Standardized evaluation of weight reading, repair, writing, impossibility detection and data-free compression.
+- **Reported outcome / 结果:** Opus 5.5 macro score 0.535 over 42 tasks; GPT-6.1-sol 0.568 on the 38 tasks run, with remaining failure modes in LLM repair and compression.
+- **Comparisons / 对照:** Multiple model agents with shared task registry and sandbox metrics.
+- **Old capability / 保持:** Specific repair/compression tasks check behavior; benchmark score alone does not demonstrate general capability retention.
+- **Transfer / 迁移:** Cross-LLM benchmark, not cross-host reuse of compiled weight programs.
+- **Evidence boundary / 证据边界:** Preliminary benchmark; compared model coverage differs on 38 versus 42 tasks.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Computational-Biology Python WSP](https://arxiv.org/abs/2611.20566)
+
+- **Model / 对象:** Qwen3.5-0.8B on 50 computational-biology problems across multiple random seeds and checkpoints.
+- **Intervention / 干预:** Claude Opus 5.5 edits the language model's weights, altering Python calls and final answer submission behavior.
+- **Reported outcome / 结果:** Strictly correct answers 44→77 among 600 paired evaluations; technically correct 64→100, with many original responses having already computed a correct intermediate result.
+- **Comparisons / 对照:** Unedited checkpoint, multiple edited checkpoints and random seeds.
+- **Old capability / 保持:** Not established for unrelated prior abilities.
+- **Transfer / 迁移:** Multiple candidate checkpoints and problem seeds, not reusable edits transferred across independent hosts.
+- **Evidence boundary / 证据边界:** Some improvements reflect answer-finalization rather than improved biology calculations; score denominators depend on paired evaluations.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [YOLO26 Weight Editing Study](https://arxiv.org/abs/2611.17789)
+
+- **Model / 对象:** YOLO26 on MS COCO development and separate evaluation subsets.
+- **Intervention / 干预:** Compares deterministic, random, evolutionary and LLM-guided weight edits under matched budgets.
+- **Reported outcome / 结果:** Five-seed replication finds COCO API AP difference +0.004 (95% CI -0.026 to +0.034), without consistent external improvement.
+- **Comparisons / 对照:** CMA-ES, differential evolution, random-policy guidance and hybrid LLM-CMA-ES.
+- **Old capability / 保持:** No meaningful degradation or improvement established under the held-out evaluation.
+- **Transfer / 迁移:** Does not establish generalization beyond the development subset.
+- **Evidence boundary / 证据边界:** LLM advantage over random guidance not statistically demonstrated; early tensor-level execution only partially verifiable.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Just Sort It!](https://arxiv.org/abs/2611.21432)
+
+- **Model / 对象:** Qwen3.5-0.8B reasoning model with a reported anti-loop rank-one edit.
+- **Intervention / 干预:** Replace sparse linear-program solution with eight low-variation neuron coefficients assigned equally.
+- **Reported outcome / 结果:** Sorted edit scores 67.0% versus 67.4% for LP on 1000 problems; noninferiority interval includes zero and stays within prespecified 5-point margin.
+- **Comparisons / 对照:** Original LP-based anti-loop edit and unedited model (9.5%).
+- **Old capability / 保持:** No general unrelated-task retention measured.
+- **Transfer / 迁移:** Single target model; no new-host program transfer.
+- **Evidence boundary / 证据边界:** Indicates a nearly constant directional bias may explain the edit; does not establish a broader capability installation mechanism.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [WSP Backdoor Security Study](https://arxiv.org/abs/2611.17395)
+
+- **Model / 对象:** MNIST MLP, CIFAR-10 ResNet-18 and Qwen2.5-0.5B classifier.
+- **Intervention / 干预:** Evaluate whether models can be altered through data-free, no-forward-pass, gradient-free LLM weight-editing prompts.
+- **Reported outcome / 结果:** The paper reports feasibility of targeted malicious behavior changes on some architectures, with performance differences across five editing LLMs.
+- **Comparisons / 对照:** Five editor models and three target architectures.
+- **Old capability / 保持:** Paper reports broadly preserved clean performance in tested conditions, not guarantees.
+- **Transfer / 迁移:** Compares architectures and editor models; not cross-host executable program reuse.
+- **Evidence boundary / 证据边界:** Security-motivated failure analysis; reported results are not a recommendation to apply edits.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Perceptual Diffusion WSP](https://arxiv.org/abs/2611.18690)
+
+- **Model / 对象:** Proposed diffusion super-resolution backbones, plus executed small residual-network calibration tests.
+- **Intervention / 干预:** Feedback-guided LLM proposals target small parameter subsets using activations and previews.
+- **Reported outcome / 结果:** Executed toy color-calibration experiments demonstrate correction of a fixed shift but also cases where improved feedback worsens unseen-scene outcomes.
+- **Comparisons / 对照:** Proposed matched editor comparisons with separately reported toy calibration conditions.
+- **Old capability / 保持:** Preservation and transfer for full diffusion models not established from abstract.
+- **Transfer / 迁移:** Cross-scene toy tests reveal generalization risk; large-backbone deployment not established.
+- **Evidence boundary / 证据边界:** Do not interpret proposed 1020-trial diffusion protocol as a completed large-model improvement study.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Computation, Not Weight Access](https://arxiv.org/abs/2611.07847)
+
+- **Model / 对象:** Simulated clinical prediction networks from 105 to 38,401 weights.
+- **Intervention / 干预:** Separate weights-only prompting from computation tools and black-box versus white-box access for LLM audits.
+- **Reported outcome / 结果:** With tools, planted relationships recovered in 39/39 audits; black-box access performs as well as white-box access.
+- **Comparisons / 对照:** Calculation scripts, no-tool prompts, black-box and white-box audit access.
+- **Old capability / 保持:** Mainly an audit study; no evidence of continuing capability retention.
+- **Transfer / 迁移:** Tests multiple network sizes, but no executable weight edits transferred.
+- **Evidence boundary / 证据边界:** Results challenge interpretations that success demonstrates native raw-weight comprehension; simulated data setting.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models](https://arxiv.org/abs/2611.18114)
 
 - **Model / 对象:** Handwritten transformers for 13 algorithmic and four NLP tasks; visual, language and auditory brain-encoding models.
 - **Intervention / 干预:** Agent iteratively writes weights/features from validation feedback without backpropagation; released neuroscience evaluators fit ridge readouts.
