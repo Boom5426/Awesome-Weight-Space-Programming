@@ -1,6 +1,6 @@
 # Evaluating weight programs beyond benchmark gains
 
-Research guide, 13 November 2026. The most useful next step is to test when a weight program remains effective across equivalent parameterizations, independently trained hosts, and successive edits. Existing work motivates these experiments but does not establish their general success. The [evidence matrix](wsp-evidence.md) records individual studies; this guide connects them to concrete research designs.
+Research guide, updated 20 November 2026. The most useful next step is to test when a weight program remains effective across equivalent parameterizations, independently trained hosts, and successive edits. Existing work motivates these experiments but does not establish their general success. The [evidence matrix](wsp-evidence.md) records individual studies; this guide connects them to concrete research designs.
 
 中文摘要：下一步值得研究的是权重程序在等价参数化、独立训练模型和连续编辑下是否仍然有效。需要区分修复已有能力、安装新能力、从零构造网络，以及请求结束后恢复权重的临时干预。下文的实验方案是研究建议，不是已经完成的结果，也不构成新颖性声明。
 
@@ -12,9 +12,12 @@ Research guide, 13 November 2026. The most useful next step is to test when a we
 | Can a program install or repair behavior? | [WeightCode](https://github.com/Gen-Verse/WeightCode), [WSP-Scope](https://arxiv.org/abs/2611.09382) | New behavior, recovery of existing behavior, and changes to decoding or stopping |
 | Can an agent construct a useful model? | [iWSP](https://www.alphaxiv.org/abs/2611.interpretable-weight-space-programming), [medical imaging WSP](https://arxiv.org/html/2611.12066v1), [Physics2Weight](https://arxiv.org/html/2611.12954v1) | Written weights, analytical architecture choices, evaluator fitting and hidden-set generalization |
 | Can interventions execute predictably? | [W-ISA](https://arxiv.org/html/2611.13232v1), [NCP](https://arxiv.org/html/2611.13236v1) | Execution/restoration guarantees, admission decisions and actual task improvement |
+| Can feedback revise the editing problem itself? | [HypoLoop](https://arxiv.org/abs/2611.23718v1), [WeightLoop](https://arxiv.org/abs/2611.07319) | Editable location, fitting objective, matched feedback, held-out validation, and solver-based optimization versus executable-program updates |
 | Can improvements accumulate? | [WeightLoop](https://arxiv.org/abs/2611.07319), [TIES-Merging](https://arxiv.org/abs/2306.01708) | Sequential adaptation, interference, old-task retention and numerical update composition |
 
 The broader [Weight Space Learning survey](https://arxiv.org/abs/2603.10090) organizes work around understanding, representation and generation. These supply mechanisms and baselines for WSP, but trained weight predictors and merging algorithms should retain their own classifications.
+
+**HypoLoop is a useful related method, not a no-training installation result.** Its editing policy chooses where and how to update a scientific predictor, and numerical fitting (including Adam in nonlinear variants) then determines the weight patch. The paper reports 22 tasks, matched-budget location comparisons and sequential revision, but outcomes differ by task and variant. Compare its plan adaptation against fixed and numeric-only editors, and report unsuccessful settings instead of selecting the best family member per dataset. See the [arXiv full text](https://arxiv.org/html/2611.23718v1).
 
 ## Findings that change experimental design
 
