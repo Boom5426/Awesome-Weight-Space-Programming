@@ -3,8 +3,8 @@
   "updates": [
     {
       "date": "2026-11-20",
-      "en": "Updated [WeightCode](https://arxiv.org/abs/2611.25476) to its official arXiv preprint and [iWSP](https://arxiv.org/abs/2611.18114) to arXiv; added 12 source-checked WSP studies across construction, control, evaluation, repair and security, plus [HypoLoop](https://arxiv.org/abs/2611.23718) and SWEET as related weight-editing research.",
-      "zh": "将 [WeightCode](https://arxiv.org/abs/2611.25476) 与 [iWSP](https://arxiv.org/abs/2611.18114) 更新为正式 arXiv 链接；核对并新增 12 篇 WSP 研究（网络构造、控制、评测、修复和安全），另在相关模型编辑中加入 [HypoLoop](https://arxiv.org/abs/2611.23718) 与 SWEET。"
+      "en": "Curated a selective, evidence-driven [Start Here](#start-here): prominently featured [HypoLoop](https://arxiv.org/abs/2611.23718) for feedback-driven scientific editing, removed unsupported conjectural and preliminary diffusion entries, and kept weak or negative experimental results accessible without treating them as recommended starting points. Earlier this day, updated [WeightCode](https://arxiv.org/abs/2611.25476) and added new WSP studies.",
+      "zh": "按实证质量精简[入门推荐](#start-here)：重点推荐科学反馈驱动的 [HypoLoop](https://arxiv.org/abs/2611.23718)，剔除缺乏已完成实验的扩散猜想和早期方案条目，保留有信息量的负面结果但不作为首选阅读。同日已修正 [WeightCode](https://arxiv.org/abs/2611.25476) 链接并扩充 WSP 文献。"
     },
     {
       "date": "2026-11-18",
