@@ -33,19 +33,21 @@
 <a id="start-here"></a>
 ## 🚀 从这里开始
 
-刚接触 WSP？先选一个研究问题。**加粗条目**是建议的入门起点，不代表影响力排名；发表状态请见下方完整列表。
+刚接触 WSP？这里是**经过选择的重点阅读入口**：优先考虑实质方法、对照实验、可检验的证据及对研究问题的价值，而不是发表平台、引用数或 arXiv 上线顺序。列为重点推荐不代表已经过同行评审。
 
-准备设计实验？参阅[评估研究指南（英文，附中文摘要）](docs/wsp-research-opportunities.md)，了解程序迁移、组合、能力保持和公平基线的研究问题及一手依据。
+准备设计实验？参阅[评估研究指南（英文，附中文摘要）](docs/wsp-research-opportunities.md)，了解程序迁移、组合、能力保持和公平基线等问题。
 
-| 目标 | 推荐入口 |
+| 研究问题 | 精选阅读 |
 | --- | --- |
-| 🧠 **理解直接 WSP** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** · [WSP-Scope](https://arxiv.org/abs/2611.09382) |
-| 🛠️ **安装能力与反馈适应** | **[WeightCode](https://arxiv.org/abs/2611.25476)** · [WeightLoop](https://arxiv.org/abs/2611.07319) |
-| 📏 **评测权重理解与编辑** | **[WeightBench](https://arxiv.org/abs/2611.18553)** · [IWIBench](https://arxiv.org/abs/2611.08647) · [WSP-Scope](https://arxiv.org/abs/2611.09382) · [Weight Oracles](https://arxiv.org/abs/2610.07334) · [Orbit Audits](https://arxiv.org/abs/2611.05798) · [Clinical Network Audits](https://arxiv.org/abs/2611.05341) |
-| 🧬 **生成权重与网络** | **[Physics2Weight](https://arxiv.org/abs/2611.12954)** · [Medical Imaging WSP](https://arxiv.org/abs/2611.12066) · [Game Policies](https://arxiv.org/abs/2611.09271) |
-| ✅ **构建可验证的干预** | **[W-ISA](https://arxiv.org/abs/2611.13232)** · [NCP](https://arxiv.org/abs/2611.13236) · [Policy Model Checking](https://arxiv.org/abs/2611.11604) |
-| 🧭 **探索权重相关研究** | **[权重相关研究](docs/weight-centric-research_zh.md)** · [English](docs/weight-centric-research.md) |
-| 🔗 **了解相邻范式** | **[Program-as-Weights](https://arxiv.org/abs/2607.02512)** · [Tracr](https://arxiv.org/abs/2301.05062) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) · [Text-to-LoRA](https://arxiv.org/abs/2506.06105) |
+| **什么是权重空间编程？** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)**（最初的技术报告）· [WSP-Scope](https://arxiv.org/abs/2611.09382)（系统评估） |
+| **程序能否持久安装新能力？** | **[WeightCode](https://arxiv.org/abs/2611.25476)**（新能力、旧能力保持、跨模型程序重执行） |
+| **科学反馈能否改变编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718v1)**（22 项科学任务，探索编辑位置与规则）· [WeightLoop](https://arxiv.org/abs/2611.07319)（可重用的反馈编辑器） |
+| **如何严谨评估 WSP？** | **[WeightBench](https://arxiv.org/abs/2611.18553)**（多任务评测）· [IWIBench](https://arxiv.org/abs/2611.08647)（考虑能力保持的编辑评估） |
+| **能否直接构建有效网络？** | **[iWSP](https://arxiv.org/abs/2611.18114)**（可解释网络与神经编码）· [Weights & Caches](https://arxiv.org/abs/2611.20174)（表格基础模型） |
+| **编辑效果究竟来自什么机制？** | **[Same Fix, Different Weights](https://arxiv.org/abs/2611.20953)**（机制复现）· [YOLO26 evaluation](https://arxiv.org/abs/2611.17789)（匹配负面对照） |
+| **有哪些相关理论与方法基础？** | **[Tracr](https://arxiv.org/abs/2301.05062)**（程序编译）· [Program-as-Weights](https://arxiv.org/abs/2607.02512)（神经程序）· [Doc-to-LoRA](https://arxiv.org/abs/2602.15902)（学习式权重生成） |
+
+**重要区别：** HypoLoop 利用实验反馈修订*编辑方案*，实际权重补丁由数值求解器拟合，部分变体使用梯度优化。推荐它是因为其科学反馈与编辑决策方法有研究价值，**不能将其结果等同于免梯度权重更新**。下方完整目录还收录有信息价值的失败和局限研究，不代表所有条目都属于重点推荐。
 
 <a id="latest-updates"></a>
 ## 📰 最近更新
