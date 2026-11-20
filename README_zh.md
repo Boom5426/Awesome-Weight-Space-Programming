@@ -53,9 +53,9 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
+| `2026-11-18` | 核对并新增两篇 WSP 研究：对原始读写结论的[独立复现与扩展](https://arxiv.org/abs/2611.21449)，以及在未公开游戏上将规则编译为网络、并与程序和学习基线对照的[研究](https://arxiv.org/abs/2611.16981)。 |
 | `2026-11-13` | 核对五篇 WSP 论文的证据，将 Autoresearch 更新为 iWSP 预印本，补充 EditLens 和[评估研究指南](docs/wsp-research-opportunities.md)。 |
 | `2026-11-13` | 优化交互式研究图谱与检索页面：支持中文检索、准确的分支导航、移动端目录和分页浏览。 |
-| `2026-11-13` | 引入结构化双语文献库、自动校验与证据字段，并补充早期权重编程基础和机器人策略编辑研究。 |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -64,16 +64,20 @@
 <!-- AUTO:START direct -->
 直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**20 篇论文与手稿** · [2026（20）](#2026)
+**22 篇论文与手稿** · [2026（22）](#2026)
 
 **证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 20 篇
+### 🗓️ 2026 — 22 篇
 
 - **[WeightCode]** `[能力植入]` `[程序复用]` WeightCode: Installing New Capabilities into Neural Networks via Weight Programming（**手稿 2026**）[[论文](https://github.com/Gen-Verse/WeightCode/blob/main/assets/WeightCode.pdf)] [[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
 - **[iWSP]** `[可解释构造]` `[神经科学]` Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models（**alphaXiv 预印本 2026**）[[论文](https://www.alphaxiv.org/abs/2611.interpretable-weight-space-programming)] [[代码](https://github.com/csinva/weight-space-programming-autoresearch)] [[报告](https://csinva.io/weight-space-programming-autoresearch/analyze)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
+
+- **[Replicating and Extending WSP]** `[复现研究]` `[权重读取]` Replicating and Extending Weight-Space Programming: Frontier LLMs Compile Programs into Weights and Read Input Layers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.21449)]
+
+- **[Rule-to-Network Compilation]** `[规则编译]` `[程序基线]` Compiling Known Rules into Compact Neural Agents: Weight-Space Programming on Unseen Games（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.16981)] [[代码](https://github.com/JensLehmann/weight-space-programming-games)] ![GitHub stars](https://img.shields.io/github/stars/JensLehmann/weight-space-programming-games.svg?logo=github&label=Stars)
 
 - **[Mixed Signals]** `[生物信号]` `[模型构建]` Mixed Signals: Weight-Space Programming for EEG and ECG（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13758)] [[项目](https://daravaram.github.io/)]
 

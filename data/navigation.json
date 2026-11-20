@@ -24,7 +24,8 @@
           "ids": [
             "can-an-llm-actually-reason-about-weights",
             "orbit-audits",
-            "clinical-network-audits"
+            "clinical-network-audits",
+            "replicating-and-extending-wsp"
           ]
         },
         {
@@ -38,7 +39,8 @@
             "wsp-for-quantum-circuits",
             "wsp-for-mathematical-optimization",
             "zero-shot-game-wsp",
-            "wsp-autoresearch"
+            "wsp-autoresearch",
+            "rule-to-network-compilation"
           ]
         },
         {
