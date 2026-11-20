@@ -25,7 +25,8 @@
             "can-an-llm-actually-reason-about-weights",
             "orbit-audits",
             "clinical-network-audits",
-            "replicating-and-extending-wsp"
+            "replicating-and-extending-wsp",
+            "clinical-audits-computation-not-weights"
           ]
         },
         {
@@ -40,7 +41,11 @@
             "wsp-for-mathematical-optimization",
             "zero-shot-game-wsp",
             "wsp-autoresearch",
-            "rule-to-network-compilation"
+            "rule-to-network-compilation",
+            "wsp-beyond-transformers",
+            "tractor-weight-space-engineering",
+            "wsp-tabular-foundation-models",
+            "wsp-structured-tabular-zero-shot"
           ]
         },
         {
@@ -49,7 +54,13 @@
           "name_zh": "修复与定向编辑",
           "ids": [
             "can-llms-debug-robots-by-editing-their-weights",
-            "distilling-instructions-into-weights-closed-form-edits-fix-a-robot-pol"
+            "distilling-instructions-into-weights-closed-form-edits-fix-a-robot-pol",
+            "same-fix-different-weights",
+            "wsp-computational-biology-python",
+            "wsp-yolo26-evaluation",
+            "anti-loop-sort-edit",
+            "wsp-backdoor-security",
+            "perceptual-diffusion-wsp"
           ]
         },
         {
@@ -58,7 +69,8 @@
           "name_zh": "编辑器评估",
           "ids": [
             "wsp-scope",
-            "iwibench"
+            "iwibench",
+            "weightbench"
           ]
         },
         {
