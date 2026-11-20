@@ -55,7 +55,7 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
-| `2026-11-20` | 将 [WeightCode](https://arxiv.org/abs/2611.25476) 与 [iWSP](https://arxiv.org/abs/2611.18114) 更新为正式 arXiv 链接；核对并新增 12 篇 WSP 研究（网络构造、控制、评测、修复和安全），另在相关模型编辑中加入 [HypoLoop](https://arxiv.org/abs/2611.23718) 与 SWEET。 |
+| `2026-11-20` | 按实证质量精简[入门推荐](#start-here)：重点推荐科学反馈驱动的 [HypoLoop](https://arxiv.org/abs/2611.23718)，剔除缺乏已完成实验的扩散猜想和早期方案条目，保留有信息量的负面结果但不作为首选阅读。同日已修正 [WeightCode](https://arxiv.org/abs/2611.25476) 链接并扩充 WSP 文献。 |
 | `2026-11-18` | 核对并新增两篇 WSP 研究：对原始读写结论的[独立复现与扩展](https://arxiv.org/abs/2611.21449)，以及在未公开游戏上将规则编译为网络、并与程序和学习基线对照的[研究](https://arxiv.org/abs/2611.16981)。 |
 | `2026-11-13` | 核对五篇 WSP 论文的证据，将 Autoresearch 更新为 iWSP 预印本，补充 EditLens 和[评估研究指南](docs/wsp-research-opportunities.md)。 |
 <!-- AUTO:END updates -->
@@ -66,12 +66,12 @@
 <!-- AUTO:START direct -->
 直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**34 篇论文与手稿** · [2026（34）](#2026)
+**32 篇论文与手稿** · [2026（32）](#2026)
 
 **证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 34 篇
+### 🗓️ 2026 — 32 篇
 
 - **[WeightCode]** `[能力植入]` `[程序复用]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.25476)] [[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -94,8 +94,6 @@
 - **[Just Sort It!]** `[机制检验]` `[解析编辑]` Just sort it! A note on the LP behind rank-one anti-loop edits（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.21432)]
 
 - **[WSP Backdoor Security Study]** `[安全审计]` `[权重编辑]` Can LLMs Write Backdoors? An Empirical Security Study of Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.17395)]
-
-- **[Perceptual Diffusion WSP]** `[扩散模型编辑]` `[证据有限]` Perceptual Weight Space Programming for Diffusion Super-Resolution（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.18690)]
 
 - **[Computation, Not Weight Access]** `[审计对照]` `[黑箱比较]` Computation, not weight access: large language models as auditors of clinical prediction networks（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07847)]
 
@@ -134,8 +132,6 @@
 - **[Orbit Audits]** `[权重读取]` `[对称性]` Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.05798)]
 
 - **[Clinical Network Audits]** `[临床 AI]` `[审计与修复]` Weight-space programming for auditing clinical decision networks（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.05341)] [[代码](https://github.com/hnusrat1/weightspace-rt)] ![GitHub stars](https://img.shields.io/github/stars/hnusrat1/weightspace-rt.svg?logo=github&label=Stars)
-
-- **[Diffusion WSP Conjectures]** `[扩散模型]` `[猜想]` Weight-Space Programming for Improving Image-Restoration Diffusion Models: Technical Conjectures and a Recursive Improvement Loop（**猜想性 arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.04268)]
 
 - **[Robot Policy Debugging]** `[机器人基础模型]` `[词汇修复]` Can LLMs Debug Robots by Editing Their Weights?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09376)]
 
@@ -223,7 +219,7 @@
 
 研究知识与行为修改、参数增量复用、对称性以及网络权重表征。
 
-- **[HypoLoop]** `[反馈驱动编辑]` `[数值求解]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.23718)] [[代码](https://github.com/limengran98/HypoLoop)] — 利用科研反馈修改可编辑位置和拟合规则；权重补丁由数值求解器拟合，因此列为相关编辑方法，不等同于免训练权重程序。
+- **[HypoLoop]** `[反馈驱动编辑]` `[数值求解]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.23718)] [[代码](https://github.com/limengran98/HypoLoop)] — 在 22 项科学任务上利用连续实验反馈修订编辑位置与拟合规则；补丁由数值求解器拟合（部分使用梯度优化），属于相关模型编辑，不等同于免梯度能力安装。
 
 - **[SWEET]** `[免训练编辑]` `[机制定位]` SWEET: Mitigating Spurious Feature Reliance in LLM Reasoning via Weight Editing（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.10974)] — 通过反事实激活方向定位并抑制虚假相关行为；属于相关机制编辑方法，不等同于智能体编写的权重程序。
 
