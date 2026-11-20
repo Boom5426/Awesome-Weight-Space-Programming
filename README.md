@@ -4,7 +4,8 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
   <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/stargazers"><img src="https://img.shields.io/github/stars/Boom5426/Awesome-Weight-Space-Programming?style=flat-square&logo=github&label=Stars" alt="GitHub stars" /></a>
   <a href="https://github.com/Boom5426/Awesome-Weight-Space-Programming/commits/main"><img src="https://img.shields.io/github/last-commit/Boom5426/Awesome-Weight-Space-Programming?style=flat-square&logo=github&label=Updated" alt="Last update" /></a>
-  &nbsp;&nbsp; <b>English</b> | <a href="README_zh.md">简体中文</a>
+  <a href="README.md"><img src="https://img.shields.io/badge/Language-English-0B6E99?style=flat-square&logo=googletranslate&logoColor=white" alt="English" /></a>
+  <a href="README_zh.md"><img src="https://img.shields.io/badge/%E8%AF%AD%E8%A8%80-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-24B6A6?style=flat-square&logo=googletranslate&logoColor=white" alt="简体中文" /></a>
 </p>
 
 **Weight-Space Programming (WSP)** explores how language models and other reasoning agents can inspect, construct, and modify neural-network weights with executable procedures. This repository follows direct WSP research, while clearly distinguishing neural-program compilation, hypernetworks, and established model-editing methods as related foundations.
