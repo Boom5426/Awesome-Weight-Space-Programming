@@ -26,7 +26,13 @@ class ResearchSiteTest(unittest.TestCase):
         self.assertEqual(sum(b["count"] for b in self.nav["branches"]), len(self.items))
         self.assertEqual(len({e["id"] for e in self.items}), len(self.items))
         self.assertEqual(len(self.nav["branches"]), 4)
-        self.assertEqual(sum(len(b["leaves"]) for b in self.nav["branches"]), 20)
+        expected_leaves = {(b["id"], leaf["id"]) for b in self.config["branches"]
+                           for leaf in b["leaves"]}
+        actual_leaves = {(b["id"], leaf["id"]) for b in self.nav["branches"]
+                         for leaf in b["leaves"]}
+        self.assertEqual(actual_leaves, expected_leaves)
+        self.assertTrue(all(leaf["count"] > 0 for b in self.nav["branches"]
+                            for leaf in b["leaves"]))
 
     def test_research_tracks(self):
         self.assertEqual(self.allocation["weightcode"], "direct.install")

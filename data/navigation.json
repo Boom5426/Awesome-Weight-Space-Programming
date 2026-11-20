@@ -59,8 +59,7 @@
             "wsp-computational-biology-python",
             "wsp-yolo26-evaluation",
             "anti-loop-sort-edit",
-            "wsp-backdoor-security",
-            "perceptual-diffusion-wsp"
+            "wsp-backdoor-security"
           ]
         },
         {
@@ -81,14 +80,6 @@
             "ncp",
             "w-isa",
             "wsp-for-policies"
-          ]
-        },
-        {
-          "id": "explore",
-          "name": "Conjectures & proposals",
-          "name_zh": "研究猜想",
-          "ids": [
-            "diffusion-wsp-conjectures"
           ]
         }
       ]

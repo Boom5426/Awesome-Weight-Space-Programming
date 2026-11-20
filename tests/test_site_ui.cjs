@@ -5,6 +5,7 @@ const vm=require("node:vm");
 const path=require("node:path");
 const ROOT=path.resolve(__dirname,"..");
 const ENTRIES=JSON.parse(fs.readFileSync(path.join(ROOT,"data/entries.json"),"utf8")).entries;
+const NAV_CONFIG=JSON.parse(fs.readFileSync(path.join(ROOT,"data/navigation.json"),"utf8"));
 
 function scriptOf(file){
   const html=fs.readFileSync(path.join(ROOT,file),"utf8");
@@ -113,7 +114,8 @@ assert.ok(!reviewed.get("results").innerHTML.includes("undefined"));
 const map=harness("landscape.html","?lang=zh");
 assert.equal(map.document.documentElement.lang,"zh");
 assert.ok(map.get("mapTitle").textContent.includes("导航"));
-assert.equal((map.get("mobileLinks").innerHTML.match(/<a href=/g)||[]).length,20);
+const expectedLinkCount=NAV_CONFIG.branches.reduce((count,b)=>count+b.leaves.length,0);
+assert.equal((map.get("mobileLinks").innerHTML.match(/<a href=/g)||[]).length,expectedLinkCount);
 assert.ok(map.get("mobileLinks").innerHTML.includes("lang=zh"));
 const scene=map.get("scene");
 const leaf=scene.children.find(e=>e.attributes.class?.startsWith("node leaf")&&e.attributes["aria-label"]?.startsWith("几何与对称性"));

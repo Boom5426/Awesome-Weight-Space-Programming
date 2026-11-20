@@ -5,7 +5,7 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 34 direct-WSP papers; 28 source-checked examples; 6 metadata-only entries.
+**Coverage:** 32 direct-WSP papers; 27 source-checked examples; 5 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
 
@@ -128,17 +128,6 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 - **Old capability / 保持:** Paper reports broadly preserved clean performance in tested conditions, not guarantees.
 - **Transfer / 迁移:** Compares architectures and editor models; not cross-host executable program reuse.
 - **Evidence boundary / 证据边界:** Security-motivated failure analysis; reported results are not a recommendation to apply edits.
-- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
-
-### [Perceptual Diffusion WSP](https://arxiv.org/abs/2611.18690)
-
-- **Model / 对象:** Proposed diffusion super-resolution backbones, plus executed small residual-network calibration tests.
-- **Intervention / 干预:** Feedback-guided LLM proposals target small parameter subsets using activations and previews.
-- **Reported outcome / 结果:** Executed toy color-calibration experiments demonstrate correction of a fixed shift but also cases where improved feedback worsens unseen-scene outcomes.
-- **Comparisons / 对照:** Proposed matched editor comparisons with separately reported toy calibration conditions.
-- **Old capability / 保持:** Preservation and transfer for full diffusion models not established from abstract.
-- **Transfer / 迁移:** Cross-scene toy tests reveal generalization risk; large-backbone deployment not established.
-- **Evidence boundary / 证据边界:** Do not interpret proposed 1020-trial diffusion protocol as a completed large-model improvement study.
 - **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
 
 ### [Computation, Not Weight Access](https://arxiv.org/abs/2611.07847)
@@ -330,7 +319,6 @@ These entries have bibliographic metadata but their outcomes, controls and reten
 | [WSP for Mathematical Optimization](https://arxiv.org/abs/2611.09559) | preprint | Metadata only / 未审查结果 |
 | [Zero-Shot Game WSP](https://arxiv.org/abs/2611.09271) | preprint | Metadata only / 未审查结果 |
 | [Clinical Network Audits](https://arxiv.org/abs/2611.05341) | preprint | Metadata only / 未审查结果 |
-| [Diffusion WSP Conjectures](https://arxiv.org/abs/2611.04268) | preprint | Metadata only / 未审查结果 |
 
 ## How to read this matrix / 如何理解证据
 

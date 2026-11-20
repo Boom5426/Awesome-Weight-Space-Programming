@@ -256,29 +256,6 @@
       }
     },
     {
-      "id": "perceptual-diffusion-wsp",
-      "group": "direct",
-      "section": "direct",
-      "title": "Perceptual Diffusion WSP",
-      "url": "https://arxiv.org/abs/2611.18690",
-      "year": 2026,
-      "render_en": "- **[Perceptual Diffusion WSP]** `[Diffusion Editing]` `[Limited Evidence]` Perceptual Weight Space Programming for Diffusion Super-Resolution (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.18690)]",
-      "render_zh": "- **[Perceptual Diffusion WSP]** `[扩散模型编辑]` `[证据有限]` Perceptual Weight Space Programming for Diffusion Super-Resolution（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.18690)]",
-      "evidence": {
-        "level": "preprint",
-        "review": "source_checked",
-        "gradient_free": true,
-        "source_url": "https://arxiv.org/abs/2611.18690",
-        "target_model": "Proposed diffusion super-resolution backbones, plus executed small residual-network calibration tests.",
-        "intervention": "Feedback-guided LLM proposals target small parameter subsets using activations and previews.",
-        "claim": "Executed toy color-calibration experiments demonstrate correction of a fixed shift but also cases where improved feedback worsens unseen-scene outcomes.",
-        "baselines": "Proposed matched editor comparisons with separately reported toy calibration conditions.",
-        "preservation": "Preservation and transfer for full diffusion models not established from abstract.",
-        "transfer": "Cross-scene toy tests reveal generalization risk; large-backbone deployment not established.",
-        "caveat": "Do not interpret proposed 1020-trial diffusion protocol as a completed large-model improvement study."
-      }
-    },
-    {
       "id": "clinical-audits-computation-not-weights",
       "group": "direct",
       "section": "direct",
@@ -716,29 +693,6 @@
       }
     },
     {
-      "id": "diffusion-wsp-conjectures",
-      "group": "direct",
-      "section": "direct",
-      "title": "Diffusion WSP Conjectures",
-      "url": "https://arxiv.org/abs/2611.04268",
-      "year": 2026,
-      "render_en": "- **[Diffusion WSP Conjectures]** `[Diffusion Models]` `[Conjecture]` Weight-Space Programming for Improving Image-Restoration Diffusion Models: Technical Conjectures and a Recursive Improvement Loop (**Conjectural arXiv Preprint 2026**) [[paper](https://arxiv.org/abs/2611.04268)]",
-      "render_zh": "- **[Diffusion WSP Conjectures]** `[扩散模型]` `[猜想]` Weight-Space Programming for Improving Image-Restoration Diffusion Models: Technical Conjectures and a Recursive Improvement Loop（**猜想性 arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.04268)]",
-      "evidence": {
-        "level": "preprint",
-        "review": "metadata_only",
-        "gradient_free": null,
-        "target_model": null,
-        "intervention": null,
-        "claim": null,
-        "baselines": null,
-        "preservation": null,
-        "transfer": null,
-        "caveat": null,
-        "source_url": "https://arxiv.org/abs/2611.04268"
-      }
-    },
-    {
       "id": "editlens",
       "group": "reports",
       "section": "reports",
@@ -935,8 +889,8 @@
       "title": "HypoLoop",
       "url": "https://arxiv.org/abs/2611.23718",
       "year": 2026,
-      "render_en": "- **[HypoLoop]** `[Feedback-driven Editing]` `[Numerical Solvers]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.23718)] [[code](https://github.com/limengran98/HypoLoop)] — Revises editable locations and fitting rules using scientific feedback; numerical solvers fit patches, so this is a related editing method, not gradient-free weight-program execution.",
-      "render_zh": "- **[HypoLoop]** `[反馈驱动编辑]` `[数值求解]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.23718)] [[代码](https://github.com/limengran98/HypoLoop)] — 利用科研反馈修改可编辑位置和拟合规则；权重补丁由数值求解器拟合，因此列为相关编辑方法，不等同于免训练权重程序。"
+      "render_en": "- **[HypoLoop]** `[Feedback-driven Editing]` `[Numerical Solvers]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.23718)] [[code](https://github.com/limengran98/HypoLoop)] — Revises editable locations and fitting rules from sequential scientific feedback across 22 tasks. Patches are fitted by numerical solvers (including gradient-based optimization); related model editing, not gradient-free capability installation.",
+      "render_zh": "- **[HypoLoop]** `[反馈驱动编辑]` `[数值求解]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.23718)] [[代码](https://github.com/limengran98/HypoLoop)] — 在 22 项科学任务上利用连续实验反馈修订编辑位置与拟合规则；补丁由数值求解器拟合（部分使用梯度优化），属于相关模型编辑，不等同于免梯度能力安装。"
     },
     {
       "id": "sweet-weight-editing",
