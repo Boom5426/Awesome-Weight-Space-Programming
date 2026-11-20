@@ -55,7 +55,7 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
-| `2026-11-20` | Updated [WeightCode](https://arxiv.org/abs/2611.25476) to its official arXiv preprint and [iWSP](https://arxiv.org/abs/2611.18114) to arXiv; added 12 source-checked WSP studies across construction, control, evaluation, repair and security, plus [HypoLoop](https://arxiv.org/abs/2611.23718) and SWEET as related weight-editing research. |
+| `2026-11-20` | Curated a selective, evidence-driven [Start Here](#start-here): prominently featured [HypoLoop](https://arxiv.org/abs/2611.23718) for feedback-driven scientific editing, removed unsupported conjectural and preliminary diffusion entries, and kept weak or negative experimental results accessible without treating them as recommended starting points. Earlier this day, updated [WeightCode](https://arxiv.org/abs/2611.25476) and added new WSP studies. |
 | `2026-11-18` | Source-checked two new WSP studies: an independent [replication and extension](https://arxiv.org/abs/2611.21449) of the original read/write claims, and [rule-to-network compilation](https://arxiv.org/abs/2611.16981) on unseen games with program and learning baselines. |
 | `2026-11-13` | Source-checked five more WSP papers, updated Autoresearch to the iWSP preprint, and added EditLens plus an [evaluation research guide](docs/wsp-research-opportunities.md). |
 <!-- AUTO:END updates -->
@@ -66,12 +66,12 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**34 papers and manuscripts** · [2026 (34)](#2026)
+**32 papers and manuscripts** · [2026 (32)](#2026)
 
 **Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 34 papers
+### 🗓️ 2026 — 32 papers
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.25476)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -94,8 +94,6 @@ Research directly involving programmatic inspection, construction, or modificati
 - **[Just Sort It!]** `[Mechanism Test]` `[Closed-form Edit]` Just sort it! A note on the LP behind rank-one anti-loop edits (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.21432)]
 
 - **[WSP Backdoor Security Study]** `[Security Audit]` `[Weight Editing]` Can LLMs Write Backdoors? An Empirical Security Study of Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.17395)]
-
-- **[Perceptual Diffusion WSP]** `[Diffusion Editing]` `[Limited Evidence]` Perceptual Weight Space Programming for Diffusion Super-Resolution (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.18690)]
 
 - **[Computation, Not Weight Access]** `[Audit Controls]` `[Black-box Comparison]` Computation, not weight access: large language models as auditors of clinical prediction networks (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07847)]
 
@@ -134,8 +132,6 @@ Research directly involving programmatic inspection, construction, or modificati
 - **[Orbit Audits]** `[Weight Reading]` `[Symmetry]` Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.05798)]
 
 - **[Clinical Network Audits]** `[Clinical AI]` `[Auditing & Repair]` Weight-space programming for auditing clinical decision networks (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.05341)] [[code](https://github.com/hnusrat1/weightspace-rt)] ![GitHub stars](https://img.shields.io/github/stars/hnusrat1/weightspace-rt.svg?logo=github&label=Stars)
-
-- **[Diffusion WSP Conjectures]** `[Diffusion Models]` `[Conjecture]` Weight-Space Programming for Improving Image-Restoration Diffusion Models: Technical Conjectures and a Recursive Improvement Loop (**Conjectural arXiv Preprint 2026**) [[paper](https://arxiv.org/abs/2611.04268)]
 
 - **[Robot Policy Debugging]** `[Robot Foundation Model]` `[Lexical Repair]` Can LLMs Debug Robots by Editing Their Weights? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09376)]
 
@@ -223,7 +219,7 @@ Learned compilers, hypernetworks, and adapter generators that map instructions o
 
 Research on modifying facts or behaviors, parameter differences, symmetries, and learned weight representations.
 
-- **[HypoLoop]** `[Feedback-driven Editing]` `[Numerical Solvers]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.23718)] [[code](https://github.com/limengran98/HypoLoop)] — Revises editable locations and fitting rules using scientific feedback; numerical solvers fit patches, so this is a related editing method, not gradient-free weight-program execution.
+- **[HypoLoop]** `[Feedback-driven Editing]` `[Numerical Solvers]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.23718)] [[code](https://github.com/limengran98/HypoLoop)] — Revises editable locations and fitting rules from sequential scientific feedback across 22 tasks. Patches are fitted by numerical solvers (including gradient-based optimization); related model editing, not gradient-free capability installation.
 
 - **[SWEET]** `[Training-free Editing]` `[Mechanistic Localization]` SWEET: Mitigating Spurious Feature Reliance in LLM Reasoning via Weight Editing (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.10974)] — Uses counterfactual activation directions to localize and suppress spurious behavior; related mechanistic editing, not necessarily agent-authored programs.
 
