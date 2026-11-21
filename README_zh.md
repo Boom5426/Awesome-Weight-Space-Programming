@@ -64,12 +64,12 @@
 <!-- AUTO:START direct -->
 直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**32 篇论文与手稿** · [2026（32）](#2026)
+**34 篇论文与手稿** · [2026（34）](#2026)
 
 **证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 32 篇
+### 🗓️ 2026 — 34 篇
 
 - **[WeightCode]** `[能力植入]` `[程序复用]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.25476)] [[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -90,6 +90,10 @@
 - **[YOLO26 Weight Editing Study]** `[目标检测]` `[负面证据]` Can Large Language Models Optimize Pretrained Neural Network Weights? A Multi-Phase Empirical Evaluation of Gradient-Free Editing in YOLO26 Object Detection（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.17789)]
 
 - **[Just Sort It!]** `[机制检验]` `[解析编辑]` Just sort it! A note on the LP behind rank-one anti-loop edits（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.21432)]
+
+- **[SGNE-CC v2]** `[球面旋转]` `[稀疏防循环编辑]` SGNE-CC v2: Training-Free Spherical Rotation of 205 `down_proj` Columns (0.0177%) in DeepSeek-R1-Distill-Qwen-1.5B（**Zenodo 2026**）[[预印本](https://doi.org/10.5281/zenodo.24398165)] [[代码](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2)] [[权重](https://huggingface.co/Nondual-Observer/DeepSeek-R1-Distill-Qwen-1.5B-SGNE-CC-v2)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2.svg?logo=github&label=Stars)
+
+- **[SGNE-CC]** `[机制审计]` `[保范数编辑]` Weight-Space Audit of MIT-p50c and DNA Weight Editing (SGNE-CC) on Qwen3.5-0.8B at a 32,768-Token Generation Limit（**Zenodo 2026**）[[预印本](https://doi.org/10.5281/zenodo.24235218)] [[代码](https://github.com/Nondual-Observer/dna-weight-editing)] [[权重](https://huggingface.co/Nondual-Observer/Qwen3.5-0.8B-SGNE-CC)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/dna-weight-editing.svg?logo=github&label=Stars)
 
 - **[WSP Backdoor Security Study]** `[安全审计]` `[权重编辑]` Can LLMs Write Backdoors? An Empirical Security Study of Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.17395)]
 
