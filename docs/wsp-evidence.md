@@ -123,11 +123,11 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 - **Model / 对象:** DeepSeek-R1-Distill-Qwen-1.5B (dense 28-layer Qwen2 transformer with no recurrent layers).
 - **Intervention / 干预:** Exact norm-preserving spherical rotation of 205 mlp.down_proj columns (0.0177% of parameters; 603 KB patch) calibrated on 200 MATH-500 items with zero gradient steps.
-- **Reported outcome / 结果:** Across 1,054 problems on five benchmarks at T=0 (32,768 tokens, no penalties), overall accuracy rises from 60.5% to 69.5% (MATH-500 65.4% -> 76.4%, MBPP 53.3% -> 67.5%, BBH 68.3% -> 77.5%, ARC 52.7% -> 59.3%), unclosed traces drop 87% (27.8% -> 3.6%), and mean token count drops 2.7x.
+- **Reported outcome / 结果:** Across 1,054 problems on five benchmarks at T=0 (32,768 tokens, no penalties), overall accuracy rises from 60.5% to 69.5% (MATH-500 65.4% -> 76.4%, MBPP 53.3% -> 67.5%, BBH 68.3% -> 77.5%, ARC 52.7% -> 59.3%), unclosed traces drop 87% (28.9% -> 3.9%, 305 -> 41 of 1,054), and mean token count drops 2.7x.
 - **Comparisons / 对照:** Unedited DeepSeek-R1-Distill-Qwen-1.5B evaluated under greedy T=0, recommended T=0.6 sampling, and T=0.3 low-noise sampling, with 42/42 SHA-256 trace verification.
 - **Old capability / 保持:** Four of five benchmarks (MBPP, HumanEval, BBH Logic, ARC-Challenge; 554 tasks) are completely untouched during calibration and all improve or preserve accuracy at T=0.
 - **Transfer / 迁移:** Extends column-norm-preserving spherical editing from hybrid GatedDeltaNet Qwen3.5-0.8B to a pure dense attention-MLP transformer without architecture-specific recurrent gates.
-- **Evidence boundary / 证据边界:** Under recommended T=0.6 sampling, gains are smaller (+2.0pp on MATH-500, -0.6pp on ARC-Challenge, though T=0.3 reaches 66.0% on ARC vs. 57.3% base at T=0.6); evaluated on one 1.5B distilled model.
+- **Evidence boundary / 证据边界:** Under recommended T=0.6 sampling, gains are smaller (+2.0pp on MATH-500, -0.7pp on ARC-Challenge, though T=0.3 reaches 66.0% on ARC vs. 57.3% base at T=0.6); evaluated on one 1.5B distilled model.
 - **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
 
 ### [SGNE-CC (Qwen3.5-0.8B Audit)](https://doi.org/10.5281/zenodo.24235218)
