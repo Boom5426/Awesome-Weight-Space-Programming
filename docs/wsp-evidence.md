@@ -5,7 +5,7 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 32 direct-WSP papers; 27 source-checked examples; 5 metadata-only entries.
+**Coverage:** 34 direct-WSP papers; 29 source-checked examples; 5 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
 
@@ -117,6 +117,28 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 - **Old capability / 保持:** No general unrelated-task retention measured.
 - **Transfer / 迁移:** Single target model; no new-host program transfer.
 - **Evidence boundary / 证据边界:** Indicates a nearly constant directional bias may explain the edit; does not establish a broader capability installation mechanism.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [SGNE-CC v2 (DeepSeek-R1-1.5B)](https://doi.org/10.5281/zenodo.24398165)
+
+- **Model / 对象:** DeepSeek-R1-Distill-Qwen-1.5B (dense 28-layer Qwen2 transformer with no recurrent layers).
+- **Intervention / 干预:** Exact norm-preserving spherical rotation of 205 mlp.down_proj columns (0.0177% of parameters; 603 KB patch) calibrated on 200 MATH-500 items with zero gradient steps.
+- **Reported outcome / 结果:** Across 1,054 problems on five benchmarks at T=0 (32,768 tokens, no penalties), overall accuracy rises from 60.5% to 69.5% (MATH-500 65.4% -> 76.4%, MBPP 53.3% -> 67.5%, BBH 68.3% -> 77.5%, ARC 52.7% -> 59.3%), unclosed traces drop 87% (27.8% -> 3.6%), and mean token count drops 2.7x.
+- **Comparisons / 对照:** Unedited DeepSeek-R1-Distill-Qwen-1.5B evaluated under greedy T=0, recommended T=0.6 sampling, and T=0.3 low-noise sampling, with 42/42 SHA-256 trace verification.
+- **Old capability / 保持:** Four of five benchmarks (MBPP, HumanEval, BBH Logic, ARC-Challenge; 554 tasks) are completely untouched during calibration and all improve or preserve accuracy at T=0.
+- **Transfer / 迁移:** Extends column-norm-preserving spherical editing from hybrid GatedDeltaNet Qwen3.5-0.8B to a pure dense attention-MLP transformer without architecture-specific recurrent gates.
+- **Evidence boundary / 证据边界:** Under recommended T=0.6 sampling, gains are smaller (+2.0pp on MATH-500, -0.6pp on ARC-Challenge, though T=0.3 reaches 66.0% on ARC vs. 57.3% base at T=0.6); evaluated on one 1.5B distilled model.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [SGNE-CC (Qwen3.5-0.8B Audit)](https://doi.org/10.5281/zenodo.24235218)
+
+- **Model / 对象:** Qwen3.5-0.8B (752M text parameters; 18 GatedDeltaNet + 6 attention layers) compared directly against MIT-p50c.
+- **Intervention / 干预:** 3.13 MiB gradient-free spherical rotation of selected output columns preserving Euclidean column norms within BF16 rounding (<= 0.1625% drift vs. up to +114.3% norm inflation in MIT-p50c).
+- **Reported outcome / 结果:** Under greedy decoding without repetition penalties (T=0, 32,768-token budget), MATH-500 rises from 0% (base) and 5.0% (MIT-p50c) to 43.0%, cutting 32k cutoffs from 95.0% to 18.4% and mean length 3.7x across 1,128 tasks on five suites.
+- **Comparisons / 对照:** Unedited Qwen3.5-0.8B and MIT-p50c evaluated under both greedy decoding (T=0, pp=0) and model-card sampling (T=0.6, pp=1.5).
+- **Old capability / 保持:** Tested on held-out MGSM-240, BBH-160, HumanEval-164, and MultiSpeech-64; under T=0.6, pp=1.5 matches vLLM MATH-500 (47.0% vs. 48.2%) and improves BBH Web of Lies (45% vs. 35%), but trails MIT-p50c on MGSM-240 (41.7% vs. 57.1%).
+- **Transfer / 迁移:** Evaluated on Qwen3.5-0.8B; companion study SGNE-CC v2 tests the same column-norm-preserving formulation on a dense 1.5B Qwen2 transformer.
+- **Evidence boundary / 证据边界:** Constructed via mechanistic weight-geometry calibration rather than an autonomous LLM prompt loop; shorter generations occasionally terminate verbal checks early under T=0.6, pp=1.5 on MGSM-240 and MATH L1-2.
 - **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
 
 ### [WSP Backdoor Security Study](https://arxiv.org/abs/2611.17395)

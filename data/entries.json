@@ -233,6 +233,52 @@
       }
     },
     {
+      "id": "sgne-cc-v2-deepseek-r1",
+      "group": "direct",
+      "section": "direct",
+      "title": "SGNE-CC v2 (DeepSeek-R1-1.5B)",
+      "url": "https://doi.org/10.5281/zenodo.24398165",
+      "year": 2026,
+      "render_en": "- **[SGNE-CC v2]** `[Spherical Rotation]` `[Sparse Anti-Loop Edit]` SGNE-CC v2: Training-Free Spherical Rotation of 205 `down_proj` Columns (0.0177%) in DeepSeek-R1-Distill-Qwen-1.5B (**Zenodo 2026**) [[preprint](https://doi.org/10.5281/zenodo.24398165)] [[code](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2)] [[weights](https://huggingface.co/Nondual-Observer/DeepSeek-R1-Distill-Qwen-1.5B-SGNE-CC-v2)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2.svg?logo=github&label=Stars)",
+      "render_zh": "- **[SGNE-CC v2]** `[球面旋转]` `[稀疏防循环编辑]` SGNE-CC v2: Training-Free Spherical Rotation of 205 `down_proj` Columns (0.0177%) in DeepSeek-R1-Distill-Qwen-1.5B（**Zenodo 2026**）[[预印本](https://doi.org/10.5281/zenodo.24398165)] [[代码](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2)] [[权重](https://huggingface.co/Nondual-Observer/DeepSeek-R1-Distill-Qwen-1.5B-SGNE-CC-v2)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2.svg?logo=github&label=Stars)",
+      "evidence": {
+        "level": "preprint",
+        "review": "source_checked",
+        "gradient_free": true,
+        "source_url": "https://doi.org/10.5281/zenodo.24398165",
+        "target_model": "DeepSeek-R1-Distill-Qwen-1.5B (dense 28-layer Qwen2 transformer with no recurrent layers).",
+        "intervention": "Exact norm-preserving spherical rotation of 205 mlp.down_proj columns (0.0177% of parameters; 603 KB patch) calibrated on 200 MATH-500 items with zero gradient steps.",
+        "claim": "Across 1,054 problems on five benchmarks at T=0 (32,768 tokens, no penalties), overall accuracy rises from 60.5% to 69.5% (MATH-500 65.4% -> 76.4%, MBPP 53.3% -> 67.5%, BBH 68.3% -> 77.5%, ARC 52.7% -> 59.3%), unclosed traces drop 87% (27.8% -> 3.6%), and mean token count drops 2.7x.",
+        "baselines": "Unedited DeepSeek-R1-Distill-Qwen-1.5B evaluated under greedy T=0, recommended T=0.6 sampling, and T=0.3 low-noise sampling, with 42/42 SHA-256 trace verification.",
+        "preservation": "Four of five benchmarks (MBPP, HumanEval, BBH Logic, ARC-Challenge; 554 tasks) are completely untouched during calibration and all improve or preserve accuracy at T=0.",
+        "transfer": "Extends column-norm-preserving spherical editing from hybrid GatedDeltaNet Qwen3.5-0.8B to a pure dense attention-MLP transformer without architecture-specific recurrent gates.",
+        "caveat": "Under recommended T=0.6 sampling, gains are smaller (+2.0pp on MATH-500, -0.6pp on ARC-Challenge, though T=0.3 reaches 66.0% on ARC vs. 57.3% base at T=0.6); evaluated on one 1.5B distilled model."
+      }
+    },
+    {
+      "id": "sgne-cc-qwen35-audit",
+      "group": "direct",
+      "section": "direct",
+      "title": "SGNE-CC (Qwen3.5-0.8B Audit)",
+      "url": "https://doi.org/10.5281/zenodo.24235218",
+      "year": 2026,
+      "render_en": "- **[SGNE-CC]** `[Mechanistic Audit]` `[Norm-Preserving Edit]` Weight-Space Audit of MIT-p50c and DNA Weight Editing (SGNE-CC) on Qwen3.5-0.8B at a 32,768-Token Generation Limit (**Zenodo 2026**) [[preprint](https://doi.org/10.5281/zenodo.24235218)] [[code](https://github.com/Nondual-Observer/dna-weight-editing)] [[weights](https://huggingface.co/Nondual-Observer/Qwen3.5-0.8B-SGNE-CC)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/dna-weight-editing.svg?logo=github&label=Stars)",
+      "render_zh": "- **[SGNE-CC]** `[机制审计]` `[保范数编辑]` Weight-Space Audit of MIT-p50c and DNA Weight Editing (SGNE-CC) on Qwen3.5-0.8B at a 32,768-Token Generation Limit（**Zenodo 2026**）[[预印本](https://doi.org/10.5281/zenodo.24235218)] [[代码](https://github.com/Nondual-Observer/dna-weight-editing)] [[权重](https://huggingface.co/Nondual-Observer/Qwen3.5-0.8B-SGNE-CC)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/dna-weight-editing.svg?logo=github&label=Stars)",
+      "evidence": {
+        "level": "preprint",
+        "review": "source_checked",
+        "gradient_free": true,
+        "source_url": "https://doi.org/10.5281/zenodo.24235218",
+        "target_model": "Qwen3.5-0.8B (752M text parameters; 18 GatedDeltaNet + 6 attention layers) compared directly against MIT-p50c.",
+        "intervention": "3.13 MiB gradient-free spherical rotation of selected output columns preserving Euclidean column norms within BF16 rounding (<= 0.1625% drift vs. up to +114.3% norm inflation in MIT-p50c).",
+        "claim": "Under greedy decoding without repetition penalties (T=0, 32,768-token budget), MATH-500 rises from 0% (base) and 5.0% (MIT-p50c) to 43.0%, cutting 32k cutoffs from 95.0% to 18.4% and mean length 3.7x across 1,128 tasks on five suites.",
+        "baselines": "Unedited Qwen3.5-0.8B and MIT-p50c evaluated under both greedy decoding (T=0, pp=0) and model-card sampling (T=0.6, pp=1.5).",
+        "preservation": "Tested on held-out MGSM-240, BBH-160, HumanEval-164, and MultiSpeech-64; under T=0.6, pp=1.5 matches vLLM MATH-500 (47.0% vs. 48.2%) and improves BBH Web of Lies (45% vs. 35%), but trails MIT-p50c on MGSM-240 (41.7% vs. 57.1%).",
+        "transfer": "Evaluated on Qwen3.5-0.8B; companion study SGNE-CC v2 tests the same column-norm-preserving formulation on a dense 1.5B Qwen2 transformer.",
+        "caveat": "Constructed via mechanistic weight-geometry calibration rather than an autonomous LLM prompt loop; shorter generations occasionally terminate verbal checks early under T=0.6, pp=1.5 on MGSM-240 and MATH L1-2."
+      }
+    },
+    {
       "id": "wsp-backdoor-security",
       "group": "direct",
       "section": "direct",

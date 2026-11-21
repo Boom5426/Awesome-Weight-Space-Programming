@@ -59,7 +59,9 @@
             "wsp-computational-biology-python",
             "wsp-yolo26-evaluation",
             "anti-loop-sort-edit",
-            "wsp-backdoor-security"
+            "wsp-backdoor-security",
+            "sgne-cc-qwen35-audit",
+            "sgne-cc-v2-deepseek-r1"
           ]
         },
         {

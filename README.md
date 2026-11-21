@@ -62,12 +62,12 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**32 papers and manuscripts** · [2026 (32)](#2026)
+**34 papers and manuscripts** · [2026 (34)](#2026)
 
 **Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 32 papers
+### 🗓️ 2026 — 34 papers
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.25476)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
@@ -88,6 +88,10 @@ Research directly involving programmatic inspection, construction, or modificati
 - **[YOLO26 Weight Editing Study]** `[Object Detection]` `[Negative Evidence]` Can Large Language Models Optimize Pretrained Neural Network Weights? A Multi-Phase Empirical Evaluation of Gradient-Free Editing in YOLO26 Object Detection (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.17789)]
 
 - **[Just Sort It!]** `[Mechanism Test]` `[Closed-form Edit]` Just sort it! A note on the LP behind rank-one anti-loop edits (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.21432)]
+
+- **[SGNE-CC v2]** `[Spherical Rotation]` `[Sparse Anti-Loop Edit]` SGNE-CC v2: Training-Free Spherical Rotation of 205 `down_proj` Columns (0.0177%) in DeepSeek-R1-Distill-Qwen-1.5B (**Zenodo 2026**) [[preprint](https://doi.org/10.5281/zenodo.24398165)] [[code](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2)] [[weights](https://huggingface.co/Nondual-Observer/DeepSeek-R1-Distill-Qwen-1.5B-SGNE-CC-v2)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2.svg?logo=github&label=Stars)
+
+- **[SGNE-CC]** `[Mechanistic Audit]` `[Norm-Preserving Edit]` Weight-Space Audit of MIT-p50c and DNA Weight Editing (SGNE-CC) on Qwen3.5-0.8B at a 32,768-Token Generation Limit (**Zenodo 2026**) [[preprint](https://doi.org/10.5281/zenodo.24235218)] [[code](https://github.com/Nondual-Observer/dna-weight-editing)] [[weights](https://huggingface.co/Nondual-Observer/Qwen3.5-0.8B-SGNE-CC)] ![GitHub stars](https://img.shields.io/github/stars/Nondual-Observer/dna-weight-editing.svg?logo=github&label=Stars)
 
 - **[WSP Backdoor Security Study]** `[Security Audit]` `[Weight Editing]` Can LLMs Write Backdoors? An Empirical Security Study of Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.17395)]
 
