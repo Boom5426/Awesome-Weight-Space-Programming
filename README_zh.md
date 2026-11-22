@@ -39,6 +39,7 @@
 | --- | --- |
 | **什么是权重空间编程？** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)**（最初的技术报告）· [WSP-Scope](https://arxiv.org/abs/2611.09382)（系统评估） |
 | **程序能否持久安装新能力？** | **[WeightCode](https://arxiv.org/abs/2611.25476)**（新能力、旧能力保持、跨模型程序重执行） |
+| **语言模型能否直接改写自己的权重？** | **[Self-Rewriting](https://arxiv.org/abs/2611.21885)**（27B 模型免梯度自我编辑，并报告多轮持续改进） |
 | **科学反馈能否改变编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718v1)**（22 项科学任务，探索编辑位置与规则）· [WeightLoop](https://arxiv.org/abs/2611.07319)（可重用的反馈编辑器） |
 | **如何严谨评估 WSP？** | **[WeightBench](https://arxiv.org/abs/2611.18553)**（多任务评测）· [IWIBench](https://arxiv.org/abs/2611.08647)（考虑能力保持的编辑评估） |
 | **能否直接构建有效网络？** | **[iWSP](https://arxiv.org/abs/2611.18114)**（可解释网络与神经编码）· [Weights & Caches](https://arxiv.org/abs/2611.20174)（表格基础模型） |

@@ -37,6 +37,7 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 | --- | --- |
 | **What is weight-space programming?** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** (original technical report) · [WSP-Scope](https://arxiv.org/abs/2611.09382) (systematic evaluation) |
 | **Can programs install lasting capabilities?** | **[WeightCode](https://arxiv.org/abs/2611.25476)** (new-task gain, old-task retention, rerunnable cross-model programs) |
+| **Can a language model rewrite its own weights?** | **[Self-Rewriting](https://arxiv.org/abs/2611.21885)** (27B model, gradient-free self-editing and repeated improvement) |
 | **Can scientific feedback improve an editing plan?** | **[HypoLoop](https://arxiv.org/abs/2611.23718v1)** (where/how to edit across 22 scientific tasks) · [WeightLoop](https://arxiv.org/abs/2611.07319) (reusable scientific feedback editor) |
 | **How reliable are WSP claims?** | **[WeightBench](https://arxiv.org/abs/2611.18553)** (multi-task benchmark) · [IWIBench](https://arxiv.org/abs/2611.08647) (preservation-aware editing evaluation) |
 | **Can agents construct useful networks?** | **[iWSP](https://arxiv.org/abs/2611.18114)** (interpretable networks and neural encoding) · [Weights & Caches](https://arxiv.org/abs/2611.20174) (tabular foundation models) |
