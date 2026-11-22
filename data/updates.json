@@ -2,6 +2,11 @@
   "version": 1,
   "updates": [
     {
+      "date": "2026-11-22",
+      "en": "Added [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) to Direct WSP and the evidence matrix: a 27B model reports gradient-free self-editing (+6.6 percentage points on held-out problems) and eight accepted improvement sessions, with scope and retention caveats.",
+      "zh": "新增[Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) 至直接 WSP 与证据矩阵：27B 模型通过免梯度自我编辑，在未见测试题上报告提升 6.6 个百分点，并经历 8 轮被接受的修改；同时标明能力保持与泛化证据边界。"
+    },
+    {
       "date": "2026-11-20",
       "en": "Curated a selective, evidence-driven [Start Here](#start-here): prominently featured [HypoLoop](https://arxiv.org/abs/2611.23718) for feedback-driven scientific editing, removed unsupported conjectural and preliminary diffusion entries, and kept weak or negative experimental results accessible without treating them as recommended starting points. Earlier this day, updated [WeightCode](https://arxiv.org/abs/2611.25476) and added new WSP studies.",
       "zh": "按实证质量精简[入门推荐](#start-here)：重点推荐科学反馈驱动的 [HypoLoop](https://arxiv.org/abs/2611.23718)，剔除缺乏已完成实验的扩散猜想和早期方案条目，保留有信息量的负面结果但不作为首选阅读。同日已修正 [WeightCode](https://arxiv.org/abs/2611.25476) 链接并扩充 WSP 文献。"

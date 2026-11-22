@@ -51,9 +51,9 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
+| `2026-11-22` | Added [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) to Direct WSP and the evidence matrix: a 27B model reports gradient-free self-editing (+6.6 percentage points on held-out problems) and eight accepted improvement sessions, with scope and retention caveats. |
 | `2026-11-20` | Curated a selective, evidence-driven [Start Here](#start-here): prominently featured [HypoLoop](https://arxiv.org/abs/2611.23718) for feedback-driven scientific editing, removed unsupported conjectural and preliminary diffusion entries, and kept weak or negative experimental results accessible without treating them as recommended starting points. Earlier this day, updated [WeightCode](https://arxiv.org/abs/2611.25476) and added new WSP studies. |
 | `2026-11-18` | Source-checked two new WSP studies: an independent [replication and extension](https://arxiv.org/abs/2611.21449) of the original read/write claims, and [rule-to-network compilation](https://arxiv.org/abs/2611.16981) on unseen games with program and learning baselines. |
-| `2026-11-13` | Source-checked five more WSP papers, updated Autoresearch to the iWSP preprint, and added EditLens plus an [evaluation research guide](docs/wsp-research-opportunities.md). |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -62,12 +62,14 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**34 papers and manuscripts** · [2026 (34)](#2026)
+**35 papers and manuscripts** · [2026 (35)](#2026)
 
 **Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 34 papers
+### 🗓️ 2026 — 35 papers
+
+- **[Self-Rewriting]** `[Self-Rewriting]` `[Continual Improvement]` Language Models Can Rewrite Their Own Weights (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.21885)] [[project](https://www.jiajunfan.com/projects/self-rewriting/)]
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.25476)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
