@@ -2,6 +2,11 @@
   "version": 1,
   "updates": [
     {
+      "date": "2026-11-26",
+      "en": "Added 17 source-checked preprints from 19–25 November, covering self-editing, reusable retrieval recipes, robot repair, closed-form adaptation, security and informative negative results. See the [dated review](docs/literature-update-2026-11-26.md). Merged community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) (metric correction) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) (related list).",
+      "zh": "补充 11 月 19—25 日的 17 篇已核对原文预印本，覆盖自编辑、检索规则复用、机器人修复、闭式适应、安全及有信息量的负面结果，详见[本轮整理](docs/literature-update-2026-11-26.md)。合并社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12)（统计口径修正）和 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13)（相关资源列表）。"
+    },
+    {
       "date": "2026-11-22",
       "en": "Added [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) to Direct WSP and the evidence matrix: a 27B model reports gradient-free self-editing (+6.6 percentage points on held-out problems) and eight accepted improvement sessions, with scope and retention caveats.",
       "zh": "新增[Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) 至直接 WSP 与证据矩阵：27B 模型通过免梯度自我编辑，在未见测试题上报告提升 6.6 个百分点，并经历 8 轮被接受的修改；同时标明能力保持与泛化证据边界。"
@@ -46,5 +51,11 @@
       "en": "Added a Simplified Chinese README.",
       "zh": "新增中文 README。"
     }
-  ]
+  ],
+  "metadata": {
+    "title": "Weight-Space Programming update history",
+    "author": "Li Bo",
+    "creator": "Li Bo",
+    "last_modified_by": "Li Bo"
+  }
 }

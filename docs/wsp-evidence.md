@@ -1,3 +1,10 @@
+---
+title: "Weight-Space Programming evidence matrix"
+author: "Li Bo"
+creator: "Li Bo"
+last_modified_by: "Li Bo"
+---
+
 <!-- AUTO:START evidence -->
 # WSP Evidence Matrix / 权重编程证据矩阵
 
@@ -5,9 +12,196 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 35 direct-WSP papers; 30 source-checked examples; 5 metadata-only entries.
+**Coverage:** 52 direct-WSP papers; 47 source-checked examples; 5 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
+
+### [FWSP](https://arxiv.org/abs/2611.34612v1)
+
+- **Model / 对象:** Thirteen models across five modalities; DINOv2-Base for blind routing and DeepSeek-R1-0528-8B for reasoning calibration.
+- **Intervention / 干预:** Deterministic probing, localization, closed-form operators and paired verification; a separate hybrid variant adds gradient-trained LoRA.
+- **Reported outcome / 结果:** On 18 structured DINOv2 trials, exact operator dispatch is 15/18 (83.3%) versus 6/18 (33.3%) for a 27B tool router.
+- **Comparisons / 对照:** Same-library 8B/27B agents, random routing, exhaustive operator search, MeZO and budget-forcing comparisons.
+- **Old capability / 保持:** Uses retention guards; some calibration subsets fail verification, so passing-subset results must remain conditional.
+- **Transfer / 迁移:** Tests fixed routing thresholds on other faults/models and a frozen reasoning patch across tasks and HF/vLLM backends.
+- **Evidence boundary / 证据边界:** Preprint; comparisons cover structured faults and open 8B/27B editors, not all frontier hypothesis discovery. Frozen-feature limits remain; the hybrid LoRA arm uses gradients.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Kolpona](https://arxiv.org/abs/2611.33973v1)
+
+- **Model / 对象:** Qwen3.5-4B for neuron edits; Qwen3.8-27B for the larger agent framework.
+- **Intervention / 干预:** Closed-form edits to 16 neurons address generation habits; an additional inference-time agent and selection harness proposes RTL designs.
+- **Reported outcome / 结果:** On VerilogEval v2, the edited 4B model alone rises from 31.7% to 55.4%; the full mini framework reaches 77.6%.
+- **Comparisons / 对照:** Unedited model, staged harness ablations and published RTL systems; framework scores include additional inference-time computation.
+- **Old capability / 保持:** Reports transfer of the edited 4B model to HumanEval+ (84.8% to 91.5%) and MBPP+ (67.7% to 77.5%); no broad retention guarantee.
+- **Transfer / 迁移:** Tests other RTL benchmarks and Python with the same edited 4B weights; no independent-host program reuse study.
+- **Evidence boundary / 证据边界:** Preprint; later edit rounds are test-informed. The 27B framework headline is not an isolated weight-edit gain, and logic errors remain.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Closed-Form Classifiers](https://arxiv.org/abs/2611.33972v1)
+
+- **Model / 对象:** Frozen RoBERTa-large with multi-template, multi-layer classifier heads.
+- **Intervention / 干预:** LLM-assisted programs fit closed-form supervised heads and cross-fit their selection; encoder parameters never change.
+- **Reported outcome / 结果:** On six held-out datasets, average differences to full fine-tuning are +0.53 points at 512 labels and -0.39 at 8,192 labels.
+- **Comparisons / 对照:** Full fine-tuning, LoRA, prompt-based fine-tuning and probes using the same frozen encoder.
+- **Old capability / 保持:** Encoder remains frozen; this does not establish preservation of an installed task inside its original weights.
+- **Transfer / 迁移:** Evaluates a fixed recipe on held-out classification datasets; no cross-encoder reuse is demonstrated.
+- **Evidence boundary / 证据边界:** Preprint; supervised fitting remains necessary. Development test results shaped the recipe, held-out registered tests do not pass, and 17 encoder passes per input increase inference cost.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Tool-Free Quantization Repair](https://arxiv.org/abs/2611.33031v1)
+
+- **Model / 对象:** A 20,280-weight CIFAR-10 CNN; four Claude editors under four input/output protocols.
+- **Intervention / 干预:** Editor reads numerical weights as text and returns integer-weight corrections without data, execution tools or inference feedback.
+- **Reported outcome / 结果:** With chunked layer responses, Opus 5.5 improves 4-bit accuracy from 60.39% to 77.95%; the float network scores 81.42%.
+- **Comparisons / 对照:** RTN, exact kernel balancing (77.80%), SQuant, AdaRound (80.71%) and GPTQ with disclosed calibration data.
+- **Old capability / 保持:** Measures recovered CIFAR-10 accuracy; other skills and distribution-shift retention are not established.
+- **Transfer / 迁移:** Tests protocol and editor variations on one CNN, not transfer of a weight program to another host.
+- **Evidence boundary / 证据边界:** Preprint; chunked responses and an explicit accuracy-loss hint matter. The discovered correction resembles an existing quantization rule and does not outperform calibrated PTQ.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Robot Foundation Model Repair](https://arxiv.org/abs/2611.31715v1)
+
+- **Model / 对象:** 3.35B-parameter pi0.5 policy in RoboTwin 2.0 simulation, including a task-fine-tuned basket checkpoint.
+- **Intervention / 干预:** Claude writes state-triggered corrective movements into two near-silent action-expert neurons, changing about 6,000 parameters without training.
+- **Reported outcome / 结果:** Held-out success rises 56.5% to 70.5% on hammer, 87.3% to 96.7% on bell and 67.7% to 84.4% on basket.
+- **Comparisons / 对照:** Paired seeded scenes, unedited policies, matched random edits and sign-reversed corrections.
+- **Old capability / 保持:** Basket fixes 121 scenes but breaks 37 of 505; broad cross-task preservation is not established.
+- **Transfer / 迁移:** Edits generalize to unseen scenes within tasks and help an already fine-tuned checkpoint; no fixed-program reuse across models.
+- **Evidence boundary / 证据边界:** Preprint; three of five repairs work clearly, can-to-pot is not significant and switch fails. Simulation and task-specific corrections do not establish real-robot deployment.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [TowerBridge](https://arxiv.org/abs/2611.31233v1)
+
+- **Model / 对象:** 21 CLIP checkpoints, including eight unseen by the agent, plus five other dual encoders.
+- **Intervention / 干预:** LLM-discovered weight corrections are distilled into a closed-form projection recipe computed from 25,000 labeled pairs.
+- **Reported outcome / 结果:** Across 21 CLIPs, mean COCO/Flickr30k test retrieval gains are +16.8/+6.6 RSUM.
+- **Comparisons / 对照:** Unedited encoders, gap removal, centering, whitening and learned adaptation; RSUM is the sum of six recall percentages.
+- **Old capability / 保持:** Uses an ImageNet accuracy guard of 0.5 points; the reported mean CLIP change is -0.16 points.
+- **Transfer / 迁移:** Recomputes corrections from each checkpoint’s embeddings without model-specific tuning; four of five other families pass the guard.
+- **Evidence boundary / 证据边界:** Preprint; supervised construction and retention data are required. This is a recomputed recipe, not copying a fixed delta; retention is limited to evaluated tasks.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Self-Upgrading Embodied Agents](https://arxiv.org/abs/2611.31117v1)
+
+- **Model / 对象:** Qwen3.5-27B acting in ALFWorld, a text household environment; smaller same-family models are compared.
+- **Intervention / 干预:** Uses its own experience and hidden-state contrasts to edit one tensor, with paired practice tests and an accept-or-abstain loop.
+- **Reported outcome / 结果:** Held-out task completion rises from 41.6% to 45.2% (+3.6 points, 95% CI +1.9 to +5.2), using 48 fresh seeds per task.
+- **Comparisons / 对照:** Unchanged model on matched tasks/seeds and model-size comparisons; a comprehensive matched fine-tuning comparison is not established.
+- **Old capability / 保持:** The accepted upgrade persists across later nights; some task/seed pairs still regress.
+- **Transfer / 迁移:** Tests held-out tasks and unseen rooms in the same text environment, not another robot or model host.
+- **Evidence boundary / 证据边界:** Preprint; four nights produce one retained edit. Stable persistence is not repeated acquisition of new skills, and ALFWorld is not a physical robot experiment.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [IR-ODWSP](https://arxiv.org/abs/2611.29882v1)
+
+- **Model / 对象:** 17 YOLO26, EdgeCrafter and RF-DETR detectors across 26 single/cross-model settings.
+- **Intervention / 干预:** Function-preserving expansion, closed-form subspace updates and folding; Gemini assists diagnosis and operator synthesis.
+- **Reported outcome / 结果:** Reports positive gains in 26/26 settings; pure single-checkpoint folding yields only +0.01 to +0.16 overall AP, up to +0.31 AP-small.
+- **Comparisons / 对照:** Original detectors, naive weight edits/interpolation, calibration and reparameterization ablations.
+- **Old capability / 保持:** Evaluates COCO and COCO-O; larger reported gains can require extra inference latency or auxiliary weights.
+- **Transfer / 迁移:** Studies same-model and width-compatible cross-model alignment, corruption repair and weather shifts.
+- **Evidence boundary / 证据边界:** Preprint; modest equal-cost single-model gains should be separated from higher-cost variants. Cross-model alignment requires matching layer widths.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [SELFWRITE](https://arxiv.org/abs/2611.29513v1)
+
+- **Model / 对象:** Qwen3.8-27B on decontaminated DAPO-Math, with separate 500-problem gate and test sets.
+- **Intervention / 干预:** Current model writes low-rank edits from its own traces and white-box primitives; a hidden gate selects an improving candidate.
+- **Reported outcome / 结果:** After five generations, held-out avg@4 rises 76.30% to 77.75% and pass@4 82.60% to 84.80%.
+- **Comparisons / 对照:** Initial model and per-generation gate comparisons; no matched random-search or gradient-training baseline is established.
+- **Old capability / 保持:** Gate improvement is required, but broad non-math capability retention is not evaluated.
+- **Transfer / 迁移:** Held-out math generalization within one model family; no cross-host program reuse.
+- **Evidence boundary / 证据边界:** Preprint; four edits are accepted across five generations, with no gain in the fifth. Repeated gate selection and one model/domain limit claims about open-ended improvement.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [PAWP-TTS](https://arxiv.org/abs/2611.29455v1)
+
+- **Model / 对象:** A trained 1.49M-parameter English/Nepali TTS model; compact 281K models provide architecture comparisons.
+- **Intervention / 干预:** Activation-guided post-training weight edits target pauses and pronunciation; the acoustic model itself was trained conventionally.
+- **Reported outcome / 结果:** A 96-weight pause edit shows 27:1 duration selectivity, but does not establish accuracy improvement beyond matched controls.
+- **Comparisons / 对照:** Matched-norm random edits, same-parameter gradient fine-tuning, validation-selected global bias and untouched test utterances.
+- **Old capability / 保持:** Shared edits can hurt both languages; language-gated residuals isolate the measured collateral effects.
+- **Transfer / 迁移:** Evaluates bilingual utterances, not cross-checkpoint reusable programs.
+- **Evidence boundary / 证据边界:** Preprint; label/version artifacts and phonology errors explain apparent editing targets. Synthesis quality and compactness gains must not be attributed to WSP.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Self-WSP](https://arxiv.org/abs/2611.28833v1)
+
+- **Model / 对象:** Qwen3.5-0.8B as both editor and solver on GSM8K and MATH500.
+- **Intervention / 干预:** Proposes edits to its own weights and continues editing with the modified model, under an external score-selection loop.
+- **Reported outcome / 结果:** Selected runs reach 62.2% GSM8K and 32.2% MATH500 from 11.8% and 7.0%; ordinary runs improve less.
+- **Comparisons / 对照:** Budget-controlled random search, single random edits and a frozen editor with the same selection loop.
+- **Old capability / 保持:** Many accepted edits regress on validation; broad preservation and monotonic improvement are not established.
+- **Transfer / 迁移:** Repeated self-editing within one small host; no independent-model program transfer.
+- **Evidence boundary / 证据边界:** Preprint; random search can match GSM8K gains, while MATH results depend on budget/interface. Best-run scores and plausible explanations do not demonstrate reliable mechanistic understanding.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Autonomous Parameter Surgery](https://arxiv.org/abs/2611.27920v1)
+
+- **Model / 对象:** Qwen3.5-0.8B, Llama-3.2-1B and SmolLM3-3B; 18 sessions over IMDb and Yelp.
+- **Intervention / 干预:** Studies persistent weight tampering by an isolated editing agent, followed by checkpoint reload and fresh-process confirmation.
+- **Reported outcome / 结果:** Reports 99.2% mean attack success in-domain and 97.6% on the unseen review domain.
+- **Comparisons / 对照:** Base checkpoints, clean and neighboring-trigger controls, repeated sessions and hidden verification/confirmation splits.
+- **Old capability / 保持:** Reports general-capability changes within 1.7 points on the evaluated suite; this is bounded clean retention, not a safety guarantee.
+- **Transfer / 迁移:** Measures cross-review-domain transfer across three target families, not reusable-program transfer between hosts.
+- **Evidence boundary / 证据边界:** Preprint security study with specified white-box access. High success under that threat model does not establish universal attacks or resistance to broader defensive screening.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [TrojanMaxxing](https://arxiv.org/abs/2611.27425v1)
+
+- **Model / 对象:** Vision-language models for content moderation and OCR, including ShieldGemma 2 and Qwen families.
+- **Intervention / 干预:** Evaluates agent-written persistent weight tampering and visual-trigger behavior without gradient optimization.
+- **Reported outcome / 结果:** Reports 93–100% attack success on moderation and 78–100% on OCR under the paper’s threat model.
+- **Comparisons / 对照:** Unedited and clean-input performance, two editing agents, benchmark variations and quantization/detection defenses.
+- **Old capability / 保持:** Clean task accuracy is measured, but broad capability and safety retention are not established.
+- **Transfer / 迁移:** Tests several target models and task datasets; transfer of one fixed program or trigger to new hosts is not established.
+- **Evidence boundary / 证据边界:** Preprint security evaluation; success rates depend on privileged weight access and task/trigger definitions. Imperceptibility and defense findings are limited to the tested settings.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Spatial WSP vs LoRA](https://arxiv.org/abs/2611.27089v1)
+
+- **Model / 对象:** Qwen3.5-0.8B on reference-frame reasoning, StepGame and two untrained distance tasks.
+- **Intervention / 干预:** Compares the public p50c patch and additional closed-form edits with supervised rank-1 LoRA.
+- **Reported outcome / 结果:** p50c reaches 22.1%/33.7% on the two target tasks; worked-solution LoRA reaches 100%/98.8%.
+- **Comparisons / 对照:** Unedited model, shuffled deltas, decoding controls, supervision ablations and held-out templates/difficulty levels.
+- **Old capability / 保持:** LoRA drops distance accuracy from 94%/92% under p50c to 0–2%, exposing severe interference.
+- **Transfer / 迁移:** Tests new wordings, difficulty levels and heading combinations within the same model.
+- **Evidence boundary / 证据边界:** Preprint; WSP editing is gradient-free while the LoRA comparison is trained. Small fixed tasks, worked-solution supervision and decoding choices limit general conclusions about method superiority.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Particle-Physics WSP](https://arxiv.org/abs/2611.27079v1)
+
+- **Model / 对象:** OmniLearned jet foundation models at three sizes, with classification, generation and regression heads.
+- **Intervention / 干预:** Separately compares SAE-direction removal and LLM-written weight repair of spurious soft-neutral-particle sensitivity.
+- **Reported outcome / 结果:** Target-informed WSP leaves median normalized error 0.12 in the smallest model; clean classification changes remain small.
+- **Comparisons / 对照:** Fine-tuning, SAE editing, an explicit particle-removal rule and three agent-information conditions with repeated runs.
+- **Old capability / 保持:** Checks clean accuracy, physical response and other heads; repair is not equivalent to proving complete infrared safety.
+- **Transfer / 迁移:** Edits constructed on W/QCD jets are evaluated on other classes, the generator and a new regression head.
+- **Evidence boundary / 证据边界:** Preprint; agents receive 10,240 practice jets and up to 50 evaluator calls. Results depend on information access; SAE construction and fine-tuning use training, unlike the WSP repair arm.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [ICL-to-Weights](https://arxiv.org/abs/2611.26841v2)
+
+- **Model / 对象:** Primarily Qwen2.5-0.5B, with larger Qwen2.5 models and limited Llama/Mistral replications.
+- **Intervention / 干预:** Editors convert example-induced residual shifts into persistent weight updates, often in format-gated MLP units, without backpropagation.
+- **Reported outcome / 结果:** In strict 16-pair controls, the strongest tested editor averages 85.8% versus 86.5–88.2% for fine-tuning baselines; other editors trail.
+- **Comparisons / 对照:** Few-shot ICL, Adam, LoRA, rank-1 fine-tuning, context distillation and scripted task vectors, including strict-data controls.
+- **Old capability / 保持:** Perplexity is usually stable in completed main runs; sequential edits can forget tasks even when earlier edited tensors stay unchanged.
+- **Transfer / 迁移:** Checks model scales, families and unseen wordings; prompt-format changes can sharply reduce accuracy.
+- **Evidence boundary / 证据边界:** Preprint v2; editors can supply additional task pairs, sometimes covering hidden test inputs. Headline parity depends on editor, knowledge access and unfinished-run accounting; multi-task stacking is unreliable.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Edit-Ready Vision Training](https://arxiv.org/abs/2611.26408v1)
+
+- **Model / 对象:** ResNet and ViT vision classifiers on Waterbirds, CIFAR-100, Entity-30 and PACS; five LLM editors.
+- **Intervention / 干预:** Gradient-based edit-ready training prepares a network for later tool-guided weight edits; the whole preparation pipeline uses gradients.
+- **Reported outcome / 结果:** Mean success-minus-side-effect score improves by about 0.12 over ERM for each of the two main editors.
+- **Comparisons / 对照:** ERM, label smoothing, editable-neural-network preparation, multiple editors and training/budget ablations.
+- **Old capability / 保持:** Explicitly measures side effects; some prepared settings underperform ERM and edits can reduce overall accuracy.
+- **Transfer / 迁移:** Compares tasks/backbones and editor families; benefits depend on which editor operates on the prepared network.
+- **Evidence boundary / 证据边界:** Preprint; ERT is not significantly better than ENN overall in the reported main comparison. Post-training editing and gradient-based preparation must be distinguished.
+- **Gradient-free / 免梯度:** No · **Source level / 来源类型:** preprint
 
 ### [Self-Rewriting](https://arxiv.org/abs/2611.21885)
 

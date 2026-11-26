@@ -15,7 +15,12 @@
           "ids": [
             "weightcode",
             "weightloop",
-            "language-models-rewrite-own-weights"
+            "language-models-rewrite-own-weights",
+            "towerbridge",
+            "self-upgrading-embodied-agents",
+            "selfwrite",
+            "self-wsp",
+            "icl-to-weights"
           ]
         },
         {
@@ -46,7 +51,8 @@
             "wsp-beyond-transformers",
             "tractor-weight-space-engineering",
             "wsp-tabular-foundation-models",
-            "wsp-structured-tabular-zero-shot"
+            "wsp-structured-tabular-zero-shot",
+            "closed-form-frozen-encoder-classifiers"
           ]
         },
         {
@@ -62,7 +68,16 @@
             "anti-loop-sort-edit",
             "wsp-backdoor-security",
             "sgne-cc-qwen35-audit",
-            "sgne-cc-v2-deepseek-r1"
+            "sgne-cc-v2-deepseek-r1",
+            "forward-wsp",
+            "kolpona",
+            "tool-free-quantized-network-repair",
+            "robot-foundation-model-targeted-repair",
+            "ir-odwsp",
+            "pawp-tts",
+            "autonomous-parameter-surgery",
+            "trojanmaxxing",
+            "particle-physics-wsp"
           ]
         },
         {
@@ -72,7 +87,9 @@
           "ids": [
             "wsp-scope",
             "iwibench",
-            "weightbench"
+            "weightbench",
+            "spatial-wsp-vs-lora",
+            "edit-ready-vision-training"
           ]
         },
         {
@@ -190,5 +207,11 @@
         }
       ]
     }
-  ]
+  ],
+  "metadata": {
+    "title": "Weight-Space Programming research navigation",
+    "author": "Li Bo",
+    "creator": "Li Bo",
+    "last_modified_by": "Li Bo"
+  }
 }

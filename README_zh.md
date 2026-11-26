@@ -1,3 +1,10 @@
+---
+title: "Awesome Weight-Space Programming — 中文文献目录"
+author: "Li Bo"
+creator: "Li Bo"
+last_modified_by: "Li Bo"
+---
+
 <h1 align="center">Awesome Weight-Space Programming</h1>
 
 <p align="center">
@@ -44,6 +51,8 @@
 | **如何严谨评估 WSP？** | **[WeightBench](https://arxiv.org/abs/2611.18553)**（多任务评测）· [IWIBench](https://arxiv.org/abs/2611.08647)（考虑能力保持的编辑评估） |
 | **能否直接构建有效网络？** | **[iWSP](https://arxiv.org/abs/2611.18114)**（可解释网络与神经编码）· [Weights & Caches](https://arxiv.org/abs/2611.20174)（表格基础模型） |
 | **编辑效果究竟来自什么机制？** | **[Same Fix, Different Weights](https://arxiv.org/abs/2611.20953)**（机制复现）· [YOLO26 evaluation](https://arxiv.org/abs/2611.17789)（匹配负面对照） |
+| **修复规则能否泛化？** | **[TowerBridge](https://arxiv.org/abs/2611.31233)**（21 个 CLIP 检查点，注明标注数据与能力保持约束）· [机器人基础模型修复](https://arxiv.org/abs/2611.31715)（配对仿真场景与失败案例） |
+| **自编辑结论有哪些边界？** | **[Self-WSP](https://arxiv.org/abs/2611.28833)**（随机搜索对照）· [SELFWRITE](https://arxiv.org/abs/2611.29513)（隐藏验收集，五代中接受四项编辑） |
 | **有哪些相关理论与方法基础？** | **[Tracr](https://arxiv.org/abs/2301.05062)**（程序编译）· [Program-as-Weights](https://arxiv.org/abs/2607.02512)（神经程序）· [Doc-to-LoRA](https://arxiv.org/abs/2602.15902)（学习式权重生成） |
 
 **重要区别：** HypoLoop 利用实验反馈修订*编辑方案*，实际权重补丁由数值求解器拟合，部分变体使用梯度优化。推荐它是因为其科学反馈与编辑决策方法有研究价值，**不能将其结果等同于免梯度权重更新**。下方完整目录还收录有信息价值的失败和局限研究，不代表所有条目都属于重点推荐。
@@ -54,9 +63,9 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
+| `2026-11-26` | 补充 11 月 19—25 日的 17 篇已核对原文预印本，覆盖自编辑、检索规则复用、机器人修复、闭式适应、安全及有信息量的负面结果，详见[本轮整理](docs/literature-update-2026-11-26.md)。合并社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12)（统计口径修正）和 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13)（相关资源列表）。 |
 | `2026-11-22` | 新增[Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) 至直接 WSP 与证据矩阵：27B 模型通过免梯度自我编辑，在未见测试题上报告提升 6.6 个百分点，并经历 8 轮被接受的修改；同时标明能力保持与泛化证据边界。 |
 | `2026-11-20` | 按实证质量精简[入门推荐](#start-here)：重点推荐科学反馈驱动的 [HypoLoop](https://arxiv.org/abs/2611.23718)，剔除缺乏已完成实验的扩散猜想和早期方案条目，保留有信息量的负面结果但不作为首选阅读。同日已修正 [WeightCode](https://arxiv.org/abs/2611.25476) 链接并扩充 WSP 文献。 |
-| `2026-11-18` | 核对并新增两篇 WSP 研究：对原始读写结论的[独立复现与扩展](https://arxiv.org/abs/2611.21449)，以及在未公开游戏上将规则编译为网络、并与程序和学习基线对照的[研究](https://arxiv.org/abs/2611.16981)。 |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -65,12 +74,46 @@
 <!-- AUTO:START direct -->
 直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**35 篇论文与手稿** · [2026（35）](#2026)
+**52 篇论文与手稿** · [2026（52）](#2026)
 
 **证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 35 篇
+### 🗓️ 2026 — 52 篇
+
+- **[FWSP]** `[确定性编辑]` `[能力边界]` Do We Really Need an LLM for Weight-Space Programming? A Deterministic Forward-Only Paradigm and Its Capability Boundaries（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.34612)]
+
+- **[Kolpona]** `[RTL 生成]` `[神经元编程]` Kolpona: An Agentic Framework with Gradient-Free Neuron Programming for RTL Generation（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.33973)]
+
+- **[Closed-Form Classifiers]** `[冻结编码器]` `[监督闭式分类头]` Fine-Tuning Without Gradients? Closed-Form, LLM-Written Classifiers on a Frozen Encoder（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.33972)]
+
+- **[Tool-Free Quantization Repair]** `[量化修复]` `[无工具权重读取]` Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.33031)] [[代码](https://github.com/urbste/weight-space-programming-ptq)]
+
+- **[Robot Foundation Model Repair]** `[机器人基础模型]` `[执行故障修复]` Sparks of Weight-Space Programming for Robot Foundation Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.31715)]
+
+- **[TowerBridge]** `[跨检查点规则]` `[多模态检索]` TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.31233)]
+
+- **[Self-Upgrading Embodied Agents]** `[模型自编辑]` `[文本具身环境]` Self-Upgrading Embodied Agents（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.31117)]
+
+- **[IR-ODWSP]** `[目标检测]` `[逆重参数化]` Reparameterizing Your Object Detectors for Weight Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.29882)] [[代码](https://github.com/WongKinYiu/ODWSP)]
+
+- **[SELFWRITE]** `[递归自编辑]` `[隐藏验收集]` Recursive Self-Editing: LLMs Program Their Own Weight Edits for Self-Improvement（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.29513)]
+
+- **[PAWP-TTS]** `[语音合成]` `[负面证据]` PAWP-TTS: Phoneme-Aware Weight Programming for Compact Bilingual English-Nepali Speech Synthesis（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.29455)] [[代码](https://github.com/Firojpaudel/PAWP_TTS)]
+
+- **[Self-WSP]** `[模型自编辑]` `[随机搜索对照]` Self-WSP: Can Language Models Improve Themselves Through Weight-Space Programming?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.28833)]
+
+- **[Autonomous Parameter Surgery]** `[安全评估]` `[选择性权重篡改]` Autonomous Parameter Surgery: How LLMs Implant Selective Backdoors into Language Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27920)]
+
+- **[TrojanMaxxing]** `[安全评估]` `[视觉语言模型]` TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27425)]
+
+- **[Spatial WSP vs LoRA]** `[同骨干对照]` `[能力保持权衡]` Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and Low-Rank Adaptation（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27089)]
+
+- **[Particle-Physics WSP]** `[科学模型修复]` `[机制对照]` Weight-space programming and mechanistic interpretability for model editing in particle physics（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27079)]
+
+- **[ICL-to-Weights]** `[上下文内化]` `[知识匹配对照]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.26841)]
+
+- **[Edit-Ready Vision Training]** `[可编辑性训练]` `[梯度训练骨干]` Training Vision Models for LLM-Driven Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.26408)]
 
 - **[Self-Rewriting]** `[模型自修改]` `[持续改进]` Language Models Can Rewrite Their Own Weights（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.21885)] [[项目](https://www.jiajunfan.com/projects/self-rewriting/)]
 
@@ -319,6 +362,10 @@
 
 - **[wsp-kit]** 用于有界编辑的独立工具包；并非同行评审论文。[[代码](https://github.com/AuremHQ/weight-space-programming)] ![GitHub stars](https://img.shields.io/github/stars/AuremHQ/weight-space-programming.svg?logo=github&label=Stars)
 <!-- AUTO:END resources -->
+
+### 相关文献列表
+
+- **[Awesome Weight Editing]** 汇集知识编辑、激活引导、任务向量与合并、遗忘及 WSP 五类权重修改研究，提供中英文目录及 arXiv 动态。[[项目](https://github.com/vicfei/awesome-weight-editing)]
 
 <a id="scope"></a>
 ## 🎯 收录范围
