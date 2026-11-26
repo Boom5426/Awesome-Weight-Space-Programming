@@ -65,7 +65,7 @@ all:"weight-space programming"
 
 ## 首页精选
 
-`Research question` 表格保留 5 个互补问题，每项一篇：WSP-Scope、WeightCode、TowerBridge、HypoLoop、Weight Coding。选择依据分别是系统轨迹与失败报告、匹配对照与保持、未见宿主评估、跨科学任务的方法对照，以及留出评估和在线实验。其余条目留在完整目录；首页不因收录数量增长而继续扩张。入选仍是对当前证据价值的编辑判断，不代表同行评审或独立复现。
+`Research question` 表格保留 5 个互补问题，每项最多 3 篇，按质量和互补性选择，当前共 7 篇：WSP-Scope、iWSP、WeightCode、TowerBridge、HypoLoop、Weight Coding、机器人基础模型修复。选择依据包括系统轨迹与失败报告、隐藏算法测试、匹配对照与保持、未见宿主评估、科学任务的方法对照、在线实验及配对仿真控制。其余条目留在完整目录；首页不因收录数量增长而继续扩张。入选仍是对当前证据价值的编辑判断，不代表同行评审或独立复现。
 
 ## 社区贡献处理
 

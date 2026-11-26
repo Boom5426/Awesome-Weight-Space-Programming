@@ -3,8 +3,8 @@
   "updates": [
     {
       "date": "2026-11-26",
-      "en": "Expanded the 26 November update with 25 additional papers/manuscripts: 11 direct-WSP items, 9 weight-centric papers and 5 related foundations. Reduced Start Here to five papers selected for substantive evidence. The two search passes add 42 entries in total; see the [dated review](docs/literature-update-2026-11-26.md). Community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) are merged.",
-      "zh": "扩大 11 月 26 日检索，再补 25 篇论文/手稿：直接 WSP 11 篇、权重相关研究 9 篇、相关基础 5 篇；入门表格精简为 5 篇有实质实验支撑的论文。两轮共补充 42 条，详见[本轮整理](docs/literature-update-2026-11-26.md)。社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) 与 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) 已合并。"
+      "en": "Expanded the 26 November update with 25 additional papers/manuscripts: 11 direct-WSP items, 9 weight-centric papers and 5 related foundations. Reduced Start Here to five research questions, with up to three complementary, evidence-driven papers per question. The two search passes add 42 entries in total; see the [dated review](docs/literature-update-2026-11-26.md). Community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) are merged.",
+      "zh": "扩大 11 月 26 日检索，再补 25 篇论文/手稿：直接 WSP 11 篇、权重相关研究 9 篇、相关基础 5 篇；入门表格精简为 5 个问题，每项最多 3 篇有实质实验支撑且互补的论文。两轮共补充 42 条，详见[本轮整理](docs/literature-update-2026-11-26.md)。社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) 与 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) 已合并。"
     },
     {
       "date": "2026-11-22",

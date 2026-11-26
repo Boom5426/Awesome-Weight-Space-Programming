@@ -33,13 +33,13 @@ New to WSP? These are **selective research entry points**, chosen for substantiv
 
 Planning an experiment? See the [evaluation research guide](docs/wsp-research-opportunities.md) for source-grounded questions on program portability, composition, retention, and matched baselines.
 
-| Research question | Selected paper |
+| Research question | Selected papers |
 | --- | --- |
-| **What can WSP reliably do?** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)** — systematic trajectories, held-out evaluations and unsuccessful attempts. |
+| **What can WSP reliably do?** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)** (systematic trajectories and held-out tests) · **[iWSP](https://arxiv.org/abs/2611.18114)** (transparent network construction and hidden algorithmic tests). |
 | **Can programs install and preserve capabilities?** | **[WeightCode](https://arxiv.org/abs/2611.25476)** — matched fine-tuning comparisons, retention, program reuse and successive installation. |
 | **Can an editing recipe transfer across checkpoints?** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** — 21 CLIP checkpoints, unseen hosts and an explicit retention guard. |
 | **Can scientific feedback improve an editing plan?** | **[HypoLoop](https://arxiv.org/abs/2611.23718)** — 22 scientific tasks and comparisons of editing locations and fitting rules. |
-| **Does weight editing help production systems?** | **[Weight Coding](https://arxiv.org/abs/2611.29613)** — held-out dates and online A/B tests, with objective-dependent trade-offs. |
+| **Can weight editing help practical systems?** | **[Weight Coding](https://arxiv.org/abs/2611.29613)** (held-out dates and online A/B tests) · **[Robot Foundation Model Repair](https://arxiv.org/abs/2611.31715)** (paired simulation scenes, random and sign-reversed controls). |
 
 **Important distinction:** HypoLoop's editing *plan* is revised from experimental evidence, while numerical solvers—including gradient-based optimization in some variants—fit the actual weight changes. Its inclusion highlights valuable scientific-feedback methodology; it is **not** evidence of gradient-free weight updates. The full catalog below tracks other relevant studies, including informative failures, without endorsing every entry as a starting point.
 
@@ -49,7 +49,7 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
-| `2026-11-26` | Expanded the 26 November update with 25 additional papers/manuscripts: 11 direct-WSP items, 9 weight-centric papers and 5 related foundations. Reduced Start Here to five papers selected for substantive evidence. The two search passes add 42 entries in total; see the [dated review](docs/literature-update-2026-11-26.md). Community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) are merged. |
+| `2026-11-26` | Expanded the 26 November update with 25 additional papers/manuscripts: 11 direct-WSP items, 9 weight-centric papers and 5 related foundations. Reduced Start Here to five research questions, with up to three complementary, evidence-driven papers per question. The two search passes add 42 entries in total; see the [dated review](docs/literature-update-2026-11-26.md). Community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) are merged. |
 | `2026-11-22` | Added [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) to Direct WSP and the evidence matrix: a 27B model reports gradient-free self-editing (+6.6 percentage points on held-out problems) and eight accepted improvement sessions, with scope and retention caveats. |
 | `2026-11-20` | Curated a selective, evidence-driven [Start Here](#start-here): prominently featured [HypoLoop](https://arxiv.org/abs/2611.23718) for feedback-driven scientific editing, removed unsupported conjectural and preliminary diffusion entries, and kept weak or negative experimental results accessible without treating them as recommended starting points. Earlier this day, updated [WeightCode](https://arxiv.org/abs/2611.25476) and added new WSP studies. |
 <!-- AUTO:END updates -->

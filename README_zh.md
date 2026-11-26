@@ -37,11 +37,11 @@
 
 | 研究问题 | 精选论文 |
 | --- | --- |
-| **WSP 的能力与边界是什么？** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)** — 系统编辑轨迹、留出评估与失败尝试。 |
+| **WSP 的能力与边界是什么？** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)**（系统编辑轨迹与留出评估）· **[iWSP](https://arxiv.org/abs/2611.18114)**（透明网络构造与隐藏算法测试）。 |
 | **程序能否安装并保持能力？** | **[WeightCode](https://arxiv.org/abs/2611.25476)** — 匹配微调对照、能力保持、程序复用和连续安装。 |
 | **编辑规则能否跨检查点迁移？** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** — 21 个 CLIP 检查点、未见宿主及明确的能力保持约束。 |
 | **科学反馈能否改善编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718)** — 22 项科学任务，以及编辑位置和拟合规则对照。 |
-| **权重编辑能否改善生产系统？** | **[Weight Coding](https://arxiv.org/abs/2611.29613)** — 留出日期评估与在线 A/B 测试，同时报告业务目标间的权衡。 |
+| **权重编辑能否改善实际系统？** | **[Weight Coding](https://arxiv.org/abs/2611.29613)**（留出日期与在线 A/B 测试）· **[机器人基础模型修复](https://arxiv.org/abs/2611.31715)**（配对仿真场景、随机及反向编辑对照）。 |
 
 **重要区别：** HypoLoop 利用实验反馈修订*编辑方案*，实际权重补丁由数值求解器拟合，部分变体使用梯度优化。推荐它是因为其科学反馈与编辑决策方法有研究价值，**不能将其结果等同于免梯度权重更新**。下方完整目录还收录有信息价值的失败和局限研究，不代表所有条目都属于重点推荐。
 
@@ -51,7 +51,7 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
-| `2026-11-26` | 扩大 11 月 26 日检索，再补 25 篇论文/手稿：直接 WSP 11 篇、权重相关研究 9 篇、相关基础 5 篇；入门表格精简为 5 篇有实质实验支撑的论文。两轮共补充 42 条，详见[本轮整理](docs/literature-update-2026-11-26.md)。社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) 与 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) 已合并。 |
+| `2026-11-26` | 扩大 11 月 26 日检索，再补 25 篇论文/手稿：直接 WSP 11 篇、权重相关研究 9 篇、相关基础 5 篇；入门表格精简为 5 个问题，每项最多 3 篇有实质实验支撑且互补的论文。两轮共补充 42 条，详见[本轮整理](docs/literature-update-2026-11-26.md)。社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) 与 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) 已合并。 |
 | `2026-11-22` | 新增[Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) 至直接 WSP 与证据矩阵：27B 模型通过免梯度自我编辑，在未见测试题上报告提升 6.6 个百分点，并经历 8 轮被接受的修改；同时标明能力保持与泛化证据边界。 |
 | `2026-11-20` | 按实证质量精简[入门推荐](#start-here)：重点推荐科学反馈驱动的 [HypoLoop](https://arxiv.org/abs/2611.23718)，剔除缺乏已完成实验的扩散猜想和早期方案条目，保留有信息量的负面结果但不作为首选阅读。同日已修正 [WeightCode](https://arxiv.org/abs/2611.25476) 链接并扩充 WSP 文献。 |
 <!-- AUTO:END updates -->

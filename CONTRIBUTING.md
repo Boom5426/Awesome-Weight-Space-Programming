@@ -22,9 +22,9 @@ Commit changes to the JSON and all regenerated Markdown files.
 
 ## Featured reading / 首页精选
 
-Keep the **Start Here / Research question** table to about **five questions, one paper per question**, with the English and Chinese versions aligned. Choose papers for substantive experiments, useful controls, held-out evaluation and a distinct research question. Blogs, conjectures and studies awaiting evidence review belong in the full catalog rather than this table. Adding a paper to the bibliography does not automatically make it featured.
+Keep the **Start Here / Research question** table to about **five questions, at most three papers per question**, with the English and Chinese versions aligned. Select one to three complementary papers according to their evidence, rather than filling a quota. Choose papers for substantive experiments, useful controls, held-out evaluation and a distinct research contribution. Keep blogs, conjectures and studies awaiting evidence review out of this table. Adding a paper to the bibliography does not automatically make it featured.
 
-首页表格保持约五个问题，每个问题一篇论文；优先考虑实质实验、有效对照、留出评估及互补的研究价值。新增文献先进入完整目录，精选入口不随文献数量自动扩张。
+首页表格保持约五个问题，每项最多三篇，根据质量和互补性选择，不强制只有一篇，也不凑满三篇；优先考虑实质实验、有效对照及留出评估。新增文献先进入完整目录，精选入口不随文献数量自动扩张。
 
 ## Data fields / 文献数据格式
 
