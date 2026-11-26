@@ -1,9 +1,3 @@
----
-title: "Awesome Weight-Space Programming"
-author: "Li Bo"
-creator: "Li Bo"
-last_modified_by: "Li Bo"
----
 
 <h1 align="center">Awesome Weight-Space Programming</h1>
 
