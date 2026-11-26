@@ -1,3 +1,10 @@
+---
+title: "Awesome Weight-Space Programming"
+author: "Li Bo"
+creator: "Li Bo"
+last_modified_by: "Li Bo"
+---
+
 <h1 align="center">Awesome Weight-Space Programming</h1>
 
 <p align="center">
@@ -42,6 +49,8 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 | **How reliable are WSP claims?** | **[WeightBench](https://arxiv.org/abs/2611.18553)** (multi-task benchmark) · [IWIBench](https://arxiv.org/abs/2611.08647) (preservation-aware editing evaluation) |
 | **Can agents construct useful networks?** | **[iWSP](https://arxiv.org/abs/2611.18114)** (interpretable networks and neural encoding) · [Weights & Caches](https://arxiv.org/abs/2611.20174) (tabular foundation models) |
 | **What actually causes an edit to work?** | **[Same Fix, Different Weights](https://arxiv.org/abs/2611.20953)** (mechanistic replication) · [YOLO26 evaluation](https://arxiv.org/abs/2611.17789) (matched negative controls) |
+| **Can a repair recipe generalize?** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** (21 CLIP checkpoints, labeled construction data and retention guard) · [Robot Foundation Model Repair](https://arxiv.org/abs/2611.31715) (paired simulation scenes and failed repairs) |
+| **What limits self-editing claims?** | **[Self-WSP](https://arxiv.org/abs/2611.28833)** (random-search controls) · [SELFWRITE](https://arxiv.org/abs/2611.29513) (hidden acceptance gate; four accepted edits over five generations) |
 | **What are the neighboring foundations?** | **[Tracr](https://arxiv.org/abs/2301.05062)** (program compilation) · [Program-as-Weights](https://arxiv.org/abs/2607.02512) (neural programming) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) (learned weight generation) |
 
 **Important distinction:** HypoLoop's editing *plan* is revised from experimental evidence, while numerical solvers—including gradient-based optimization in some variants—fit the actual weight changes. Its inclusion highlights valuable scientific-feedback methodology; it is **not** evidence of gradient-free weight updates. The full catalog below tracks other relevant studies, including informative failures, without endorsing every entry as a starting point.
@@ -52,9 +61,9 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
+| `2026-11-26` | Added 17 source-checked preprints from 19–25 November, covering self-editing, reusable retrieval recipes, robot repair, closed-form adaptation, security and informative negative results. See the [dated review](docs/literature-update-2026-11-26.md). Merged community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) (metric correction) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) (related list). |
 | `2026-11-22` | Added [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) to Direct WSP and the evidence matrix: a 27B model reports gradient-free self-editing (+6.6 percentage points on held-out problems) and eight accepted improvement sessions, with scope and retention caveats. |
 | `2026-11-20` | Curated a selective, evidence-driven [Start Here](#start-here): prominently featured [HypoLoop](https://arxiv.org/abs/2611.23718) for feedback-driven scientific editing, removed unsupported conjectural and preliminary diffusion entries, and kept weak or negative experimental results accessible without treating them as recommended starting points. Earlier this day, updated [WeightCode](https://arxiv.org/abs/2611.25476) and added new WSP studies. |
-| `2026-11-18` | Source-checked two new WSP studies: an independent [replication and extension](https://arxiv.org/abs/2611.21449) of the original read/write claims, and [rule-to-network compilation](https://arxiv.org/abs/2611.16981) on unseen games with program and learning baselines. |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -63,12 +72,46 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**35 papers and manuscripts** · [2026 (35)](#2026)
+**52 papers and manuscripts** · [2026 (52)](#2026)
 
 **Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 35 papers
+### 🗓️ 2026 — 52 papers
+
+- **[FWSP]** `[Deterministic Editing]` `[Capability Boundaries]` Do We Really Need an LLM for Weight-Space Programming? A Deterministic Forward-Only Paradigm and Its Capability Boundaries (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.34612)]
+
+- **[Kolpona]** `[RTL Generation]` `[Neuron Programming]` Kolpona: An Agentic Framework with Gradient-Free Neuron Programming for RTL Generation (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.33973)]
+
+- **[Closed-Form Classifiers]** `[Frozen Encoder]` `[Supervised Closed-form Heads]` Fine-Tuning Without Gradients? Closed-Form, LLM-Written Classifiers on a Frozen Encoder (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.33972)]
+
+- **[Tool-Free Quantization Repair]** `[Quantization]` `[Tool-free Weight Reading]` Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.33031)] [[code](https://github.com/urbste/weight-space-programming-ptq)]
+
+- **[Robot Foundation Model Repair]** `[Robot Foundation Model]` `[Physical Execution Repair]` Sparks of Weight-Space Programming for Robot Foundation Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.31715)]
+
+- **[TowerBridge]** `[Cross-checkpoint Recipe]` `[Multimodal Retrieval]` TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.31233)]
+
+- **[Self-Upgrading Embodied Agents]** `[Self-Editing]` `[Text Embodied Environment]` Self-Upgrading Embodied Agents (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.31117)]
+
+- **[IR-ODWSP]** `[Object Detection]` `[Inverse Reparameterization]` Reparameterizing Your Object Detectors for Weight Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.29882)] [[code](https://github.com/WongKinYiu/ODWSP)]
+
+- **[SELFWRITE]** `[Recursive Self-Editing]` `[Hidden Acceptance Gate]` Recursive Self-Editing: LLMs Program Their Own Weight Edits for Self-Improvement (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.29513)]
+
+- **[PAWP-TTS]** `[Speech Synthesis]` `[Negative Evidence]` PAWP-TTS: Phoneme-Aware Weight Programming for Compact Bilingual English-Nepali Speech Synthesis (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.29455)] [[code](https://github.com/Firojpaudel/PAWP_TTS)]
+
+- **[Self-WSP]** `[Self-Editing]` `[Random-search Controls]` Self-WSP: Can Language Models Improve Themselves Through Weight-Space Programming? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.28833)]
+
+- **[Autonomous Parameter Surgery]** `[Security Evaluation]` `[Selective Weight Tampering]` Autonomous Parameter Surgery: How LLMs Implant Selective Backdoors into Language Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27920)]
+
+- **[TrojanMaxxing]** `[Security Evaluation]` `[Vision-Language Models]` TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27425)]
+
+- **[Spatial WSP vs LoRA]** `[Matched Backbone]` `[Retention Trade-off]` Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and Low-Rank Adaptation (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27089)]
+
+- **[Particle-Physics WSP]** `[Scientific Model Repair]` `[Mechanistic Controls]` Weight-space programming and mechanistic interpretability for model editing in particle physics (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27079)]
+
+- **[ICL-to-Weights]** `[Context Internalization]` `[Knowledge-matched Controls]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.26841)]
+
+- **[Edit-Ready Vision Training]** `[Editability Preparation]` `[Gradient-trained Backbone]` Training Vision Models for LLM-Driven Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.26408)]
 
 - **[Self-Rewriting]** `[Self-Rewriting]` `[Continual Improvement]` Language Models Can Rewrite Their Own Weights (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.21885)] [[project](https://www.jiajunfan.com/projects/self-rewriting/)]
 

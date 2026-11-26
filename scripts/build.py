@@ -80,7 +80,8 @@ def evidence_view(entries):
         ev = e["evidence"]
         section = "### [" + e["title"] + "](" + ev["source_url"] + ")\n\n"
         section += "\n".join("- **" + label + ":** " + (ev.get(key) or "Not established / 未证实") for key, label in fields)
-        section += "\n- **Gradient-free / 免梯度:** " + ("Yes" if ev["gradient_free"] is True else "Not assessed")
+        gradient_label = {True: "Yes", False: "No", None: "Not assessed"}[ev["gradient_free"]]
+        section += "\n- **Gradient-free / 免梯度:** " + gradient_label
         section += " · **Source level / 来源类型:** " + ev["level"]
         parts.append(section)
     parts.append("## Other direct-WSP entries / 尚待逐篇核对实证信息\n\n"
