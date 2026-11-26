@@ -40,7 +40,7 @@
 | **WSP 的能力与边界是什么？** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)**（系统编辑轨迹与留出评估）· **[iWSP](https://arxiv.org/abs/2611.18114)**（透明网络构造与隐藏算法测试）。 |
 | **程序能否安装并保持能力？** | **[WeightCode](https://arxiv.org/abs/2611.25476)** — 匹配微调对照、能力保持、程序复用和连续安装。 |
 | **编辑规则能否跨检查点迁移？** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** — 21 个 CLIP 检查点、未见宿主及明确的能力保持约束。 |
-| **科学反馈能否改善编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718)** — 22 项科学任务，以及编辑位置和拟合规则对照。 |
+| **科学反馈能否改善编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718)**（22 项科学任务，比较编辑位置与拟合规则）· **[WeightLoop](https://arxiv.org/abs/2611.07319)**（可复用的反馈驱动权重更新）。 |
 | **权重编辑能否改善实际系统？** | **[Weight Coding](https://arxiv.org/abs/2611.29613)**（留出日期与在线 A/B 测试）· **[机器人基础模型修复](https://arxiv.org/abs/2611.31715)**（配对仿真场景、随机及反向编辑对照）。 |
 
 **重要区别：** HypoLoop 利用实验反馈修订*编辑方案*，实际权重补丁由数值求解器拟合，部分变体使用梯度优化。推荐它是因为其科学反馈与编辑决策方法有研究价值，**不能将其结果等同于免梯度权重更新**。下方完整目录还收录有信息价值的失败和局限研究，不代表所有条目都属于重点推荐。
@@ -85,7 +85,7 @@
 
 - **[VLM Repair Low-Bit Audit]** `[数值取证]` `[舍入对照]` Weight Space Programming for Vision Language Model Repair（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.23615)]
 
-- **[Materials-Science WSP]** `[无标签构造]` `[科学先验]` Weight-Space Programming for Materials Science（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.22013)]
+- **[Materials-Science WSP]** `[无标签构造]` `[科学先验]` Weight-Space Programming for Materials Science（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.22013)] [[代码](https://github.com/sheikhahnaf/weightspace-programming-for-material-science)]
 
 - **[Diffusion Program Construction]** `[程序与修订区分]` `[优化器参与]` What Does Weight-Space Programming Add to Diffusion Editing? Program Construction versus Score-Guided Refinement（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.22228)]
 
@@ -119,9 +119,9 @@
 
 - **[Spatial WSP vs LoRA]** `[同骨干对照]` `[能力保持权衡]` Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and Low-Rank Adaptation（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27089)]
 
-- **[Particle-Physics WSP]** `[科学模型修复]` `[机制对照]` Weight-space programming and mechanistic interpretability for model editing in particle physics（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27079)]
+- **[Particle-Physics WSP]** `[科学模型修复]` `[机制对照]` Weight-space programming and mechanistic interpretability for model editing in particle physics（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27079)] [[代码](https://github.com/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics)]
 
-- **[ICL-to-Weights]** `[上下文内化]` `[知识匹配对照]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.26841)]
+- **[ICL-to-Weights]** `[上下文内化]` `[知识匹配对照]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.26841)] [[代码](https://github.com/y3nk0/weight-space-programming-study)]
 
 - **[Edit-Ready Vision Training]** `[可编辑性训练]` `[梯度训练骨干]` Training Vision Models for LLM-Driven Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.26408)]
 
@@ -129,11 +129,11 @@
 
 - **[WeightCode]** `[能力植入]` `[程序复用]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.25476)] [[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
-- **[WSP Beyond Transformers]** `[架构设计]` `[稀疏联想记忆]` Weight-Space Programming Doesn't Need Transformers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.22055)]
+- **[WSP Beyond Transformers]** `[架构设计]` `[稀疏联想记忆]` Weight-Space Programming Doesn't Need Transformers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.22055)] [[代码](https://github.com/effl-lab/Weight-Space-Programming)]
 
 - **[Tractor Guidance WSP]** `[真实控制]` `[权重构造]` Weight-space programming for tractor guidance controller: large language models natively write neural network weights that steer a real tractor（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.21958)]
 
-- **[Same Fix, Different Weights]** `[复现]` `[修复机制]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20953)]
+- **[Same Fix, Different Weights]** `[复现]` `[修复机制]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20953)] [[代码](https://github.com/Cenrax/weight-space-programming-claude)]
 
 - **[Weights & Caches]** `[表格基础模型]` `[权重与缓存]` Weights & Caches: LLMs Can Program Tabular Foundation Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20174)]
 
@@ -141,7 +141,7 @@
 
 - **[WeightBench]** `[基准评测]` `[42 项任务]` WeightBench: Evaluating Language Models as Weight-Space Programmers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.18553)] [[代码](https://github.com/Aayush-Marasini/WeightBench)]
 
-- **[Computational-Biology Python WSP]** `[计算生物学]` `[行为修复]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20566)]
+- **[Computational-Biology Python WSP]** `[计算生物学]` `[行为修复]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20566)] [[仓库；代码待发布](https://github.com/satouma7/bioWSP)]
 
 - **[YOLO26 Weight Editing Study]** `[目标检测]` `[负面证据]` Can Large Language Models Optimize Pretrained Neural Network Weights? A Multi-Phase Empirical Evaluation of Gradient-Free Editing in YOLO26 Object Detection（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.17789)]
 
@@ -153,7 +153,7 @@
 
 - **[WSP Backdoor Security Study]** `[安全审计]` `[权重编辑]` Can LLMs Write Backdoors? An Empirical Security Study of Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.17395)]
 
-- **[Computation, Not Weight Access]** `[审计对照]` `[黑箱比较]` Computation, not weight access: large language models as auditors of clinical prediction networks（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07847)]
+- **[Computation, Not Weight Access]** `[审计对照]` `[黑箱比较]` Computation, not weight access: large language models as auditors of clinical prediction networks（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07847)] [[代码](https://github.com/Chth1z/llm-clinical-network-audit)]
 
 - **[iWSP]** `[可解释构造]` `[神经科学]` Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.18114)] [[代码](https://github.com/csinva/weight-space-programming-autoresearch)] [[报告](https://csinva.io/weight-space-programming-autoresearch/analyze)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
@@ -161,21 +161,21 @@
 
 - **[Rule-to-Network Compilation]** `[规则编译]` `[程序基线]` Compiling Known Rules into Compact Neural Agents: Weight-Space Programming on Unseen Games（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.16981)] [[代码](https://github.com/JensLehmann/weight-space-programming-games)] ![GitHub stars](https://img.shields.io/github/stars/JensLehmann/weight-space-programming-games.svg?logo=github&label=Stars)
 
-- **[Mixed Signals]** `[生物信号]` `[模型构建]` Mixed Signals: Weight-Space Programming for EEG and ECG（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13758)] [[项目](https://daravaram.github.io/)]
+- **[Mixed Signals]** `[生物信号]` `[模型构建]` Mixed Signals: Weight-Space Programming for EEG and ECG（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13758)] [[项目仓库](https://github.com/DaraVaram/BioWSP)] [[项目](https://daravaram.github.io/BioWSP/)]
 
-- **[NCP]** `[验证]` `[控制]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13236)]
+- **[NCP]** `[验证]` `[控制]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13236)] [[代码](https://github.com/eax/w-isa/tree/main/NCP)]
 
-- **[W-ISA]** `[运行时]` `[事务式编辑]` W-ISA: Transactional Execution of Weight-Space Intervention Programs（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13232)]
+- **[W-ISA]** `[运行时]` `[事务式编辑]` W-ISA: Transactional Execution of Weight-Space Intervention Programs（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13232)] [[代码](https://github.com/eax/w-isa)]
 
 - **[Physics2Weight]** `[科学智能]` `[PDE 求解]` Physics2Weight: Direct Neural Network Architecture and Weight Generation from Physical Laws Using Large Language Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.12954)]
 
 - **[WSP for Medical Imaging]** `[医学影像]` `[模型构建]` Weight-Space Programming for Medical Imaging: Do We Still Need Training Data?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.12066)] [[代码](https://github.com/MaximilianLindholz/weight-space-programming-medical)] ![GitHub stars](https://img.shields.io/github/stars/MaximilianLindholz/weight-space-programming-medical.svg?logo=github&label=Stars)
 
-- **[WSP for Policies]** `[策略合成]` `[形式化验证]` Weight-Space Programming of Policies and Their Verification via Model Checking（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11604)]
+- **[WSP for Policies]** `[策略合成]` `[形式化验证]` Weight-Space Programming of Policies and Their Verification via Model Checking（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11604)] [[代码](https://github.com/LAVA-LAB/COOL-MC/tree/wsp_verified)]
 
-- **[WSP for Quantum Circuits]** `[量子计算]` `[参数合成]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11537)]
+- **[WSP for Quantum Circuits]** `[量子计算]` `[参数合成]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11537)] [[代码](https://github.com/DebarshiKunduPSU/Quantum-Weight-Space-Programming)]
 
-- **[WSP for Mathematical Optimization]** `[运筹优化]` `[打分网络]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09559)]
+- **[WSP for Mathematical Optimization]** `[运筹优化]` `[打分网络]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09559)] [[代码](https://github.com/butkeraites/llm-written-weights-or)]
 
 - **[WSP-Scope]** `[基准评测]` `[LLM 编辑]` Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09382)] [[代码](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars) [[项目](https://wsp-scope.github.io/)]
 
@@ -185,7 +185,7 @@
 
 - **[IWIBench]** `[基准评测]` `[权重内注入]` IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.08647)] [[代码](https://github.com/hcltech-robotics/iwibench)] ![GitHub stars](https://img.shields.io/github/stars/hcltech-robotics/iwibench.svg?logo=github&label=Stars)
 
-- **[WeightLoop]** `[实验反馈]` `[持续适应]` WeightLoop: Weight-Space Programming with Experimental Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07319)]
+- **[WeightLoop]** `[实验反馈]` `[持续适应]` WeightLoop: Weight-Space Programming with Experimental Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07319)] [[代码](https://github.com/limengran98/WeightLoop)]
 
 - **[Orbit Audits]** `[权重读取]` `[对称性]` Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.05798)]
 
@@ -193,7 +193,7 @@
 
 - **[Robot Policy Debugging]** `[机器人基础模型]` `[词汇修复]` Can LLMs Debug Robots by Editing Their Weights?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09376)]
 
-- **[Instruction Distillation]** `[机器人策略]` `[闭式编辑]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11894)]
+- **[Instruction Distillation]** `[机器人策略]` `[闭式编辑]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11894)] [[代码](https://github.com/adeeb10abbas/weightsmith)]
 <!-- AUTO:END direct -->
 
 <a id="reports-and-blogs"></a>
