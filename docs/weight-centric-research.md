@@ -4,7 +4,7 @@
 
 **Selection rule:** Include a paper when it offers a concrete, testable idea for reading or writing weights, transferring computations across networks, composing multiple updates, or preserving existing capabilities. General fine-tuning, compression, or optimization papers without such a connection are not included. A proposed connection is a research hypothesis, not an established result.
 
-**Current selection:** 67 papers across 6 research tracks. The original 21-paper selection has been supplemented by a systematic cross-keyword search, with entries retained only when they suggest a testable weight-programming idea. Papers already listed in the [main related-work catalog](../README.md#related-research) are not duplicated here.
+**Current selection:** 76 papers across 6 research tracks. The original 21-paper selection has been supplemented by a systematic cross-keyword search, with entries retained only when they suggest a testable weight-programming idea. Papers already listed in the [main related-work catalog](../README.md#related-research) are not duplicated here.
 
 ## Reading map
 
@@ -50,6 +50,10 @@
 
 *Can model properties be inferred from parameters without running the model on the original task?*
 
+- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)** (arXiv preprint 2026). **Weight-centric idea:** Probes displacement from a shared or learned reference, including Gram responses, rather than raw weights alone. **Potential WSP inspiration:** Test whether reference-aware summaries improve edit localization; results on Model Trees do not establish arbitrary-host understanding. [[code](https://github.com/hoonki2002/DSProbe)]
+
+- **[Interfaces and Modules: A Scalable Representation for Weight-Space Learning across Architectures](https://arxiv.org/abs/2610.21995)** (arXiv preprint 2026). **Weight-centric idea:** Typed interface/module graphs encode shared permutation actions and let one weight encoder process several supported architectures. **Potential WSP inspiration:** Test architecture-aware inspection under verified symmetry constraints; ranking unseen architectures is not evidence of executable edit transfer.
+
 - **[Predicting Neural Network Accuracy from Weights](https://arxiv.org/abs/2002.11448)** (2020 preprint). **Weight-centric idea:** Predicts model accuracy from weight statistics without evaluating on task inputs. **Potential WSP inspiration:** A concrete precedent for weight-only inspection; generalization to other model families must be tested.
 
 - **[Self-Supervised Representation Learning on Neural Network Weights for Model Characteristic Prediction](https://arxiv.org/abs/2110.15288)** (NeurIPS 2021). **Weight-centric idea:** Learns model-level representations from populations of weights. **Potential WSP inspiration:** A possible alternative to directly giving an LLM raw tensors for edit localization and model profiling.
@@ -85,6 +89,10 @@
 
 *Can networks be generated as objects rather than optimized afresh for every task?*
 
+- **[Towards Autoregressive Neural Network Parameter Generation](https://arxiv.org/abs/2611.25538)** (arXiv preprint 2026). **Weight-centric idea:** IGPG trains a VQ-VAE weight tokenizer and conditional autoregressive generator; some held-out results concern improved initialization after adaptation. **Potential WSP inspiration:** Compare tokenized learned weight priors with agent-written code, separating zero-shot generated accuracy from subsequent training.
+
+- **[CrossGMN: Graph Metanetworks for Cross-Architecture Weight-Space Transformations](https://arxiv.org/abs/2610.01649)** (arXiv preprint 2026). **Weight-centric idea:** A graph metanetwork jointly reads trained source weights and target initialization to generate a compression initialization before distillation. **Potential WSP inspiration:** Separate source invariance, target equivariance and downstream distillation when evaluating cross-architecture weight programs.
+
 - **[HyperDiffusion: Generating Implicit Neural Fields with Weight-Space Diffusion](https://arxiv.org/abs/2303.17015)** (2023 preprint). **Weight-centric idea:** Trains diffusion in the weights of implicit neural fields. **Potential WSP inspiration:** A generative prior could constrain proposed edits toward plausible functional regions.
 
 - **[Neural Network Diffusion](https://arxiv.org/abs/2402.13144)** (2024 preprint). **Weight-centric idea:** Uses latent diffusion to synthesize performant parameter subsets. **Potential WSP inspiration:** Raises the possibility of proposing or repairing local weight blocks with a trained parameter prior.
@@ -115,6 +123,16 @@
 ## Weight Arithmetic, Merging & Interference
 
 *How can changes be combined without destroying existing capabilities?*
+
+- **[Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs](https://arxiv.org/abs/2611.33048)** (arXiv preprint 2026). **Weight-centric idea:** A learned merger combines hypernetwork latents before decoding a fixed-rank LoRA, exploiting geometry unlike directly fine-tuned adapters. **Potential WSP inspiration:** Evaluate whether a shared edit generator exposes a safer composition space; a trained latent merger is not free composition of arbitrary programs.
+
+- **[Large-scale Model Merging via Recovery-aware Task Weighting](https://arxiv.org/abs/2611.33315)** (arXiv preprint 2026). **Weight-centric idea:** RaTW weights tasks by recoverable expert performance and evaluates mean accuracy together with worst-tail retention on CLIPMerge-100. **Potential WSP inspiration:** Use tail-task preservation when accepting multiple weight programs; disclose the labeled validation data used to derive weights.
+
+- **[Change Partners at Every Layer: Balanced Random Regrouping for Model Merging](https://arxiv.org/abs/2611.33308)** (arXiv preprint 2026). **Weight-centric idea:** Changes balanced expert groupings across layers or matrices to reduce correlated feature interference. **Potential WSP inspiration:** Test modular edit allocation against repeated grouping; task identity and multiple stored groups distinguish this from one universal merged checkpoint.
+
+- **[Watch Where You Linearize: Predicting and Correcting Model-Merging Interference](https://arxiv.org/abs/2611.25000)** (arXiv preprint 2026). **Weight-centric idea:** Receiver-local derivatives predict merging interference better than derivatives at the original backbone; LR-Merge uses an unlabeled-probe surrogate. **Potential WSP inspiration:** Measure the second program on the already-edited host and include equal-compute teacher matching; local surrogates need not extrapolate far.
+
+- **[Model Merging Does Not Require Uniform LoRA Ranks](https://arxiv.org/abs/2611.06486)** (arXiv preprint 2026). **Weight-centric idea:** Studies heterogeneous adapter ranks and shows magnitude-based spectral selection can discard an entire expert’s useful components. **Potential WSP inspiration:** Audit per-capability loss when compressing composed edits; parameter norm alone should not decide which installed behavior survives.
 
 - **[Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](https://arxiv.org/abs/2203.05482)** (ICML 2022). **Weight-centric idea:** Combines compatible fine-tuned checkpoints by averaging weights. **Potential WSP inspiration:** Provides a simple composition baseline and a reminder that checkpoint compatibility matters.
 

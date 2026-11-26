@@ -1,14 +1,14 @@
 # WSP 文献更新与社区贡献整理
 
-截至 2026 年 11 月 26 日，本轮补充 17 篇预印本，直接 WSP 目录由 35 篇增至 52 篇，结构化目录总数由 163 条增至 180 条。已同步中英文 README、证据矩阵、检索目录和研究图谱。下表按研究问题整理；完整标题、模型、对照、能力保持及局限保存在 [entries.json](../data/entries.json) 和[证据矩阵](wsp-evidence.md)。
+截至 2026 年 11 月 26 日，两轮检索共补充 42 条论文/手稿：第一轮 17 条，扩展检索再补 25 条。直接 WSP 目录现为 63 篇，权重相关研究 76 篇，相关基础 51 篇；加上报告和资源，结构化目录共 205 条。已同步中英文 README、证据矩阵、检索目录和研究图谱。完整标题、模型、对照、能力保持及局限保存在 [entries.json](../data/entries.json) 和[证据矩阵](wsp-evidence.md)。
 
-All 17 additions are preprints. Source-checked means the primary report was inspected; it does not mean independent experimental reproduction. Dates below are arXiv submission dates in UTC; the repository update date follows Asia/Shanghai.
+The additions are preprints or manuscripts, not confirmed peer-reviewed publications. Source-checked means the primary report was inspected, not independently reproduced. The JEPA manuscript remains metadata-only, with outcome fields left null. arXiv dates below are in UTC; repository updates follow Asia/Shanghai.
 
 ## 检索范围与筛选
 
-本轮重点补查 2026-11-19 至 2026-11-26 的新论文及修订，以覆盖上次更新附近可能遗漏的条目。检索方式包括 arXiv 官方接口、arXiv 论文原文、网页搜索及社区贡献中的链接交叉核对。
+第一轮重点补查 2026-11-19 至 2026-11-26 的新论文及修订。第二轮扩展到 2026 年 10—11 月的直接 WSP、权重表征、参数生成、模型合并、局部编辑和自修改机制。检索方式包括 arXiv 官方接口、论文原文、作者代码、网页搜索及相关列表交叉核对。新收录表示原目录未包含，不表示全部论文刚刚发表。
 
-arXiv 接口按 `lastUpdatedDate` 降序返回，每次最多 80 条。本轮使用以下查询，并检查论文的首次提交日期与当前版本日期，而不是以搜索引擎的抓取时间判断新旧：
+arXiv 接口按 `lastUpdatedDate` 降序返回，第一轮每次最多 80 条，第二轮每次最多 100 条。下列为第一轮查询；日期按首次提交和版本修订分别记录：
 
 ```text
 all:"weight-space programming"
@@ -16,9 +16,11 @@ all:"weight-space programming"
   AND submittedDate:[202611190000 TO 202611262359]
 ```
 
-接口查询与普通网页搜索均有遗漏：SELFWRITE 来自社区相关列表的交叉核对。因此本记录是经过筛选的本轮更新，不代表完整收录所有近期研究。ICL 写入研究采用 2026-11-23 的 v2；其余新增条目采用本轮可核对的 v1。WeightCode 已在目录中，未重复添加。更早的扩散猜想及其他不在本轮日期范围内的候选，未因关键词匹配而自动重新纳入。
+接口查询与普通网页搜索均有遗漏：SELFWRITE 来自相关列表交叉核对，Weight-Space Reading 和 JEPA 世界模型手稿来自 alphaXiv 及作者仓库。第二轮另检索 `weight space`、`parameter generation`、`hypernetwork`、`model merging`、`weight editing`、`self-modifying` 等标题。宽泛的自改进/内化搜索触及返回上限，因此补充了限定计算机学科的自编辑标题查询；不把大量泛化的 RSI 或非神经网络匹配算作 WSP。结果属于经过筛选的覆盖，不是穷尽性目录。
 
-## 按研究问题整理
+第一轮 ICL 研究采用 11-23 的 v2；第二轮 VLM 数值审计和语言模型修复分别采用 11-19、11-20 的 v2，异秩 LoRA 合并采用 v2。已收录论文不重复添加。`2611.04268` 的扩散猜想及 `2611.18690` 的初步方案仍不作为完整大模型实验收录；`2611.22228` 则核对了已完成的 24 项 TIMED 实验，并注明共享 CMA-ES 拟合器和预注册负面结果。
+
+## 第一轮：17 篇直接研究
 
 | 方向 | 论文 / 首次提交 | 本轮提取的重点与边界 |
 | --- | --- | --- |
@@ -40,13 +42,30 @@ all:"weight-space programming"
 | ICL 写入权重 | [ICL-to-Weights](https://arxiv.org/abs/2611.26841v2) · 11-19，v2 为 11-23 | 模板依赖、编辑器自带任务知识和未完成运行会改变“匹配微调”的结论；连续编辑和增量相加可发生干扰。 |
 | 面向编辑的训练 | [Edit-Ready Vision Training](https://arxiv.org/abs/2611.26408v1) · 11-19 | 整体方案包含梯度训练；编辑阶段与准备阶段分开。ERT 相对 ERM 有改善，但未证明整体显著优于 ENN。 |
 
-## 阅读顺序
+## 扩展检索：再补 25 篇
 
-研究程序复用时，先读 TowerBridge，并对照已有的 WeightCode，核对每个宿主上重新计算的数据与反馈成本。研究机器人修复时，先看配对场景中的修好与损坏数量，再看平均成功率。[TowerBridge 原文](https://arxiv.org/html/2611.31233v1)、[机器人修复原文](https://arxiv.org/pdf/2611.31715)。
+| 分类 | 新增论文 | 收录理由与证据边界 |
+| --- | --- | --- |
+| 直接 WSP | [Weight Coding](https://arxiv.org/abs/2611.29613) | Pinterest 的留出日期、不同语料/指标及在线 A/B 结果；区分来源归因收益、业务目标权衡与其他召回源的损失。 |
+| 直接 WSP | [AME](https://arxiv.org/abs/2611.34036) | 11 个少样本视觉数据集上的程序化适应；含预处理和分类器拟合，以及免反传和反传两种方案。 |
+| 直接 WSP | [Scalpel and Brush](https://arxiv.org/abs/2611.33426) | 结合稀疏编辑、剪枝与隐藏测试；方程任务 BLEU 提升主要反映符号表达，不能当作数学正确性提高。 |
+| 直接 WSP | [Game-Theoretic Policies](https://arxiv.org/abs/2611.31979) | 小型 RNN 的精确最优值和程序恢复；严格区分直接写出全部权重与由评估器编译状态机。 |
+| 直接 WSP | [Blind Deployment-Fault Repair](https://arxiv.org/abs/2611.28781) | 盲诊断、脚本与完好模型对照；人工结构化故障及激活参考限制其现实外推。 |
+| 直接 WSP | [LLM-Guided Transformer Repair](https://arxiv.org/abs/2611.25613) | 固定投影、脚本、黑盒搜索及 LoRA 对照，区分控制器选择和数值算子的贡献。 |
+| 直接 WSP | [VLM Repair Low-Bit Audit](https://arxiv.org/abs/2611.23615) | 损坏权重的浮点低位可泄漏故障位置；舍入对照揭示成功修复依赖的数值线索。 |
+| 直接 WSP | [Materials-Science WSP](https://arxiv.org/abs/2611.22013) | 从物理输入名称写出小网络，并测试科学先验用途；收益限于少标签区间，部分规则和外推基线更好。 |
+| 直接 WSP | [Diffusion Program Construction](https://arxiv.org/abs/2611.22228) | 已完成的程序构造和修订对照；免梯度仍使用 CMA-ES，探索性收益不等于预注册成功。 |
+| 直接 WSP | [Weight-Space Reading](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models) | 已读作者 PDF，单列 alphaXiv 手稿状态；权重访问收益、自读取优势和无效编辑误报分别记录。 |
+| 直接 WSP，待核对 | [JEPA World Models](https://www.alphaxiv.org/abs/2611.wsp-jepa) | 已核对作者摘要和工具仓库，但完整 PDF 尚未取得；不将网页概述转成已核对的实验结论。 |
+| 权重表征 | [DSProbe](https://arxiv.org/abs/2611.33998)、[UWE](https://arxiv.org/abs/2610.21995) | 参考点、权重位移及跨架构对称性；学习型权重编码不直接构成智能体编程证据。 |
+| 权重生成 | [IGPG](https://arxiv.org/abs/2611.25538)、[CrossGMN](https://arxiv.org/abs/2610.01649) | 分别考察自回归权重 token 与跨架构初始化；将直接生成质量与后续训练/蒸馏收益分开。 |
+| 权重组合 | [Latent Merger](https://arxiv.org/abs/2611.33048)、[RaTW](https://arxiv.org/abs/2611.33315)、[BRR](https://arxiv.org/abs/2611.33308)、[LR-Merge](https://arxiv.org/abs/2611.25000)、[异秩 LoRA 合并](https://arxiv.org/abs/2611.06486) | 补充固定秩组合、尾部能力保持、分组干扰、局部代理和谱筛选失衡；注明学习、标注验证及多组参数的成本。 |
+| 相关基础 | [BaseRSI](https://arxiv.org/abs/2611.24578)、[CLAM](https://arxiv.org/abs/2611.20759)、[AutoHebb](https://arxiv.org/abs/2610.40757) | 分别是闭式流程内化、训练型超网络记忆及元学习赫布可塑性，不混作同一种自由程序式自编辑。 |
+| 相关对照 | [Tiny Gradient Loop Repair](https://arxiv.org/abs/2611.33133)、[Ethical-Priority Edits](https://arxiv.org/abs/2611.24330) | 前者提供梯度基线；后者的权衡机制显式暴露，独立盲测编辑阶段尚未执行。 |
 
-研究自我改进时，将 SELFWRITE、Self-WSP 和 Self-Upgrading Embodied Agents 一起读：分别检查被接受的编辑数量、随机搜索对照及收益是否主要来自减少循环或无效推理。稳定保留一次修复，还不能回答长期能力积累的问题。[SELFWRITE 原文](https://arxiv.org/html/2611.29513v1)、[Self-WSP 原文](https://arxiv.org/html/2611.28833v1)、[具身智能体原文](https://arxiv.org/html/2611.31117v1)。
+## 首页精选
 
-设计实验时，加入确定性规则、同信息预算微调、随机编辑及未编辑模型的解码控制，并同时报告目标任务、相邻任务、失败运行和完整计算成本。对应本轮的 FWSP、Spatial WSP vs LoRA、PAWP-TTS 及 ICL-to-Weights；这些工作提供互补对照，而非统一的优劣排序。
+`Research question` 表格保留 5 个互补问题，每项一篇：WSP-Scope、WeightCode、TowerBridge、HypoLoop、Weight Coding。选择依据分别是系统轨迹与失败报告、匹配对照与保持、未见宿主评估、跨科学任务的方法对照，以及留出评估和在线实验。其余条目留在完整目录；首页不因收录数量增长而继续扩张。入选仍是对当前证据价值的编辑判断，不代表同行评审或独立复现。
 
 ## 社区贡献处理
 

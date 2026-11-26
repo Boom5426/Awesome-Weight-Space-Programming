@@ -20,6 +20,12 @@ python3 scripts/build.py --check
 
 Commit changes to the JSON and all regenerated Markdown files.
 
+## Featured reading / 首页精选
+
+Keep the **Start Here / Research question** table to about **five questions, one paper per question**, with the English and Chinese versions aligned. Choose papers for substantive experiments, useful controls, held-out evaluation and a distinct research question. Blogs, conjectures and studies awaiting evidence review belong in the full catalog rather than this table. Adding a paper to the bibliography does not automatically make it featured.
+
+首页表格保持约五个问题，每个问题一篇论文；优先考虑实质实验、有效对照、留出评估及互补的研究价值。新增文献先进入完整目录，精选入口不随文献数量自动扩张。
+
 ## Data fields / 文献数据格式
 
 Every item has an ID, original title, group, section, canonical HTTPS URL, year, and bilingual display lines. Weight-Centric records additionally have ideas, potential inspirations, and venue text in both languages. A possible WSP inspiration is a testable hypothesis, not an established result.
