@@ -65,7 +65,13 @@ all:"weight-space programming"
 
 ## 首页精选
 
-`Research question` 表格保留 5 个互补问题，每项最多 3 篇，按质量和互补性选择，当前共 7 篇：WSP-Scope、iWSP、WeightCode、TowerBridge、HypoLoop、Weight Coding、机器人基础模型修复。选择依据包括系统轨迹与失败报告、隐藏算法测试、匹配对照与保持、未见宿主评估、科学任务的方法对照、在线实验及配对仿真控制。其余条目留在完整目录；首页不因收录数量增长而继续扩张。入选仍是对当前证据价值的编辑判断，不代表同行评审或独立复现。
+`Research question` 表格保留 5 个互补问题，每项最多 3 篇，按质量和互补性选择，当前共 8 篇：WSP-Scope、iWSP、WeightCode、TowerBridge、HypoLoop、WeightLoop、Weight Coding、机器人基础模型修复。科学反馈问题下并列 HypoLoop 与 WeightLoop，分别关注反馈修订编辑方案和可复用的反馈驱动权重更新。选择依据包括系统轨迹与失败报告、隐藏算法测试、匹配对照与保持、未见宿主评估、科学任务的方法对照、在线实验及配对仿真控制。其余条目留在完整目录；首页不因收录数量增长而继续扩张。入选仍是对当前证据价值的编辑判断，不代表同行评审或独立复现。
+
+## GitHub 链接核对
+
+检查 48 篇原先缺少 GitHub 入口的直接 WSP 论文的摘要、HTML/PDF，并补查作者主页与仓库 README；为 15 篇补充作者 GitHub 入口，其中 13 篇链接到已发布代码，2 篇链接到项目仓库。直接研究的 GitHub 入口覆盖从 15/63 增至 30/63，中英文列表同步。
+
+[Mixed Signals](https://github.com/DaraVaram/BioWSP) 的仓库主要托管配套说明、提示与展示页面，标为项目仓库；[计算生物学 Python 研究](https://github.com/satouma7/bioWSP) 的 README 明确代码待发布，保留该状态，不标为已发布代码。WSP for Policies 使用论文指定的 `wsp_verified` 分支，NCP 直接链接到 W-ISA 仓库中的对应目录。未将参考文献中的其他项目、依赖库或当前返回 404 的仓库标为论文代码。
 
 ## 社区贡献处理
 

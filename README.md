@@ -38,7 +38,7 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 | **What can WSP reliably do?** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)** (systematic trajectories and held-out tests) · **[iWSP](https://arxiv.org/abs/2611.18114)** (transparent network construction and hidden algorithmic tests). |
 | **Can programs install and preserve capabilities?** | **[WeightCode](https://arxiv.org/abs/2611.25476)** — matched fine-tuning comparisons, retention, program reuse and successive installation. |
 | **Can an editing recipe transfer across checkpoints?** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** — 21 CLIP checkpoints, unseen hosts and an explicit retention guard. |
-| **Can scientific feedback improve an editing plan?** | **[HypoLoop](https://arxiv.org/abs/2611.23718)** — 22 scientific tasks and comparisons of editing locations and fitting rules. |
+| **Can scientific feedback improve an editing plan?** | **[HypoLoop](https://arxiv.org/abs/2611.23718)** (22 scientific tasks; editing locations and fitting rules) · **[WeightLoop](https://arxiv.org/abs/2611.07319)** (reusable feedback-driven weight updates). |
 | **Can weight editing help practical systems?** | **[Weight Coding](https://arxiv.org/abs/2611.29613)** (held-out dates and online A/B tests) · **[Robot Foundation Model Repair](https://arxiv.org/abs/2611.31715)** (paired simulation scenes, random and sign-reversed controls). |
 
 **Important distinction:** HypoLoop's editing *plan* is revised from experimental evidence, while numerical solvers—including gradient-based optimization in some variants—fit the actual weight changes. Its inclusion highlights valuable scientific-feedback methodology; it is **not** evidence of gradient-free weight updates. The full catalog below tracks other relevant studies, including informative failures, without endorsing every entry as a starting point.
@@ -83,7 +83,7 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[VLM Repair Low-Bit Audit]** `[Numerical Forensics]` `[Rounded Controls]` Weight Space Programming for Vision Language Model Repair (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.23615)]
 
-- **[Materials-Science WSP]** `[Zero-label Construction]` `[Scientific Priors]` Weight-Space Programming for Materials Science (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.22013)]
+- **[Materials-Science WSP]** `[Zero-label Construction]` `[Scientific Priors]` Weight-Space Programming for Materials Science (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.22013)] [[code](https://github.com/sheikhahnaf/weightspace-programming-for-material-science)]
 
 - **[Diffusion Program Construction]** `[Program vs Refinement]` `[Optimizer-in-the-loop]` What Does Weight-Space Programming Add to Diffusion Editing? Program Construction versus Score-Guided Refinement (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.22228)]
 
@@ -117,9 +117,9 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[Spatial WSP vs LoRA]** `[Matched Backbone]` `[Retention Trade-off]` Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and Low-Rank Adaptation (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27089)]
 
-- **[Particle-Physics WSP]** `[Scientific Model Repair]` `[Mechanistic Controls]` Weight-space programming and mechanistic interpretability for model editing in particle physics (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27079)]
+- **[Particle-Physics WSP]** `[Scientific Model Repair]` `[Mechanistic Controls]` Weight-space programming and mechanistic interpretability for model editing in particle physics (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27079)] [[code](https://github.com/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics)]
 
-- **[ICL-to-Weights]** `[Context Internalization]` `[Knowledge-matched Controls]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.26841)]
+- **[ICL-to-Weights]** `[Context Internalization]` `[Knowledge-matched Controls]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.26841)] [[code](https://github.com/y3nk0/weight-space-programming-study)]
 
 - **[Edit-Ready Vision Training]** `[Editability Preparation]` `[Gradient-trained Backbone]` Training Vision Models for LLM-Driven Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.26408)]
 
@@ -127,11 +127,11 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[WeightCode]** `[Capability Installation]` `[Program Reuse]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.25476)] [[code](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 
-- **[WSP Beyond Transformers]** `[Architecture Design]` `[Sparse Associative Memory]` Weight-Space Programming Doesn't Need Transformers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.22055)]
+- **[WSP Beyond Transformers]** `[Architecture Design]` `[Sparse Associative Memory]` Weight-Space Programming Doesn't Need Transformers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.22055)] [[code](https://github.com/effl-lab/Weight-Space-Programming)]
 
 - **[Tractor Guidance WSP]** `[Real-world Control]` `[Network Construction]` Weight-space programming for tractor guidance controller: large language models natively write neural network weights that steer a real tractor (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.21958)]
 
-- **[Same Fix, Different Weights]** `[Replication]` `[Repair Mechanism]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20953)]
+- **[Same Fix, Different Weights]** `[Replication]` `[Repair Mechanism]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20953)] [[code](https://github.com/Cenrax/weight-space-programming-claude)]
 
 - **[Weights & Caches]** `[Tabular Foundation Models]` `[Weights & KV Cache]` Weights & Caches: LLMs Can Program Tabular Foundation Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20174)]
 
@@ -139,7 +139,7 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[WeightBench]** `[Benchmark]` `[42 Tasks]` WeightBench: Evaluating Language Models as Weight-Space Programmers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.18553)] [[code](https://github.com/Aayush-Marasini/WeightBench)]
 
-- **[Computational-Biology Python WSP]** `[Computational Biology]` `[Behavior Repair]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20566)]
+- **[Computational-Biology Python WSP]** `[Computational Biology]` `[Behavior Repair]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20566)] [[repository; code pending](https://github.com/satouma7/bioWSP)]
 
 - **[YOLO26 Weight Editing Study]** `[Object Detection]` `[Negative Evidence]` Can Large Language Models Optimize Pretrained Neural Network Weights? A Multi-Phase Empirical Evaluation of Gradient-Free Editing in YOLO26 Object Detection (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.17789)]
 
@@ -151,7 +151,7 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[WSP Backdoor Security Study]** `[Security Audit]` `[Weight Editing]` Can LLMs Write Backdoors? An Empirical Security Study of Weight-Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.17395)]
 
-- **[Computation, Not Weight Access]** `[Audit Controls]` `[Black-box Comparison]` Computation, not weight access: large language models as auditors of clinical prediction networks (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07847)]
+- **[Computation, Not Weight Access]** `[Audit Controls]` `[Black-box Comparison]` Computation, not weight access: large language models as auditors of clinical prediction networks (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07847)] [[code](https://github.com/Chth1z/llm-clinical-network-audit)]
 
 - **[iWSP]** `[Interpretable Construction]` `[Neuroscience]` Interpretable Weight-Space Programming Builds Transparent Transformers and Brain Encoding Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.18114)] [[code](https://github.com/csinva/weight-space-programming-autoresearch)] [[reports](https://csinva.io/weight-space-programming-autoresearch/analyze)] ![GitHub stars](https://img.shields.io/github/stars/csinva/weight-space-programming-autoresearch.svg?logo=github&label=Stars)
 
@@ -159,21 +159,21 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[Rule-to-Network Compilation]** `[Rule Compilation]` `[Program Baselines]` Compiling Known Rules into Compact Neural Agents: Weight-Space Programming on Unseen Games (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.16981)] [[code](https://github.com/JensLehmann/weight-space-programming-games)] ![GitHub stars](https://img.shields.io/github/stars/JensLehmann/weight-space-programming-games.svg?logo=github&label=Stars)
 
-- **[Mixed Signals]** `[Biosignals]` `[Model Construction]` Mixed Signals: Weight-Space Programming for EEG and ECG (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13758)] [[project](https://daravaram.github.io/)]
+- **[Mixed Signals]** `[Biosignals]` `[Model Construction]` Mixed Signals: Weight-Space Programming for EEG and ECG (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13758)] [[project repository](https://github.com/DaraVaram/BioWSP)] [[project](https://daravaram.github.io/BioWSP/)]
 
-- **[NCP]** `[Verification]` `[Control]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13236)]
+- **[NCP]** `[Verification]` `[Control]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13236)] [[code](https://github.com/eax/w-isa/tree/main/NCP)]
 
-- **[W-ISA]** `[Runtime]` `[Transactional Editing]` W-ISA: Transactional Execution of Weight-Space Intervention Programs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13232)]
+- **[W-ISA]** `[Runtime]` `[Transactional Editing]` W-ISA: Transactional Execution of Weight-Space Intervention Programs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13232)] [[code](https://github.com/eax/w-isa)]
 
 - **[Physics2Weight]** `[Scientific AI]` `[PDE Solving]` Physics2Weight: Direct Neural Network Architecture and Weight Generation from Physical Laws Using Large Language Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.12954)]
 
 - **[WSP for Medical Imaging]** `[Medical Imaging]` `[Model Construction]` Weight-Space Programming for Medical Imaging: Do We Still Need Training Data? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.12066)] [[code](https://github.com/MaximilianLindholz/weight-space-programming-medical)] ![GitHub stars](https://img.shields.io/github/stars/MaximilianLindholz/weight-space-programming-medical.svg?logo=github&label=Stars)
 
-- **[WSP for Policies]** `[Policy Synthesis]` `[Formal Verification]` Weight-Space Programming of Policies and Their Verification via Model Checking (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11604)]
+- **[WSP for Policies]** `[Policy Synthesis]` `[Formal Verification]` Weight-Space Programming of Policies and Their Verification via Model Checking (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11604)] [[code](https://github.com/LAVA-LAB/COOL-MC/tree/wsp_verified)]
 
-- **[WSP for Quantum Circuits]** `[Quantum Computing]` `[Parameter Synthesis]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11537)]
+- **[WSP for Quantum Circuits]** `[Quantum Computing]` `[Parameter Synthesis]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11537)] [[code](https://github.com/DebarshiKunduPSU/Quantum-Weight-Space-Programming)]
 
-- **[WSP for Mathematical Optimization]** `[Operations Research]` `[Scoring Networks]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09559)]
+- **[WSP for Mathematical Optimization]** `[Operations Research]` `[Scoring Networks]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09559)] [[code](https://github.com/butkeraites/llm-written-weights-or)]
 
 - **[WSP-Scope]** `[Benchmark]` `[LLM Editing]` Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09382)] [[code](https://github.com/WSP-Scope/WSP-Scope-Project)] ![GitHub stars](https://img.shields.io/github/stars/WSP-Scope/WSP-Scope-Project.svg?logo=github&label=Stars) [[project](https://wsp-scope.github.io/)]
 
@@ -183,7 +183,7 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[IWIBench]** `[Benchmark]` `[Intra-weight Injection]` IWIBench: Evaluating Gradient-Free Model Driven Intra-weight Injection (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.08647)] [[code](https://github.com/hcltech-robotics/iwibench)] ![GitHub stars](https://img.shields.io/github/stars/hcltech-robotics/iwibench.svg?logo=github&label=Stars)
 
-- **[WeightLoop]** `[Experimental Feedback]` `[Continual Adaptation]` WeightLoop: Weight-Space Programming with Experimental Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07319)]
+- **[WeightLoop]** `[Experimental Feedback]` `[Continual Adaptation]` WeightLoop: Weight-Space Programming with Experimental Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07319)] [[code](https://github.com/limengran98/WeightLoop)]
 
 - **[Orbit Audits]** `[Weight Reading]` `[Symmetry]` Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.05798)]
 
@@ -191,7 +191,7 @@ Research directly involving programmatic inspection, construction, or modificati
 
 - **[Robot Policy Debugging]** `[Robot Foundation Model]` `[Lexical Repair]` Can LLMs Debug Robots by Editing Their Weights? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09376)]
 
-- **[Instruction Distillation]** `[Robot Policy]` `[Closed-Form Editing]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11894)]
+- **[Instruction Distillation]** `[Robot Policy]` `[Closed-Form Editing]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11894)] [[code](https://github.com/adeeb10abbas/weightsmith)]
 <!-- AUTO:END direct -->
 
 <a id="reports-and-blogs"></a>
