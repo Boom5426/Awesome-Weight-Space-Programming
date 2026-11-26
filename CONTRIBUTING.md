@@ -47,6 +47,8 @@ Keep unknown evidence values null. Do not invent outcomes or infer old-skill pre
 
 Authors may submit their own work but should disclose authorship, venue status, model/task, evaluation protocol, public code, and evidence scope. Prefer primary papers and first-party projects. Focus on practical research value, not raw number of papers or GitHub stars.
 
+Display a matching GitHub star badge beside each identifiable repository link in both languages, following WeightCode's style: `![GitHub stars](https://img.shields.io/github/stars/OWNER/REPO.svg?logo=github&label=Stars)`. For branch or subdirectory links, the badge uses the parent repository's `OWNER/REPO`. Keep project-only and code-pending labels accurate.
+
 ## Research Landscape and searchable catalog
 
 The interactive pages are generated from **the same** `data/entries.json` used by the bilingual README. Add any new paper only once to the canonical dataset; never edit the embedded HTML data by hand.

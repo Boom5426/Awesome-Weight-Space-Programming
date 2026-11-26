@@ -50,7 +50,7 @@
 
 *不运行原任务，仅靠参数能读出模型的哪些性质？*
 
-- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)**（arXiv 预印本 2026）。**核心思路：**读取相对于共享或学习参考点的权重位移，并结合 Gram 响应，避免只分析原始权重。 **对未来权重编程的启发：**检验参考感知摘要能否改善编辑定位；Model Tree 上的结果不代表对任意宿主的理解。 [[代码](https://github.com/hoonki2002/DSProbe)]
+- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)**（arXiv 预印本 2026）。**核心思路：**读取相对于共享或学习参考点的权重位移，并结合 Gram 响应，避免只分析原始权重。 **对未来权重编程的启发：**检验参考感知摘要能否改善编辑定位；Model Tree 上的结果不代表对任意宿主的理解。 [[代码](https://github.com/hoonki2002/DSProbe)] ![GitHub stars](https://img.shields.io/github/stars/hoonki2002/DSProbe.svg?logo=github&label=Stars)
 
 - **[Interfaces and Modules: A Scalable Representation for Weight-Space Learning across Architectures](https://arxiv.org/abs/2610.21995)**（arXiv 预印本 2026）。**核心思路：**以类型化接口和模块图表示共享置换作用，让同一权重编码器处理多种支持的架构。 **对未来权重编程的启发：**在可验证的对称性约束下检验跨架构读取；能排序未见架构不等于能迁移可执行编辑。
 

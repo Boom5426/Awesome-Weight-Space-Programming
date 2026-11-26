@@ -43,8 +43,8 @@
       "source_updated": "2026-11-25",
       "source_version": "2611.33998v1",
       "cataloged_on": "2026-11-26",
-      "render_en": "- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)** (arXiv preprint 2026). **Weight-centric idea:** Probes displacement from a shared or learned reference, including Gram responses, rather than raw weights alone. **Potential WSP inspiration:** Test whether reference-aware summaries improve edit localization; results on Model Trees do not establish arbitrary-host understanding. [[code](https://github.com/hoonki2002/DSProbe)]",
-      "render_zh": "- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)**（arXiv 预印本 2026）。**核心思路：**读取相对于共享或学习参考点的权重位移，并结合 Gram 响应，避免只分析原始权重。 **对未来权重编程的启发：**检验参考感知摘要能否改善编辑定位；Model Tree 上的结果不代表对任意宿主的理解。 [[代码](https://github.com/hoonki2002/DSProbe)]",
+      "render_en": "- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)** (arXiv preprint 2026). **Weight-centric idea:** Probes displacement from a shared or learned reference, including Gram responses, rather than raw weights alone. **Potential WSP inspiration:** Test whether reference-aware summaries improve edit localization; results on Model Trees do not establish arbitrary-host understanding. [[code](https://github.com/hoonki2002/DSProbe)] ![GitHub stars](https://img.shields.io/github/stars/hoonki2002/DSProbe.svg?logo=github&label=Stars)",
+      "render_zh": "- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)**（arXiv 预印本 2026）。**核心思路：**读取相对于共享或学习参考点的权重位移，并结合 Gram 响应，避免只分析原始权重。 **对未来权重编程的启发：**检验参考感知摘要能否改善编辑定位；Model Tree 上的结果不代表对任意宿主的理解。 [[代码](https://github.com/hoonki2002/DSProbe)] ![GitHub stars](https://img.shields.io/github/stars/hoonki2002/DSProbe.svg?logo=github&label=Stars)",
       "idea_en": "Probes displacement from a shared or learned reference, including Gram responses, rather than raw weights alone.",
       "idea_zh": "读取相对于共享或学习参考点的权重位移，并结合 Gram 响应，避免只分析原始权重。",
       "inspiration_en": "Test whether reference-aware summaries improve edit localization; results on Model Trees do not establish arbitrary-host understanding.",
@@ -198,8 +198,8 @@
       "year": 2026,
       "published": "2026-11-23",
       "cataloged_on": "2026-11-26",
-      "render_en": "- **[Weight-Space Programming of JEPA World Models]** `[World Models]` `[Full-text Review Pending]` Weight-Space Programming of JEPA World Models (**alphaXiv manuscript 2026**) [[paper](https://www.alphaxiv.org/abs/2611.wsp-jepa)] [[code](https://github.com/suayptalha/wsr)]",
-      "render_zh": "- **[Weight-Space Programming of JEPA World Models]** `[世界模型]` `[全文实证待核对]` Weight-Space Programming of JEPA World Models（**alphaXiv 手稿 2026**）[[论文](https://www.alphaxiv.org/abs/2611.wsp-jepa)] [[代码](https://github.com/suayptalha/wsr)]",
+      "render_en": "- **[Weight-Space Programming of JEPA World Models]** `[World Models]` `[Full-text Review Pending]` Weight-Space Programming of JEPA World Models (**alphaXiv manuscript 2026**) [[paper](https://www.alphaxiv.org/abs/2611.wsp-jepa)] [[code](https://github.com/suayptalha/wsr)] ![GitHub stars](https://img.shields.io/github/stars/suayptalha/wsr.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Weight-Space Programming of JEPA World Models]** `[世界模型]` `[全文实证待核对]` Weight-Space Programming of JEPA World Models（**alphaXiv 手稿 2026**）[[论文](https://www.alphaxiv.org/abs/2611.wsp-jepa)] [[代码](https://github.com/suayptalha/wsr)] ![GitHub stars](https://img.shields.io/github/stars/suayptalha/wsr.svg?logo=github&label=Stars)",
       "evidence": {
         "gradient_free": null,
         "target_model": null,
@@ -334,8 +334,8 @@
       "source_updated": "2026-11-18",
       "source_version": "2611.24578v1",
       "cataloged_on": "2026-11-26",
-      "render_en": "- **[BaseRSI]** `[Harness Internalization]` `[Closed-form Regression]` BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness Internalization (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.24578)] [[code](https://github.com/beita6969/BaseRSI)] — ReGap/ReKey distill activation differences into selected neurons via regression and measured edit strength; distinguish this specified fitting rule from unrestricted agent-authored programs.",
-      "render_zh": "- **[BaseRSI]** `[外部流程内化]` `[闭式回归]` BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness Internalization（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.24578)] [[代码](https://github.com/beita6969/BaseRSI)] — ReGap/ReKey 通过回归及实测编辑强度，将激活差异写入选定神经元；应区分既定拟合规则与智能体自由构造编辑程序。"
+      "render_en": "- **[BaseRSI]** `[Harness Internalization]` `[Closed-form Regression]` BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness Internalization (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.24578)] [[code](https://github.com/beita6969/BaseRSI)] ![GitHub stars](https://img.shields.io/github/stars/beita6969/BaseRSI.svg?logo=github&label=Stars) — ReGap/ReKey distill activation differences into selected neurons via regression and measured edit strength; distinguish this specified fitting rule from unrestricted agent-authored programs.",
+      "render_zh": "- **[BaseRSI]** `[外部流程内化]` `[闭式回归]` BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness Internalization（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.24578)] [[代码](https://github.com/beita6969/BaseRSI)] ![GitHub stars](https://img.shields.io/github/stars/beita6969/BaseRSI.svg?logo=github&label=Stars) — ReGap/ReKey 通过回归及实测编辑强度，将激活差异写入选定神经元；应区分既定拟合规则与智能体自由构造编辑程序。"
     },
     {
       "id": "ethical-priority-weight-edits",
@@ -414,8 +414,8 @@
       "source_updated": "2026-11-17",
       "source_version": "2611.22013v1",
       "cataloged_on": "2026-11-26",
-      "render_en": "- **[Materials-Science WSP]** `[Zero-label Construction]` `[Scientific Priors]` Weight-Space Programming for Materials Science (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.22013)] [[code](https://github.com/sheikhahnaf/weightspace-programming-for-material-science)]",
-      "render_zh": "- **[Materials-Science WSP]** `[无标签构造]` `[科学先验]` Weight-Space Programming for Materials Science（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.22013)] [[代码](https://github.com/sheikhahnaf/weightspace-programming-for-material-science)]",
+      "render_en": "- **[Materials-Science WSP]** `[Zero-label Construction]` `[Scientific Priors]` Weight-Space Programming for Materials Science (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.22013)] [[code](https://github.com/sheikhahnaf/weightspace-programming-for-material-science)] ![GitHub stars](https://img.shields.io/github/stars/sheikhahnaf/weightspace-programming-for-material-science.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Materials-Science WSP]** `[无标签构造]` `[科学先验]` Weight-Space Programming for Materials Science（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.22013)] [[代码](https://github.com/sheikhahnaf/weightspace-programming-for-material-science)] ![GitHub stars](https://img.shields.io/github/stars/sheikhahnaf/weightspace-programming-for-material-science.svg?logo=github&label=Stars)",
       "reviewed_on": "2026-11-26",
       "evidence": {
         "level": "preprint",
@@ -484,8 +484,8 @@
       "url": "https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models",
       "year": 2026,
       "cataloged_on": "2026-11-26",
-      "render_en": "- **[Weight-Space Reading]** `[Behavior Forecasting]` `[No-op Controls]` Weight-Space Reading (**alphaXiv manuscript 2026**) [[paper](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models)] [[code](https://github.com/suayptalha/wsr)]",
-      "render_zh": "- **[Weight-Space Reading]** `[行为预测]` `[无效编辑对照]` Weight-Space Reading（**alphaXiv 手稿 2026**）[[论文](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models)] [[代码](https://github.com/suayptalha/wsr)]",
+      "render_en": "- **[Weight-Space Reading]** `[Behavior Forecasting]` `[No-op Controls]` Weight-Space Reading (**alphaXiv manuscript 2026**) [[paper](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models)] [[code](https://github.com/suayptalha/wsr)] ![GitHub stars](https://img.shields.io/github/stars/suayptalha/wsr.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Weight-Space Reading]** `[行为预测]` `[无效编辑对照]` Weight-Space Reading（**alphaXiv 手稿 2026**）[[论文](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models)] [[代码](https://github.com/suayptalha/wsr)] ![GitHub stars](https://img.shields.io/github/stars/suayptalha/wsr.svg?logo=github&label=Stars)",
       "evidence": {
         "gradient_free": true,
         "target_model": "Qwen3.8-27B, Qwen3.5-9B and Muse-Glimmer-30B in crossed reader/target comparisons.",
@@ -675,8 +675,8 @@
       "source_updated": "2026-11-24",
       "source_version": "2611.33031v1",
       "reviewed_on": "2026-11-26",
-      "render_en": "- **[Tool-Free Quantization Repair]** `[Quantization]` `[Tool-free Weight Reading]` Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.33031)] [[code](https://github.com/urbste/weight-space-programming-ptq)]",
-      "render_zh": "- **[Tool-Free Quantization Repair]** `[量化修复]` `[无工具权重读取]` Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.33031)] [[代码](https://github.com/urbste/weight-space-programming-ptq)]",
+      "render_en": "- **[Tool-Free Quantization Repair]** `[Quantization]` `[Tool-free Weight Reading]` Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming? (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.33031)] [[code](https://github.com/urbste/weight-space-programming-ptq)] ![GitHub stars](https://img.shields.io/github/stars/urbste/weight-space-programming-ptq.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Tool-Free Quantization Repair]** `[量化修复]` `[无工具权重读取]` Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming?（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.33031)] [[代码](https://github.com/urbste/weight-space-programming-ptq)] ![GitHub stars](https://img.shields.io/github/stars/urbste/weight-space-programming-ptq.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -787,8 +787,8 @@
       "source_updated": "2026-11-23",
       "source_version": "2611.29882v1",
       "reviewed_on": "2026-11-26",
-      "render_en": "- **[IR-ODWSP]** `[Object Detection]` `[Inverse Reparameterization]` Reparameterizing Your Object Detectors for Weight Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.29882)] [[code](https://github.com/WongKinYiu/ODWSP)]",
-      "render_zh": "- **[IR-ODWSP]** `[目标检测]` `[逆重参数化]` Reparameterizing Your Object Detectors for Weight Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.29882)] [[代码](https://github.com/WongKinYiu/ODWSP)]",
+      "render_en": "- **[IR-ODWSP]** `[Object Detection]` `[Inverse Reparameterization]` Reparameterizing Your Object Detectors for Weight Space Programming (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.29882)] [[code](https://github.com/WongKinYiu/ODWSP)] ![GitHub stars](https://img.shields.io/github/stars/WongKinYiu/ODWSP.svg?logo=github&label=Stars)",
+      "render_zh": "- **[IR-ODWSP]** `[目标检测]` `[逆重参数化]` Reparameterizing Your Object Detectors for Weight Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.29882)] [[代码](https://github.com/WongKinYiu/ODWSP)] ![GitHub stars](https://img.shields.io/github/stars/WongKinYiu/ODWSP.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -843,8 +843,8 @@
       "source_updated": "2026-11-22",
       "source_version": "2611.29455v1",
       "reviewed_on": "2026-11-26",
-      "render_en": "- **[PAWP-TTS]** `[Speech Synthesis]` `[Negative Evidence]` PAWP-TTS: Phoneme-Aware Weight Programming for Compact Bilingual English-Nepali Speech Synthesis (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.29455)] [[code](https://github.com/Firojpaudel/PAWP_TTS)]",
-      "render_zh": "- **[PAWP-TTS]** `[语音合成]` `[负面证据]` PAWP-TTS: Phoneme-Aware Weight Programming for Compact Bilingual English-Nepali Speech Synthesis（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.29455)] [[代码](https://github.com/Firojpaudel/PAWP_TTS)]",
+      "render_en": "- **[PAWP-TTS]** `[Speech Synthesis]` `[Negative Evidence]` PAWP-TTS: Phoneme-Aware Weight Programming for Compact Bilingual English-Nepali Speech Synthesis (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.29455)] [[code](https://github.com/Firojpaudel/PAWP_TTS)] ![GitHub stars](https://img.shields.io/github/stars/Firojpaudel/PAWP_TTS.svg?logo=github&label=Stars)",
+      "render_zh": "- **[PAWP-TTS]** `[语音合成]` `[负面证据]` PAWP-TTS: Phoneme-Aware Weight Programming for Compact Bilingual English-Nepali Speech Synthesis（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.29455)] [[代码](https://github.com/Firojpaudel/PAWP_TTS)] ![GitHub stars](https://img.shields.io/github/stars/Firojpaudel/PAWP_TTS.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -983,8 +983,8 @@
       "source_updated": "2026-11-20",
       "source_version": "2611.27079v1",
       "reviewed_on": "2026-11-26",
-      "render_en": "- **[Particle-Physics WSP]** `[Scientific Model Repair]` `[Mechanistic Controls]` Weight-space programming and mechanistic interpretability for model editing in particle physics (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27079)] [[code](https://github.com/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics)]",
-      "render_zh": "- **[Particle-Physics WSP]** `[科学模型修复]` `[机制对照]` Weight-space programming and mechanistic interpretability for model editing in particle physics（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27079)] [[代码](https://github.com/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics)]",
+      "render_en": "- **[Particle-Physics WSP]** `[Scientific Model Repair]` `[Mechanistic Controls]` Weight-space programming and mechanistic interpretability for model editing in particle physics (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.27079)] [[code](https://github.com/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics)] ![GitHub stars](https://img.shields.io/github/stars/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Particle-Physics WSP]** `[科学模型修复]` `[机制对照]` Weight-space programming and mechanistic interpretability for model editing in particle physics（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.27079)] [[代码](https://github.com/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics)] ![GitHub stars](https://img.shields.io/github/stars/rbonnetguerrini/WSP-mech-interp-for-model-editing-in-particle-physics.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1011,8 +1011,8 @@
       "source_updated": "2026-11-23",
       "source_version": "2611.26841v2",
       "reviewed_on": "2026-11-26",
-      "render_en": "- **[ICL-to-Weights]** `[Context Internalization]` `[Knowledge-matched Controls]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.26841)] [[code](https://github.com/y3nk0/weight-space-programming-study)]",
-      "render_zh": "- **[ICL-to-Weights]** `[上下文内化]` `[知识匹配对照]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.26841)] [[代码](https://github.com/y3nk0/weight-space-programming-study)]",
+      "render_en": "- **[ICL-to-Weights]** `[Context Internalization]` `[Knowledge-matched Controls]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.26841)] [[code](https://github.com/y3nk0/weight-space-programming-study)] ![GitHub stars](https://img.shields.io/github/stars/y3nk0/weight-space-programming-study.svg?logo=github&label=Stars)",
+      "render_zh": "- **[ICL-to-Weights]** `[上下文内化]` `[知识匹配对照]` Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.26841)] [[代码](https://github.com/y3nk0/weight-space-programming-study)] ![GitHub stars](https://img.shields.io/github/stars/y3nk0/weight-space-programming-study.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1108,8 +1108,8 @@
       "title": "WSP Beyond Transformers",
       "url": "https://arxiv.org/abs/2611.22055",
       "year": 2026,
-      "render_en": "- **[WSP Beyond Transformers]** `[Architecture Design]` `[Sparse Associative Memory]` Weight-Space Programming Doesn't Need Transformers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.22055)] [[code](https://github.com/effl-lab/Weight-Space-Programming)]",
-      "render_zh": "- **[WSP Beyond Transformers]** `[架构设计]` `[稀疏联想记忆]` Weight-Space Programming Doesn't Need Transformers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.22055)] [[代码](https://github.com/effl-lab/Weight-Space-Programming)]",
+      "render_en": "- **[WSP Beyond Transformers]** `[Architecture Design]` `[Sparse Associative Memory]` Weight-Space Programming Doesn't Need Transformers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.22055)] [[code](https://github.com/effl-lab/Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/effl-lab/Weight-Space-Programming.svg?logo=github&label=Stars)",
+      "render_zh": "- **[WSP Beyond Transformers]** `[架构设计]` `[稀疏联想记忆]` Weight-Space Programming Doesn't Need Transformers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.22055)] [[代码](https://github.com/effl-lab/Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/effl-lab/Weight-Space-Programming.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1154,8 +1154,8 @@
       "title": "Same Fix, Different Weights",
       "url": "https://arxiv.org/abs/2611.20953",
       "year": 2026,
-      "render_en": "- **[Same Fix, Different Weights]** `[Replication]` `[Repair Mechanism]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20953)] [[code](https://github.com/Cenrax/weight-space-programming-claude)]",
-      "render_zh": "- **[Same Fix, Different Weights]** `[复现]` `[修复机制]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20953)] [[代码](https://github.com/Cenrax/weight-space-programming-claude)]",
+      "render_en": "- **[Same Fix, Different Weights]** `[Replication]` `[Repair Mechanism]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20953)] [[code](https://github.com/Cenrax/weight-space-programming-claude)] ![GitHub stars](https://img.shields.io/github/stars/Cenrax/weight-space-programming-claude.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Same Fix, Different Weights]** `[复现]` `[修复机制]` Same Fix, Different Weights: Replicating Weight-Space Programming with Claude（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20953)] [[代码](https://github.com/Cenrax/weight-space-programming-claude)] ![GitHub stars](https://img.shields.io/github/stars/Cenrax/weight-space-programming-claude.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1223,8 +1223,8 @@
       "title": "WeightBench",
       "url": "https://arxiv.org/abs/2611.18553",
       "year": 2026,
-      "render_en": "- **[WeightBench]** `[Benchmark]` `[42 Tasks]` WeightBench: Evaluating Language Models as Weight-Space Programmers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.18553)] [[code](https://github.com/Aayush-Marasini/WeightBench)]",
-      "render_zh": "- **[WeightBench]** `[基准评测]` `[42 项任务]` WeightBench: Evaluating Language Models as Weight-Space Programmers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.18553)] [[代码](https://github.com/Aayush-Marasini/WeightBench)]",
+      "render_en": "- **[WeightBench]** `[Benchmark]` `[42 Tasks]` WeightBench: Evaluating Language Models as Weight-Space Programmers (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.18553)] [[code](https://github.com/Aayush-Marasini/WeightBench)] ![GitHub stars](https://img.shields.io/github/stars/Aayush-Marasini/WeightBench.svg?logo=github&label=Stars)",
+      "render_zh": "- **[WeightBench]** `[基准评测]` `[42 项任务]` WeightBench: Evaluating Language Models as Weight-Space Programmers（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.18553)] [[代码](https://github.com/Aayush-Marasini/WeightBench)] ![GitHub stars](https://img.shields.io/github/stars/Aayush-Marasini/WeightBench.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1246,8 +1246,8 @@
       "title": "Computational-Biology Python WSP",
       "url": "https://arxiv.org/abs/2611.20566",
       "year": 2026,
-      "render_en": "- **[Computational-Biology Python WSP]** `[Computational Biology]` `[Behavior Repair]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20566)] [[repository; code pending](https://github.com/satouma7/bioWSP)]",
-      "render_zh": "- **[Computational-Biology Python WSP]** `[计算生物学]` `[行为修复]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20566)] [[仓库；代码待发布](https://github.com/satouma7/bioWSP)]",
+      "render_en": "- **[Computational-Biology Python WSP]** `[Computational Biology]` `[Behavior Repair]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.20566)] [[repository; code pending](https://github.com/satouma7/bioWSP)] ![GitHub stars](https://img.shields.io/github/stars/satouma7/bioWSP.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Computational-Biology Python WSP]** `[计算生物学]` `[行为修复]` Weight-Space Programming Changes How an LLM Uses Python for Computational Biology（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.20566)] [[仓库；代码待发布](https://github.com/satouma7/bioWSP)] ![GitHub stars](https://img.shields.io/github/stars/satouma7/bioWSP.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1384,8 +1384,8 @@
       "title": "Computation, Not Weight Access",
       "url": "https://arxiv.org/abs/2611.07847",
       "year": 2026,
-      "render_en": "- **[Computation, Not Weight Access]** `[Audit Controls]` `[Black-box Comparison]` Computation, not weight access: large language models as auditors of clinical prediction networks (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07847)] [[code](https://github.com/Chth1z/llm-clinical-network-audit)]",
-      "render_zh": "- **[Computation, Not Weight Access]** `[审计对照]` `[黑箱比较]` Computation, not weight access: large language models as auditors of clinical prediction networks（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07847)] [[代码](https://github.com/Chth1z/llm-clinical-network-audit)]",
+      "render_en": "- **[Computation, Not Weight Access]** `[Audit Controls]` `[Black-box Comparison]` Computation, not weight access: large language models as auditors of clinical prediction networks (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07847)] [[code](https://github.com/Chth1z/llm-clinical-network-audit)] ![GitHub stars](https://img.shields.io/github/stars/Chth1z/llm-clinical-network-audit.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Computation, Not Weight Access]** `[审计对照]` `[黑箱比较]` Computation, not weight access: large language models as auditors of clinical prediction networks（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07847)] [[代码](https://github.com/Chth1z/llm-clinical-network-audit)] ![GitHub stars](https://img.shields.io/github/stars/Chth1z/llm-clinical-network-audit.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1476,8 +1476,8 @@
       "title": "Mixed Signals",
       "url": "https://arxiv.org/abs/2611.13758",
       "year": 2026,
-      "render_en": "- **[Mixed Signals]** `[Biosignals]` `[Model Construction]` Mixed Signals: Weight-Space Programming for EEG and ECG (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13758)] [[project repository](https://github.com/DaraVaram/BioWSP)] [[project](https://daravaram.github.io/BioWSP/)]",
-      "render_zh": "- **[Mixed Signals]** `[生物信号]` `[模型构建]` Mixed Signals: Weight-Space Programming for EEG and ECG（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13758)] [[项目仓库](https://github.com/DaraVaram/BioWSP)] [[项目](https://daravaram.github.io/BioWSP/)]",
+      "render_en": "- **[Mixed Signals]** `[Biosignals]` `[Model Construction]` Mixed Signals: Weight-Space Programming for EEG and ECG (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13758)] [[project repository](https://github.com/DaraVaram/BioWSP)] ![GitHub stars](https://img.shields.io/github/stars/DaraVaram/BioWSP.svg?logo=github&label=Stars) [[project](https://daravaram.github.io/BioWSP/)]",
+      "render_zh": "- **[Mixed Signals]** `[生物信号]` `[模型构建]` Mixed Signals: Weight-Space Programming for EEG and ECG（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13758)] [[项目仓库](https://github.com/DaraVaram/BioWSP)] ![GitHub stars](https://img.shields.io/github/stars/DaraVaram/BioWSP.svg?logo=github&label=Stars) [[项目](https://daravaram.github.io/BioWSP/)]",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1499,8 +1499,8 @@
       "title": "NCP",
       "url": "https://arxiv.org/abs/2611.13236",
       "year": 2026,
-      "render_en": "- **[NCP]** `[Verification]` `[Control]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13236)] [[code](https://github.com/eax/w-isa/tree/main/NCP)]",
-      "render_zh": "- **[NCP]** `[验证]` `[控制]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13236)] [[代码](https://github.com/eax/w-isa/tree/main/NCP)]",
+      "render_en": "- **[NCP]** `[Verification]` `[Control]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13236)] [[code](https://github.com/eax/w-isa/tree/main/NCP)] ![GitHub stars](https://img.shields.io/github/stars/eax/w-isa.svg?logo=github&label=Stars)",
+      "render_zh": "- **[NCP]** `[验证]` `[控制]` NCP: Verifier-Guided Optimization of Weight-Space Control Policies（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13236)] [[代码](https://github.com/eax/w-isa/tree/main/NCP)] ![GitHub stars](https://img.shields.io/github/stars/eax/w-isa.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1522,8 +1522,8 @@
       "title": "W-ISA",
       "url": "https://arxiv.org/abs/2611.13232",
       "year": 2026,
-      "render_en": "- **[W-ISA]** `[Runtime]` `[Transactional Editing]` W-ISA: Transactional Execution of Weight-Space Intervention Programs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13232)] [[code](https://github.com/eax/w-isa)]",
-      "render_zh": "- **[W-ISA]** `[运行时]` `[事务式编辑]` W-ISA: Transactional Execution of Weight-Space Intervention Programs（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13232)] [[代码](https://github.com/eax/w-isa)]",
+      "render_en": "- **[W-ISA]** `[Runtime]` `[Transactional Editing]` W-ISA: Transactional Execution of Weight-Space Intervention Programs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.13232)] [[code](https://github.com/eax/w-isa)] ![GitHub stars](https://img.shields.io/github/stars/eax/w-isa.svg?logo=github&label=Stars)",
+      "render_zh": "- **[W-ISA]** `[运行时]` `[事务式编辑]` W-ISA: Transactional Execution of Weight-Space Intervention Programs（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.13232)] [[代码](https://github.com/eax/w-isa)] ![GitHub stars](https://img.shields.io/github/stars/eax/w-isa.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1591,8 +1591,8 @@
       "title": "WSP for Policies",
       "url": "https://arxiv.org/abs/2611.11604",
       "year": 2026,
-      "render_en": "- **[WSP for Policies]** `[Policy Synthesis]` `[Formal Verification]` Weight-Space Programming of Policies and Their Verification via Model Checking (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11604)] [[code](https://github.com/LAVA-LAB/COOL-MC/tree/wsp_verified)]",
-      "render_zh": "- **[WSP for Policies]** `[策略合成]` `[形式化验证]` Weight-Space Programming of Policies and Their Verification via Model Checking（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11604)] [[代码](https://github.com/LAVA-LAB/COOL-MC/tree/wsp_verified)]",
+      "render_en": "- **[WSP for Policies]** `[Policy Synthesis]` `[Formal Verification]` Weight-Space Programming of Policies and Their Verification via Model Checking (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11604)] [[code](https://github.com/LAVA-LAB/COOL-MC/tree/wsp_verified)] ![GitHub stars](https://img.shields.io/github/stars/LAVA-LAB/COOL-MC.svg?logo=github&label=Stars)",
+      "render_zh": "- **[WSP for Policies]** `[策略合成]` `[形式化验证]` Weight-Space Programming of Policies and Their Verification via Model Checking（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11604)] [[代码](https://github.com/LAVA-LAB/COOL-MC/tree/wsp_verified)] ![GitHub stars](https://img.shields.io/github/stars/LAVA-LAB/COOL-MC.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "metadata_only",
@@ -1614,8 +1614,8 @@
       "title": "WSP for Quantum Circuits",
       "url": "https://arxiv.org/abs/2611.11537",
       "year": 2026,
-      "render_en": "- **[WSP for Quantum Circuits]** `[Quantum Computing]` `[Parameter Synthesis]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11537)] [[code](https://github.com/DebarshiKunduPSU/Quantum-Weight-Space-Programming)]",
-      "render_zh": "- **[WSP for Quantum Circuits]** `[量子计算]` `[参数合成]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11537)] [[代码](https://github.com/DebarshiKunduPSU/Quantum-Weight-Space-Programming)]",
+      "render_en": "- **[WSP for Quantum Circuits]** `[Quantum Computing]` `[Parameter Synthesis]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11537)] [[code](https://github.com/DebarshiKunduPSU/Quantum-Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/DebarshiKunduPSU/Quantum-Weight-Space-Programming.svg?logo=github&label=Stars)",
+      "render_zh": "- **[WSP for Quantum Circuits]** `[量子计算]` `[参数合成]` Weight-Space Programming of Variational Quantum Circuits: Large Language Models Write Quantum Circuit Parameters Without an Optimizer（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11537)] [[代码](https://github.com/DebarshiKunduPSU/Quantum-Weight-Space-Programming)] ![GitHub stars](https://img.shields.io/github/stars/DebarshiKunduPSU/Quantum-Weight-Space-Programming.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "metadata_only",
@@ -1637,8 +1637,8 @@
       "title": "WSP for Mathematical Optimization",
       "url": "https://arxiv.org/abs/2611.09559",
       "year": 2026,
-      "render_en": "- **[WSP for Mathematical Optimization]** `[Operations Research]` `[Scoring Networks]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09559)] [[code](https://github.com/butkeraites/llm-written-weights-or)]",
-      "render_zh": "- **[WSP for Mathematical Optimization]** `[运筹优化]` `[打分网络]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09559)] [[代码](https://github.com/butkeraites/llm-written-weights-or)]",
+      "render_en": "- **[WSP for Mathematical Optimization]** `[Operations Research]` `[Scoring Networks]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.09559)] [[code](https://github.com/butkeraites/llm-written-weights-or)] ![GitHub stars](https://img.shields.io/github/stars/butkeraites/llm-written-weights-or.svg?logo=github&label=Stars)",
+      "render_zh": "- **[WSP for Mathematical Optimization]** `[运筹优化]` `[打分网络]` Can a Language Model Write the Weights? An Empirical Study of LLM-Written Scoring Networks for Column Generation and MILP Branching, with a Bus-Driver Scheduling Application（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.09559)] [[代码](https://github.com/butkeraites/llm-written-weights-or)] ![GitHub stars](https://img.shields.io/github/stars/butkeraites/llm-written-weights-or.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "metadata_only",
@@ -1752,8 +1752,8 @@
       "title": "WeightLoop",
       "url": "https://arxiv.org/abs/2611.07319",
       "year": 2026,
-      "render_en": "- **[WeightLoop]** `[Experimental Feedback]` `[Continual Adaptation]` WeightLoop: Weight-Space Programming with Experimental Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07319)] [[code](https://github.com/limengran98/WeightLoop)]",
-      "render_zh": "- **[WeightLoop]** `[实验反馈]` `[持续适应]` WeightLoop: Weight-Space Programming with Experimental Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07319)] [[代码](https://github.com/limengran98/WeightLoop)]",
+      "render_en": "- **[WeightLoop]** `[Experimental Feedback]` `[Continual Adaptation]` WeightLoop: Weight-Space Programming with Experimental Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07319)] [[code](https://github.com/limengran98/WeightLoop)] ![GitHub stars](https://img.shields.io/github/stars/limengran98/WeightLoop.svg?logo=github&label=Stars)",
+      "render_zh": "- **[WeightLoop]** `[实验反馈]` `[持续适应]` WeightLoop: Weight-Space Programming with Experimental Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07319)] [[代码](https://github.com/limengran98/WeightLoop)] ![GitHub stars](https://img.shields.io/github/stars/limengran98/WeightLoop.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -1821,8 +1821,8 @@
       "title": "What Did Astra's Edit Actually Do?",
       "url": "https://xxlya.github.io/editlens/",
       "year": 2026,
-      "render_en": "- **[EditLens]** `[Mechanistic Audit]` `[Replication]` What Did Astra's Edit Actually Do? (**Technical Blog 2026**) [[blog](https://xxlya.github.io/editlens/)] [[code](https://github.com/assassin808/edit-lens)] — Tests loop-repair explanations and contrasts weight swaps with activation patches.",
-      "render_zh": "- **[EditLens]** `[机制审计]` `[复现]` What Did Astra's Edit Actually Do?（**技术博客 2026**）[[博客](https://xxlya.github.io/editlens/)] [[代码](https://github.com/assassin808/edit-lens)] — 检验循环修复的机制解释，并区分权重交换与激活修补。"
+      "render_en": "- **[EditLens]** `[Mechanistic Audit]` `[Replication]` What Did Astra's Edit Actually Do? (**Technical Blog 2026**) [[blog](https://xxlya.github.io/editlens/)] [[code](https://github.com/assassin808/edit-lens)] ![GitHub stars](https://img.shields.io/github/stars/assassin808/edit-lens.svg?logo=github&label=Stars) — Tests loop-repair explanations and contrasts weight swaps with activation patches.",
+      "render_zh": "- **[EditLens]** `[机制审计]` `[复现]` What Did Astra's Edit Actually Do?（**技术博客 2026**）[[博客](https://xxlya.github.io/editlens/)] [[代码](https://github.com/assassin808/edit-lens)] ![GitHub stars](https://img.shields.io/github/stars/assassin808/edit-lens.svg?logo=github&label=Stars) — 检验循环修复的机制解释，并区分权重交换与激活修补。"
     },
     {
       "id": "fable-wsp-replication",
@@ -1871,8 +1871,8 @@
       "title": "Sparks of Weight-Space Programming",
       "url": "https://rikiyat.github.io/blog/weight-space-programming/",
       "year": 2026,
-      "render_en": "- **[Sparks of Weight-Space Programming]** `[Weight Reading]` `[Direct Editing]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights (**Technical Blog 2026**) [[blog](https://rikiyat.github.io/blog/weight-space-programming/)] [[logs](https://github.com/RikiyaT/lm_understand-logs)]",
-      "render_zh": "- **[Sparks of Weight-Space Programming]** `[权重读取]` `[直接编辑]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights（**技术博客 2026**）[[博客](https://rikiyat.github.io/blog/weight-space-programming/)] [[日志](https://github.com/RikiyaT/lm_understand-logs)]"
+      "render_en": "- **[Sparks of Weight-Space Programming]** `[Weight Reading]` `[Direct Editing]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights (**Technical Blog 2026**) [[blog](https://rikiyat.github.io/blog/weight-space-programming/)] [[logs](https://github.com/RikiyaT/lm_understand-logs)] ![GitHub stars](https://img.shields.io/github/stars/RikiyaT/lm_understand-logs.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Sparks of Weight-Space Programming]** `[权重读取]` `[直接编辑]` Sparks of Weight-Space Programming: LLMs Can Natively Read & Write Neural Network Weights（**技术博客 2026**）[[博客](https://rikiyat.github.io/blog/weight-space-programming/)] [[日志](https://github.com/RikiyaT/lm_understand-logs)] ![GitHub stars](https://img.shields.io/github/stars/RikiyaT/lm_understand-logs.svg?logo=github&label=Stars)"
     },
     {
       "id": "adapters-as-data",
@@ -2011,8 +2011,8 @@
       "title": "HypoLoop",
       "url": "https://arxiv.org/abs/2611.23718",
       "year": 2026,
-      "render_en": "- **[HypoLoop]** `[Feedback-driven Editing]` `[Numerical Solvers]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.23718)] [[code](https://github.com/limengran98/HypoLoop)] — Revises editable locations and fitting rules from sequential scientific feedback across 22 tasks. Patches are fitted by numerical solvers (including gradient-based optimization); related model editing, not gradient-free capability installation.",
-      "render_zh": "- **[HypoLoop]** `[反馈驱动编辑]` `[数值求解]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.23718)] [[代码](https://github.com/limengran98/HypoLoop)] — 在 22 项科学任务上利用连续实验反馈修订编辑位置与拟合规则；补丁由数值求解器拟合（部分使用梯度优化），属于相关模型编辑，不等同于免梯度能力安装。"
+      "render_en": "- **[HypoLoop]** `[Feedback-driven Editing]` `[Numerical Solvers]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.23718)] [[code](https://github.com/limengran98/HypoLoop)] ![GitHub stars](https://img.shields.io/github/stars/limengran98/HypoLoop.svg?logo=github&label=Stars) — Revises editable locations and fitting rules from sequential scientific feedback across 22 tasks. Patches are fitted by numerical solvers (including gradient-based optimization); related model editing, not gradient-free capability installation.",
+      "render_zh": "- **[HypoLoop]** `[反馈驱动编辑]` `[数值求解]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.23718)] [[代码](https://github.com/limengran98/HypoLoop)] ![GitHub stars](https://img.shields.io/github/stars/limengran98/HypoLoop.svg?logo=github&label=Stars) — 在 22 项科学任务上利用连续实验反馈修订编辑位置与拟合规则；补丁由数值求解器拟合（部分使用梯度优化），属于相关模型编辑，不等同于免梯度能力安装。"
     },
     {
       "id": "sweet-weight-editing",
@@ -3376,8 +3376,8 @@
       "title": "Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading",
       "url": "https://arxiv.org/abs/2611.11894",
       "year": 2026,
-      "render_en": "- **[Instruction Distillation]** `[Robot Policy]` `[Closed-Form Editing]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11894)] [[code](https://github.com/adeeb10abbas/weightsmith)]",
-      "render_zh": "- **[Instruction Distillation]** `[机器人策略]` `[闭式编辑]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11894)] [[代码](https://github.com/adeeb10abbas/weightsmith)]",
+      "render_en": "- **[Instruction Distillation]** `[Robot Policy]` `[Closed-Form Editing]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.11894)] [[code](https://github.com/adeeb10abbas/weightsmith)] ![GitHub stars](https://img.shields.io/github/stars/adeeb10abbas/weightsmith.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Instruction Distillation]** `[机器人策略]` `[闭式编辑]` Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.11894)] [[代码](https://github.com/adeeb10abbas/weightsmith)] ![GitHub stars](https://img.shields.io/github/stars/adeeb10abbas/weightsmith.svg?logo=github&label=Stars)",
       "evidence": {
         "level": "preprint",
         "review": "source_checked",
@@ -3399,8 +3399,8 @@
       "title": "Independently Discovered Weight Edits Compose: A Replication and Extension of Weight-Space Programming",
       "url": "https://github.com/ajaygrover/weight-space-programming-stacking",
       "year": 2026,
-      "render_en": "- **[Independent Edit Composition]** `[Replication]` `[Composition]` Independently Discovered Weight Edits Compose: A Replication and Extension of Weight-Space Programming (**GitHub Report 2026**) [[code](https://github.com/ajaygrover/weight-space-programming-stacking)]",
-      "render_zh": "- **[Independent Edit Composition]** `[独立复现]` `[组合]` Independently Discovered Weight Edits Compose: A Replication and Extension of Weight-Space Programming（**GitHub 报告 2026**）[[代码](https://github.com/ajaygrover/weight-space-programming-stacking)]"
+      "render_en": "- **[Independent Edit Composition]** `[Replication]` `[Composition]` Independently Discovered Weight Edits Compose: A Replication and Extension of Weight-Space Programming (**GitHub Report 2026**) [[code](https://github.com/ajaygrover/weight-space-programming-stacking)] ![GitHub stars](https://img.shields.io/github/stars/ajaygrover/weight-space-programming-stacking.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Independent Edit Composition]** `[独立复现]` `[组合]` Independently Discovered Weight Edits Compose: A Replication and Extension of Weight-Space Programming（**GitHub 报告 2026**）[[代码](https://github.com/ajaygrover/weight-space-programming-stacking)] ![GitHub stars](https://img.shields.io/github/stars/ajaygrover/weight-space-programming-stacking.svg?logo=github&label=Stars)"
     },
     {
       "id": "opus-5-5-makes-0-5-move-faster-and-smoother-by-editing-its-weights",
@@ -3409,8 +3409,8 @@
       "title": "Opus 5.5 makes π0.5 move faster and smoother by editing its weights",
       "url": "https://github.com/Cuzyoung/robotics-weight-editing",
       "year": 2026,
-      "render_en": "- **[Robot VLA Weight Editing]** `[Robot Policy]` `[Direct Editing]` Opus 5.5 makes π0.5 move faster and smoother by editing its weights (**Technical Report 2026**) [[code](https://github.com/Cuzyoung/robotics-weight-editing)]",
-      "render_zh": "- **[Robot VLA Weight Editing]** `[机器人策略]` `[直接编辑]` Opus 5.5 makes π0.5 move faster and smoother by editing its weights（**技术报告 2026**）[[代码](https://github.com/Cuzyoung/robotics-weight-editing)]"
+      "render_en": "- **[Robot VLA Weight Editing]** `[Robot Policy]` `[Direct Editing]` Opus 5.5 makes π0.5 move faster and smoother by editing its weights (**Technical Report 2026**) [[code](https://github.com/Cuzyoung/robotics-weight-editing)] ![GitHub stars](https://img.shields.io/github/stars/Cuzyoung/robotics-weight-editing.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Robot VLA Weight Editing]** `[机器人策略]` `[直接编辑]` Opus 5.5 makes π0.5 move faster and smoother by editing its weights（**技术报告 2026**）[[代码](https://github.com/Cuzyoung/robotics-weight-editing)] ![GitHub stars](https://img.shields.io/github/stars/Cuzyoung/robotics-weight-editing.svg?logo=github&label=Stars)"
     },
     {
       "id": "policy-surgery",
@@ -3419,8 +3419,8 @@
       "title": "Policy Surgery",
       "url": "https://github.com/latentpaths/policy-surgery",
       "year": 2026,
-      "render_en": "- **[Policy Surgery]** `[RL Control]` `[Weight Editing]` Policy Surgery: Programmatic repair of learned control policies (**GitHub Project 2026**) [[code](https://github.com/latentpaths/policy-surgery)]",
-      "render_zh": "- **[Policy Surgery]** `[强化学习控制]` `[权重编辑]` Policy Surgery：对已有控制策略进行程序化权重修复（**GitHub 项目 2026**）[[代码](https://github.com/latentpaths/policy-surgery)]"
+      "render_en": "- **[Policy Surgery]** `[RL Control]` `[Weight Editing]` Policy Surgery: Programmatic repair of learned control policies (**GitHub Project 2026**) [[code](https://github.com/latentpaths/policy-surgery)] ![GitHub stars](https://img.shields.io/github/stars/latentpaths/policy-surgery.svg?logo=github&label=Stars)",
+      "render_zh": "- **[Policy Surgery]** `[强化学习控制]` `[权重编辑]` Policy Surgery：对已有控制策略进行程序化权重修复（**GitHub 项目 2026**）[[代码](https://github.com/latentpaths/policy-surgery)] ![GitHub stars](https://img.shields.io/github/stars/latentpaths/policy-surgery.svg?logo=github&label=Stars)"
     },
     {
       "id": "learning-to-control-fast-weight-memories-an-alternative-to-dynamic-rec",
