@@ -318,6 +318,10 @@ Ideas from robotics and interpretability that may inform portable programs and c
 - **[wsp-kit]** Independent toolkit for bounded edits; not a peer-reviewed paper. [[code](https://github.com/AuremHQ/weight-space-programming)] ![GitHub stars](https://img.shields.io/github/stars/AuremHQ/weight-space-programming.svg?logo=github&label=Stars)
 <!-- AUTO:END resources -->
 
+### Related lists
+
+- **[Awesome Weight Editing]** The umbrella list: five families of direct weight modification (knowledge editing, steering & abliteration, task arithmetic & merging, unlearning, WSP), bilingual, with a daily arXiv radar and a transactional toolkit ([modifyllm](https://github.com/vicfei/modifyllm)). [[code](https://github.com/vicfei/awesome-weight-editing)]
+
 <a id="scope"></a>
 ## 🎯 Scope
 
