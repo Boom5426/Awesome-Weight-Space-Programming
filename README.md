@@ -1,4 +1,3 @@
-
 <h1 align="center">Awesome Weight-Space Programming</h1>
 
 <p align="center">

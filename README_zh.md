@@ -1,10 +1,3 @@
----
-title: "Awesome Weight-Space Programming — 中文文献目录"
-author: "Li Bo"
-creator: "Li Bo"
-last_modified_by: "Li Bo"
----
-
 <h1 align="center">Awesome Weight-Space Programming</h1>
 
 <p align="center">

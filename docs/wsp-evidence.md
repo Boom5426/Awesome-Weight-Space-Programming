@@ -1,10 +1,3 @@
----
-title: "Weight-Space Programming evidence matrix"
-author: "Li Bo"
-creator: "Li Bo"
-last_modified_by: "Li Bo"
----
-
 <!-- AUTO:START evidence -->
 # WSP Evidence Matrix / 权重编程证据矩阵
 

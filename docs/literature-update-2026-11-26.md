@@ -1,10 +1,3 @@
----
-title: "WSP 文献更新与社区贡献整理 — 2026-11-26"
-author: "Li Bo"
-creator: "Li Bo"
-last_modified_by: "Li Bo"
----
-
 # WSP 文献更新与社区贡献整理
 
 截至 2026 年 11 月 26 日，本轮补充 17 篇预印本，直接 WSP 目录由 35 篇增至 52 篇，结构化目录总数由 163 条增至 180 条。已同步中英文 README、证据矩阵、检索目录和研究图谱。下表按研究问题整理；完整标题、模型、对照、能力保持及局限保存在 [entries.json](../data/entries.json) 和[证据矩阵](wsp-evidence.md)。
@@ -63,4 +56,4 @@ all:"weight-space programming"
 
 ## 验证
 
-文献数据通过 `scripts/validate.py` 校验；Markdown 与 HTML 通过各自生成器重新生成并执行 `--check`。同时运行仓库现有 Python 数据/导航测试、Node 浏览器状态测试和生成脚本语法检查。新建及更新的文档元数据记录作者、创建者和最后修改者为 Li Bo。
+文献数据通过 `scripts/validate.py` 校验；Markdown 与 HTML 通过各自生成器重新生成并执行 `--check`。同时运行仓库现有 Python 数据/导航测试、Node 浏览器状态测试和生成脚本语法检查。

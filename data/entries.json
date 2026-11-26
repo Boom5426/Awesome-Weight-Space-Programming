@@ -2965,11 +2965,5 @@
       "render_en": "- **[Robotic Policy Adaptation via Weight-Space Meta-Learning]** `[Historical Foundation]` Robotic Policy Adaptation via Weight-Space Meta-Learning (**Preprint 2026**) [[paper](https://arxiv.org/abs/2606.07217)] — A learned meta-network predicts adaptation weights for robot policies.",
       "render_zh": "- **[Robotic Policy Adaptation via Weight-Space Meta-Learning]** `[历史基础]` Robotic Policy Adaptation via Weight-Space Meta-Learning（**预印本 2026**）[[论文](https://arxiv.org/abs/2606.07217)] — 学习型元网络为机器人策略生成适应性权重。"
     }
-  ],
-  "metadata": {
-    "title": "Weight-Space Programming bilingual bibliography",
-    "author": "Li Bo",
-    "creator": "Li Bo",
-    "last_modified_by": "Li Bo"
-  }
+  ]
 }
