@@ -50,7 +50,7 @@
 
 *Can model properties be inferred from parameters without running the model on the original task?*
 
-- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)** (arXiv preprint 2026). **Weight-centric idea:** Probes displacement from a shared or learned reference, including Gram responses, rather than raw weights alone. **Potential WSP inspiration:** Test whether reference-aware summaries improve edit localization; results on Model Trees do not establish arbitrary-host understanding. [[code](https://github.com/hoonki2002/DSProbe)]
+- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)** (arXiv preprint 2026). **Weight-centric idea:** Probes displacement from a shared or learned reference, including Gram responses, rather than raw weights alone. **Potential WSP inspiration:** Test whether reference-aware summaries improve edit localization; results on Model Trees do not establish arbitrary-host understanding. [[code](https://github.com/hoonki2002/DSProbe)] ![GitHub stars](https://img.shields.io/github/stars/hoonki2002/DSProbe.svg?logo=github&label=Stars)
 
 - **[Interfaces and Modules: A Scalable Representation for Weight-Space Learning across Architectures](https://arxiv.org/abs/2610.21995)** (arXiv preprint 2026). **Weight-centric idea:** Typed interface/module graphs encode shared permutation actions and let one weight encoder process several supported architectures. **Potential WSP inspiration:** Test architecture-aware inspection under verified symmetry constraints; ranking unseen architectures is not evidence of executable edit transfer.
 
