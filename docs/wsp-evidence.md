@@ -5,9 +5,20 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 34 direct-WSP papers; 29 source-checked examples; 5 metadata-only entries.
+**Coverage:** 35 direct-WSP papers; 30 source-checked examples; 5 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
+
+### [Self-Rewriting](https://arxiv.org/abs/2611.21885)
+
+- **Model / 对象:** Qwen3.5-27B self-editor; Qwen3.5 models at 2B, 4B and 9B for scale comparison; a deliberately corrupted copy of 27B for repair.
+- **Intervention / 干预:** The 27B model uses graded practice answers and its own hidden states to diagnose failures, writes and tests executable edits to its own weights using forward passes, and accepts changes that pass its tests; no gradient training.
+- **Reported outcome / 结果:** The author's self-edit improves accuracy by 6.6 percentage points on 490 held-out, pre-specified problems. Eight accepted sessions show nondecreasing accuracy; repairing a corrupted copy raises accuracy from 7.3% to 70.2% across six image benchmarks.
+- **Comparisons / 对照:** Unedited 27B model, independently run editing sessions, and same-family 2B/4B/9B self-editing attempts; this is not a matched comprehensive comparison against gradient-based training.
+- **Old capability / 保持:** Held-out accuracy increases are reported, but preservation across a broad suite of pre-existing capabilities and safety behaviors is not systematically established.
+- **Transfer / 迁移:** A repair found using text-only practice problems also restores performance on image benchmarks of the same damaged model; reusable edits across independently trained host models are not shown.
+- **Evidence boundary / 证据边界:** arXiv preprint and source-reported results, not independently reproduced. The main gain targets a specific looping failure mode; eight accepted edits do not establish open-ended acquisition of new skills or indefinite self-improvement.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
 
 ### [WeightCode](https://arxiv.org/abs/2611.25476)
 

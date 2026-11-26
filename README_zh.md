@@ -39,6 +39,7 @@
 | --- | --- |
 | **什么是权重空间编程？** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)**（最初的技术报告）· [WSP-Scope](https://arxiv.org/abs/2611.09382)（系统评估） |
 | **程序能否持久安装新能力？** | **[WeightCode](https://arxiv.org/abs/2611.25476)**（新能力、旧能力保持、跨模型程序重执行） |
+| **语言模型能否直接改写自己的权重？** | **[Self-Rewriting](https://arxiv.org/abs/2611.21885)**（27B 模型免梯度自我编辑，并报告多轮持续改进） |
 | **科学反馈能否改变编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718v1)**（22 项科学任务，探索编辑位置与规则）· [WeightLoop](https://arxiv.org/abs/2611.07319)（可重用的反馈编辑器） |
 | **如何严谨评估 WSP？** | **[WeightBench](https://arxiv.org/abs/2611.18553)**（多任务评测）· [IWIBench](https://arxiv.org/abs/2611.08647)（考虑能力保持的编辑评估） |
 | **能否直接构建有效网络？** | **[iWSP](https://arxiv.org/abs/2611.18114)**（可解释网络与神经编码）· [Weights & Caches](https://arxiv.org/abs/2611.20174)（表格基础模型） |
@@ -53,9 +54,9 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
+| `2026-11-22` | 新增[Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) 至直接 WSP 与证据矩阵：27B 模型通过免梯度自我编辑，在未见测试题上报告提升 6.6 个百分点，并经历 8 轮被接受的修改；同时标明能力保持与泛化证据边界。 |
 | `2026-11-20` | 按实证质量精简[入门推荐](#start-here)：重点推荐科学反馈驱动的 [HypoLoop](https://arxiv.org/abs/2611.23718)，剔除缺乏已完成实验的扩散猜想和早期方案条目，保留有信息量的负面结果但不作为首选阅读。同日已修正 [WeightCode](https://arxiv.org/abs/2611.25476) 链接并扩充 WSP 文献。 |
 | `2026-11-18` | 核对并新增两篇 WSP 研究：对原始读写结论的[独立复现与扩展](https://arxiv.org/abs/2611.21449)，以及在未公开游戏上将规则编译为网络、并与程序和学习基线对照的[研究](https://arxiv.org/abs/2611.16981)。 |
-| `2026-11-13` | 核对五篇 WSP 论文的证据，将 Autoresearch 更新为 iWSP 预印本，补充 EditLens 和[评估研究指南](docs/wsp-research-opportunities.md)。 |
 <!-- AUTO:END updates -->
 
 <a id="research-papers"></a>
@@ -64,12 +65,14 @@
 <!-- AUTO:START direct -->
 直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**34 篇论文与手稿** · [2026（34）](#2026)
+**35 篇论文与手稿** · [2026（35）](#2026)
 
 **证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 34 篇
+### 🗓️ 2026 — 35 篇
+
+- **[Self-Rewriting]** `[模型自修改]` `[持续改进]` Language Models Can Rewrite Their Own Weights（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.21885)] [[项目](https://www.jiajunfan.com/projects/self-rewriting/)]
 
 - **[WeightCode]** `[能力植入]` `[程序复用]` WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.25476)] [[代码](https://github.com/Gen-Verse/WeightCode)] ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/WeightCode.svg?logo=github&label=Stars)
 

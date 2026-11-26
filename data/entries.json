@@ -1,7 +1,30 @@
 {
   "version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-22",
   "entries": [
+    {
+      "id": "language-models-rewrite-own-weights",
+      "group": "direct",
+      "section": "direct",
+      "title": "Self-Rewriting",
+      "url": "https://arxiv.org/abs/2611.21885",
+      "year": 2026,
+      "render_en": "- **[Self-Rewriting]** `[Self-Rewriting]` `[Continual Improvement]` Language Models Can Rewrite Their Own Weights (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.21885)] [[project](https://www.jiajunfan.com/projects/self-rewriting/)]",
+      "render_zh": "- **[Self-Rewriting]** `[模型自修改]` `[持续改进]` Language Models Can Rewrite Their Own Weights（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.21885)] [[项目](https://www.jiajunfan.com/projects/self-rewriting/)]",
+      "evidence": {
+        "level": "preprint",
+        "review": "source_checked",
+        "gradient_free": true,
+        "source_url": "https://arxiv.org/abs/2611.21885",
+        "target_model": "Qwen3.5-27B self-editor; Qwen3.5 models at 2B, 4B and 9B for scale comparison; a deliberately corrupted copy of 27B for repair.",
+        "intervention": "The 27B model uses graded practice answers and its own hidden states to diagnose failures, writes and tests executable edits to its own weights using forward passes, and accepts changes that pass its tests; no gradient training.",
+        "claim": "The author's self-edit improves accuracy by 6.6 percentage points on 490 held-out, pre-specified problems. Eight accepted sessions show nondecreasing accuracy; repairing a corrupted copy raises accuracy from 7.3% to 70.2% across six image benchmarks.",
+        "baselines": "Unedited 27B model, independently run editing sessions, and same-family 2B/4B/9B self-editing attempts; this is not a matched comprehensive comparison against gradient-based training.",
+        "preservation": "Held-out accuracy increases are reported, but preservation across a broad suite of pre-existing capabilities and safety behaviors is not systematically established.",
+        "transfer": "A repair found using text-only practice problems also restores performance on image benchmarks of the same damaged model; reusable edits across independently trained host models are not shown.",
+        "caveat": "arXiv preprint and source-reported results, not independently reproduced. The main gain targets a specific looping failure mode; eight accepted edits do not establish open-ended acquisition of new skills or indefinite self-improvement."
+      }
+    },
     {
       "id": "weightcode",
       "group": "direct",

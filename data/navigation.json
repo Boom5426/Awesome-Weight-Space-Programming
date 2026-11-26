@@ -14,7 +14,8 @@
           "name_zh": "能力安装与反馈适应",
           "ids": [
             "weightcode",
-            "weightloop"
+            "weightloop",
+            "language-models-rewrite-own-weights"
           ]
         },
         {
