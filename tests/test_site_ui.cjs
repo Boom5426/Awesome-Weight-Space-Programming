@@ -85,8 +85,9 @@ assert.ok(all.get("count").textContent.includes("显示"));
 const foundation=harness("index.html","?branch=foundations&leaf=fast");
 assert.equal(foundation.evaluate("group"),"related");
 assert.equal(foundation.evaluate("track"),"foundations.fast");
-assert.equal(cards(foundation),6);
-assert.ok(foundation.get("count").textContent.includes("6 matches"));
+const fastFoundationCount=ENTRIES.filter(e=>e.group==="related"&&e.section==="fast-foundations").length;
+assert.equal(cards(foundation),Math.min(24,fastFoundationCount));
+assert.ok(foundation.get("count").textContent.includes(fastFoundationCount+" matches"));
 
 const reports=harness("index.html","?branch=resources&leaf=reports");
 assert.equal(reports.evaluate("group"),"reports");

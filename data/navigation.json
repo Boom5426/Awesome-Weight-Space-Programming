@@ -20,7 +20,9 @@
             "self-upgrading-embodied-agents",
             "selfwrite",
             "self-wsp",
-            "icl-to-weights"
+            "icl-to-weights",
+            "agentic-model-editing",
+            "weight-coding-recommenders"
           ]
         },
         {
@@ -32,7 +34,9 @@
             "orbit-audits",
             "clinical-network-audits",
             "replicating-and-extending-wsp",
-            "clinical-audits-computation-not-weights"
+            "clinical-audits-computation-not-weights",
+            "game-theoretic-weight-reading",
+            "weight-space-reading"
           ]
         },
         {
@@ -52,7 +56,8 @@
             "tractor-weight-space-engineering",
             "wsp-tabular-foundation-models",
             "wsp-structured-tabular-zero-shot",
-            "closed-form-frozen-encoder-classifiers"
+            "closed-form-frozen-encoder-classifiers",
+            "materials-science-wsp"
           ]
         },
         {
@@ -77,7 +82,13 @@
             "pawp-tts",
             "autonomous-parameter-surgery",
             "trojanmaxxing",
-            "particle-physics-wsp"
+            "particle-physics-wsp",
+            "scalpel-and-brush",
+            "blind-deployment-fault-repair",
+            "llm-guided-transformer-repair",
+            "vlm-repair-low-bit-audit",
+            "diffusion-program-construction",
+            "jepa-world-model-wsp"
           ]
         },
         {

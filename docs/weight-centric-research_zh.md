@@ -4,7 +4,7 @@
 
 **收录标准：** 能够为权重读取或写入、跨模型计算迁移、多次更新的组合、旧能力保留等问题提供具体、可验证的思路。没有明确关联的一般微调、压缩与优化工作不纳入。下文的“潜在启发”是研究假设，不是已得到验证的 WSP 结论。
 
-**当前收录：** 67 篇论文，6 条研究线。在原有 21 篇基础上进行多关键词系统补充，仅保留能提出可检验权重编程启发的文献。已在[主仓库相关工作](../README_zh.md#related-research)收录的论文不在此重复列出。
+**当前收录：** 76 篇论文，6 条研究线。在原有 21 篇基础上进行多关键词系统补充，仅保留能提出可检验权重编程启发的文献。已在[主仓库相关工作](../README_zh.md#related-research)收录的论文不在此重复列出。
 
 ## 阅读路线
 
@@ -50,6 +50,10 @@
 
 *不运行原任务，仅靠参数能读出模型的哪些性质？*
 
+- **[The Reference Matters: Displacement Probing for Weight-Space Learning](https://arxiv.org/abs/2611.33998)**（arXiv 预印本 2026）。**核心思路：**读取相对于共享或学习参考点的权重位移，并结合 Gram 响应，避免只分析原始权重。 **对未来权重编程的启发：**检验参考感知摘要能否改善编辑定位；Model Tree 上的结果不代表对任意宿主的理解。 [[代码](https://github.com/hoonki2002/DSProbe)]
+
+- **[Interfaces and Modules: A Scalable Representation for Weight-Space Learning across Architectures](https://arxiv.org/abs/2610.21995)**（arXiv 预印本 2026）。**核心思路：**以类型化接口和模块图表示共享置换作用，让同一权重编码器处理多种支持的架构。 **对未来权重编程的启发：**在可验证的对称性约束下检验跨架构读取；能排序未见架构不等于能迁移可执行编辑。
+
 - **[Predicting Neural Network Accuracy from Weights](https://arxiv.org/abs/2002.11448)**（2020 preprint）。**核心思路：**从参数统计量预测模型精度，不需要执行原任务。 **对未来权重编程的启发：**为纯权重读取提供可检验的先例，但跨模型泛化仍需验证。
 
 - **[Self-Supervised Representation Learning on Neural Network Weights for Model Characteristic Prediction](https://arxiv.org/abs/2110.15288)**（NeurIPS 2021）。**核心思路：**从多个已训练网络的参数中学习模型级表征。 **对未来权重编程的启发：**可能为编辑位置检索与网络画像提供比原始张量更合适的输入。
@@ -85,6 +89,10 @@
 
 *能否把网络作为可生成的对象，而不是每个任务都重新优化？*
 
+- **[Towards Autoregressive Neural Network Parameter Generation](https://arxiv.org/abs/2611.25538)**（arXiv 预印本 2026）。**核心思路：**IGPG 训练权重 VQ-VAE 分词器和条件自回归生成器；部分留出结果衡量后续适应后的初始化收益。 **对未来权重编程的启发：**比较离散权重先验与智能体程序，并分别报告生成后的零样本性能及后续训练收益。
+
+- **[CrossGMN: Graph Metanetworks for Cross-Architecture Weight-Space Transformations](https://arxiv.org/abs/2610.01649)**（arXiv 预印本 2026）。**核心思路：**图元网络共同读取训练后的源权重和目标初始化，在蒸馏前生成压缩模型初始化。 **对未来权重编程的启发：**评估跨架构权重程序时，分别衡量源不变性、目标等变性及后续蒸馏过程。
+
 - **[HyperDiffusion: Generating Implicit Neural Fields with Weight-Space Diffusion](https://arxiv.org/abs/2303.17015)**（2023 preprint）。**核心思路：**在隐式神经场的 MLP 权重空间训练扩散生成模型。 **对未来权重编程的启发：**可以考虑用生成先验约束编辑，使修改更可能落在有效的功能区域。
 
 - **[Neural Network Diffusion](https://arxiv.org/abs/2402.13144)**（2024 preprint）。**核心思路：**用潜在扩散模型合成性能较好的参数子集。 **对未来权重编程的启发：**启发基于参数先验生成或修复局部权重块。
@@ -115,6 +123,16 @@
 ## 权重算术、合并与干扰
 
 *多个参数变化如何组合，才能避免破坏已有能力？*
+
+- **[Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs](https://arxiv.org/abs/2611.33048)**（arXiv 预印本 2026）。**核心思路：**学习型合并器先组合超网络潜变量，再解码为固定秩 LoRA；其几何结构不同于直接微调的适配器。 **对未来权重编程的启发：**检验共享编辑生成器是否提供更合适的组合空间；学习型潜合并不能等同于任意程序的直接相加。
+
+- **[Large-scale Model Merging via Recovery-aware Task Weighting](https://arxiv.org/abs/2611.33315)**（arXiv 预印本 2026）。**核心思路：**RaTW 依据可恢复的专家能力赋权，并在 CLIPMerge-100 同时评估均值和尾部任务保持。 **对未来权重编程的启发：**多程序验收可加入尾部任务保持指标，并公开权重计算所需的标注验证数据。
+
+- **[Change Partners at Every Layer: Balanced Random Regrouping for Model Merging](https://arxiv.org/abs/2611.33308)**（arXiv 预印本 2026）。**核心思路：**在各层或矩阵重新平衡分组专家，减少相关的特征干扰。 **对未来权重编程的启发：**比较模块化编辑分配与固定分组；须注明任务身份及多组权重存储成本，不能当作单一通用检查点。
+
+- **[Watch Where You Linearize: Predicting and Correcting Model-Merging Interference](https://arxiv.org/abs/2611.25000)**（arXiv 预印本 2026）。**核心思路：**接收模型附近的导数比原始骨干处更能预测合并干扰，LR-Merge 利用无标签探针构造代理。 **对未来权重编程的启发：**在已编辑宿主上测量第二个程序，并加入等计算量教师匹配；局部代理不保证远距离外推。
+
+- **[Model Merging Does Not Require Uniform LoRA Ranks](https://arxiv.org/abs/2611.06486)**（arXiv 预印本 2026）。**核心思路：**研究不同秩适配器，揭示按幅值筛选谱成分可能丢弃某个专家的有效分量。 **对未来权重编程的启发：**压缩组合编辑时逐项审计能力损失，避免只按参数范数决定保留何种行为。
 
 - **[Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time](https://arxiv.org/abs/2203.05482)**（ICML 2022）。**核心思路：**通过平均兼容的微调检查点来组合模型。 **对未来权重编程的启发：**是权重组合的简单基线，也提示模型兼容性不可忽视。
 

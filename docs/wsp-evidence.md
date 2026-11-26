@@ -5,9 +5,119 @@ This matrix summarizes source-reported evidence, not independently reproduced re
 
 本表整理原始来源报告的证据，并非独立复现实验。修复现有功能不等于安装此前缺失的能力。
 
-**Coverage:** 52 direct-WSP papers; 47 source-checked examples; 5 metadata-only entries.
+**Coverage:** 63 direct-WSP papers; 57 source-checked examples; 6 metadata-only entries.
 
 ## Source-checked examples / 已核对来源的案例
+
+### [AME](https://arxiv.org/abs/2611.34036v1)
+
+- **Model / 对象:** CLIP ViT-B/16 on eleven classification datasets, with other backbone/editor checks.
+- **Intervention / 干预:** Agent jointly designs input transforms, encoder edits, feature statistics and fitted classifiers; both backpropagation-free and trained variants are evaluated.
+- **Reported outcome / 结果:** Mean accuracy is 81.2% without backpropagation and 81.9% with it, at eight labeled support images per class.
+- **Comparisons / 对照:** Few-shot adaptation methods, agent/tool ablations and separate final test sets.
+- **Old capability / 保持:** Measures target-domain accuracy; broad zero-shot/old-domain retention is not established.
+- **Transfer / 迁移:** Shared tools are evaluated across domains, but a separate program is designed for each domain.
+- **Evidence boundary / 证据边界:** Preprint; up to five aggregate validation submissions guide selection. Whole-program gains include preprocessing and classifier fitting, and are not isolated effects of weight edits.
+- **Gradient-free / 免梯度:** No · **Source level / 来源类型:** preprint
+
+### [Scalpel and Brush](https://arxiv.org/abs/2611.33426v1)
+
+- **Model / 对象:** Qwen2.5-Math-1.5B-Instruct with a DeepSeek agent on differential equations and GoEmotions.
+- **Intervention / 干预:** Agent proposes sparse repairs, neuron masks and layer removal, using up to 50 development evaluations.
+- **Reported outcome / 结果:** BLEU gains on equations reflect notation alignment rather than improved mathematical correctness; emotion-classification gains survive hidden splits.
+- **Comparisons / 对照:** Random edits, prompt controls, conventional pruning, ridge classifiers and matched-evaluation search.
+- **Old capability / 保持:** Tests two hidden splits and pruning loss constraints, rather than broad language-capability retention.
+- **Transfer / 迁移:** Multiple runs/tasks on one target host; independent-host program reuse is not demonstrated.
+- **Evidence boundary / 证据边界:** Preprint; standard procedures reproduce much of the gain after being given agent-selected sites/forms. Their independent discovery remains a separate comparison.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Game-Theoretic Weight Reading](https://arxiv.org/abs/2611.31979v1)
+
+- **Model / 对象:** 1,218-weight recurrent policies for repeated 2×2 games; one open-model reader/writer.
+- **Intervention / 干预:** Blind replies either emit weights, describe a compiled state machine, predict actions, recover a program or patch a fault.
+- **Reported outcome / 结果:** Programs are recovered in 62/66 replies; direct full-weight writing succeeds in 13/20 versus 20/20 for evaluator-compiled machines; repair succeeds in 4/18.
+- **Comparisons / 对照:** Exact optimal values, named strategies, search, shuffled weights and alternative output formats.
+- **Old capability / 保持:** Repair is non-damaging in 15/18 replies; this is a small-policy measure.
+- **Transfer / 迁移:** Tests unnamed and obfuscated machines, not reuse across large independently trained hosts.
+- **Evidence boundary / 证据边界:** Preprint; exact scoring helps interpret small networks, but compiled machine descriptions are not direct numeric-weight emission and the setting does not establish scale.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Weight Coding](https://arxiv.org/abs/2611.29613v1)
+
+- **Model / 对象:** Pinterest 147M image-search retriever, plus generative retrieval and ranking models up to 1.37B parameters.
+- **Intervention / 干预:** Agent writes and composes weight edits with cached forward evaluation and numerical search; no serving architecture change.
+- **Reported outcome / 结果:** Reports up to +15.0 recall@10 points on held-out dates; save-targeted arms increase source-attributed saves per user by 8.4–10.7%.
+- **Comparisons / 对照:** Production models, post-training comparisons, alternate corpora/dates/metrics and week-long online experiments.
+- **Old capability / 保持:** Engagement objectives trade off: higher closeups or long clicks can coincide with lower saves.
+- **Transfer / 迁移:** Methodology spans several production architectures; edits remain model-specific.
+- **Evidence boundary / 证据边界:** Preprint using private production data. Source-attributed gains can cannibalize other retrievers; adaptive overfitting is not ruled out, and this is not proof of general training replacement.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Blind Deployment-Fault Repair](https://arxiv.org/abs/2611.28781v1)
+
+- **Model / 对象:** Classification, segmentation and detection models across 183 agent runs.
+- **Intervention / 干预:** Forward-only agent diagnoses preprocessing, conversion or output-convention faults and writes corrective weights.
+- **Reported outcome / 结果:** A post-hoc script repairs 30/48 known faults versus 33/48 for the agent; on five unprepared fault types the counts are 4/15 versus 15/15.
+- **Comparisons / 对照:** Post-hoc repair scripts, adaptation/fine-tuning, intact models and activation-reference ablations.
+- **Old capability / 保持:** Agent leaves all 21 intact models unedited; synthetic repair results do not guarantee preservation under arbitrary damage.
+- **Transfer / 迁移:** Tests new structured fault types across vision tasks, not new capability acquisition.
+- **Evidence boundary / 证据边界:** Preprint; one agent, small per-condition counts, synthetic faults and six flagged/grey-area runs. Success often requires reliable per-layer activation references; cost is not measured.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [LLM-Guided Transformer Repair](https://arxiv.org/abs/2611.25613v2)
+
+- **Model / 对象:** Five masked/causal language-model checkpoints and 20 recorded editing sessions.
+- **Intervention / 干预:** Editor chooses projection recipes from predictions, activations and weight summaries without gradient updates.
+- **Reported outcome / 结果:** On Pythia, live selection reaches 65.62% completion accuracy versus 66.15% for a fixed projection; under compound faults scripted and agent selection reach the same descriptive mean.
+- **Comparisons / 对照:** Fixed projections, scripted selection, matched-budget black-box search and LoRA.
+- **Old capability / 保持:** Measures completion recovery, parameter restoration and separate preservation probes.
+- **Transfer / 迁移:** Compares multiple hosts/faults but does not establish fixed-program portability.
+- **Evidence boundary / 证据边界:** Preprint v2; controlled low-rank faults and completion tasks constrain the result. Recovery often reflects available operator coverage, while supervised adaptation can do better.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [VLM Repair Low-Bit Audit](https://arxiv.org/abs/2611.23615v2)
+
+- **Model / 对象:** SmolVLM-256M and LFM2-VL-450M with planted scaling/noise faults.
+- **Intervention / 干预:** Audits agent repairs before/after rounding damaged weights back to the original low-precision grid.
+- **Reported outcome / 结果:** LFM2-VL recovery falls from about 17 to 4 points after rounding removes fault-computation traces.
+- **Comparisons / 对照:** Rounded faults, low-bit marking, fixed statistical rules, gradient fits and row/column swaps.
+- **Old capability / 保持:** Rounding leaves tested predictions unchanged before repair, isolating the numerical cue.
+- **Transfer / 迁移:** Evaluates some agent-written programs across faulted checkpoints; natural-failure portability is not established.
+- **Evidence boundary / 证据边界:** Preprint v2; two models and synthetic tasks. Several comparisons are post hoc, and faults computed in float32 may reveal cues absent from real failures.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Materials-Science WSP](https://arxiv.org/abs/2611.22013v1)
+
+- **Model / 对象:** Small written ReLU networks for alloys, phase equilibria and crystal-property tasks.
+- **Intervention / 干预:** LLM emits every weight from a named physical task/input description; written predictors can become surrogate mean functions.
+- **Reported outcome / 结果:** Zero-label alloy rankings reach reported Spearman correlations of 0.64–0.79; prior means mainly help in the first tens of labels.
+- **Comparisons / 对照:** Simple physical descriptors, subsystem extrapolation, constant-mean Gaussian processes and fitted surrogates.
+- **Old capability / 保持:** Constructs new predictors, so old-capability retention is not the relevant endpoint.
+- **Transfer / 迁移:** Tests multiple material targets and uses, not reusable edits across pretrained hosts.
+- **Evidence boundary / 证据边界:** Preprint; physical input names and prior model knowledge matter. Rules can match or beat written networks, some optimization targets regress, and licensed Thermo-Calc data restrict reproduction.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Diffusion Program Construction](https://arxiv.org/abs/2611.22228v1)
+
+- **Model / 对象:** Stable Diffusion 1.4 on 24 TIMED concept edits.
+- **Intervention / 干预:** LLM programs propose weight directions and preservation contexts; a shared CMA-ES fitter selects coefficients.
+- **Reported outcome / 结果:** Preregistered rewriting shows no advantage over a strong baseline; exploratory one-shot programs improve joint success while score-guided revision trades it against CLIP.
+- **Comparisons / 对照:** Published editors, shared-panel hand-written programs and budget-matched conventional-edit search.
+- **Old capability / 保持:** Separates protected text-state invariants, image-level preservation and subject retention.
+- **Transfer / 迁移:** Evaluates fresh scenes within edited concepts; no cross-backbone program reuse claim.
+- **Evidence boundary / 证据边界:** Preprint; gradient-free does not mean optimizer-free. Exploratory and preregistered results differ, and metric/evaluator choices affect conclusions.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** preprint
+
+### [Weight-Space Reading](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models.pdf)
+
+- **Model / 对象:** Qwen3.8-27B, Qwen3.5-9B and Muse-Glimmer-30B in crossed reader/target comparisons.
+- **Intervention / 干预:** Read-only sandboxed agents forecast edit effects without executing the target; separate inference establishes ground truth.
+- **Reported outcome / 结果:** On subtle self-edits, the 27B reader reaches 0.730 balanced accuracy versus 0.578 from text descriptions; a self-reading advantage is not established.
+- **Comparisons / 对照:** Text-only descriptions, crossed self/other readers, destructive edits and no-op controls.
+- **Old capability / 保持:** This is behavioral forecasting, not a newly deployed edit; inert edits produce many false-positive change predictions.
+- **Transfer / 迁移:** Cross-model reading comparisons do not establish reusable weight-program transfer.
+- **Evidence boundary / 证据边界:** alphaXiv manuscript, not a confirmed arXiv publication. Small dependent intervention pools and architecture-sensitive edit banks limit conclusions; no-op detection can fail badly.
+- **Gradient-free / 免梯度:** Yes · **Source level / 来源类型:** manuscript
 
 ### [FWSP](https://arxiv.org/abs/2611.34612v1)
 
@@ -534,6 +644,7 @@ These entries have bibliographic metadata but their outcomes, controls and reten
 
 | Work | Source type | Verification status |
 | --- | --- | --- |
+| [Weight-Space Programming of JEPA World Models](https://www.alphaxiv.org/abs/2611.wsp-jepa) | manuscript | Metadata only / 未审查结果 |
 | [WSP for Policies](https://arxiv.org/abs/2611.11604) | preprint | Metadata only / 未审查结果 |
 | [WSP for Quantum Circuits](https://arxiv.org/abs/2611.11537) | preprint | Metadata only / 未审查结果 |
 | [WSP for Mathematical Optimization](https://arxiv.org/abs/2611.09559) | preprint | Metadata only / 未审查结果 |

@@ -35,18 +35,13 @@
 
 准备设计实验？参阅[评估研究指南（英文，附中文摘要）](docs/wsp-research-opportunities.md)，了解程序迁移、组合、能力保持和公平基线等问题。
 
-| 研究问题 | 精选阅读 |
+| 研究问题 | 精选论文 |
 | --- | --- |
-| **什么是权重空间编程？** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)**（最初的技术报告）· [WSP-Scope](https://arxiv.org/abs/2611.09382)（系统评估） |
-| **程序能否持久安装新能力？** | **[WeightCode](https://arxiv.org/abs/2611.25476)**（新能力、旧能力保持、跨模型程序重执行） |
-| **语言模型能否直接改写自己的权重？** | **[Self-Rewriting](https://arxiv.org/abs/2611.21885)**（27B 模型免梯度自我编辑，并报告多轮持续改进） |
-| **科学反馈能否改变编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718v1)**（22 项科学任务，探索编辑位置与规则）· [WeightLoop](https://arxiv.org/abs/2611.07319)（可重用的反馈编辑器） |
-| **如何严谨评估 WSP？** | **[WeightBench](https://arxiv.org/abs/2611.18553)**（多任务评测）· [IWIBench](https://arxiv.org/abs/2611.08647)（考虑能力保持的编辑评估） |
-| **能否直接构建有效网络？** | **[iWSP](https://arxiv.org/abs/2611.18114)**（可解释网络与神经编码）· [Weights & Caches](https://arxiv.org/abs/2611.20174)（表格基础模型） |
-| **编辑效果究竟来自什么机制？** | **[Same Fix, Different Weights](https://arxiv.org/abs/2611.20953)**（机制复现）· [YOLO26 evaluation](https://arxiv.org/abs/2611.17789)（匹配负面对照） |
-| **修复规则能否泛化？** | **[TowerBridge](https://arxiv.org/abs/2611.31233)**（21 个 CLIP 检查点，注明标注数据与能力保持约束）· [机器人基础模型修复](https://arxiv.org/abs/2611.31715)（配对仿真场景与失败案例） |
-| **自编辑结论有哪些边界？** | **[Self-WSP](https://arxiv.org/abs/2611.28833)**（随机搜索对照）· [SELFWRITE](https://arxiv.org/abs/2611.29513)（隐藏验收集，五代中接受四项编辑） |
-| **有哪些相关理论与方法基础？** | **[Tracr](https://arxiv.org/abs/2301.05062)**（程序编译）· [Program-as-Weights](https://arxiv.org/abs/2607.02512)（神经程序）· [Doc-to-LoRA](https://arxiv.org/abs/2602.15902)（学习式权重生成） |
+| **WSP 的能力与边界是什么？** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)**（系统编辑轨迹与留出评估）· **[iWSP](https://arxiv.org/abs/2611.18114)**（透明网络构造与隐藏算法测试）。 |
+| **程序能否安装并保持能力？** | **[WeightCode](https://arxiv.org/abs/2611.25476)** — 匹配微调对照、能力保持、程序复用和连续安装。 |
+| **编辑规则能否跨检查点迁移？** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** — 21 个 CLIP 检查点、未见宿主及明确的能力保持约束。 |
+| **科学反馈能否改善编辑方案？** | **[HypoLoop](https://arxiv.org/abs/2611.23718)** — 22 项科学任务，以及编辑位置和拟合规则对照。 |
+| **权重编辑能否改善实际系统？** | **[Weight Coding](https://arxiv.org/abs/2611.29613)**（留出日期与在线 A/B 测试）· **[机器人基础模型修复](https://arxiv.org/abs/2611.31715)**（配对仿真场景、随机及反向编辑对照）。 |
 
 **重要区别：** HypoLoop 利用实验反馈修订*编辑方案*，实际权重补丁由数值求解器拟合，部分变体使用梯度优化。推荐它是因为其科学反馈与编辑决策方法有研究价值，**不能将其结果等同于免梯度权重更新**。下方完整目录还收录有信息价值的失败和局限研究，不代表所有条目都属于重点推荐。
 
@@ -56,7 +51,7 @@
 <!-- AUTO:START updates -->
 | 日期 | 更新内容 |
 | --- | --- |
-| `2026-11-26` | 补充 11 月 19—25 日的 17 篇已核对原文预印本，覆盖自编辑、检索规则复用、机器人修复、闭式适应、安全及有信息量的负面结果，详见[本轮整理](docs/literature-update-2026-11-26.md)。合并社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12)（统计口径修正）和 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13)（相关资源列表）。 |
+| `2026-11-26` | 扩大 11 月 26 日检索，再补 25 篇论文/手稿：直接 WSP 11 篇、权重相关研究 9 篇、相关基础 5 篇；入门表格精简为 5 个问题，每项最多 3 篇有实质实验支撑且互补的论文。两轮共补充 42 条，详见[本轮整理](docs/literature-update-2026-11-26.md)。社区 PR [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) 与 [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) 已合并。 |
 | `2026-11-22` | 新增[Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) 至直接 WSP 与证据矩阵：27B 模型通过免梯度自我编辑，在未见测试题上报告提升 6.6 个百分点，并经历 8 轮被接受的修改；同时标明能力保持与泛化证据边界。 |
 | `2026-11-20` | 按实证质量精简[入门推荐](#start-here)：重点推荐科学反馈驱动的 [HypoLoop](https://arxiv.org/abs/2611.23718)，剔除缺乏已完成实验的扩散猜想和早期方案条目，保留有信息量的负面结果但不作为首选阅读。同日已修正 [WeightCode](https://arxiv.org/abs/2611.25476) 链接并扩充 WSP 文献。 |
 <!-- AUTO:END updates -->
@@ -67,12 +62,34 @@
 <!-- AUTO:START direct -->
 直接通过程序读取、构建或修改神经网络权重的研究，并标注方法与任务属性。
 
-**52 篇论文与手稿** · [2026（52）](#2026)
+**63 篇论文与手稿** · [2026（63）](#2026)
 
 **证据整理：** [WSP 证据矩阵](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 52 篇
+### 🗓️ 2026 — 63 篇
+
+- **[AME]** `[少样本视觉语言适应]` `[智能体设计程序]` Few-Shot Adaptation of Vision-Language Models via Agentic Model Editing（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.34036)]
+
+- **[Scalpel and Brush]** `[剪枝]` `[指标审计]` Scalpel and Brush: Pruning and Targeted Weight Editing of a Small Language Model by a Single LLM Agent（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.33426)]
+
+- **[Game-Theoretic Weight Reading]** `[精确评估]` `[读取/构造/修复]` Reading, Writing and Repairing Game-Theoretic Policies in Weight Space（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.31979)]
+
+- **[Weight-Space Programming of JEPA World Models]** `[世界模型]` `[全文实证待核对]` Weight-Space Programming of JEPA World Models（**alphaXiv 手稿 2026**）[[论文](https://www.alphaxiv.org/abs/2611.wsp-jepa)] [[代码](https://github.com/suayptalha/wsr)]
+
+- **[Weight Coding]** `[生产推荐系统]` `[在线 A/B 评估]` Weight Coding: Evolving Web-Scale Recommenders through Direct Weight Edits with LLM Agents（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.29613)]
+
+- **[Blind Deployment-Fault Repair]** `[盲诊断]` `[脚本对照]` Where Does a Weight-Editing Agent Help? Blind Diagnosis and Repair of Deployment Faults in Vision Models（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.28781)]
+
+- **[LLM-Guided Transformer Repair]** `[控制器与算子区分]` `[匹配搜索]` Can an LLM Repair a Language Model in Weight Space Without Gradient Training?（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.25613)]
+
+- **[VLM Repair Low-Bit Audit]** `[数值取证]` `[舍入对照]` Weight Space Programming for Vision Language Model Repair（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.23615)]
+
+- **[Materials-Science WSP]** `[无标签构造]` `[科学先验]` Weight-Space Programming for Materials Science（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.22013)]
+
+- **[Diffusion Program Construction]** `[程序与修订区分]` `[优化器参与]` What Does Weight-Space Programming Add to Diffusion Editing? Program Construction versus Score-Guided Refinement（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.22228)]
+
+- **[Weight-Space Reading]** `[行为预测]` `[无效编辑对照]` Weight-Space Reading（**alphaXiv 手稿 2026**）[[论文](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models)] [[代码](https://github.com/suayptalha/wsr)]
 
 - **[FWSP]** `[确定性编辑]` `[能力边界]` Do We Really Need an LLM for Weight-Space Programming? A Deterministic Forward-Only Paradigm and Its Capability Boundaries（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.34612)]
 
@@ -207,7 +224,7 @@
 
 未来的权重编程不必只从模型编辑论文中寻找灵感。新增的 **[权重相关研究](docs/weight-centric-research_zh.md)** 系列把权重作为可理解、可表征、可生成、可组合和可保护的对象。这些论文提供**方法启发与比较基线**，不等于直接 WSP。
 
-**现收录 67 篇，分成六条研究线：**
+**现收录 76 篇，分成六条研究线：**
 
 | 研究线 | 关键问题 |
 | --- | --- |
@@ -229,6 +246,8 @@
 ### 神经程序编译与权重生成
 
 学习型编译器、超网络和适配器生成器，以及将程序直接编译为网络参数的方法。
+
+- **[CLAM]** `[参数记忆]` `[循环超网络]` Instant Weight-Space Consolidation for Long-Term Memory in LLMs（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.20759)] — 训练循环超网络，将会话激活编译为持续携带的 LoRA 记忆，并结合情景缓冲区；部署时无梯度，但生成器须针对基础模型训练。
 
 - **[Adapters as Data]** `[LoRA]` `[权重表征]` Adapters as Data: The Latent Space of LoRAs（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.07775)]
 
@@ -259,6 +278,10 @@
 ### 模型编辑与权重空间基础
 
 研究知识与行为修改、参数增量复用、对称性以及网络权重表征。
+
+- **[Tiny Gradient Loop Repair]** `[梯度基线]` `[循环机制]` A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.33133)] — 用稀疏梯度编辑及常量残差偏移补充已发布的 WSP 补丁；属于训练基线，收益依赖解码预算，不归作免梯度 WSP。
+
+- **[Ethical-Priority Weight Edits]** `[探索性对照]` `[显式权衡机制]` Can Weight-Space Programming Alter Learned Ethical Priorities?（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.24330)] — 在概念监督读取器中，以预先指定的编辑改变已拟合的权衡；独立盲测编辑阶段尚未运行，不能据此声称发现通用大模型的伦理机制。
 
 - **[HypoLoop]** `[反馈驱动编辑]` `[数值求解]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback（**arXiv 2026**）[[论文](https://arxiv.org/abs/2611.23718)] [[代码](https://github.com/limengran98/HypoLoop)] — 在 22 项科学任务上利用连续实验反馈修订编辑位置与拟合规则；补丁由数值求解器拟合（部分使用梯度优化），属于相关模型编辑，不等同于免梯度能力安装。
 
@@ -305,6 +328,10 @@
 ### 快速权重与自修改网络
 
 关注动态参数状态和自修改机制，区分在线临时记忆与持久能力安装。
+
+- **[BaseRSI]** `[外部流程内化]` `[闭式回归]` BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness Internalization（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2611.24578)] [[代码](https://github.com/beita6969/BaseRSI)] — ReGap/ReKey 通过回归及实测编辑强度，将激活差异写入选定神经元；应区分既定拟合规则与智能体自由构造编辑程序。
+
+- **[AutoHebb]** `[赫布可塑性]` `[元学习]` AutoHebb: Self-Modifying Neural Networks that Zero-Shot Infer and Continually Learn（**arXiv 预印本 2026**）[[论文](https://arxiv.org/abs/2610.40757)] — 用元学习得到的固定权重控制局部赫布可塑性以实现在线学习；属于自修改基础机制，并非语言模型编写持久编辑程序。
 
 - **[Learning to control fast-weight memories: An alternative to dynamic recurrent networks]** `[历史基础]` Learning to control fast-weight memories: An alternative to dynamic recurrent networks（**经典研究 1992**）[[论文](https://doi.org/10.1162/neco.1992.4.1.131)] — 早期 Fast Weight 控制器：一个网络在线编程另一个网络的临时权重。
 

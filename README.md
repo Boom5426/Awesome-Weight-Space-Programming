@@ -33,18 +33,13 @@ New to WSP? These are **selective research entry points**, chosen for substantiv
 
 Planning an experiment? See the [evaluation research guide](docs/wsp-research-opportunities.md) for source-grounded questions on program portability, composition, retention, and matched baselines.
 
-| Research question | Selected starting points |
+| Research question | Selected papers |
 | --- | --- |
-| **What is weight-space programming?** | **[Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)** (original technical report) · [WSP-Scope](https://arxiv.org/abs/2611.09382) (systematic evaluation) |
-| **Can programs install lasting capabilities?** | **[WeightCode](https://arxiv.org/abs/2611.25476)** (new-task gain, old-task retention, rerunnable cross-model programs) |
-| **Can a language model rewrite its own weights?** | **[Self-Rewriting](https://arxiv.org/abs/2611.21885)** (27B model, gradient-free self-editing and repeated improvement) |
-| **Can scientific feedback improve an editing plan?** | **[HypoLoop](https://arxiv.org/abs/2611.23718v1)** (where/how to edit across 22 scientific tasks) · [WeightLoop](https://arxiv.org/abs/2611.07319) (reusable scientific feedback editor) |
-| **How reliable are WSP claims?** | **[WeightBench](https://arxiv.org/abs/2611.18553)** (multi-task benchmark) · [IWIBench](https://arxiv.org/abs/2611.08647) (preservation-aware editing evaluation) |
-| **Can agents construct useful networks?** | **[iWSP](https://arxiv.org/abs/2611.18114)** (interpretable networks and neural encoding) · [Weights & Caches](https://arxiv.org/abs/2611.20174) (tabular foundation models) |
-| **What actually causes an edit to work?** | **[Same Fix, Different Weights](https://arxiv.org/abs/2611.20953)** (mechanistic replication) · [YOLO26 evaluation](https://arxiv.org/abs/2611.17789) (matched negative controls) |
-| **Can a repair recipe generalize?** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** (21 CLIP checkpoints, labeled construction data and retention guard) · [Robot Foundation Model Repair](https://arxiv.org/abs/2611.31715) (paired simulation scenes and failed repairs) |
-| **What limits self-editing claims?** | **[Self-WSP](https://arxiv.org/abs/2611.28833)** (random-search controls) · [SELFWRITE](https://arxiv.org/abs/2611.29513) (hidden acceptance gate; four accepted edits over five generations) |
-| **What are the neighboring foundations?** | **[Tracr](https://arxiv.org/abs/2301.05062)** (program compilation) · [Program-as-Weights](https://arxiv.org/abs/2607.02512) (neural programming) · [Doc-to-LoRA](https://arxiv.org/abs/2602.15902) (learned weight generation) |
+| **What can WSP reliably do?** | **[WSP-Scope](https://arxiv.org/abs/2611.09382)** (systematic trajectories and held-out tests) · **[iWSP](https://arxiv.org/abs/2611.18114)** (transparent network construction and hidden algorithmic tests). |
+| **Can programs install and preserve capabilities?** | **[WeightCode](https://arxiv.org/abs/2611.25476)** — matched fine-tuning comparisons, retention, program reuse and successive installation. |
+| **Can an editing recipe transfer across checkpoints?** | **[TowerBridge](https://arxiv.org/abs/2611.31233)** — 21 CLIP checkpoints, unseen hosts and an explicit retention guard. |
+| **Can scientific feedback improve an editing plan?** | **[HypoLoop](https://arxiv.org/abs/2611.23718)** — 22 scientific tasks and comparisons of editing locations and fitting rules. |
+| **Can weight editing help practical systems?** | **[Weight Coding](https://arxiv.org/abs/2611.29613)** (held-out dates and online A/B tests) · **[Robot Foundation Model Repair](https://arxiv.org/abs/2611.31715)** (paired simulation scenes, random and sign-reversed controls). |
 
 **Important distinction:** HypoLoop's editing *plan* is revised from experimental evidence, while numerical solvers—including gradient-based optimization in some variants—fit the actual weight changes. Its inclusion highlights valuable scientific-feedback methodology; it is **not** evidence of gradient-free weight updates. The full catalog below tracks other relevant studies, including informative failures, without endorsing every entry as a starting point.
 
@@ -54,7 +49,7 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START updates -->
 | Date | What changed |
 | --- | --- |
-| `2026-11-26` | Added 17 source-checked preprints from 19–25 November, covering self-editing, reusable retrieval recipes, robot repair, closed-form adaptation, security and informative negative results. See the [dated review](docs/literature-update-2026-11-26.md). Merged community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) (metric correction) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) (related list). |
+| `2026-11-26` | Expanded the 26 November update with 25 additional papers/manuscripts: 11 direct-WSP items, 9 weight-centric papers and 5 related foundations. Reduced Start Here to five research questions, with up to three complementary, evidence-driven papers per question. The two search passes add 42 entries in total; see the [dated review](docs/literature-update-2026-11-26.md). Community PRs [#12](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/12) and [#13](https://github.com/Boom5426/Awesome-Weight-Space-Programming/pull/13) are merged. |
 | `2026-11-22` | Added [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885) to Direct WSP and the evidence matrix: a 27B model reports gradient-free self-editing (+6.6 percentage points on held-out problems) and eight accepted improvement sessions, with scope and retention caveats. |
 | `2026-11-20` | Curated a selective, evidence-driven [Start Here](#start-here): prominently featured [HypoLoop](https://arxiv.org/abs/2611.23718) for feedback-driven scientific editing, removed unsupported conjectural and preliminary diffusion entries, and kept weak or negative experimental results accessible without treating them as recommended starting points. Earlier this day, updated [WeightCode](https://arxiv.org/abs/2611.25476) and added new WSP studies. |
 <!-- AUTO:END updates -->
@@ -65,12 +60,34 @@ Planning an experiment? See the [evaluation research guide](docs/wsp-research-op
 <!-- AUTO:START direct -->
 Research directly involving programmatic inspection, construction, or modification of neural-network weights, with informative method and task tags.
 
-**52 papers and manuscripts** · [2026 (52)](#2026)
+**63 papers and manuscripts** · [2026 (63)](#2026)
 
 **Evidence audit:** [WSP Evidence Matrix](docs/wsp-evidence.md)
 
 <a id="2026"></a>
-### 🗓️ 2026 — 52 papers
+### 🗓️ 2026 — 63 papers
+
+- **[AME]** `[Few-shot VLM Adaptation]` `[Agent-designed Programs]` Few-Shot Adaptation of Vision-Language Models via Agentic Model Editing (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.34036)]
+
+- **[Scalpel and Brush]** `[Pruning]` `[Metric Audit]` Scalpel and Brush: Pruning and Targeted Weight Editing of a Small Language Model by a Single LLM Agent (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.33426)]
+
+- **[Game-Theoretic Weight Reading]** `[Exact Evaluation]` `[Read/Write/Repair]` Reading, Writing and Repairing Game-Theoretic Policies in Weight Space (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.31979)]
+
+- **[Weight-Space Programming of JEPA World Models]** `[World Models]` `[Full-text Review Pending]` Weight-Space Programming of JEPA World Models (**alphaXiv manuscript 2026**) [[paper](https://www.alphaxiv.org/abs/2611.wsp-jepa)] [[code](https://github.com/suayptalha/wsr)]
+
+- **[Weight Coding]** `[Production Recommenders]` `[Online A/B Evaluation]` Weight Coding: Evolving Web-Scale Recommenders through Direct Weight Edits with LLM Agents (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.29613)]
+
+- **[Blind Deployment-Fault Repair]** `[Blind Diagnosis]` `[Script Controls]` Where Does a Weight-Editing Agent Help? Blind Diagnosis and Repair of Deployment Faults in Vision Models (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.28781)]
+
+- **[LLM-Guided Transformer Repair]** `[Controller vs Operator]` `[Matched Search]` Can an LLM Repair a Language Model in Weight Space Without Gradient Training? (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.25613)]
+
+- **[VLM Repair Low-Bit Audit]** `[Numerical Forensics]` `[Rounded Controls]` Weight Space Programming for Vision Language Model Repair (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.23615)]
+
+- **[Materials-Science WSP]** `[Zero-label Construction]` `[Scientific Priors]` Weight-Space Programming for Materials Science (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.22013)]
+
+- **[Diffusion Program Construction]** `[Program vs Refinement]` `[Optimizer-in-the-loop]` What Does Weight-Space Programming Add to Diffusion Editing? Program Construction versus Score-Guided Refinement (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.22228)]
+
+- **[Weight-Space Reading]** `[Behavior Forecasting]` `[No-op Controls]` Weight-Space Reading (**alphaXiv manuscript 2026**) [[paper](https://www.alphaxiv.org/abs/2611.weight-space-reading-language-models)] [[code](https://github.com/suayptalha/wsr)]
 
 - **[FWSP]** `[Deterministic Editing]` `[Capability Boundaries]` Do We Really Need an LLM for Weight-Space Programming? A Deterministic Forward-Only Paradigm and Its Capability Boundaries (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.34612)]
 
@@ -205,7 +222,7 @@ Research directly involving programmatic inspection, construction, or modificati
 
 Not all useful ideas for future weight programming come from editing papers. Our new **[Weight-Centric Research](docs/weight-centric-research.md)** reading series explores neural weights as objects to understand, represent, generate, compose, and protect. These studies are **inspirations and baselines**, not automatically direct WSP.
 
-**67 curated papers across six research tracks:**
+**76 curated papers across six research tracks:**
 
 | Track | Research question |
 | --- | --- |
@@ -227,6 +244,8 @@ These adjacent methods inform WSP, but are not automatically instances of direct
 ### Neural Program Compilation & Weight Generation
 
 Learned compilers, hypernetworks, and adapter generators that map instructions or data to model parameters, plus program-to-weight compilers.
+
+- **[CLAM]** `[Parametric Memory]` `[Recurrent Hypernetwork]` Instant Weight-Space Consolidation for Long-Term Memory in LLMs (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.20759)] — A trained recurrent hypernetwork compiles session activations into a carried LoRA memory, alongside an episodic buffer. Deployment uses no gradients; the generator requires per-base-model training.
 
 - **[Adapters as Data]** `[LoRA]` `[Weight Representation]` Adapters as Data: The Latent Space of LoRAs (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.07775)]
 
@@ -257,6 +276,10 @@ Learned compilers, hypernetworks, and adapter generators that map instructions o
 ### Model Editing & Weight-Space Foundations
 
 Research on modifying facts or behaviors, parameter differences, symmetries, and learned weight representations.
+
+- **[Tiny Gradient Loop Repair]** `[Gradient Baseline]` `[Looping Mechanism]` A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.33133)] — Sparse gradient edits and constant residual shifts complement a published WSP patch; a trained baseline, not gradient-free WSP. Gains depend strongly on decoding budget.
+
+- **[Ethical-Priority Weight Edits]** `[Exploratory Control]` `[Exposed Trade-off Mechanism]` Can Weight-Space Programming Alter Learned Ethical Priorities? (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.24330)] — Hand-specified edits change fitted trade-offs in concept-supervised readers. The independent blinded editor has not run; this is not evidence of discovering ethical mechanisms in general LLMs.
 
 - **[HypoLoop]** `[Feedback-driven Editing]` `[Numerical Solvers]` HypoLoop: Revising Weight-Editing Plans from Scientific Feedback (**arXiv 2026**) [[paper](https://arxiv.org/abs/2611.23718)] [[code](https://github.com/limengran98/HypoLoop)] — Revises editable locations and fitting rules from sequential scientific feedback across 22 tasks. Patches are fitted by numerical solvers (including gradient-based optimization); related model editing, not gradient-free capability installation.
 
@@ -303,6 +326,10 @@ Research on modifying facts or behaviors, parameter differences, symmetries, and
 ### Fast Weights & Self-Modifying Networks
 
 Dynamic parameter states and self-modification; distinguish online memory from persistent capability installation.
+
+- **[BaseRSI]** `[Harness Internalization]` `[Closed-form Regression]` BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness Internalization (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2611.24578)] [[code](https://github.com/beita6969/BaseRSI)] — ReGap/ReKey distill activation differences into selected neurons via regression and measured edit strength; distinguish this specified fitting rule from unrestricted agent-authored programs.
+
+- **[AutoHebb]** `[Hebbian Plasticity]` `[Meta-learning]` AutoHebb: Self-Modifying Neural Networks that Zero-Shot Infer and Continually Learn (**arXiv preprint 2026**) [[paper](https://arxiv.org/abs/2610.40757)] — Meta-learned fixed weights control local Hebbian plasticity for online learning. This supplies a self-modification foundation rather than an LLM writing persistent edit programs.
 
 - **[Learning to control fast-weight memories: An alternative to dynamic recurrent networks]** `[Historical Foundation]` Learning to control fast-weight memories: An alternative to dynamic recurrent networks (**Classic 1992**) [[paper](https://doi.org/10.1162/neco.1992.4.1.131)] — Early fast-weight controllers in which one network programs transient weights of another.
 
